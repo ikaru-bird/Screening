@@ -9,6 +9,7 @@ import pandas as pd
 import random
 import yfinance as yf
 from classCheckData import CheckData
+from classEarningsInfo import EarningsInfo
 from datetime import datetime, timedelta
 import time
 
@@ -47,56 +48,103 @@ n = i - 1
 NG_list = ["COM","AUX","PRN","NUL"]
 
 # 株価データの取得期間
-# end = datetime.now().strftime("%Y-%m-%d")
 end   = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
 start = (datetime.now() - timedelta(days=2*365)).strftime("%Y-%m-%d")
 
 # 銘柄数の分だけループ
-for i in range(0, n+1):
-#   print(str(symbol[i]))
-    print('TICKER:{0} ({1}/{2})'.format(str(symbol[i]), str(i+1), str(n+1)))
+for i in range(0, n + 1):
+    ticker_str = str(symbol[i])
+    if not ticker_str:
+        continue
+
+    print('--- {0}/{1}: Checking {2} ---'.format(str(i + 1), str(n + 1), ticker_str))
+
+    # ==================================================
+    # STAGE 1: FUNDAMENTAL SCREENING
+    # ==================================================
+    try:
+        # yfinanceから情報を取得
+        ticker_obj = yf.Ticker(ticker_str)
+        info = ticker_obj.info
+        roe = info.get('returnOnEquity')
+
+        # yfinanceオブジェクトを渡してEarningsInfoを作成
+        ern_info = EarningsInfo(ticker_obj)
+
+        # ファンダメンタルズ条件をチェック
+        passed, results = ern_info.get_fundamental_screening_results(roe)
+
+        # ログとしてチェック結果を表示
+        for check_name, (res, reason) in results.items():
+            status = "PASS" if res else "FAIL"
+            print(f"  - {status}: {check_name} ({reason})")
+
+        if not passed:
+            print(f"-> {ticker_str} did not pass fundamental screening. Skipping.\n")
+            continue
+
+    except Exception as e:
+        print(f"##ERROR## Could not perform fundamental screen for {ticker_str}: {e}\n")
+        continue
+
+    print(f"-> {ticker_str} PASSED fundamental screening. Proceeding to technical analysis.")
+
+    # ==================================================
+    # STAGE 2: TECHNICAL ANALYSIS (Price Data)
+    # ==================================================
     symbol_data = None
 
     # 使用できないファイル名の場合、ファイル名を変更
-    if symbol[i] in NG_list:
-        # 保存ファイル名の指定
-        fileName = str(out_dir) + str(symbol[i])+'-X.csv'
+    if ticker_str in NG_list:
+        fileName = str(out_dir) + ticker_str + '-X.csv'
     else:
-        # 保存ファイル名の指定
-        fileName = str(out_dir) + str(symbol[i])+'.csv'
+        fileName = str(out_dir) + ticker_str + '.csv'
 
-    # 最大3回実行
+    # 株価データのダウンロード（最大3回リトライ）
     for j in range(3):
         try:
-            # 株価データ読み込み
             if dt_interval == "1wk":
-                symbol_data = yf.download(symbol[i], start=start, end=end, interval="1wk", auto_adjust=True)
+                symbol_data = ticker_obj.history(start=start, end=end, interval="1wk", auto_adjust=True)
             else:
-                symbol_data = yf.download(symbol[i], start=start, end=end, interval="1d", auto_adjust=True)
-            # 不要なインデックスレベルを削除
+                symbol_data = ticker_obj.history(start=start, end=end, interval="1d", auto_adjust=True)
+
+            if symbol_data.empty:
+                raise ValueError("No price data downloaded")
+
             if isinstance(symbol_data.columns, pd.MultiIndex):
                 symbol_data.columns = symbol_data.columns.droplevel(1)
-        except:
-            print("\r##ERROR##: Retry=%s" % (str(j)), end="\n", flush=True)
-            time.sleep(5)  # 5秒スリープしてリトライ
-        else:
-            # 不要な行を除去
-            symbol_data.to_csv(fileName, header=True, index=True)
-            
-            # csvをDataframeに格納
-            ckdt.csvSetDF(fileName)
-            
-            # 売買サイン判定の呼び出し
-            ckdt.isTrendTemplete()  # トレンドテンプレート該当銘柄からPivotを探す
-            ckdt.isON_Minervini()   # オニール、ミネルヴィ・ニパターンを探す
-            ckdt.isGranville()      # 買いポイントを探す
-            ckdt.isGoldernCross()   # GoldernCrossを探す
-#           ckdt.isShortSign()      # 空売りパターンを探す
-            print('--')
-            
-            break  # ループを抜ける
 
-    # 過度なアクセスを防ぐために時間（ランダム0.2～1秒）空ける
+            break # success
+        except Exception as e:
+            print(f"##ERROR## Downloading price data for {ticker_str}: {e}. Retry {j+1}/3")
+            time.sleep(5)
+
+    if symbol_data is None or symbol_data.empty:
+        print(f"-> Could not download price data for {ticker_str}. Skipping.\n")
+        continue
+
+    # テクニカル分析の実行
+    try:
+        symbol_data.to_csv(fileName, header=True, index=True)
+
+        # 取得済みの決算情報をセット
+        ckdt.set_earnings_info(ern_info)
+
+        # DFをセット
+        ckdt.csvSetDF(fileName)
+
+        # 売買サイン判定の呼び出し
+        ckdt.isTrendTemplete()
+        ckdt.isON_Minervini()
+        ckdt.isGranville()
+        ckdt.isGoldernCross()
+        print(f"-> Finished technical analysis for {ticker_str}.\n")
+
+    except Exception as e:
+        print(f"##ERROR## during technical analysis for {ticker_str}: {e}\n")
+        continue
+
+    # ループの最後に短いスリープを入れる
     time.sleep(random.randrange(200,1000,31)/1000)
 
 # データ処理クラスの破棄

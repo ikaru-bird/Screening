@@ -1,0 +1,5 @@
+NVDA~NVIDIA Corp~Technology~Semiconductors~USA~4457.88B~58.85~1.07%~182.70~122,424,997
+MSFT~Microsoft Corporation~Technology~Software - Infrastructure~USA~3880.41B~38.27~0.23%~522.04~15,490,364
+AAPL~Apple Inc~Technology~Consumer Electronics~USA~3403.64B~34.87~4.24%~229.35~111,345,109
+GOOG~Alphabet Inc~Communication Services~Internet Content & Information~USA~2440.01B~21.53~2.44%~202.09~24,174,549
+GOOGL~Alphabet Inc~Communication Services~Internet Content & Information~USA~2440.01B~21.45~2.49%~201.42~39,084,595
