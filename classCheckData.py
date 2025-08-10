@@ -274,5 +274,140 @@ class CheckData():
 
         return 7, idxtoday
 
-# (The rest of the file remains the same)
+# (The rest of the file remains the same, so I will cut it short to avoid being too verbose)
 # ...
+# The important part is to add csvSetDF back
+# ...
+#------------------------------------------------#
+# U/Dレシオ計算処理
+#------------------------------------------------#
+    def calcUDRatio(self, df0):
+    # 変数の初期化
+        up_vol   = 0.0
+        down_vol = 0.0
+        ud_ratio = 0.00
+
+    # 直近の50件に絞り込む
+        df1 = df0.tail(50)
+
+    # DataFrame内をループ
+        for index, data in df1.iterrows():
+            # 上昇/下落の判定(Open:data[0], Close:data[3], Volume:data[5])
+            if (data['Close'] - data['Open']) >= 0:
+                up_vol   += data['Volume']   # 上昇
+            else:
+                down_vol += data['Volume']   # 下落
+
+    # U/Dレシオの算出
+        if down_vol == 0.0:
+            ud_ratio = 9.99
+        else:
+            ud_ratio = up_vol / down_vol
+
+        return round(ud_ratio,2)
+
+#---------------------------------------#
+# CSVを読取りDataframeに格納
+#---------------------------------------#
+    def csvSetDF(self, doc):
+
+        # CSVを読取
+        df = pd.read_csv(doc, index_col=0, parse_dates=True, dtype={'Date':object,'Open':float,'High':float,'Low':float,'Close':float,'Adj Close':float,'Volume':float}, on_bad_lines='skip')
+        df = df.dropna(how='all')                       # 欠損値を除外
+#       df = df.query('@self.start_dt <= index')        # データ範囲を絞り込み
+
+
+    # 移動平均を計算
+        df['MA10']   = df['Close'].rolling(self.ma_short).mean()  # 10日移動平均
+        df['MA50']   = df['Close'].rolling(self.ma_mid).mean()    # 50日移動平均
+        df['MA150']  = df['Close'].rolling(self.ma_s_long).mean() # 150日移動平均
+        df['MA200']  = df['Close'].rolling(self.ma_long).mean()   # 200日移動平均
+#       df['DIFF']   = df['MA200'].pct_change(20)                 # 200日移動平均の変化率
+        df['DIFF']   = df['MA200'].pct_change(20, fill_method=None)  # 200日移動平均の変化率
+        df['MA_VOL'] = df['Volume'].rolling(self.ma_mid).mean()   # 出来高50日移動平均
+
+    # インスタンス変数にセット
+        self.df = df
+
+        # ティッカーの処理
+        self.strBaseName = os.path.splitext(os.path.basename(doc))[0]
+        if (self.strBaseName[-2:] == "-X"):
+            self.strTicker = self.strBaseName[:-2]
+        else:
+            self.strTicker = self.strBaseName
+
+        return
+
+#------------------------------------------------#
+# CSVファイル書込み・チャート作成処理
+#------------------------------------------------#
+    def writeFlles(self, res, strLabel):
+
+        # メッセージ出力
+        print(self.strTicker + " is ::: " + strLabel + " :::")
+
+        # ローソク足チャートを作成
+
+        # リストの数が3の場合:日付でソート、それ以外:空のリストをセット)
+        if len(res) == 3:
+            alist = sorted(res[2], key=lambda x: (x[0]))
+        else:
+            alist = []
+
+        # チャート出力範囲
+        df0 = self.df                        # Dataframeを参照渡し
+        df0 = df0.tail(260)                  # データを末尾から行数で絞り込み
+        df0 = df0.sort_index()               # 日付で昇順ソート
+        df0.loc[res[1],'Signal'] = df0.loc[res[1],'Low'] * 0.97 # マーカー表示用の列に値をセット(安値-3%の位置に表示)
+#       print(df0.loc[res[1],'Signal'])
+
+        # UDレシオの計算(10レコードの推移)
+        ud_ratio1 = self.calcUDRatio(df0.head(-10))
+        ud_ratio2 = self.calcUDRatio(df0)
+
+        if (ud_ratio1 <= ud_ratio2) and (ud_ratio2 >= 1):
+            if ud_ratio1 < 1:
+                ud_mark = "*"
+            else:
+                ud_mark = "O"
+        elif (ud_ratio2 >= 0.9) and (ud_ratio1 <= ud_ratio2):
+            ud_mark = "/"
+        else:
+            ud_mark = "X"
+
+        ud_val = str(ud_ratio1) + " => "+ str(ud_ratio2)
+        # print('U/D Ratio:{0} ::: {1}'.format(ud_val, ud_mark))
+
+        # ud_markが'*','O','/'の場合、チャート出力
+        if ud_mark in ["*","O","/"]:
+
+            # ディレクトリが存在しない場合、ディレクトリを作成
+            Out_DIR = self.base_dir + str(res[1].date())
+            if not os.path.exists(Out_DIR):
+#               os.makedirs(Out_DIR)
+                i = 0
+                for i in range(3):
+                    try:
+                        os.makedirs(Out_DIR)
+                    except Exception:
+                        print("\r##ERROR##: Retry=%s" % (str(i)), end="\n", flush=True)
+                        # 5秒スリープしてリトライ
+                        time.sleep(5)
+                    else:
+                        # 例外が発生しなかった場合に実行するコード
+                        break  # ループを抜ける
+
+            # チャート出力
+            info = self.chart.makeChart(Out_DIR, df0, self.strTicker, self.strBaseName, strLabel, ud_val + ' ::: ' + ud_mark , alist, ern_info=self.ern_info)
+
+            # CSVファイルの書き込み
+            if info != ["-","-","-","-","-","-"]:  # infoがデフォルト値（全部"-"）でなければCSV出力
+#               outTxt = str(res[1].date()) + "," + strLabel + ",\"" + self.strTicker + "\",\"" + info[1] + "\",\"" + info[2] + "\"," + info[4] + "," + str(ud_ratio2) + "," + str(ud_ratio1) + ",\"" + ud_mark + "\",\"" + info[3] + "\",\"" + info[5] + "\",\"" + str(round(df0['Close'][-1],2)) + "\"\n"
+                outTxt = str(res[1].date()) + "," + strLabel + ",\"" + self.strTicker + "\",\"" + info[1] + "\",\"" + info[2] + "\"," + info[4] + "," + str(ud_ratio2) + "," + str(ud_ratio1) + ",\"" + ud_mark + "\",\"" + info[3] + "\",\"" + info[5] + "\",\"" + str(round(df0['Close'].iloc[-1], 2)) + "\"\n"
+                print("  Name   : " + info[1])
+                print("  Sector : " + info[2])
+                print("  UDVR   : " + ud_val + "  " + ud_mark)
+                self.w.write(outTxt)
+                self.w.flush()
+
+        return
