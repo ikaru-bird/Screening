@@ -1,2 +1,1319 @@
-THG~THG Plc~Consumer Cyclical~Internet Retail~1000000000~0~0~Jun 24/a~100000~1.0
-META~Meta Platforms, Inc.~Communications~Internet & Web Services~1195860000000~29.58~23.11~Apr 24/a~32000000~474.22
+NVDA~NVIDIA Corp~Technology~Semiconductors~USA~4457.88B~58.85~1.07%~182.70~122,424,997
+MSFT~Microsoft Corporation~Technology~Software - Infrastructure~USA~3880.41B~38.27~0.23%~522.04~15,490,364
+AAPL~Apple Inc~Technology~Consumer Electronics~USA~3403.64B~34.87~4.24%~229.35~111,345,109
+GOOG~Alphabet Inc~Communication Services~Internet Content & Information~USA~2440.01B~21.53~2.44%~202.09~24,174,549
+GOOGL~Alphabet Inc~Communication Services~Internet Content & Information~USA~2440.01B~21.45~2.49%~201.42~39,084,595
+AMZN~Amazon.com Inc~Consumer Cyclical~Internet Retail~USA~2374.97B~33.98~-0.20%~222.69~31,492,924
+META~Meta Platforms Inc~Communication Services~Internet Content & Information~USA~1932.45B~27.86~0.98%~769.30~7,298,935
+AVGO~Broadcom Inc~Technology~Semiconductors~USA~1434.42B~114.64~0.40%~304.97~12,421,187
+TSM~Taiwan Semiconductor Manufacturing ADR~Technology~Semiconductors~Taiwan~1254.10B~27.53~-0.33%~241.83~10,532,290
+ORCL~Oracle Corp~Technology~Software - Infrastructure~USA~702.35B~57.60~0.26%~250.05~8,294,487
+V~Visa Inc~Financial~Credit Services~USA~648.84B~33.25~1.41%~336.78~6,071,031
+LLY~Lilly(Eli) & Co~Healthcare~Drug Manufacturers - General~USA~592.15B~41.49~-2.37%~625.65~14,074,568
+MA~Mastercard Incorporated~Financial~Credit Services~USA~519.19B~38.74~2.33%~574.32~2,906,841
+NFLX~Netflix Inc~Communication Services~Entertainment~USA~514.86B~51.63~2.65%~1211.64~3,801,744
+PLTR~Palantir Technologies Inc~Technology~Software - Infrastructure~USA~441.41B~621.34~2.61%~186.96~62,282,153
+COST~Costco Wholesale Corp~Consumer Defensive~Discount Stores~USA~435.04B~55.64~0.36%~980.98~2,185,862
+JNJ~Johnson & Johnson~Healthcare~Drug Manufacturers - General~USA~417.44B~18.54~1.05%~173.33~7,685,405
+HD~Home Depot, Inc~Consumer Cyclical~Home Improvement Retail~USA~385.88B~26.31~0.44%~387.85~2,318,857
+ABBV~Abbvie Inc~Healthcare~Drug Manufacturers - General~USA~349.87B~94.25~-0.41%~198.05~4,100,971
+SAP~Sap SE ADR~Technology~Software - Application~Germany~340.20B~48.34~-1.13%~292.12~1,159,690
+GE~GE Aerospace~Industrials~Aerospace & Defense~USA~291.63B~38.39~1.10%~275.01~3,285,368
+CSCO~Cisco Systems, Inc~Technology~Communication Equipment~USA~284.29B~29.42~2.70%~71.79~31,363,296
+ASML~ASML Holding NV~Technology~Semiconductor Equipment & Materials~Netherlands~284.07B~27.68~1.29%~722.32~1,039,353
+AMD~Advanced Micro Devices Inc~Technology~Semiconductors~USA~280.36B~99.44~0.21%~172.76~68,203,992
+TMUS~T-Mobile US Inc~Communication Services~Telecom Services~USA~275.71B~23.10~0.84%~244.98~4,260,670
+BABA~Alibaba Group Holding Ltd ADR~Consumer Cyclical~Internet Retail~China~269.03B~16.16~-0.50%~120.36~9,739,858
+PM~Philip Morris International Inc~Consumer Defensive~Tobacco~USA~264.90B~32.29~1.20%~170.18~3,772,707
+TM~Toyota Motor Corporation ADR~Consumer Cyclical~Auto Manufacturers~Japan~246.15B~8.70~3.94%~188.64~506,818
+ABT~Abbott Laboratories~Healthcare~Medical Devices~USA~233.71B~16.79~1.68%~134.28~4,984,782
+CRM~Salesforce Inc~Technology~Software - Application~USA~229.93B~37.62~-0.15%~240.51~8,805,159
+MS~Morgan Stanley~Financial~Capital Markets~USA~228.56B~16.22~1.60%~143.18~3,941,554
+AZN~Astrazeneca plc ADR~Healthcare~Drug Manufacturers - General~United Kingdom~228.04B~27.59~-1.37%~73.55~4,929,069
+UNH~Unitedhealth Group Inc~Healthcare~Healthcare Plans~USA~227.59B~10.87~2.54%~250.89~10,112,867
+IBM~International Business Machines Corp~Technology~Information Technology Services~USA~225.68B~39.30~-3.15%~242.27~6,792,617
+NVS~Novartis AG ADR~Healthcare~Drug Manufacturers - General~Switzerland~221.71B~16.92~0.79%~116.84~1,585,007
+MCD~McDonald's Corp~Consumer Cyclical~Restaurants~USA~217.97B~26.16~-0.80%~305.45~2,597,430
+INTU~Intuit Inc~Technology~Software - Application~USA~208.93B~60.95~-1.66%~749.00~1,670,038
+RTX~RTX Corp~Industrials~Aerospace & Defense~USA~207.29B~34.02~-0.58%~154.86~3,659,261
+AXP~American Express Co~Financial~Credit Services~USA~206.98B~20.88~0.92%~297.43~1,777,481
+BX~Blackstone Inc~Financial~Asset Management~USA~206.19B~45.59~0.76%~168.91~2,278,445
+SHOP~Shopify Inc~Technology~Software - Application~Canada~194.10B~83.09~-0.97%~149.61~9,562,064
+HDB~HDFC Bank Ltd. ADR~Financial~Banks - Regional~India~191.11B~23.06~-1.33%~74.72~1,712,477
+UBER~Uber Technologies Inc~Technology~Software - Application~USA~186.77B~15.20~-3.36%~89.56~26,168,463
+VZ~Verizon Communications Inc~Communication Services~Telecom Services~USA~181.93B~10.02~0.47%~43.15~13,029,427
+NOW~ServiceNow Inc~Technology~Software - Application~USA~181.48B~109.82~-0.18%~872.51~1,897,146
+GEV~GE Vernova Inc~Industrials~Specialty Industrial Machinery~USA~176.70B~155.32~0.50%~649.09~1,885,799
+SCHW~Charles Schwab Corp~Financial~Capital Markets~USA~176.39B~26.14~1.14%~97.08~5,030,197
+BKNG~Booking Holdings Inc~Consumer Cyclical~Travel Services~USA~175.20B~37.60~-0.48%~5405.91~186,015
+ANET~Arista Networks Inc~Technology~Computer Hardware~USA~174.93B~54.73~-0.07%~139.18~9,642,105
+BLK~Blackrock Inc~Financial~Asset Management~USA~174.21B~27.19~1.09%~1124.97~426,323
+BA~Boeing Co~Industrials~Aerospace & Defense~USA~173.25B~-~0.79%~229.12~4,714,691
+NVO~Novo Nordisk ADR~Healthcare~Drug Manufacturers - General~Denmark~171.94B~14.07~4.76%~51.08~23,125,499
+TXN~Texas Instruments Inc~Technology~Semiconductors~USA~170.21B~34.22~0.70%~187.22~5,941,163
+SPGI~S&P Global Inc~Financial~Financial Data & Stock Exchanges~USA~170.01B~42.80~-0.40%~556.87~819,628
+ISRG~Intuitive Surgical Inc~Healthcare~Medical Instruments & Supplies~USA~168.51B~65.60~0.06%~470.08~1,160,387
+QCOM~Qualcomm, Inc~Technology~Semiconductors~USA~159.22B~14.23~1.14%~147.56~5,024,020
+PDD~PDD Holdings Inc ADR~Consumer Cyclical~Internet Retail~China~158.68B~12.30~0.06%~114.26~4,325,187
+AMGN~AMGEN Inc~Healthcare~Drug Manufacturers - General~USA~155.17B~23.58~1.24%~288.23~1,801,041
+APP~Applovin Corp~Communication Services~Advertising Agencies~USA~154.24B~67.74~4.26%~455.98~9,468,036
+BSX~Boston Scientific Corp~Healthcare~Medical Devices~USA~152.83B~61.39~0.17%~103.14~5,076,115
+NEE~NextEra Energy Inc~Utilities~Utilities - Regulated Electric~USA~149.11B~25.23~-0.23%~72.41~5,573,672
+ACN~Accenture plc~Technology~Information Technology Services~Ireland~148.99B~19.04~-1.04%~239.20~3,810,169
+AMAT~Applied Materials Inc~Technology~Semiconductor Equipment & Materials~USA~148.36B~22.50~0.94%~184.87~4,333,868
+ARM~Arm Holdings plc. ADR~Technology~Semiconductors~United Kingdom~146.67B~210.90~2.16%~138.50~3,465,829
+TJX~TJX Companies, Inc~Consumer Cyclical~Apparel Retail~USA~146.56B~30.98~-0.46%~131.37~4,622,448
+ADBE~Adobe Inc~Technology~Software - Application~USA~144.67B~21.81~0.82%~341.05~3,502,711
+PGR~Progressive Corp~Financial~Insurance - Property & Casualty~USA~144.51B~13.88~0.49%~246.51~2,118,468
+SYK~Stryker Corp~Healthcare~Medical Devices~USA~144.35B~49.96~0.32%~377.58~972,328
+SPOT~Spotify Technology S.A~Communication Services~Internet Content & Information~Luxembourg~143.10B~169.65~2.79%~705.89~2,361,160
+ETN~Eaton Corporation plc~Industrials~Specialty Industrial Machinery~Ireland~141.25B~36.50~0.74%~362.84~2,137,800
+PFE~Pfizer Inc~Healthcare~Drug Manufacturers - General~USA~139.75B~13.07~1.44%~24.58~36,344,647
+HON~Honeywell International Inc~Industrials~Conglomerates~USA~137.33B~24.59~-0.12%~216.31~2,673,339
+APH~Amphenol Corp~Technology~Electronic Components~USA~134.28B~43.88~1.32%~109.98~5,051,794
+MU~Micron Technology Inc~Technology~Semiconductors~USA~133.05B~21.46~6.28%~118.89~28,887,806
+LRCX~Lam Research Corp~Technology~Semiconductor Equipment & Materials~USA~130.15B~24.47~2.62%~101.75~8,756,854
+TD~Toronto Dominion Bank~Financial~Banks - Diversified~Canada~128.31B~10.71~0.51%~73.25~960,128
+KKR~KKR & Co. Inc~Financial~Asset Management~USA~127.07B~68.42~0.34%~142.67~2,163,481
+ADP~Automatic Data Processing Inc~Technology~Software - Application~USA~123.87B~30.63~0.76%~305.81~879,122
+KLAC~KLA Corp~Technology~Semiconductor Equipment & Materials~USA~120.97B~30.09~0.30%~914.80~719,320
+MELI~MercadoLibre Inc~Consumer Cyclical~Internet Retail~USA~119.33B~58.12~0.81%~2353.70~303,218
+IBN~ICICI Bank Ltd. ADR~Financial~Banks - Regional~India~117.32B~19.42~0.09%~32.87~1,804,834
+SNPS~Synopsys, Inc~Technology~Software - Infrastructure~USA~114.62B~44.61~-0.15%~619.42~700,503
+WELL~Welltower Inc~Real Estate~REIT - Healthcare Facilities~USA~112.23B~138.80~-0.97%~168.03~1,968,136
+PANW~Palo Alto Networks Inc~Technology~Software - Infrastructure~USA~111.51B~95.60~-0.62%~167.06~9,820,079
+ADI~Analog Devices Inc~Technology~Semiconductors~USA~111.13B~60.97~0.37%~223.95~3,077,167
+DASH~DoorDash Inc~Consumer Cyclical~Internet Retail~USA~110.74B~144.20~-4.35%~259.19~5,340,062
+CB~Chubb Limited~Financial~Insurance - Property & Casualty~Switzerland~108.14B~11.97~0.72%~271.24~960,911
+ICE~Intercontinental Exchange Inc~Financial~Financial Data & Stock Exchanges~USA~106.70B~35.78~-0.86%~186.40~2,783,622
+CRWD~Crowdstrike Holdings Inc~Technology~Software - Infrastructure~USA~105.80B~-~-0.12%~424.49~3,619,523
+CEG~Constellation Energy Corporation~Utilities~Utilities - Renewable~USA~104.89B~35.04~-0.19%~335.77~1,959,058
+SO~Southern Company~Utilities~Utilities - Regulated Electric~USA~104.16B~24.45~-0.69%~94.69~4,148,246
+ENB~Enbridge Inc~Energy~Oil & Gas Midstream~Canada~102.46B~23.11~-0.19%~46.99~2,386,637
+HOOD~Robinhood Markets Inc~Financial~Capital Markets~USA~101.87B~58.22~3.06%~114.63~41,621,897
+CME~CME Group Inc~Financial~Financial Data & Stock Exchanges~USA~101.70B~27.31~0.45%~282.21~1,487,856
+PLD~Prologis Inc~Real Estate~REIT - Industrial~USA~100.45B~28.79~-0.57%~105.68~1,841,538
+MMC~Marsh & McLennan Cos., Inc~Financial~Insurance Brokers~USA~100.13B~24.45~0.18%~203.67~2,219,215
+BAM~Brookfield Asset Management Ltd~Financial~Asset Management~USA~98.79B~41.35~0.56%~61.26~2,030,943
+CDNS~Cadence Design Systems, Inc~Technology~Software - Application~USA~95.93B~95.26~-0.64%~352.06~1,372,788
+TT~Trane Technologies plc~Industrials~Building Products & Equipment~Ireland~95.70B~34.13~0.46%~430.09~755,548
+WM~Waste Management, Inc~Industrials~Waste Management~USA~94.70B~34.88~0.80%~235.09~1,088,373
+VRTX~Vertex Pharmaceuticals, Inc~Healthcare~Biotechnology~USA~93.98B~26.20~-2.42%~366.54~3,678,688
+DELL~Dell Technologies Inc~Technology~Computer Hardware~USA~93.42B~21.94~2.75%~137.61~5,455,855
+CTAS~Cintas Corporation~Industrials~Specialty Business Services~USA~91.18B~51.41~1.28%~226.27~1,434,876
+HCA~HCA Healthcare Inc~Healthcare~Medical Care Facilities~USA~89.29B~16.03~2.22%~381.61~1,015,892
+RBLX~Roblox Corporation~Communication Services~Electronic Gaming & Multimedia~USA~89.23B~-~-0.71%~128.71~5,701,818
+ORLY~O'Reilly Automotive, Inc~Consumer Cyclical~Auto Parts~USA~88.33B~36.96~-0.14%~103.33~3,659,536
+GD~General Dynamics Corp~Industrials~Aerospace & Defense~USA~84.50B~21.09~0.45%~314.13~1,157,279
+MCK~Mckesson Corporation~Healthcare~Medical Distribution~USA~83.16B~26.68~0.80%~668.58~1,298,594
+CVS~CVS Health Corp~Healthcare~Healthcare Plans~USA~83.13B~18.29~3.08%~65.54~6,411,345
+RCL~Royal Caribbean Group~Consumer Cyclical~Travel Services~USA~81.88B~22.72~-2.69%~301.44~1,892,743
+NTES~NetEase Inc ADR~Communication Services~Electronic Gaming & Multimedia~China~81.78B~18.47~-1.76%~128.62~817,033
+APO~Apollo Global Management Inc~Financial~Asset Management~USA~81.21B~26.79~0.61%~141.97~3,008,675
+SE~Sea Ltd ADR~Consumer Cyclical~Internet Retail~Singapore~80.67B~103.80~-0.84%~147.61~3,844,983
+MDLZ~Mondelez International Inc~Consumer Defensive~Confectioners~USA~80.00B~22.58~-0.91%~61.83~6,416,545
+COIN~Coinbase Global Inc~Financial~Financial Data & Stock Exchanges~USA~79.79B~30.04~-0.08%~310.54~9,203,173
+RACE~Ferrari N.V~Consumer Cyclical~Auto Manufacturers~Italy~79.10B~45.81~-1.08%~443.84~480,354
+AON~Aon plc~Financial~Insurance Brokers~Ireland~79.01B~30.68~0.38%~366.40~1,095,232
+TDG~Transdigm Group Incorporated~Industrials~Aerospace & Defense~USA~78.31B~46.14~-2.76%~1389.77~433,013
+GSK~GSK Plc ADR~Healthcare~Drug Manufacturers - General~United Kingdom~76.26B~17.61~0.59%~37.80~3,401,581
+NEM~Newmont Corp~Basic Materials~Gold~USA~75.77B~12.38~-0.13%~68.98~9,062,475
+MSI~Motorola Solutions Inc~Technology~Communication Equipment~USA~75.54B~36.49~1.87%~453.41~1,617,467
+ABNB~Airbnb Inc~Consumer Cyclical~Travel Services~USA~75.19B~29.20~0.82%~121.02~5,782,265
+CVNA~Carvana Co~Consumer Cyclical~Auto & Truck Dealerships~USA~74.80B~87.02~-2.85%~347.56~2,815,075
+AJG~Arthur J. Gallagher & Co~Financial~Insurance Brokers~USA~74.21B~43.63~-0.19%~289.44~1,726,231
+CRH~CRH Plc~Basic Materials~Building Materials~USA~73.52B~22.85~2.23%~109.30~7,478,001
+CI~Cigna Group~Healthcare~Healthcare Plans~USA~73.38B~15.01~1.44%~274.90~1,518,076
+HWM~Howmet Aerospace Inc~Industrials~Aerospace & Defense~USA~72.87B~52.82~-0.46%~180.75~1,588,221
+FI~Fiserv, Inc~Technology~Information Technology Services~USA~72.43B~22.27~0.41%~133.24~3,926,786
+NET~Cloudflare Inc~Technology~Software - Infrastructure~USA~71.30B~-~-2.78%~204.60~1,765,955
+WMB~Williams Cos Inc~Energy~Oil & Gas Midstream~USA~70.69B~29.21~0.00%~57.89~5,384,621
+BCS~Barclays plc ADR~Financial~Banks - Diversified~United Kingdom~70.28B~6.42~0.96%~19.94~13,363,939
+ING~ING Groep N.V. ADR~Financial~Banks - Diversified~Netherlands~69.77B~-~2.09%~24.44~2,141,379
+VST~Vistra Corp~Utilities~Utilities - Independent Power Producers~USA~68.59B~32.07~-1.69%~202.12~4,058,522
+AEM~Agnico Eagle Mines Ltd~Basic Materials~Gold~Canada~68.12B~23.06~-0.13%~135.61~2,239,300
+AZO~Autozone Inc~Consumer Cyclical~Auto Parts~USA~67.50B~27.31~-0.62%~4035.16~93,618
+MRVL~Marvell Technology Inc~Technology~Semiconductors~USA~66.68B~-~1.96%~77.34~9,934,954
+ELV~Elevance Health Inc~Healthcare~Healthcare Plans~USA~66.20B~12.51~3.71%~293.99~2,404,999
+AXON~Axon Enterprise Inc~Industrials~Aerospace & Defense~USA~66.14B~208.27~-3.27%~842.50~664,482
+PYPL~PayPal Holdings Inc~Financial~Credit Services~USA~64.63B~14.48~-0.84%~67.65~9,653,680
+SNOW~Snowflake Inc~Technology~Software - Application~USA~63.97B~-~-7.11%~191.73~8,593,885
+MNST~Monster Beverage Corp~Consumer Defensive~Beverages - Non-Alcoholic~USA~63.09B~40.40~6.40%~64.69~12,208,386
+ADSK~Autodesk Inc~Technology~Software - Application~USA~62.19B~62.29~-0.79%~290.68~1,497,984
+HLT~Hilton Worldwide Holdings Inc~Consumer Cyclical~Lodging~USA~61.69B~40.29~0.53%~262.30~1,957,036
+ARES~Ares Management Corp~Financial~Asset Management~USA~61.54B~107.80~0.79%~188.43~952,904
+AEP~American Electric Power Company Inc~Utilities~Utilities - Regulated Electric~USA~60.16B~16.48~-1.08%~112.50~2,706,454
+FCX~Freeport-McMoRan Inc~Basic Materials~Copper~USA~60.13B~31.71~2.62%~41.87~11,827,462
+KMI~Kinder Morgan Inc~Energy~Oil & Gas Midstream~USA~59.75B~22.06~0.49%~26.89~15,110,275
+TEL~TE Connectivity plc~Technology~Electronic Components~Ireland~59.68B~41.70~1.03%~201.98~1,435,286
+TRV~Travelers Companies Inc~Financial~Insurance - Property & Casualty~USA~59.63B~11.71~-0.18%~264.87~920,447
+WDAY~Workday Inc~Technology~Software - Application~USA~59.29B~122.62~0.49%~222.07~2,385,521
+DLR~Digital Realty Trust Inc~Real Estate~REIT - Specialty~USA~57.95B~44.53~-0.77%~169.91~905,163
+ALNY~Alnylam Pharmaceuticals Inc~Healthcare~Biotechnology~USA~57.53B~-~0.88%~438.93~901,269
+ROP~Roper Technologies Inc~Technology~Software - Application~USA~57.51B~37.55~-0.43%~534.38~358,734
+FTNT~Fortinet Inc~Technology~Software - Infrastructure~USA~56.94B~29.69~-1.21%~74.39~16,988,350
+PWR~Quanta Services, Inc~Industrials~Engineering & Construction~USA~56.89B~59.89~-0.31%~386.15~654,318
+GLW~Corning, Inc~Technology~Electronic Components~USA~56.34B~69.63~1.56%~65.77~4,368,964
+NDAQ~Nasdaq Inc~Financial~Financial Data & Stock Exchanges~USA~55.57B~37.21~0.41%~96.85~2,569,967
+TFC~Truist Financial Corporation~Financial~Banks - Regional~USA~55.54B~11.70~0.51%~43.07~5,311,708
+BDX~Becton Dickinson & Co~Healthcare~Medical Instruments & Supplies~USA~55.46B~34.80~3.10%~193.50~3,805,072
+COR~Cencora Inc~Healthcare~Medical Distribution~USA~55.28B~29.33~2.42%~285.13~1,106,201
+FAST~Fastenal Co~Industrials~Industrial Distribution~USA~55.08B~46.38~1.07%~47.99~5,069,166
+ALL~Allstate Corp~Financial~Insurance - Property & Casualty~USA~54.49B~9.72~0.88%~206.80~1,160,086
+VRT~Vertiv Holdings Co~Industrials~Electrical Equipment & Parts~USA~53.43B~66.85~0.39%~139.93~3,720,274
+D~Dominion Energy Inc~Utilities~Utilities - Regulated Electric~USA~52.75B~21.36~0.11%~61.81~3,893,494
+IDXX~Idexx Laboratories, Inc~Healthcare~Diagnostics & Research~USA~52.65B~54.77~1.23%~658.06~566,171
+MFC~Manulife Financial Corp~Financial~Insurance - Life~Canada~51.54B~13.41~0.07%~30.09~3,368,868
+PAYX~Paychex Inc~Technology~Software - Application~USA~50.86B~30.84~0.48%~141.19~1,367,603
+CPNG~Coupang Inc~Consumer Cyclical~Internet Retail~USA~50.74B~140.13~0.07%~27.83~8,301,359
+LNG~Cheniere Energy Inc~Energy~Oil & Gas Midstream~USA~50.73B~13.45~-1.89%~230.83~2,349,736
+FLUT~Flutter Entertainment Plc~Consumer Cyclical~Gambling~USA~49.41B~138.21~-8.32%~280.59~6,248,946
+WCN~Waste Connections Inc~Industrials~Waste Management~Canada~48.38B~75.62~-0.10%~187.89~864,388
+CTVA~Corteva Inc~Basic Materials~Agricultural Inputs~USA~48.15B~34.50~-0.20%~70.91~5,568,025
+OKE~Oneok Inc~Energy~Oil & Gas Midstream~USA~46.89B~14.52~-1.35%~74.46~3,158,682
+KDP~Keurig Dr Pepper Inc~Consumer Defensive~Beverages - Non-Alcoholic~USA~46.76B~30.54~1.53%~34.42~6,659,160
+CBRE~CBRE Group Inc~Real Estate~Real Estate Services~USA~46.24B~43.54~0.67%~155.40~990,291
+VEEV~Veeva Systems Inc~Healthcare~Health Information Services~USA~46.10B~59.78~0.85%~282.13~846,394
+EW~Edwards Lifesciences Corp~Healthcare~Medical Devices~USA~46.00B~53.49~0.54%~78.35~2,877,353
+WPM~Wheaton Precious Metals Corp~Basic Materials~Gold~Canada~45.71B~58.00~0.90%~100.69~3,100,387
+GWW~W.W. Grainger Inc~Industrials~Industrial Distribution~USA~45.45B~23.97~0.81%~950.13~208,661
+DDOG~Datadog Inc~Technology~Software - Application~USA~45.21B~378.24~-4.01%~130.91~10,855,291
+GRMN~Garmin Ltd~Technology~Scientific & Technical Instruments~Switzerland~44.73B~28.67~1.49%~232.38~631,034
+CPRT~Copart, Inc~Industrials~Specialty Business Services~USA~44.66B~30.53~0.16%~46.19~4,455,947
+HMC~Honda Motor ADR~Consumer Cyclical~Auto Manufacturers~Japan~44.34B~11.43~3.50%~32.56~1,242,299
+TEAM~Atlassian Corporation~Technology~Software - Application~USA~44.24B~-~-1.72%~168.06~7,901,917
+PEG~Public Service Enterprise Group Inc~Utilities~Utilities - Regulated Electric~USA~43.76B~22.14~0.24%~87.68~2,389,512
+XEL~Xcel Energy, Inc~Utilities~Utilities - Regulated Electric~USA~43.37B~20.34~0.14%~73.33~3,098,204
+AIG~American International Group Inc~Financial~Insurance - Diversified~USA~43.28B~14.48~2.00%~78.13~4,170,609
+EBAY~EBay Inc~Consumer Cyclical~Internet Retail~USA~42.56B~20.58~0.13%~93.14~5,325,819
+JD~JD.com Inc ADR~Consumer Cyclical~Internet Retail~China~42.56B~7.68~-0.82%~31.49~4,276,944
+MSCI~MSCI Inc~Financial~Financial Data & Stock Exchanges~USA~42.29B~36.22~0.22%~546.68~489,364
+ZS~Zscaler Inc~Technology~Software - Infrastructure~USA~41.99B~-~-1.03%~269.70~1,673,340
+RMD~Resmed Inc~Healthcare~Medical Instruments & Supplies~USA~41.63B~29.86~1.33%~283.90~827,364
+FANG~Diamondback Energy Inc~Energy~Oil & Gas E&P~USA~41.12B~10.10~0.64%~142.03~1,683,860
+ETR~Entergy Corp~Utilities~Utilities - Regulated Electric~USA~40.39B~22.52~-0.07%~90.47~1,627,348
+RDDT~Reddit Inc~Communication Services~Internet Content & Information~USA~40.32B~181.85~1.71%~215.44~4,714,087
+B~Barrick Mining Corp~Basic Materials~Gold~Canada~40.29B~17.60~1.56%~23.43~18,679,033
+TTWO~Take-Two Interactive Software, Inc~Communication Services~Electronic Gaming & Multimedia~USA~40.10B~-~-4.03%~217.37~5,616,762
+CSGP~Costar Group, Inc~Real Estate~Real Estate Services~USA~40.03B~370.73~-0.88%~94.50~2,429,424
+YUM~Yum Brands Inc~Consumer Cyclical~Restaurants~USA~39.21B~27.90~-0.90%~141.28~2,262,955
+MPWR~Monolithic Power System Inc~Technology~Semiconductors~USA~38.52B~20.94~0.80%~804.29~399,338
+TCOM~Trip.com Group Ltd ADR~Consumer Cyclical~Travel Services~Singapore~38.41B~17.19~-5.41%~58.80~7,011,680
+DKNG~DraftKings Inc~Consumer Cyclical~Gambling~USA~38.13B~-~-5.13%~42.88~16,810,240
+FIG~Figma Inc~Technology~Software - Application~USA~38.08B~-~-0.17%~78.11~7,276,100
+HEI~Heico Corp~Industrials~Aerospace & Defense~USA~37.92B~73.25~-1.05%~313.39~337,552
+HEI-A~Heico Corp~Industrials~Aerospace & Defense~USA~37.92B~57.46~-0.53%~245.83~93,900
+FER~Ferrovial S.E~Industrials~Engineering & Construction~Netherlands~37.78B~10.41~-0.30%~52.50~240,249
+ED~Consolidated Edison, Inc~Utilities~Utilities - Regulated Electric~USA~37.68B~18.94~-0.50%~104.48~2,796,376
+HSY~Hershey Company~Consumer Defensive~Confectioners~USA~37.36B~24.49~-1.72%~184.27~1,655,302
+FIS~Fidelity National Information Services, Inc~Technology~Information Technology Services~USA~37.17B~266.42~1.56%~71.16~4,362,103
+VRSK~Verisk Analytics Inc~Industrials~Consulting Services~USA~37.03B~40.88~0.20%~265.04~826,252
+CCL~Carnival Corp~Consumer Cyclical~Travel Services~USA~36.98B~15.38~-2.21%~28.37~18,007,303
+LVS~Las Vegas Sands Corp~Consumer Cyclical~Resorts & Casinos~USA~36.13B~26.58~-0.72%~52.63~2,607,219
+HIG~Hartford Insurance Group Inc.(The)~Financial~Insurance - Property & Casualty~USA~36.03B~11.62~0.75%~128.16~942,973
+TRGP~Targa Resources Corp~Energy~Oil & Gas Midstream~USA~35.53B~23.64~-1.08%~165.09~2,023,021
+WEC~WEC Energy Group Inc~Utilities~Utilities - Regulated Electric~USA~35.52B~21.15~-0.32%~110.35~1,754,263
+LYV~Live Nation Entertainment Inc~Communication Services~Entertainment~USA~35.49B~66.51~3.28%~153.13~3,917,188
+CRCL~Circle Internet Group Inc~Financial~Capital Markets~USA~35.39B~500.09~3.99%~159.03~8,861,417
+RKT~Rocket Companies Inc~Financial~Mortgage Finance~USA~35.38B~-~-4.22%~16.81~12,851,724
+CHT~Chunghwa Telecom ADR~Communication Services~Telecom Services~Taiwan~35.04B~30.30~0.07%~45.17~140,593
+XYL~Xylem Inc~Industrials~Specialty Industrial Machinery~USA~34.72B~37.08~-0.58%~142.65~596,988
+RYAAY~Ryanair Holdings Plc ADR~Industrials~Airlines~Ireland~34.18B~15.33~-0.60%~64.41~755,788
+CTSH~Cognizant Technology Solutions Corp~Technology~Information Technology Services~USA~33.98B~14.13~0.67%~69.58~2,770,538
+CCJ~Cameco Corp~Energy~Uranium~Canada~33.49B~87.50~0.72%~76.92~3,768,143
+PUK~Prudential plc ADR~Financial~Insurance - Life~United Kingdom~33.20B~15.57~-0.19%~25.91~576,834
+ACGL~Arch Capital Group Ltd~Financial~Insurance - Diversified~Bermuda~33.15B~9.18~-0.03%~88.83~1,345,043
+FNV~Franco-Nevada Corporation~Basic Materials~Gold~Canada~33.06B~53.54~0.08%~171.59~785,692
+WDS~Woodside Energy Group Ltd ADR~Energy~Oil & Gas E&P~Australia~33.02B~9.34~0.06%~17.42~562,284
+SYM~Symbotic Inc~Industrials~Specialty Industrial Machinery~USA~32.86B~-~2.58%~55.61~2,836,303
+A~Agilent Technologies Inc~Healthcare~Diagnostics & Research~USA~32.56B~28.27~0.56%~114.62~1,129,742
+TKO~TKO Group Holdings Inc~Communication Services~Entertainment~USA~32.32B~75.18~1.59%~163.29~1,539,883
+HUM~Humana Inc~Healthcare~Healthcare Plans~USA~32.07B~20.47~4.11%~266.68~1,678,201
+TW~Tradeweb Markets Inc~Financial~Capital Markets~USA~32.02B~52.20~-2.07%~135.44~975,314
+EQT~EQT Corp~Energy~Oil & Gas E&P~USA~32.01B~27.59~0.10%~51.29~4,540,135
+STX~Seagate Technology Holdings Plc~Technology~Computer Hardware~USA~32.00B~22.21~1.59%~150.45~1,901,415
+VTR~Ventas Inc~Real Estate~REIT - Healthcare Facilities~USA~31.95B~158.54~-0.20%~68.57~1,692,660
+FICO~Fair Isaac Corp~Technology~Software - Application~USA~31.71B~51.66~-0.96%~1320.88~308,448
+ONC~BeOne Medicines Ltd ADR~Healthcare~Biotechnology~Switzerland~31.58B~-~-3.39%~288.18~423,054
+FWONA~Liberty Media Corp~Communication Services~Entertainment~USA~31.35B~80.90~-0.93%~85.67~86,675
+FWONK~Liberty Media Corp~Communication Services~Entertainment~USA~31.35B~90.66~-1.13%~96.00~1,827,555
+BR~Broadridge Financial Solutions, Inc~Technology~Information Technology Services~USA~31.15B~37.49~-0.20%~265.94~535,909
+DXCM~Dexcom Inc~Healthcare~Medical Devices~USA~30.93B~55.21~3.22%~78.86~3,834,468
+BRO~Brown & Brown, Inc~Financial~Insurance Brokers~USA~30.89B~27.01~1.23%~93.65~3,643,447
+OWL~Blue Owl Capital Inc~Financial~Asset Management~USA~30.60B~355.22~4.28%~19.75~8,845,645
+IQV~IQVIA Holdings Inc~Healthcare~Diagnostics & Research~USA~30.58B~26.05~0.51%~179.86~875,191
+ALAB~Astera Labs Inc~Technology~Semiconductors~USA~29.80B~314.36~4.91%~179.28~7,054,897
+EFX~Equifax, Inc~Industrials~Consulting Services~USA~29.69B~46.89~-0.87%~239.81~884,248
+LPLA~LPL Financial Holdings Inc~Financial~Capital Markets~USA~29.59B~25.30~0.27%~369.84~528,158
+AWK~American Water Works Co. Inc~Utilities~Utilities - Regulated Water~USA~29.38B~26.17~0.65%~145.36~1,986,675
+IBKR~Interactive Brokers Group Inc~Financial~Capital Markets~USA~29.35B~34.57~2.58%~65.91~3,524,510
+QSR~Restaurant Brands International Inc~Consumer Cyclical~Restaurants~Canada~29.32B~24.47~-0.88%~64.50~3,622,852
+KB~KB Financial Group Inc ADR~Financial~Banks - Regional~South Korea~29.21B~7.86~-0.67%~82.08~91,352
+DTE~DTE Energy Co~Utilities~Utilities - Regulated Electric~USA~29.12B~20.18~0.04%~140.26~1,345,344
+IX~Orix Corporation ADR~Financial~Financial Conglomerates~Japan~28.70B~11.55~1.36%~25.26~109,843
+ROL~Rollins, Inc~Consumer Cyclical~Personal Services~USA~28.42B~58.06~0.22%~58.64~966,148
+KEYS~Keysight Technologies Inc~Technology~Scientific & Technical Instruments~USA~28.39B~38.74~2.30%~164.96~712,812
+UI~Ubiquiti Inc~Technology~Communication Equipment~USA~28.38B~51.72~1.89%~469.21~104,304
+GFI~Gold Fields Ltd ADR~Basic Materials~Gold~South Africa~28.01B~22.71~0.51%~31.29~2,582,451
+EME~Emcor Group, Inc~Industrials~Engineering & Construction~USA~27.67B~25.65~0.11%~618.22~321,268
+AEE~Ameren Corp~Utilities~Utilities - Regulated Electric~USA~27.42B~22.27~-0.91%~101.39~1,006,090
+HPE~Hewlett Packard Enterprise Co~Technology~Communication Equipment~USA~27.31B~21.50~2.01%~20.81~15,197,183
+PPL~PPL Corp~Utilities~Utilities - Regulated Electric~USA~26.88B~27.33~-0.05%~36.35~3,591,872
+BNTX~BioNTech SE ADR~Healthcare~Biotechnology~Germany~26.84B~-~0.28%~111.66~530,253
+WRB~W.R. Berkley Corp~Financial~Insurance - Property & Casualty~USA~26.79B~16.08~0.74%~70.63~1,282,644
+VLTO~Veralto Corp~Industrials~Pollution & Treatment Controls~USA~26.73B~30.16~0.15%~107.70~522,953
+IRM~Iron Mountain Inc~Real Estate~REIT - Specialty~USA~26.63B~656.66~-1.82%~90.16~1,555,280
+SMCI~Super Micro Computer Inc~Technology~Computer Hardware~USA~26.62B~26.91~-4.44%~44.60~43,573,688
+TTD~Trade Desk Inc~Communication Services~Advertising Agencies~USA~26.51B~65.38~-38.61%~54.23~104,916,680
+SOFI~SoFi Technologies Inc~Financial~Credit Services~USA~26.46B~44.57~0.09%~22.10~48,652,352
+CBOE~Cboe Global Markets Inc~Financial~Financial Data & Stock Exchanges~USA~26.42B~29.61~1.23%~252.58~886,454
+CQP~Cheniere Energy Partners LP~Energy~Oil & Gas Midstream~USA~26.39B~13.18~-1.58%~54.51~166,073
+ATO~Atmos Energy Corp~Utilities~Utilities - Regulated Gas~USA~26.37B~22.69~0.96%~164.29~1,396,736
+REG~Regency Centers Corporation~Real Estate~REIT - Retail~USA~26.19B~33.54~-0.85%~71.92~746,743
+TYL~Tyler Technologies, Inc~Technology~Software - Application~USA~25.71B~84.99~-0.97%~594.35~252,617
+DG~Dollar General Corp~Consumer Defensive~Discount Stores~USA~25.60B~22.18~0.60%~116.32~2,424,453
+TDY~Teledyne Technologies Inc~Technology~Scientific & Technical Instruments~USA~25.60B~30.08~-0.76%~545.93~207,464
+VRSN~Verisign Inc~Technology~Software - Infrastructure~USA~25.40B~32.45~-0.77%~271.89~613,079
+TOST~Toast Inc~Technology~Software - Infrastructure~USA~25.12B~125.63~-5.55%~43.08~9,030,652
+IP~International Paper Co~Consumer Cyclical~Packaging & Containers~USA~25.11B~-~-1.02%~47.55~3,279,316
+VIK~Viking Holdings Ltd~Consumer Cyclical~Travel Services~Bermuda~25.07B~45.93~-0.67%~56.58~2,618,147
+EXPE~Expedia Group Inc~Consumer Cyclical~Travel Services~USA~24.82B~23.89~4.08%~195.26~6,960,082
+PTC~PTC Inc~Technology~Software - Application~USA~24.61B~48.43~-0.35%~205.42~756,387
+FIX~Comfort Systems USA, Inc~Industrials~Engineering & Construction~USA~24.41B~35.55~-0.38%~691.76~376,004
+MKL~Markel Group Inc~Financial~Insurance - Property & Casualty~USA~24.17B~11.46~0.64%~1910.42~45,816
+ES~Eversource Energy~Utilities~Utilities - Regulated Electric~USA~24.14B~27.99~-1.35%~65.04~1,981,002
+JBL~Jabil Inc~Technology~Electronic Components~USA~24.08B~43.61~1.75%~224.34~1,152,771
+STE~Steris Plc~Healthcare~Medical Devices~Ireland~23.92B~36.82~2.80%~242.85~863,791
+CLS~Celestica, Inc~Technology~Electronic Components~Canada~23.89B~45.11~3.21%~207.66~2,982,631
+SHG~Shinhan Financial Group Co. Ltd. ADR~Financial~Banks - Regional~South Korea~23.82B~7.92~0.50%~50.15~116,535
+PINS~Pinterest Inc~Communication Services~Internet Content & Information~USA~23.72B~12.56~-10.31%~35.13~37,448,668
+SBAC~SBA Communications Corp~Real Estate~REIT - Specialty~USA~23.71B~27.14~-1.03%~220.85~569,133
+HUBS~HubSpot Inc~Technology~Software - Application~USA~23.70B~-~-2.63%~449.72~1,284,799
+LULU~Lululemon Athletica inc~Consumer Cyclical~Apparel Retail~Canada~23.67B~12.93~-0.89%~189.43~3,166,194
+DRI~Darden Restaurants, Inc~Consumer Cyclical~Restaurants~USA~23.64B~22.76~-2.25%~202.00~1,024,998
+EXE~Expand Energy Corp~Energy~Oil & Gas E&P~USA~23.61B~256.51~-0.87%~99.14~2,532,642
+CINF~Cincinnati Financial Corp~Financial~Insurance - Property & Casualty~USA~23.48B~13.02~-0.88%~150.13~510,113
+AFRM~Affirm Holdings Inc~Technology~Software - Infrastructure~USA~23.33B~-~-8.40%~72.33~9,313,852
+INSM~Insmed Inc~Healthcare~Biotechnology~USA~23.16B~-~0.23%~109.55~3,231,668
+KGC~Kinross Gold Corp~Basic Materials~Gold~Canada~23.13B~15.29~1.12%~18.98~17,363,669
+FOX~Fox Corporation~Communication Services~Entertainment~USA~22.93B~10.02~0.26%~49.19~606,124
+FOXA~Fox Corporation~Communication Services~Entertainment~USA~22.93B~11.00~0.28%~54.02~3,551,193
+TPG~TPG Inc~Financial~Asset Management~USA~22.80B~-~2.51%~61.70~1,663,276
+SW~Smurfit WestRock plc~Consumer Cyclical~Packaging & Containers~Ireland~22.71B~66.00~-0.39%~43.63~2,797,270
+TPR~Tapestry Inc~Consumer Cyclical~Luxury Goods~USA~22.66B~28.70~0.56%~109.09~3,243,754
+CG~Carlyle Group Inc~Financial~Asset Management~USA~22.47B~18.16~1.07%~62.23~2,653,991
+RF~Regions Financial Corp~Financial~Banks - Regional~USA~22.24B~11.62~1.14%~24.92~7,576,760
+LH~Labcorp Holdings Inc~Healthcare~Diagnostics & Research~USA~22.09B~29.31~2.27%~265.85~555,186
+CMS~CMS Energy Corporation~Utilities~Utilities - Regulated Electric~USA~22.00B~21.68~-1.41%~73.48~2,571,411
+PODD~Insulet Corporation~Healthcare~Medical Devices~USA~21.62B~93.46~1.17%~307.10~1,099,677
+RPRX~Royalty Pharma plc~Healthcare~Biotechnology~USA~21.51B~16.36~1.54%~37.58~2,814,730
+RKLB~Rocket Lab Corp~Industrials~Aerospace & Defense~USA~21.42B~-~1.09%~44.69~39,093,967
+CDW~CDW Corp~Technology~Information Technology Services~USA~21.35B~20.25~0.64%~162.92~1,066,641
+CPAY~Corpay Inc~Technology~Software - Infrastructure~USA~21.30B~20.50~-0.92%~301.70~580,200
+SSNC~SS&C Technologies Holdings Inc~Technology~Software - Application~USA~21.20B~27.34~0.50%~86.80~1,156,501
+GIB~CGI Inc~Technology~Information Technology Services~Canada~21.17B~17.75~0.82%~95.93~274,106
+RBA~RB Global Inc~Industrials~Specialty Business Services~USA~21.13B~56.34~2.79%~114.11~1,827,769
+DVN~Devon Energy Corp~Energy~Oil & Gas E&P~USA~21.13B~7.45~2.75%~33.28~9,264,523
+ESLT~Elbit Systems Ltd~Industrials~Aerospace & Defense~Israel~20.83B~57.01~-4.46%~449.44~219,914
+NTRA~Natera Inc~Healthcare~Diagnostics & Research~USA~20.75B~-~7.70%~151.95~3,849,432
+CRDO~Credo Technology Group Holding Ltd~Technology~Semiconductors~Cayman Islands~20.67B~432.04~0.53%~120.41~2,908,264
+AS~Amer Sports Inc~Consumer Cyclical~Leisure~Finland~20.60B~100.05~-1.67%~37.20~3,652,311
+CYBR~CyberArk Software Ltd~Technology~Software - Infrastructure~Israel~20.15B~-~-0.71%~399.76~1,913,273
+BEKE~KE Holdings Inc ADR~Real Estate~Real Estate Services~China~19.96B~33.21~-0.23%~17.56~5,713,952
+NI~NiSource Inc~Utilities~Utilities - Regulated Gas~USA~19.91B~22.46~-0.21%~42.28~3,851,040
+CHKP~Check Point Software Technologies Ltd~Technology~Software - Infrastructure~Israel~19.87B~23.89~-0.92%~183.32~747,748
+TPL~Texas Pacific Land Corporation~Energy~Oil & Gas E&P~USA~19.82B~42.98~-0.62%~862.10~160,170
+FSLR~First Solar Inc~Technology~Solar~USA~19.80B~15.79~-0.51%~184.65~1,628,527
+DGX~Quest Diagnostics, Inc~Healthcare~Diagnostics & Research~USA~19.79B~21.16~1.54%~176.96~616,267
+ZBH~Zimmer Biomet Holdings Inc~Healthcare~Medical Devices~USA~19.66B~24.17~0.84%~99.26~2,459,693
+BIP~Brookfield Infrastructure Partners L.P~Utilities~Utilities - Diversified~Bermuda~19.63B~1551.55~-0.56%~30.10~770,267
+L~Loews Corp~Financial~Insurance - Property & Casualty~USA~19.45B~14.91~0.58%~93.77~516,778
+Z~Zillow Group Inc~Communication Services~Internet Content & Information~USA~19.36B~-~-4.38%~80.92~2,949,167
+ZG~Zillow Group Inc~Communication Services~Internet Content & Information~USA~19.36B~-~-4.44%~77.51~681,146
+CASY~Casey's General Stores, Inc~Consumer Cyclical~Specialty Retail~USA~19.30B~35.44~0.13%~518.97~209,419
+IOT~Samsara Inc~Technology~Software - Infrastructure~USA~19.21B~-~-2.43%~33.74~4,805,493
+NTNX~Nutanix Inc~Technology~Software - Infrastructure~USA~19.19B~102285.71~-1.35%~71.60~1,976,135
+BIIB~Biogen Inc~Healthcare~Drug Manufacturers - General~USA~19.16B~12.50~2.29%~130.67~1,327,598
+PSTG~Pure Storage Inc~Technology~Computer Hardware~USA~19.15B~157.64~1.33%~58.58~1,770,919
+GDDY~Godaddy Inc~Technology~Software - Infrastructure~USA~19.00B~23.76~-11.25%~133.35~5,237,843
+GEN~Gen Digital Inc~Technology~Software - Infrastructure~USA~18.75B~31.78~7.71%~30.45~10,079,974
+FFIV~F5 Inc~Technology~Software - Infrastructure~USA~18.48B~28.37~1.43%~321.77~403,237
+CTRA~Coterra Energy Inc~Energy~Oil & Gas E&P~USA~18.33B~11.51~1.05%~24.02~4,368,271
+IHG~Intercontinental Hotels Group ADR~Consumer Cyclical~Lodging~United Kingdom~18.32B~25.25~-3.52%~119.41~308,396
+FUTU~Futu Holdings Ltd ADR~Financial~Capital Markets~Hong Kong~18.15B~26.86~2.77%~160.92~1,727,512
+KSPI~Kaspi.kz JSC ADR~Technology~Software - Infrastructure~Kazakhstan~18.04B~8.33~3.48%~94.96~598,661
+GWRE~Guidewire Software Inc~Technology~Software - Application~USA~17.96B~541.57~-1.91%~213.27~485,878
+COHR~Coherent Corp~Technology~Scientific & Technical Instruments~USA~17.94B~-~1.42%~115.44~3,402,034
+CW~Curtiss-Wright Corp~Industrials~Aerospace & Defense~USA~17.80B~39.86~-0.21%~472.43~473,213
+TRU~TransUnion~Financial~Financial Data & Stock Exchanges~USA~17.58B~45.41~-0.42%~90.23~1,688,750
+RL~Ralph Lauren Corp~Consumer Cyclical~Apparel Manufacturing~USA~17.47B~23.01~1.74%~288.26~1,068,712
+IT~Gartner, Inc~Technology~Information Technology Services~USA~17.34B~14.09~-0.30%~229.00~2,105,565
+WST~West Pharmaceutical Services, Inc~Healthcare~Medical Instruments & Supplies~USA~17.33B~36.10~0.18%~240.98~445,203
+TLN~Talen Energy Corp~Utilities~Utilities - Independent Power Producers~USA~17.12B~106.98~-0.24%~374.68~619,657
+BURL~Burlington Stores Inc~Consumer Cyclical~Apparel Retail~USA~17.11B~33.29~-2.47%~271.26~988,985
+MDB~MongoDB Inc~Technology~Software - Infrastructure~USA~17.09B~-~-8.20%~209.18~4,175,277
+ESS~Essex Property Trust, Inc~Real Estate~REIT - Residential~USA~16.97B~20.47~-0.95%~254.59~367,407
+DKS~Dicks Sporting Goods, Inc~Consumer Cyclical~Specialty Retail~USA~16.92B~15.10~-1.81%~211.24~958,353
+RBRK~Rubrik Inc~Technology~Software - Infrastructure~USA~16.92B~-~-2.60%~87.41~1,897,465
+LNT~Alliant Energy Corp~Utilities~Utilities - Regulated Electric~USA~16.86B~20.28~-0.73%~65.64~1,923,941
+DUOL~Duolingo Inc~Technology~Software - Application~USA~16.81B~153.90~-5.25%~370.34~3,835,252
+WAT~Waters Corp~Healthcare~Diagnostics & Research~USA~16.74B~25.35~1.15%~281.20~789,179
+ERIE~Erie Indemnity Co~Financial~Insurance Brokers~USA~16.64B~30.12~1.34%~357.32~204,425
+WMG~Warner Music Group Corp~Communication Services~Entertainment~USA~16.53B~56.10~1.80%~31.71~2,555,873
+NBIS~Nebius Group N.V~Technology~Software - Infrastructure~Netherlands~16.39B~-~5.31%~68.78~18,344,798
+BWXT~BWX Technologies Inc~Industrials~Aerospace & Defense~USA~16.38B~55.91~-0.19%~179.19~1,023,471
+SN~SharkNinja Inc~Consumer Cyclical~Furnishings, Fixtures & Appliances~USA~16.29B~31.72~0.75%~116.06~1,887,096
+BSY~Bentley Systems Inc~Technology~Software - Application~USA~16.24B~68.35~-0.06%~53.49~1,589,018
+ZBRA~Zebra Technologies Corp~Technology~Communication Equipment~USA~16.15B~30.02~0.52%~317.66~597,790
+OKTA~Okta Inc~Technology~Software - Infrastructure~USA~16.03B~142.14~-2.17%~91.55~2,429,380
+ASTS~AST SpaceMobile Inc~Technology~Communication Equipment~USA~16.01B~-~-2.26%~46.63~7,130,714
+EXPD~Expeditors International Of Washington, Inc~Industrials~Integrated Freight & Logistics~USA~15.90B~19.11~-0.80%~117.12~884,851
+FNF~Fidelity National Financial Inc~Financial~Insurance - Specialty~USA~15.83B~14.77~0.57%~58.25~1,091,844
+SNN~Smith & Nephew plc ADR~Healthcare~Medical Devices~United Kingdom~15.81B~32.21~0.17%~36.14~1,334,815
+XPEV~XPeng Inc ADR~Consumer Cyclical~Auto Manufacturers~China~15.71B~-~2.96%~20.20~9,095,081
+SGI~Somnigroup International Inc~Consumer Cyclical~Furnishings, Fixtures & Appliances~USA~15.63B~52.48~1.34%~74.95~2,920,644
+RYAN~Ryan Specialty Holdings Inc~Financial~Insurance - Specialty~USA~15.42B~2543.04~-1.78%~58.49~1,344,980
+INCY~Incyte Corp~Healthcare~Biotechnology~USA~15.31B~17.82~0.24%~78.39~1,159,998
+PFGC~Performance Food Group Company~Consumer Defensive~Food Distribution~USA~15.13B~40.35~-1.31%~96.94~2,288,027
+DECK~Deckers Outdoor Corp~Consumer Cyclical~Footwear & Accessories~USA~15.08B~15.61~-0.21%~101.68~2,252,503
+TWLO~Twilio Inc~Technology~Software - Infrastructure~USA~15.06B~810.10~-19.38%~98.67~16,631,232
+CHWY~Chewy Inc~Consumer Cyclical~Internet Retail~USA~15.00B~40.46~0.89%~36.12~6,865,896
+WWD~Woodward Inc~Industrials~Aerospace & Defense~USA~14.90B~39.30~-0.87%~248.45~541,617
+ONON~On Holding AG~Consumer Cyclical~Footwear & Accessories~Switzerland~14.79B~64.25~1.11%~45.66~6,703,686
+BALL~Ball Corp~Consumer Cyclical~Packaging & Containers~USA~14.71B~25.24~0.04%~54.06~1,729,402
+SFM~Sprouts Farmers Market Inc~Consumer Defensive~Grocery Stores~USA~14.56B~30.70~-1.52%~148.99~1,033,808
+EMA~Emera Inc~Utilities~Utilities - Regulated Electric~Canada~14.51B~23.48~1.35%~48.72~192,089
+LOGI~Logitech International S.A~Technology~Computer Hardware~Switzerland~14.50B~23.40~1.55%~98.27~614,911
+APG~APi Group Corporation~Industrials~Engineering & Construction~USA~14.47B~103.05~-0.81%~34.46~1,573,362
+FDS~Factset Research Systems Inc~Financial~Financial Data & Stock Exchanges~USA~14.46B~27.60~-1.10%~382.43~219,018
+WPC~W. P. Carey Inc~Real Estate~REIT - Diversified~USA~14.43B~43.29~0.15%~65.88~934,547
+FTI~TechnipFMC plc~Energy~Oil & Gas Equipment & Services~USA~14.37B~16.55~-0.48%~34.95~1,847,141
+MTZ~Mastec Inc~Industrials~Engineering & Construction~USA~14.31B~53.80~-0.92%~181.30~770,524
+NVT~nVent Electric plc~Industrials~Electrical Equipment & Parts~United Kingdom~14.27B~25.24~-0.47%~88.68~2,276,661
+FMS~Fresenius Medical Care AG ADR~Healthcare~Medical Care Facilities~Germany~14.12B~19.61~1.05%~24.07~349,008
+KIM~Kimco Realty Corporation~Real Estate~REIT - Retail~USA~14.09B~25.11~-1.79%~20.81~3,479,030
+ALLE~Allegion plc~Industrials~Security & Protection Services~Ireland~14.05B~22.74~-0.01%~163.72~576,550
+COO~Cooper Companies, Inc~Healthcare~Medical Instruments & Supplies~USA~14.02B~34.09~1.58%~70.29~954,364
+SBS~Companhia de Saneamento Basico do Estado de Sao Paulo. ADR~Utilities~Utilities - Regulated Water~Brazil~14.01B~7.64~-0.29%~20.49~1,106,663
+DOCU~DocuSign Inc~Technology~Software - Application~USA~13.98B~13.08~-1.83%~69.19~2,967,870
+FTAI~FTAI Aviation Ltd~Industrials~Rental & Leasing Services~USA~13.96B~33.75~-1.46%~136.06~566,247
+DT~Dynatrace Inc~Technology~Software - Application~USA~13.94B~28.46~-1.34%~46.24~4,395,525
+EG~Everest Group Ltd~Financial~Insurance - Reinsurance~Bermuda~13.83B~17.18~0.50%~329.80~245,615
+TXT~Textron Inc~Industrials~Aerospace & Defense~USA~13.73B~17.43~-0.47%~77.02~744,906
+UTHR~United Therapeutics Corp~Healthcare~Drug Manufacturers - Specialty & Generic~USA~13.64B~11.77~0.69%~301.50~519,284
+YPF~YPF ADR~Energy~Oil & Gas Integrated~Argentina~13.48B~7.96~-4.14%~34.29~1,751,534
+WF~Woori Financial Group Inc ADR~Financial~Banks - Regional~South Korea~13.46B~6.89~0.02%~54.73~31,247
+CIEN~CIENA Corp~Technology~Communication Equipment~USA~13.44B~132.41~-0.13%~95.06~2,021,349
+CELH~Celsius Holdings Inc~Consumer Defensive~Beverages - Non-Alcoholic~USA~13.40B~143.23~3.65%~51.95~10,289,683
+ULS~UL Solutions Inc~Industrials~Specialty Business Services~USA~13.39B~41.06~1.02%~66.64~929,942
+CART~Maplebear Inc~Consumer Cyclical~Internet Retail~USA~13.35B~29.56~3.68%~51.21~13,083,100
+PAYC~Paycom Software Inc~Technology~Software - Application~USA~13.30B~31.10~-1.51%~229.85~672,052
+HLI~Houlihan Lokey Inc~Financial~Capital Markets~USA~13.29B~31.85~-0.32%~188.89~361,984
+NLY~Annaly Capital Management Inc~Real Estate~REIT - Mortgage~USA~13.23B~20.50~0.10%~20.60~4,314,008
+LECO~Lincoln Electric Holdings, Inc~Industrials~Tools & Accessories~USA~13.22B~26.93~-0.76%~239.47~270,281
+LTM~LATAM Airlines Group S.A. ADR~Industrials~Airlines~Chile~13.20B~11.24~0.76%~43.67~424,972
+JLL~Jones Lang Lasalle Inc~Real Estate~Real Estate Services~USA~13.18B~23.91~1.42%~278.21~364,406
+GMAB~Genmab ADR~Healthcare~Biotechnology~Denmark~13.18B~10.70~-5.55%~21.43~1,745,722
+MP~MP Materials Corporation~Basic Materials~Other Industrial Metals & Mining~USA~13.16B~-~4.57%~74.32~24,294,467
+CF~CF Industries Holdings Inc~Basic Materials~Agricultural Inputs~USA~13.11B~10.58~-2.39%~80.91~5,730,841
+H~Hyatt Hotels Corporation~Consumer Cyclical~Lodging~USA~12.97B~32.18~-2.33%~135.86~1,280,474
+ITT~ITT Inc~Industrials~Specialty Industrial Machinery~USA~12.92B~26.04~0.40%~165.67~295,942
+AMH~American Homes 4 Rent~Real Estate~REIT - Residential~USA~12.77B~30.97~-0.95%~34.42~1,218,131
+TME~Tencent Music Entertainment Group ADR~Communication Services~Internet Content & Information~China~12.75B~26.19~0.73%~22.13~4,304,884
+CNA~CNA Financial Corp~Financial~Insurance - Property & Casualty~USA~12.72B~14.60~-0.02%~47.00~381,032
+CNM~Core & Main Inc~Industrials~Industrial Distribution~USA~12.61B~29.65~-0.22%~63.96~1,394,198
+MNDY~Monday.Com Ltd~Technology~Software - Application~Israel~12.59B~251.59~0.26%~248.04~1,208,481
+CNC~Centene Corp~Healthcare~Healthcare Plans~USA~12.57B~6.33~1.31%~25.59~11,404,759
+RBC~RBC Bearings Inc~Industrials~Tools & Accessories~USA~12.56B~50.06~-1.63%~398.07~149,609
+STN~Stantec Inc~Industrials~Engineering & Construction~Canada~12.50B~45.05~0.66%~109.54~224,053
+DOCS~Doximity Inc~Healthcare~Health Information Services~USA~12.48B~57.16~13.71%~66.58~5,177,467
+IONQ~IonQ Inc~Technology~Computer Hardware~USA~12.42B~-~3.36%~41.85~20,352,766
+NBIX~Neurocrine Biosciences, Inc~Healthcare~Drug Manufacturers - Specialty & Generic~USA~12.40B~36.90~-0.47%~125.01~1,048,364
+FN~Fabrinet~Technology~Electronic Components~Cayman Islands~12.33B~38.34~2.65%~343.99~683,717
+RGA~Reinsurance Group Of America, Inc~Financial~Insurance - Reinsurance~USA~12.32B~16.22~2.50%~186.45~507,992
+ROKU~Roku Inc~Communication Services~Entertainment~USA~12.26B~-~0.12%~83.21~3,911,749
+ZTO~ZTO Express (Cayman) Inc ADR~Industrials~Integrated Freight & Logistics~China~12.22B~13.11~-0.72%~20.58~1,960,220
+AVAV~AeroVironment Inc~Industrials~Aerospace & Defense~USA~12.21B~160.33~-4.68%~247.45~1,093,273
+MEDP~Medpace Holdings Inc~Healthcare~Diagnostics & Research~USA~12.20B~32.30~1.30%~434.35~281,102
+SNX~TD Synnex Corp~Technology~Electronics & Computer Distribution~USA~12.09B~17.13~2.15%~146.57~419,759
+IEX~Idex Corporation~Industrials~Specialty Industrial Machinery~USA~11.91B~25.55~-0.17%~158.26~613,915
+EHC~Encompass Health Corp~Healthcare~Medical Care Facilities~USA~11.84B~22.99~0.92%~117.58~780,635
+OHI~Omega Healthcare Investors, Inc~Real Estate~REIT - Healthcare Facilities~USA~11.79B~24.92~-0.45%~39.95~2,381,229
+JKHY~Jack Henry & Associates, Inc~Technology~Information Technology Services~USA~11.76B~27.50~-1.54%~161.56~885,112
+HIMS~Hims & Hers Health Inc~Consumer Defensive~Household & Personal Products~USA~11.74B~65.01~1.74%~51.94~23,104,454
+PAAS~Pan American Silver Corp~Basic Materials~Gold~Canada~11.57B~22.17~1.62%~31.95~7,177,822
+ASND~Ascendis Pharma A/S ADR~Healthcare~Biotechnology~Denmark~11.56B~-~0.60%~191.49~1,554,046
+GNRC~Generac Holdings Inc~Industrials~Specialty Industrial Machinery~USA~11.52B~32.60~1.41%~196.25~719,615
+TXRH~Texas Roadhouse Inc~Consumer Cyclical~Restaurants~USA~11.47B~26.36~-6.58%~172.84~3,205,038
+EVR~Evercore Inc~Financial~Capital Markets~USA~11.43B~26.90~-0.71%~295.73~422,140
+RNR~RenaissanceRe Holdings Ltd~Financial~Insurance - Reinsurance~Bermuda~11.31B~6.13~0.36%~240.37~266,199
+SMR~NuScale Power Corporation~Industrials~Specialty Industrial Machinery~USA~11.19B~-~-11.93%~39.35~21,529,592
+RGLD~Royal Gold, Inc~Basic Materials~Gold~USA~11.12B~24.74~2.20%~168.97~1,012,678
+UHS~Universal Health Services, Inc~Healthcare~Medical Care Facilities~USA~11.10B~9.08~1.94%~172.30~606,363
+DRS~Leonardo DRS Inc~Industrials~Aerospace & Defense~USA~11.04B~44.59~0.58%~41.49~1,097,820
+BMRN~Biomarin Pharmaceutical Inc~Healthcare~Biotechnology~USA~11.01B~16.98~-3.58%~57.33~3,523,239
+AGI~Alamos Gold Inc~Basic Materials~Gold~Canada~11.01B~31.82~-0.76%~26.18~3,397,310
+MORN~Morningstar Inc~Financial~Financial Data & Stock Exchanges~USA~10.92B~27.55~-0.43%~258.92~239,083
+FRHC~Freedom Holding Corp~Financial~Financial Conglomerates~Kazakhstan~10.91B~132.29~-4.12%~178.29~130,282
+VNOM~Viper Energy Inc~Energy~Oil & Gas Midstream~USA~10.91B~10.93~0.21%~37.81~2,542,478
+CACI~Caci International Inc~Technology~Information Technology Services~USA~10.88B~22.15~-1.01%~494.89~256,705
+WTRG~Essential Utilities Inc~Utilities~Utilities - Regulated Water~USA~10.88B~16.59~0.91%~38.78~2,461,354
+BROS~Dutch Bros Inc~Consumer Cyclical~Restaurants~USA~10.87B~140.33~-5.96%~66.08~6,494,532
+NCLH~Norwegian Cruise Line Holdings Ltd~Consumer Cyclical~Travel Services~USA~10.85B~17.27~-1.92%~24.00~12,263,980
+SEIC~SEI Investments Co~Financial~Asset Management~USA~10.82B~16.43~0.75%~87.50~407,458
+KTOS~Kratos Defense & Security Solutions Inc~Industrials~Aerospace & Defense~USA~10.78B~685.41~8.12%~63.88~7,214,328
+CHYM~Chime Financial Inc~Technology~Software - Application~USA~10.71B~-~-14.68%~28.89~7,231,069
+ERJ~Embraer S.A. ADR~Industrials~Aerospace & Defense~Brazil~10.71B~28.40~0.76%~58.39~1,704,155
+SAIL~Sailpoint Inc~Technology~Software - Infrastructure~USA~10.68B~-~-4.19%~19.19~2,132,554
+DTM~DT Midstream Inc~Energy~Oil & Gas Midstream~USA~10.62B~28.11~0.36%~104.58~572,178
+HST~Host Hotels & Resorts Inc~Real Estate~REIT - Hotel & Motel~USA~10.55B~16.25~0.52%~15.35~7,666,634
+SWKS~Skyworks Solutions, Inc~Technology~Semiconductors~USA~10.55B~28.32~3.69%~71.08~2,595,715
+TEM~Tempus AI Inc~Healthcare~Health Information Services~USA~10.54B~-~3.63%~60.87~26,040,743
+ARMK~Aramark~Industrials~Specialty Business Services~USA~10.41B~29.31~1.28%~39.62~3,825,352
+QGEN~Qiagen NV~Healthcare~Diagnostics & Research~Netherlands~10.40B~28.12~-0.66%~48.04~1,226,047
+PAC~Grupo Aeroportuario Del Pacifico SAB de CV ADR~Industrials~Airports & Air Services~Mexico~10.35B~26.08~-0.47%~240.92~35,763
+AKAM~Akamai Technologies Inc~Technology~Software - Infrastructure~USA~10.31B~25.01~-5.66%~70.53~5,398,775
+UHAL~U-Haul Holding Company~Industrials~Rental & Leasing Services~USA~10.28B~40.07~-2.53%~56.96~149,570
+UHAL-B~U-Haul Holding Company~Industrials~Rental & Leasing Services~USA~10.28B~36.55~-1.07%~51.95~498,355
+AIZ~Assurant Inc~Financial~Insurance - Property & Casualty~USA~10.26B~14.72~0.72%~203.27~402,948
+KNSL~Kinsale Capital Group Inc~Financial~Insurance - Property & Casualty~USA~10.23B~22.91~-0.26%~438.87~126,833
+APPF~Appfolio Inc~Technology~Software - Application~USA~10.16B~51.14~-5.66%~283.36~635,501
+MOS~Mosaic Company~Basic Materials~Agricultural Inputs~USA~10.15B~10.84~0.95%~31.98~5,399,407
+AR~Antero Resources Corp~Energy~Oil & Gas E&P~USA~10.14B~22.86~-0.82%~32.81~3,139,685
+WCC~Wesco International, Inc~Industrials~Industrial Distribution~USA~9.94B~15.99~-0.30%~204.28~458,128
+MLI~Mueller Industries, Inc~Industrials~Metal Fabrication~USA~9.86B~14.14~0.93%~89.08~569,757
+CAVA~Cava Group Inc~Consumer Cyclical~Restaurants~USA~9.84B~70.95~-4.33%~85.05~4,080,753
+HMY~Harmony Gold Mining Co Ltd ADR~Basic Materials~Gold~South Africa~9.81B~17.13~-0.38%~15.76~3,149,301
+PCTY~Paylocity Holding Corp~Technology~Software - Application~USA~9.76B~44.05~-3.67%~176.94~661,959
+SPXC~SPX Technologies Inc~Industrials~Building Products & Equipment~USA~9.43B~45.05~-1.34%~201.57~240,507
+SKX~Skechers U S A, Inc~Consumer Cyclical~Footwear & Accessories~USA~9.42B~14.40~-0.10%~62.96~2,337,536
+AYI~Acuity Inc~Industrials~Electrical Equipment & Parts~USA~9.41B~24.20~0.74%~307.08~157,383
+NICE~NICE Ltd ADR~Technology~Software - Application~Israel~9.40B~20.70~0.02%~148.66~403,245
+WBS~Webster Financial Corp~Financial~Banks - Regional~USA~9.40B~11.34~0.94%~55.85~1,033,392
+PEN~Penumbra Inc~Healthcare~Medical Devices~USA~9.38B~63.77~-0.10%~240.49~280,038
+NYT~New York Times Co~Communication Services~Publishing~USA~9.37B~29.60~-1.20%~57.49~2,359,149
+PCOR~Procore Technologies Inc~Technology~Software - Application~USA~9.36B~-~-3.12%~62.32~1,676,225
+SSB~SouthState Corporation~Financial~Banks - Regional~USA~9.33B~13.71~0.48%~92.22~899,265
+ORI~Old Republic International Corp~Financial~Insurance - Property & Casualty~USA~9.28B~10.58~0.73%~37.36~1,027,377
+TTAN~ServiceTitan Inc~Technology~Software - Application~USA~9.28B~-~-7.08%~102.31~1,273,116
+ATR~Aptargroup Inc~Healthcare~Medical Instruments & Supplies~USA~9.27B~24.28~0.19%~140.75~428,743
+ENSG~Ensign Group Inc~Healthcare~Medical Care Facilities~USA~9.27B~29.00~0.86%~160.63~372,655
+DVA~DaVita Inc~Healthcare~Medical Care Facilities~USA~9.26B~12.73~1.42%~129.50~949,567
+SARO~StandardAero Inc~Industrials~Aerospace & Defense~USA~9.22B~130.85~-2.20%~27.57~1,492,085
+STRL~Sterling Infrastructure Inc~Industrials~Engineering & Construction~USA~9.21B~32.91~1.02%~302.69~317,037
+CAE~Cae Inc~Industrials~Aerospace & Defense~Canada~9.16B~31.63~0.04%~28.57~415,774
+OGE~Oge Energy Corp~Utilities~Utilities - Regulated Electric~USA~9.14B~18.63~-1.03%~45.37~959,589
+BIRK~Birkenstock Holding Plc~Consumer Cyclical~Footwear & Accessories~United Kingdom~9.05B~33.52~-0.64%~48.20~1,235,681
+MTSI~MACOM Technology Solutions Holdings Inc~Technology~Semiconductors~USA~9.01B~-~-5.33%~120.94~2,150,966
+MMYT~MakeMyTrip Ltd~Consumer Cyclical~Travel Services~India~9.00B~109.38~-1.07%~94.54~497,303
+FSV~FirstService Corp~Real Estate~Real Estate Services~Canada~8.98B~63.34~-0.60%~197.54~124,704
+KVYO~Klaviyo Inc~Technology~Software - Infrastructure~USA~8.98B~-~-4.94%~32.35~1,969,316
+PLNT~Planet Fitness Inc~Consumer Cyclical~Leisure~USA~8.97B~47.61~1.19%~106.63~1,561,159
+BBIO~BridgeBio Pharma Inc~Healthcare~Biotechnology~USA~8.90B~-~1.37%~46.58~2,498,017
+CUBE~CubeSmart~Real Estate~REIT - Industrial~USA~8.90B~23.67~-1.70%~38.83~1,335,166
+PRMB~Primo Brands Corp~Consumer Defensive~Beverages - Non-Alcoholic~USA~8.85B~-~-1.29%~23.69~10,649,791
+AM~Antero Midstream Corp~Energy~Oil & Gas Midstream~USA~8.82B~19.61~-0.11%~18.44~1,620,703
+WING~Wingstop Inc~Consumer Cyclical~Restaurants~USA~8.81B~52.70~-4.64%~315.36~1,098,979
+EPAM~EPAM Systems Inc~Technology~Information Technology Services~USA~8.80B~22.53~0.16%~158.00~1,084,297
+PEGA~Pegasystems Inc~Technology~Software - Application~USA~8.76B~44.30~-4.75%~51.22~2,765,945
+WTS~Watts Water Technologies, Inc~Industrials~Specialty Industrial Machinery~USA~8.75B~28.20~0.60%~262.24~295,450
+HESM~Hess Midstream LP~Energy~Oil & Gas Midstream~USA~8.75B~15.46~1.51%~41.64~1,742,809
+DSGX~Descartes Systems Group Inc~Technology~Software - Application~Canada~8.68B~61.11~-1.20%~101.23~235,352
+BE~Bloom Energy Corp~Industrials~Electrical Equipment & Parts~USA~8.61B~7829.79~0.00%~36.80~4,743,825
+EGP~Eastgroup Properties, Inc~Real Estate~REIT - Industrial~USA~8.59B~34.74~-1.36%~161.10~461,242
+SRAD~Sportradar Group AG~Technology~Software - Application~Switzerland~8.59B~71.53~-1.52%~27.62~1,922,061
+FND~Floor & Decor Holdings Inc~Consumer Cyclical~Home Improvement Retail~USA~8.57B~40.84~-0.09%~79.60~1,714,509
+MOH~Molina Healthcare Inc~Healthcare~Healthcare Plans~USA~8.50B~7.74~1.23%~156.90~1,308,293
+LBRDA~Liberty Broadband Corp~Communication Services~Telecom Services~USA~8.36B~7.66~-0.90%~58.06~132,353
+LBRDK~Liberty Broadband Corp~Communication Services~Telecom Services~USA~8.36B~7.69~-0.88%~58.30~2,104,595
+NXT~Nextracker Inc~Technology~Solar~USA~8.32B~15.32~0.88%~56.21~1,647,335
+WTFC~Wintrust Financial Corp~Financial~Banks - Regional~USA~8.29B~11.71~0.85%~123.84~215,696
+OLLI~Ollies Bargain Outlet Holdings Inc~Consumer Defensive~Discount Stores~USA~8.29B~41.55~-3.05%~135.10~898,117
+CAI~Caris Life Sciences Inc~Healthcare~Biotechnology~USA~8.27B~-~4.06%~29.75~517,914
+BZ~Kanzhun Ltd ADR~Communication Services~Internet Content & Information~China~8.26B~37.09~2.68%~21.08~3,017,589
+KMX~Carmax Inc~Consumer Cyclical~Auto & Truck Dealerships~USA~8.25B~15.20~-0.52%~54.96~1,738,007
+RRC~Range Resources Corp~Energy~Oil & Gas E&P~USA~8.24B~17.41~-0.83%~34.58~1,868,796
+DAY~Dayforce Inc~Technology~Software - Application~USA~8.17B~168.54~-3.09%~51.17~1,993,819
+CVLT~Commvault Systems Inc~Technology~Software - Application~USA~8.16B~102.30~-1.21%~183.53~308,687
+AWI~Armstrong World Industries Inc~Industrials~Building Products & Equipment~USA~8.14B~27.87~0.22%~188.28~393,015
+ONB~Old National Bancorp~Financial~Banks - Regional~USA~8.13B~12.31~1.32%~20.74~2,531,898
+ADC~Agree Realty Corp~Real Estate~REIT - Retail~USA~8.11B~43.73~-0.74%~73.32~580,453
+DY~Dycom Industries, Inc~Industrials~Engineering & Construction~USA~8.07B~35.40~0.98%~279.13~272,709
+LITE~Lumentum Holdings Inc~Technology~Communication Equipment~USA~8.07B~-~4.63%~116.27~2,692,833
+CBSH~Commerce Bancshares, Inc~Financial~Banks - Regional~USA~8.07B~14.59~1.00%~60.46~358,000
+HQY~Healthequity Inc~Healthcare~Health Information Services~USA~8.05B~67.73~1.32%~93.05~616,384
+NVMI~Nova Ltd~Technology~Semiconductor Equipment & Materials~Israel~7.96B~36.94~2.95%~270.31~184,918
+CIGI~Colliers International Group Inc~Real Estate~Real Estate Services~Canada~7.96B~71.50~0.20%~157.25~261,119
+NFG~National Fuel Gas Co~Energy~Oil & Gas Integrated~USA~7.94B~32.89~0.66%~87.89~665,476
+GMED~Globus Medical Inc~Healthcare~Medical Devices~USA~7.94B~22.64~8.47%~58.65~3,664,877
+FRT~Federal Realty Investment Trust~Real Estate~REIT - Retail~USA~7.93B~23.16~-1.15%~91.30~1,020,557
+ESTC~Elastic N.V~Technology~Software - Application~USA~7.86B~-~-2.44%~74.51~2,843,934
+RMBS~Rambus Inc~Technology~Semiconductors~USA~7.84B~34.48~1.26%~72.86~895,979
+BRX~Brixmor Property Group Inc~Real Estate~REIT - Retail~USA~7.82B~23.39~-2.11%~25.56~1,176,364
+EXAS~Exact Sciences Corp~Healthcare~Diagnostics & Research~USA~7.76B~-~-5.03%~40.99~6,207,882
+MDGL~Madrigal Pharmaceuticals Inc~Healthcare~Biotechnology~USA~7.71B~-~1.00%~345.73~352,909
+GIL~Gildan Activewear Inc~Consumer Cyclical~Apparel Manufacturing~Canada~7.70B~16.40~-1.40%~51.58~381,495
+FSS~Federal Signal Corp~Industrials~Pollution & Treatment Controls~USA~7.62B~34.88~-0.60%~125.39~338,350
+CORT~Corcept Therapeutics Inc~Healthcare~Biotechnology~USA~7.62B~64.34~1.15%~72.30~666,613
+G~Genpact Ltd~Technology~Information Technology Services~Bermuda~7.61B~14.44~4.36%~43.54~2,940,103
+SSD~Simpson Manufacturing Co., Inc~Basic Materials~Lumber & Wood Production~USA~7.58B~23.09~-0.40%~181.31~227,015
+AXS~Axis Capital Holdings Ltd~Financial~Insurance - Specialty~Bermuda~7.54B~9.28~0.59%~96.47~796,602
+EDU~New Oriental Education & Technology Group Inc. ADR~Consumer Defensive~Education & Training Services~China~7.45B~20.20~-0.65%~45.58~1,179,905
+BILI~Bilibili Inc ADR~Communication Services~Internet Content & Information~China~7.44B~-~-1.04%~22.75~1,349,280
+ZWS~Zurn Elkay Water Solutions Corp~Industrials~Pollution & Treatment Controls~USA~7.40B~43.63~-0.88%~44.16~720,771
+AN~Autonation Inc~Consumer Cyclical~Auto & Truck Dealerships~USA~7.40B~12.29~0.94%~196.23~241,120
+HALO~Halozyme Therapeutics Inc~Healthcare~Biotechnology~USA~7.36B~14.37~1.29%~62.90~1,592,660
+FIVE~Five Below Inc~Consumer Cyclical~Specialty Retail~USA~7.35B~27.99~0.61%~133.52~721,830
+ZK~ZEEKR Intelligent Technology Holding Ltd. ADR~Consumer Cyclical~Auto Manufacturers~China~7.33B~-~0.03%~28.95~157,384
+LNC~Lincoln National Corp~Financial~Insurance - Life~USA~7.23B~6.66~-0.26%~38.16~2,578,949
+FOUR~Shift4 Payments Inc~Technology~Software - Infrastructure~USA~7.22B~30.24~-2.05%~81.61~2,382,955
+BEP~Brookfield Renewable Partners LP~Utilities~Utilities - Renewable~Bermuda~7.06B~-~-2.20%~24.89~566,260
+JBTM~JBT Marel Corp~Industrials~Specialty Industrial Machinery~USA~7.05B~-~0.79%~135.74~374,775
+FLY~Firefly Aerospace Inc~Industrials~Aerospace & Defense~USA~7.05B~-~-16.87%~50.17~8,545,539
+BXSL~Blackstone Secured Lending Fund~Financial~Asset Management~USA~7.03B~10.87~1.39%~30.54~805,437
+MKTX~MarketAxess Holdings Inc~Financial~Capital Markets~USA~6.99B~31.47~1.40%~187.01~707,457
+PNFP~Pinnacle Financial Partners Inc~Financial~Banks - Regional~USA~6.97B~11.92~2.46%~89.92~1,419,482
+DLB~Dolby Laboratories Inc~Industrials~Specialty Business Services~USA~6.95B~26.66~0.81%~72.56~301,505
+STEP~StepStone Group Inc~Financial~Asset Management~USA~6.90B~-~1.78%~58.47~930,071
+IESC~IES Holdings Inc~Industrials~Engineering & Construction~USA~6.87B~28.10~3.04%~345.90~110,800
+URBN~Urban Outfitters, Inc~Consumer Cyclical~Apparel Retail~USA~6.85B~16.01~-1.84%~76.40~2,179,830
+WIX~Wix.com Ltd~Technology~Software - Infrastructure~Israel~6.84B~44.21~-7.97%~122.85~2,135,604
+IDCC~Interdigital Inc~Technology~Software - Application~USA~6.82B~18.83~-0.67%~264.21~178,635
+EXLS~ExlService Holdings Inc~Technology~Information Technology Services~USA~6.82B~29.21~0.33%~42.20~1,148,871
+LEGN~Legend Biotech Corp ADR~Healthcare~Biotechnology~USA~6.81B~-~-1.15%~37.00~1,177,602
+BFAM~Bright Horizons Family Solutions, Inc~Consumer Cyclical~Personal Services~USA~6.78B~39.22~-0.85%~119.20~530,168
+GH~Guardant Health Inc~Healthcare~Diagnostics & Research~USA~6.76B~-~7.62%~54.23~4,595,615
+EAT~Brinker International, Inc~Consumer Cyclical~Restaurants~USA~6.76B~20.97~-4.71%~151.97~1,356,575
+GTLB~Gitlab Inc~Technology~Software - Infrastructure~USA~6.68B~405.42~-2.84%~40.42~4,165,586
+MKSI~MKS Inc~Technology~Scientific & Technical Instruments~USA~6.67B~25.26~0.61%~99.37~1,202,437
+JHG~Janus Henderson Group plc~Financial~Asset Management~United Kingdom~6.66B~16.09~0.57%~42.68~1,123,108
+SNV~Synovus Financial Corp~Financial~Banks - Regional~USA~6.64B~9.19~1.72%~47.87~1,665,932
+IONS~Ionis Pharmaceuticals Inc~Healthcare~Biotechnology~USA~6.64B~-~1.44%~41.64~1,739,246
+OMF~OneMain Holdings Inc~Financial~Credit Services~USA~6.64B~10.09~0.40%~55.83~472,357
+UPST~Upstart Holdings Inc~Financial~Credit Services~USA~6.62B~-~-1.11%~68.76~5,505,365
+STAG~STAG Industrial Inc~Real Estate~REIT - Industrial~USA~6.60B~27.41~-0.69%~34.63~1,018,311
+CTRE~CareTrust REIT Inc~Real Estate~REIT - Healthcare Facilities~USA~6.59B~27.44~1.08%~32.90~2,766,836
+BYD~Boyd Gaming Corp~Consumer Cyclical~Resorts & Casinos~USA~6.57B~12.63~-0.19%~81.97~1,166,868
+FR~First Industrial Realty Trust, Inc~Real Estate~REIT - Industrial~USA~6.56B~23.50~-0.64%~48.05~606,092
+AAON~AAON Inc~Industrials~Building Products & Equipment~USA~6.55B~42.30~-2.67%~80.52~1,953,482
+OLED~Universal Display Corp~Technology~Electronic Components~USA~6.54B~26.86~-0.64%~137.65~454,416
+AHR~American Healthcare REIT Inc~Real Estate~REIT - Healthcare Facilities~USA~6.54B~-~1.63%~40.51~1,697,685
+LRN~Stride Inc~Consumer Defensive~Education & Training Services~USA~6.52B~24.84~3.75%~149.45~991,018
+VIRT~Virtu Financial Inc~Financial~Capital Markets~USA~6.49B~9.63~-0.02%~42.44~794,200
+SANM~Sanmina Corp~Technology~Electronic Components~USA~6.46B~25.96~1.87%~121.25~1,082,700
+STVN~Stevanato Group Spa~Healthcare~Medical Instruments & Supplies~Italy~6.45B~44.14~-2.36%~23.63~364,362
+KBR~KBR Inc~Industrials~Engineering & Construction~USA~6.43B~17.02~0.06%~49.88~1,643,843
+WH~Wyndham Hotels & Resorts Inc~Consumer Cyclical~Lodging~USA~6.41B~19.68~0.20%~83.96~630,326
+FAF~First American Financial Corp~Financial~Insurance - Specialty~USA~6.38B~34.63~0.26%~62.70~454,979
+LOAR~Loar Holdings Inc~Industrials~Aerospace & Defense~USA~6.33B~177.48~-4.93%~67.62~926,119
+CWST~Casella Waste Systems, Inc~Industrials~Waste Management~USA~6.29B~548.01~-0.27%~99.08~587,241
+RGEN~Repligen Corp~Healthcare~Medical Instruments & Supplies~USA~6.27B~-~-1.84%~111.43~635,942
+ROAD~Construction Partners Inc~Industrials~Engineering & Construction~USA~6.26B~82.03~7.30%~112.22~976,447
+ARW~Arrow Electronics Inc~Technology~Electronics & Computer Distribution~USA~6.23B~13.67~2.00%~120.89~469,966
+AL~Air Lease Corp~Industrials~Rental & Leasing Services~USA~6.21B~6.74~0.45%~55.52~539,787
+LFUS~Littelfuse, Inc~Technology~Electronic Components~USA~6.18B~51.97~0.77%~249.31~132,753
+MNSO~MINISO Group Holding Ltd ADR~Consumer Cyclical~Specialty Retail~China~6.18B~18.40~-1.27%~20.14~249,125
+PJT~PJT Partners Inc~Financial~Capital Markets~USA~6.15B~30.32~-0.60%~176.56~194,645
+AMTM~Amentum Holdings Inc~Industrials~Specialty Business Services~USA~6.11B~117.54~-2.90%~25.13~1,299,715
+RLI~RLI Corp~Financial~Insurance - Property & Casualty~USA~6.11B~19.03~-0.18%~66.54~400,100
+RYTM~Rhythm Pharmaceuticals Inc~Healthcare~Biotechnology~USA~6.11B~-~-0.54%~91.98~819,638
+BEPC~Brookfield Renewable Corp~Utilities~Utilities - Renewable~USA~6.09B~-~-1.22%~33.91~744,510
+KRMN~Karman Holdings Inc~Industrials~Aerospace & Defense~USA~6.06B~-~-5.04%~45.78~3,047,043
+THG~Hanover Insurance Group Inc~Financial~Insurance - Property & Casualty~USA~6.04B~11.12~-0.42%~168.86~228,398
+ALK~Alaska Air Group Inc~Industrials~Airlines~USA~6.03B~21.25~-1.82%~52.28~1,876,393
+WAY~Waystar Holding Corp~Healthcare~Health Information Services~USA~6.03B~72.61~2.01%~34.59~1,572,022
+MOG-A~Moog, Inc~Industrials~Aerospace & Defense~USA~6.02B~28.79~-0.61%~189.51~128,221
+PRIM~Primoris Services Corp~Industrials~Engineering & Construction~USA~6.01B~25.25~0.05%~111.18~763,242
+EPRT~Essential Properties Realty Trust Inc~Real Estate~REIT - Retail~USA~6.00B~25.47~-0.36%~30.22~1,177,804
+GNTX~Gentex Corp~Consumer Cyclical~Auto Parts~USA~5.98B~15.09~-0.15%~26.62~1,942,551
+RRR~Red Rock Resorts Inc~Consumer Cyclical~Resorts & Casinos~USA~5.97B~21.44~-0.53%~56.29~616,686
+RNA~Avidity Biosciences Inc~Healthcare~Biotechnology~USA~5.96B~-~-2.59%~46.29~4,919,992
+VNT~Vontier Corporation~Technology~Scientific & Technical Instruments~USA~5.95B~15.45~0.45%~40.55~871,790
+LTH~Life Time Group Holdings Inc~Consumer Cyclical~Leisure~USA~5.94B~26.41~-1.42%~26.98~2,513,598
+VRNS~Varonis Systems Inc~Technology~Software - Infrastructure~USA~5.91B~-~-2.89%~52.79~1,242,722
+GLBE~Global E Online Ltd~Consumer Cyclical~Internet Retail~Israel~5.88B~-~-1.34%~34.70~1,727,742
+MAIN~Main Street Capital Corporation~Financial~Asset Management~USA~5.84B~10.81~3.31%~65.63~762,125
+RHP~Ryman Hospitality Properties Inc~Real Estate~REIT - Hotel & Motel~USA~5.82B~22.47~-2.04%~92.41~432,546
+MTDR~Matador Resources Co~Energy~Oil & Gas E&P~USA~5.79B~6.82~1.00%~46.54~1,057,146
+QBTS~D-Wave Quantum Inc~Technology~Computer Hardware~USA~5.78B~-~-1.57%~16.90~42,834,477
+BMNR~BitMine Immersion Technologies Inc~Financial~Capital Markets~USA~5.78B~-~24.59%~51.43~90,600,969
+ELF~e.l.f. Beauty Inc~Consumer Defensive~Household & Personal Products~USA~5.77B~60.37~1.85%~101.77~3,424,750
+GXO~GXO Logistics Inc~Industrials~Integrated Freight & Logistics~USA~5.76B~95.36~-1.18%~50.33~904,904
+PIPR~Piper Sandler Co's~Financial~Capital Markets~USA~5.71B~27.25~0.54%~322.98~125,133
+OR~OR Royalties Inc~Basic Materials~Gold~Canada~5.70B~73.03~0.16%~30.41~924,917
+MARA~MARA Holdings Inc~Financial~Capital Markets~USA~5.70B~13.78~-3.57%~15.38~25,524,359
+ALGM~Allegro Microsystems Inc~Technology~Semiconductors~USA~5.69B~-~0.16%~30.77~1,850,263
+AEIS~Advanced Energy Industries Inc~Industrials~Electrical Equipment & Parts~USA~5.68B~68.43~2.95%~150.82~470,329
+CWAN~Clearwater Analytics Holdings Inc~Technology~Software - Application~USA~5.68B~12.47~4.95%~19.72~10,158,611
+MC~Moelis & Co~Financial~Capital Markets~USA~5.65B~27.59~0.76%~70.02~402,267
+LIF~Life360 Inc~Technology~Software - Application~USA~5.65B~791.53~-1.89%~73.85~522,449
+CFLT~Confluent Inc~Technology~Software - Infrastructure~USA~5.63B~-~-3.54%~16.33~11,213,222
+LOPE~Grand Canyon Education Inc~Consumer Defensive~Education & Training Services~USA~5.57B~24.03~1.82%~198.23~588,359
+TRNO~Terreno Realty Corp~Real Estate~REIT - Industrial~USA~5.55B~21.40~-1.59%~53.77~847,239
+BMI~Badger Meter Inc~Technology~Scientific & Technical Instruments~USA~5.55B~40.98~-0.34%~188.17~238,076
+TFPM~Triple Flag Precious Metals Corp~Basic Materials~Other Precious Metals & Mining~Canada~5.46B~30.98~-0.60%~26.46~740,123
+GPI~Group 1 Automotive, Inc~Consumer Cyclical~Auto & Truck Dealerships~USA~5.46B~11.68~1.53%~421.61~119,902
+TSEM~Tower Semiconductor Ltd~Technology~Semiconductors~Israel~5.39B~27.72~-1.25%~48.23~911,957
+GATX~GATX Corp~Industrials~Rental & Leasing Services~USA~5.38B~17.29~0.01%~151.26~82,515
+S~SentinelOne Inc~Technology~Software - Infrastructure~USA~5.33B~-~-3.84%~16.03~6,168,058
+CRUS~Cirrus Logic, Inc~Technology~Semiconductors~USA~5.33B~16.25~3.16%~103.82~508,682
+ORA~Ormat Technologies Inc~Utilities~Utilities - Renewable~USA~5.26B~40.16~-0.74%~86.68~405,373
+AXSM~Axsome Therapeutics Inc~Healthcare~Biotechnology~USA~5.23B~-~0.46%~104.80~311,358
+CALM~Cal-Maine Foods, Inc~Consumer Defensive~Farm Products~USA~5.23B~4.32~1.87%~107.74~723,718
+CACC~Credit Acceptance Corp~Financial~Credit Services~USA~5.20B~13.35~-0.03%~463.17~124,040
+GBCI~Glacier Bancorp, Inc~Financial~Banks - Regional~USA~5.20B~22.77~0.55%~43.86~530,256
+SITM~SiTime Corp~Technology~Semiconductors~USA~5.19B~-~0.39%~199.57~453,521
+BCPC~Balchem Corp~Basic Materials~Specialty Chemicals~USA~5.17B~36.51~-0.07%~159.34~174,404
+IRTC~iRhythm Technologies Inc~Healthcare~Medical Devices~USA~5.09B~-~-1.55%~158.50~397,626
+UBSI~United Bankshares, Inc~Financial~Banks - Regional~USA~5.08B~12.63~1.07%~35.75~420,452
+BOOT~Boot Barn Holdings Inc~Consumer Cyclical~Apparel Retail~USA~5.07B~26.20~-1.53%~166.06~470,621
+MMSI~Merit Medical Systems, Inc~Healthcare~Medical Instruments & Supplies~USA~5.07B~43.48~-0.08%~85.58~407,369
+CRSP~CRISPR Therapeutics AG~Healthcare~Biotechnology~Switzerland~5.00B~-~-1.72%~55.00~1,600,980
+FROG~JFrog Ltd~Technology~Software - Application~USA~5.00B~-~12.45%~43.62~4,878,691
+ESE~Esco Technologies, Inc~Technology~Scientific & Technical Instruments~USA~4.99B~43.54~1.79%~193.26~486,987
+SLGN~Silgan Holdings Inc~Consumer Cyclical~Packaging & Containers~USA~4.96B~16.46~-0.54%~46.37~763,072
+MIR~Mirion Technologies Inc~Industrials~Specialty Industrial Machinery~USA~4.92B~516.46~-2.10%~21.02~1,912,125
+ANF~Abercrombie & Fitch Co~Consumer Cyclical~Apparel Retail~USA~4.91B~10.16~-0.24%~103.11~1,317,249
+BRBR~Bellring Brands Inc~Consumer Defensive~Packaged Foods~USA~4.91B~22.29~-0.43%~38.99~3,356,018
+LAZ~Lazard Inc~Financial~Capital Markets~USA~4.88B~17.88~1.01%~51.80~1,093,183
+FFIN~First Financial Bankshares, Inc~Financial~Banks - Regional~USA~4.87B~19.86~1.25%~34.04~321,099
+GKOS~Glaukos Corporation~Healthcare~Medical Devices~USA~4.85B~-~-3.81%~84.65~812,044
+ETOR~Etoro Group Ltd~Financial~Capital Markets~Israel~4.85B~6.94~2.77%~57.93~384,149
+MRUS~Merus N.V~Healthcare~Biotechnology~Netherlands~4.84B~-~0.96%~64.00~555,203
+SIGI~Selective Insurance Group Inc~Financial~Insurance - Property & Casualty~USA~4.76B~12.79~0.53%~78.15~316,020
+VCTR~Victory Capital Holdings Inc~Financial~Asset Management~USA~4.74B~17.40~5.01%~70.48~763,836
+NJR~New Jersey Resources Corporation~Utilities~Utilities - Regulated Gas~USA~4.72B~11.47~-0.55%~46.96~709,266
+BDC~Belden Inc~Technology~Communication Equipment~USA~4.71B~21.56~2.44%~118.89~335,409
+DJT~Trump Media & Technology Group Corp~Communication Services~Internet Content & Information~USA~4.71B~-~-0.82%~16.99~8,394,964
+SPR~Spirit Aerosystems Holdings Inc~Industrials~Aerospace & Defense~USA~4.69B~-~0.08%~39.90~623,755
+ACA~Arcosa Inc~Industrials~Engineering & Construction~USA~4.68B~51.13~12.71%~95.92~649,611
+TTMI~TTM Technologies Inc~Technology~Electronic Components~USA~4.68B~50.81~4.43%~45.28~1,802,022
+CRK~Comstock Resources, Inc~Energy~Oil & Gas E&P~USA~4.67B~-~-0.87%~15.94~1,715,985
+SNEX~StoneX Group Inc~Financial~Capital Markets~USA~4.66B~15.22~2.48%~89.33~818,456
+BVN~Compania de Minas Buenaventura S.A. ADR~Basic Materials~Other Precious Metals & Mining~Peru~4.65B~9.26~-0.92%~18.33~882,756
+QLYS~Qualys Inc~Technology~Software - Infrastructure~USA~4.64B~25.59~-0.13%~128.46~310,792
+OS~OneStream Inc~Technology~Software - Infrastructure~USA~4.63B~-~-9.45%~20.12~5,358,175
+POR~Portland General Electric Co~Utilities~Utilities - Regulated Electric~USA~4.61B~15.44~-0.89%~42.08~865,153
+QTWO~Q2 Holdings Inc~Technology~Software - Application~USA~4.60B~1201.14~-1.33%~73.63~981,794
+ACIW~ACI Worldwide Inc~Technology~Software - Infrastructure~USA~4.60B~18.86~1.85%~44.55~1,228,574
+EGO~Eldorado Gold Corp~Basic Materials~Gold~Canada~4.59B~11.35~-2.08%~22.60~2,057,028
+OPCH~Option Care Health Inc~Healthcare~Medical Care Facilities~USA~4.58B~22.47~1.08%~28.20~1,072,228
+FG~F&G Annuities & Life Inc~Financial~Insurance - Life~USA~4.58B~13.88~-0.38%~33.98~315,453
+PECO~Phillips Edison & Company Inc~Real Estate~REIT - Retail~USA~4.57B~62.71~-1.75%~33.04~1,156,779
+AUB~Atlantic Union Bankshares Corp~Financial~Banks - Regional~USA~4.57B~15.59~2.07%~32.04~1,409,893
+OMAB~Grupo Aeroportuario del Centro Norte S.A.B de C.V. ADR~Industrials~Airports & Air Services~Mexico~4.51B~19.68~-1.48%~107.34~71,504
+OGS~ONE Gas Inc~Utilities~Utilities - Regulated Gas~USA~4.51B~17.95~0.13%~75.22~529,863
+WTM~White Mountains Insurance Group, Ltd~Financial~Insurance - Property & Casualty~USA~4.51B~21.76~0.07%~1751.62~24,358
+SHAK~Shake Shack Inc~Consumer Cyclical~Restaurants~USA~4.51B~227.44~-5.85%~105.60~2,087,221
+NPO~Enpro Inc~Industrials~Specialty Industrial Machinery~USA~4.51B~53.57~-0.69%~214.02~101,191
+SBRA~Sabra Healthcare REIT Inc~Real Estate~REIT - Healthcare Facilities~USA~4.49B~24.62~0.21%~18.72~2,599,958
+CUZ~Cousins Properties Inc~Real Estate~REIT - Office~USA~4.48B~72.32~-1.22%~26.70~2,217,625
+SON~Sonoco Products Co~Consumer Cyclical~Packaging & Containers~USA~4.48B~-~-1.09%~45.43~520,621
+SKYW~Skywest Inc~Industrials~Airlines~USA~4.47B~11.29~-0.87%~110.81~233,386
+IREN~IREN Ltd~Financial~Capital Markets~Australia~4.45B~-~-0.65%~18.45~12,783,697
+NNI~Nelnet Inc~Financial~Credit Services~USA~4.44B~13.85~-2.15%~122.82~90,205
+BKH~Black Hills Corporation~Utilities~Utilities - Regulated Gas~USA~4.44B~15.35~0.88%~60.88~505,352
+CRVL~Corvel Corp~Financial~Insurance Brokers~USA~4.42B~44.44~0.74%~86.19~134,687
+HNGE~Hinge Health Inc~Healthcare~Health Information Services~USA~4.42B~-~-6.08%~56.68~1,294,324
+ZETA~Zeta Global Holdings Corp~Technology~Software - Infrastructure~USA~4.41B~-~-4.34%~18.73~12,760,616
+INGM~Ingram Micro Holding Corp~Technology~Information Technology Services~USA~4.41B~16.50~-0.53%~18.76~283,450
+SMTC~Semtech Corp~Technology~Semiconductors~USA~4.41B~-~-1.26%~50.85~1,636,453
+GOLF~Acushnet Holdings Corp~Consumer Cyclical~Leisure~USA~4.40B~20.06~-2.77%~75.04~722,904
+MAC~Macerich Co~Real Estate~REIT - Retail~USA~4.40B~-~0.66%~16.69~1,977,207
+CSW~CSW Industrials Inc~Industrials~Specialty Industrial Machinery~USA~4.39B~31.27~1.31%~261.56~181,226
+ATGE~Adtalem Global Education Inc~Consumer Defensive~Education & Training Services~USA~4.38B~19.67~2.19%~121.84~727,318
+FIZZ~National Beverage Corp~Consumer Defensive~Beverages - Non-Alcoholic~USA~4.35B~23.28~0.06%~46.43~127,505
+QFIN~Qfin Holdings Inc. ADR~Financial~Credit Services~China~4.32B~5.13~-0.62%~33.39~1,105,015
+DORM~Dorman Products Inc~Consumer Cyclical~Auto Parts~USA~4.26B~18.99~3.61%~139.57~368,005
+YOU~Clear Secure Inc~Technology~Software - Application~USA~4.26B~17.16~0.28%~32.02~1,582,402
+NE~Noble Corp Plc~Energy~Oil & Gas Drilling~USA~4.25B~13.89~0.71%~26.78~1,517,242
+RSI~Rush Street Interactive Inc~Consumer Cyclical~Gambling~USA~4.24B~92.11~-2.93%~18.57~1,465,444
+ENPH~Enphase Energy Inc~Technology~Solar~USA~4.24B~25.56~2.04%~32.44~7,979,509
+TGTX~TG Therapeutics Inc~Healthcare~Biotechnology~USA~4.24B~71.38~-4.23%~26.71~4,786,113
+SNDR~Schneider National Inc~Industrials~Trucking~USA~4.20B~33.67~-0.75%~23.98~514,015
+BILL~BILL Holdings Inc~Technology~Software - Application~USA~4.20B~-~-1.85%~40.74~3,363,889
+ACAD~Acadia Pharmaceuticals Inc~Healthcare~Biotechnology~USA~4.15B~18.49~0.82%~24.60~1,666,550
+WK~Workiva Inc~Technology~Software - Application~USA~4.12B~-~-3.13%~73.56~946,812
+SLAB~Silicon Laboratories Inc~Technology~Semiconductors~USA~4.12B~-~0.88%~125.42~306,566
+CNX~CNX Resources Corp~Energy~Oil & Gas E&P~USA~4.11B~49.10~-0.10%~29.03~1,216,783
+RDNT~Radnet Inc~Healthcare~Diagnostics & Research~USA~4.10B~-~1.58%~53.36~1,551,894
+FELE~Franklin Electric Co., Inc~Industrials~Specialty Industrial Machinery~USA~4.10B~23.82~-1.29%~92.13~140,711
+AROC~Archrock Inc~Energy~Oil & Gas Equipment & Services~USA~4.08B~17.58~1.66%~23.22~1,195,699
+CYTK~Cytokinetics Inc~Healthcare~Biotechnology~USA~4.08B~-~-3.23%~34.11~2,104,843
+SLG~SL Green Realty Corp~Real Estate~REIT - Office~USA~4.06B~-~-1.89%~53.41~506,235
+REZI~Resideo Technologies Inc~Industrials~Industrial Distribution~USA~4.06B~-~1.41%~27.29~1,739,597
+VIST~Vista Energy S.A.B. de C.V ADR~Energy~Oil & Gas E&P~Mexico~4.04B~7.59~-4.80%~42.41~1,378,419
+BANF~Bancfirst Corp~Financial~Banks - Regional~USA~4.03B~17.46~0.90%~121.03~59,903
+RH~RH~Consumer Cyclical~Specialty Retail~USA~4.03B~51.12~0.93%~215.04~613,188
+SPSC~SPS Commerce Inc~Technology~Software - Application~USA~4.03B~48.80~-2.47%~106.25~370,052
+ATAT~Atour Lifestyle Holdings Ltd ADR~Consumer Cyclical~Lodging~China~4.02B~28.17~1.23%~35.37~821,042
+KRYS~Krystal Biotech Inc~Healthcare~Biotechnology~USA~4.01B~28.21~1.88%~138.66~332,066
+MWA~Mueller Water Products Inc~Industrials~Specialty Industrial Machinery~USA~4.00B~27.05~-1.16%~25.61~939,529
+FTDR~Frontdoor Inc~Consumer Cyclical~Personal Services~USA~4.00B~16.20~-2.56%~54.88~525,542
+CRC~California Resources Corporation~Energy~Oil & Gas E&P~USA~3.98B~6.49~0.91%~47.55~729,791
+FHI~Federated Hermes Inc~Financial~Asset Management~USA~3.97B~11.38~0.75%~51.25~702,167
+VERX~Vertex Inc~Technology~Software - Application~USA~3.96B~-~-6.62%~25.67~3,059,272
+ADMA~Adma Biologics Inc~Healthcare~Biotechnology~USA~3.94B~19.45~-1.37%~16.52~4,193,318
+VEON~VEON Ltd ADR~Communication Services~Telecom Services~United Arab Emirates~3.94B~8.62~5.12%~56.20~273,502
+OSCR~Oscar Health Inc~Healthcare~Healthcare Plans~USA~3.94B~-~1.98%~15.46~16,217,406
+MCY~Mercury General Corp~Financial~Insurance - Property & Casualty~USA~3.92B~10.06~0.70%~70.83~266,290
+CNR~Core Natural Resources Inc~Energy~Thermal Coal~USA~3.92B~34.76~0.33%~76.18~747,754
+RELY~Remitly Global Inc~Technology~Software - Infrastructure~USA~3.92B~304.49~0.26%~19.00~7,517,106
+PAY~Paymentus Holdings Inc~Technology~Software - Infrastructure~USA~3.91B~77.69~0.59%~33.91~943,809
+TMDX~Transmedics Group Inc~Healthcare~Medical Devices~USA~3.90B~59.21~-1.34%~114.50~711,572
+ZLAB~Zai Lab Limited ADR~Healthcare~Biotechnology~China~3.87B~-~2.58%~34.96~627,427
+LB~Landbridge Company LLC~Energy~Oil & Gas Equipment & Services~USA~3.84B~133.68~1.42%~51.56~958,473
+BWIN~The Baldwin Insurance Group Inc~Financial~Insurance Brokers~USA~3.83B~-~5.05%~32.27~1,866,565
+CUK~Carnival plc ADR~Consumer Cyclical~Travel Services~United Kingdom~3.83B~14.24~-1.43%~26.28~1,894,421
+OSIS~OSI Systems, Inc~Technology~Electronic Components~USA~3.79B~27.48~0.90%~225.94~141,174
+CAMT~Camtek Ltd~Technology~Semiconductor Equipment & Materials~Israel~3.79B~30.70~1.87%~83.14~279,402
+KTB~Kontoor Brands Inc~Consumer Cyclical~Apparel Manufacturing~USA~3.76B~15.07~5.64%~67.60~1,558,183
+EEFT~Euronet Worldwide Inc~Technology~Software - Infrastructure~USA~3.76B~12.53~0.42%~91.63~365,287
+VRRM~Verra Mobility Corp~Technology~Information Technology Services~USA~3.75B~98.95~-2.41%~23.49~1,252,499
+CNS~Cohen & Steers Inc~Financial~Asset Management~USA~3.73B~23.27~0.38%~73.24~238,357
+ITGR~Integer Holdings Corp~Healthcare~Medical Devices~USA~3.73B~47.01~0.69%~106.45~282,102
+SKY~Champion Homes Inc~Consumer Cyclical~Residential Construction~USA~3.72B~17.54~-2.37%~65.90~557,833
+APAM~Artisan Partners Asset Management Inc~Financial~Asset Management~USA~3.72B~12.51~1.86%~46.10~700,431
+HWKN~Hawkins Inc~Basic Materials~Specialty Chemicals~USA~3.70B~43.65~2.03%~177.25~213,225
+CALX~Calix Inc~Technology~Software - Infrastructure~USA~3.69B~-~-0.21%~56.56~673,644
+BTSG~BrightSpring Health Services Inc~Healthcare~Health Information Services~USA~3.68B~70.30~1.56%~20.78~1,607,944
+HRI~Herc Holdings Inc~Industrials~Rental & Leasing Services~USA~3.67B~128.09~-0.90%~110.50~336,666
+ECG~Everus Construction Group~Industrials~Engineering & Construction~USA~3.64B~23.98~-0.15%~71.42~339,183
+LMND~Lemonade Inc~Financial~Insurance - Property & Casualty~USA~3.62B~-~3.64%~48.98~3,350,585
+GSAT~Globalstar Inc~Communication Services~Telecom Services~USA~3.60B~-~13.07%~28.47~1,825,943
+CVCO~Cavco Industries Inc~Consumer Cyclical~Residential Construction~USA~3.60B~19.69~0.60%~454.21~61,549
+SKT~Tanger Inc~Real Estate~REIT - Retail~USA~3.58B~35.85~-0.88%~31.66~813,051
+NHI~National Health Investors, Inc~Real Estate~REIT - Healthcare Facilities~USA~3.56B~23.92~0.51%~74.92~327,761
+TENB~Tenable Holdings Inc~Technology~Software - Infrastructure~USA~3.54B~-~-1.46%~28.99~1,103,187
+HTGC~Hercules Capital Inc~Financial~Asset Management~USA~3.54B~12.82~0.88%~19.49~1,286,860
+CNO~CNO Financial Group Inc~Financial~Insurance - Life~USA~3.54B~13.46~1.56%~36.50~595,171
+PLXS~Plexus Corp~Technology~Electronic Components~USA~3.50B~22.06~1.39%~129.63~109,192
+TGLS~Tecnoglass Inc~Basic Materials~Building Materials~Colombia~3.49B~19.11~-1.06%~74.35~519,399
+CXT~Crane NXT Co~Industrials~Specialty Industrial Machinery~USA~3.48B~23.17~5.98%~60.59~584,589
+PSMT~Pricesmart Inc~Consumer Defensive~Discount Stores~USA~3.44B~23.58~0.53%~111.88~134,929
+CBZ~Cbiz Inc~Industrials~Specialty Business Services~USA~3.41B~36.44~2.17%~63.19~601,156
+NWE~NorthWestern Energy Group Inc~Utilities~Utilities - Regulated Electric~USA~3.40B~15.06~-0.07%~55.33~323,888
+RNST~Renasant Corp~Financial~Banks - Regional~USA~3.39B~14.10~0.28%~35.72~370,955
+SEB~Seaboard Corp~Industrials~Conglomerates~USA~3.38B~24.60~0.24%~3526.09~1,805
+NVST~Envista Holdings Corp~Healthcare~Medical Instruments & Supplies~USA~3.36B~64.58~0.75%~20.24~1,484,404
+BRC~Brady Corp~Industrials~Security & Protection Services~USA~3.34B~17.47~-0.06%~70.65~144,923
+AMED~Amedisys Inc~Healthcare~Medical Care Facilities~USA~3.32B~39.30~0.06%~100.94~684,123
+HAYW~Hayward Holdings Inc~Industrials~Electrical Equipment & Parts~USA~3.29B~25.83~-3.13%~15.18~2,708,367
+GLOB~Globant S.A~Technology~Information Technology Services~Luxembourg~3.29B~22.06~-4.18%~74.68~2,213,552
+AGX~Argan, Inc~Industrials~Engineering & Construction~USA~3.26B~33.55~1.71%~239.02~237,825
+ODD~ODDITY Tech Ltd~Technology~Software - Infrastructure~Israel~3.25B~32.49~0.83%~58.22~1,596,090
+FULT~Fulton Financial Corp~Financial~Banks - Regional~USA~3.23B~10.42~0.96%~17.79~903,172
+GSHD~Goosehead Insurance Inc~Financial~Insurance Brokers~USA~3.23B~75.26~-1.28%~86.05~265,750
+PLMR~Palomar Holdings Inc~Financial~Insurance - Property & Casualty~USA~3.22B~21.17~-2.04%~120.38~396,482
+EBC~Eastern Bankshares Inc~Financial~Banks - Regional~USA~3.22B~-~1.40%~15.24~898,501
+USLM~United States Lime & Minerals Inc~Basic Materials~Building Materials~USA~3.21B~25.71~5.47%~112.15~116,554
+WNS~WNS (Holdings) Limited~Technology~Information Technology Services~India~3.21B~20.84~0.03%~74.85~962,581
+MGNI~Magnite Inc~Communication Services~Advertising Agencies~USA~3.20B~79.94~3.31%~22.47~4,302,092
+TEX~Terex Corp~Industrials~Farm & Heavy Construction Machinery~USA~3.19B~18.12~0.23%~48.59~787,242
+BNL~Broadstone Net Lease Inc~Real Estate~REIT - Diversified~USA~3.18B~32.79~-0.30%~16.81~838,928
+PTGX~Protagonist Therapeutics Inc~Healthcare~Biotechnology~USA~3.18B~71.67~0.22%~51.07~719,043
+KMPR~Kemper Corporation~Financial~Insurance - Property & Casualty~USA~3.15B~9.47~-0.69%~50.27~1,345,776
+SSRM~SSR Mining Inc~Basic Materials~Gold~USA~3.08B~19.83~2.36%~15.19~3,471,123
+GRND~Grindr Inc~Technology~Software - Application~USA~3.08B~-~-12.30%~15.69~6,526,974
+CAKE~Cheesecake Factory Inc~Consumer Cyclical~Restaurants~USA~3.07B~18.94~-0.63%~61.54~1,497,239
+FRPT~Freshpet Inc~Consumer Defensive~Packaged Foods~USA~3.06B~94.86~-1.94%~62.74~1,021,858
+SEZL~Sezzle Inc~Financial~Credit Services~USA~3.05B~31.40~-34.32%~91.51~5,300,319
+MGEE~MGE Energy, Inc~Utilities~Utilities - Regulated Electric~USA~3.04B~23.12~-1.12%~83.21~103,369
+NCNO~Ncino Inc~Technology~Software - Application~USA~3.04B~-~-2.64%~26.19~1,807,594
+SGRY~Surgery Partners Inc~Healthcare~Medical Care Facilities~USA~3.03B~-~1.81%~23.64~1,704,277
+NMIH~NMI Holdings Inc~Financial~Insurance - Specialty~USA~3.02B~8.27~1.94%~38.98~398,162
+WGS~GeneDx Holdings Corp~Healthcare~Diagnostics & Research~USA~3.02B~5621.92~-0.77%~105.13~417,331
+SM~SM Energy Co~Energy~Oil & Gas E&P~USA~3.02B~3.71~0.27%~26.24~1,458,836
+MIRM~Mirum Pharmaceuticals Inc~Healthcare~Biotechnology~USA~3.01B~-~0.25%~59.97~878,314
+DOCN~DigitalOcean Holdings Inc~Technology~Software - Infrastructure~USA~3.01B~25.96~-3.73%~33.05~2,591,491
+NMRK~Newmark Group Inc~Real Estate~Real Estate Services~USA~3.00B~38.08~2.27%~16.24~1,233,984
+BL~BlackLine Inc~Technology~Software - Application~USA~2.99B~38.90~-4.26%~48.35~995,655
+INTA~Intapp Inc~Technology~Software - Application~USA~2.99B~-~-1.12%~36.94~1,645,122
+USAC~USA Compression Partners LP~Energy~Oil & Gas Equipment & Services~USA~2.99B~36.69~3.66%~24.35~297,583
+MANU~Manchester United Plc~Communication Services~Entertainment~United Kingdom~2.99B~-~-2.78%~17.50~166,918
+TPC~Tutor Perini Corp~Industrials~Engineering & Construction~USA~2.98B~-~2.43%~56.41~1,116,536
+KAR~Openlane Inc~Consumer Cyclical~Auto & Truck Dealerships~USA~2.97B~37.76~-0.07%~27.98~1,006,889
+AI~C3.ai Inc~Technology~Software - Infrastructure~USA~2.97B~-~-2.34%~22.13~5,804,226
+TBBB~BBB Foods Inc~Consumer Defensive~Discount Stores~Mexico~2.96B~105.69~1.45%~25.81~327,653
+SMPL~Simply Good Foods Co~Consumer Defensive~Packaged Foods~USA~2.96B~20.59~-1.87%~29.45~1,061,065
+TBBK~Bancorp Inc~Financial~Banks - Regional~USA~2.93B~13.50~0.37%~62.78~448,073
+GPOR~Gulfport Energy Corp~Energy~Oil & Gas E&P~USA~2.93B~-~-1.24%~166.62~240,876
+JOE~St. Joe Co~Real Estate~Real Estate - Diversified~USA~2.92B~35.47~0.18%~50.40~114,156
+AGYS~Agilysys, Inc~Technology~Software - Application~USA~2.91B~209.51~-7.97%~103.75~227,148
+CPK~Chesapeake Utilities Corp~Utilities~Utilities - Regulated Gas~USA~2.91B~22.02~1.77%~123.46~286,456
+MGRC~McGrath Rentcorp~Industrials~Rental & Leasing Services~USA~2.90B~11.48~0.39%~117.90~90,368
+LGND~Ligand Pharmaceuticals, Inc~Healthcare~Biotechnology~USA~2.90B~-~2.56%~150.06~195,533
+FA~First Advantage Corp~Industrials~Specialty Business Services~USA~2.89B~-~-4.97%~16.63~1,891,629
+CARG~CarGurus Inc~Consumer Cyclical~Auto & Truck Dealerships~USA~2.88B~23.45~-7.32%~29.11~2,008,026
+CBU~Community Financial System Inc~Financial~Banks - Regional~USA~2.87B~14.84~1.55%~54.38~309,833
+MYRG~MYR Group Inc~Industrials~Engineering & Construction~USA~2.87B~38.64~-0.32%~185.05~160,982
+ENLT~Enlight Renewable Energy Ltd~Utilities~Utilities - Renewable~Israel~2.86B~25.85~2.06%~23.82~26,846
+CNK~Cinemark Holdings Inc~Communication Services~Entertainment~USA~2.85B~13.62~-0.72%~24.81~5,585,408
+NAMS~NewAmsterdam Pharma Company NV~Healthcare~Biotechnology~Netherlands~2.85B~-~10.24%~25.31~1,836,585
+KYMR~Kymera Therapeutics Inc~Healthcare~Biotechnology~USA~2.85B~-~-0.56%~40.62~840,550
+WSBC~Wesbanco, Inc~Financial~Banks - Regional~USA~2.83B~17.75~0.27%~29.52~317,534
+WRBY~Warby Parker Inc~Healthcare~Medical Instruments & Supplies~USA~2.83B~-~-0.64%~23.33~2,624,439
+BRZE~Braze Inc~Technology~Software - Application~USA~2.81B~-~-3.36%~25.31~1,341,486
+CWT~California Water Service Group~Utilities~Utilities - Regulated Water~USA~2.79B~20.43~-0.21%~46.78~243,206
+COLM~Columbia Sportswear Co~Consumer Cyclical~Apparel Manufacturing~USA~2.78B~12.91~-0.53%~50.70~677,664
+UMBF~UMB Financial Corp~Financial~Banks - Regional~USA~2.77B~12.65~1.45%~110.18~356,178
+EE~Excelerate Energy Inc~Energy~Oil & Gas Midstream~USA~2.77B~20.69~-0.41%~24.32~316,518
+CON~Concentra Group Holdings Parent Inc~Healthcare~Medical Care Facilities~USA~2.77B~18.53~7.03%~21.62~975,005
+WD~Walker & Dunlop Inc~Financial~Mortgage Finance~USA~2.75B~24.92~1.10%~80.79~317,408
+AMBA~Ambarella Inc~Technology~Semiconductor Equipment & Materials~USA~2.74B~-~2.65%~64.55~384,607
+BATRA~Atlanta Braves Holdings Inc~Communication Services~Entertainment~USA~2.73B~-~-1.33%~46.71~24,118
+BATRK~Atlanta Braves Holdings Inc~Communication Services~Entertainment~USA~2.73B~-~-2.15%~43.76~302,776
+ALRM~Alarm.com Holdings Inc~Technology~Software - Application~USA~2.72B~22.90~0.13%~54.41~695,805
+FCPT~Four Corners Property Trust Inc~Real Estate~REIT - Retail~USA~2.68B~23.87~-0.85%~25.69~441,280
+AIR~AAR Corp~Industrials~Aerospace & Defense~USA~2.68B~223.72~3.79%~74.79~705,257
+LIVN~LivaNova PLC~Healthcare~Medical Devices~United Kingdom~2.67B~-~0.66%~48.84~823,704
+EXTR~Extreme Networks Inc~Technology~Communication Equipment~USA~2.66B~-~0.05%~19.95~1,698,452
+RARE~Ultragenyx Pharmaceutical Inc~Healthcare~Biotechnology~USA~2.65B~-~-1.04%~27.54~1,527,637
+TOWN~Townebank Portsmouth VA~Financial~Banks - Regional~USA~2.65B~15.31~1.06%~35.30~148,149
+PRM~Perimeter Solutions Inc~Basic Materials~Specialty Chemicals~USA~2.64B~42.37~6.76%~18.00~1,969,657
+HCM~HUTCHMED (China) Limited ADR~Healthcare~Drug Manufacturers - Specialty & Generic~Hong Kong~2.62B~5.59~-8.03%~15.00~129,176
+PRK~Park National Corp~Financial~Banks - Regional~USA~2.59B~15.65~0.63%~161.00~45,161
+ENVA~Enova International Inc~Financial~Credit Services~USA~2.58B~10.95~0.38%~103.10~233,551
+QUBT~Quantum Computing Inc~Technology~Computer Hardware~USA~2.58B~-~2.35%~16.13~12,611,373
+CHA~Chagee Holdings Ltd. ADR~Consumer Cyclical~Restaurants~China~2.57B~16.07~-0.28%~21.72~662,414
+CHEF~Chefs' Warehouse Inc~Consumer Defensive~Food Distribution~USA~2.56B~38.81~-1.68%~62.88~565,452
+UE~Urban Edge Properties~Real Estate~REIT - Retail~USA~2.56B~23.22~-1.53%~19.31~729,300
+SAH~Sonic Automotive, Inc~Consumer Cyclical~Auto & Truck Dealerships~USA~2.54B~16.52~1.63%~74.25~166,816
+IRDM~Iridium Communications Inc~Communication Services~Telecom Services~USA~2.53B~23.78~0.29%~23.81~1,054,811
+PRVA~Privia Health Group Inc~Healthcare~Health Information Services~USA~2.53B~176.05~5.48%~20.58~1,789,462
+VTMX~Corporacion Inmobiliaria Vesta Sab ADR~Real Estate~Real Estate - Development~Mexico~2.51B~77.69~-0.70%~28.45~44,240
+POWI~Power Integrations Inc~Technology~Semiconductors~USA~2.48B~75.02~2.43%~44.18~859,547
+PENN~PENN Entertainment Inc~Consumer Cyclical~Resorts & Casinos~USA~2.48B~-~0.24%~16.96~4,810,979
+DAVE~Dave Inc~Technology~Software - Application~USA~2.47B~48.34~-4.37%~183.02~789,775
+VAC~Marriott Vacations Worldwide Corp~Consumer Cyclical~Resorts & Casinos~USA~2.45B~10.66~-0.83%~70.86~351,345
+AKR~Acadia Realty Trust~Real Estate~REIT - Retail~USA~2.45B~110.37~-2.69%~18.42~1,573,305
+SYNA~Synaptics Inc~Technology~Semiconductors~USA~2.45B~-~6.40%~63.52~894,222
+CPRX~Catalyst Pharmaceuticals Inc~Healthcare~Biotechnology~USA~2.43B~12.05~1.15%~19.86~2,235,020
+DFH~Dream Finders Homes Inc~Consumer Cyclical~Residential Construction~USA~2.41B~8.80~1.52%~25.98~385,437
+FUN~Six Flags Entertainment Corp~Consumer Cyclical~Leisure~USA~2.41B~-~-5.45%~23.79~5,412,810
+HSAI~Hesai Group ADR~Consumer Cyclical~Auto Parts~China~2.39B~-~1.53%~22.63~1,465,869
+KNSA~Kiniksa Pharmaceuticals International Plc~Healthcare~Drug Manufacturers - Specialty & Generic~United Kingdom~2.38B~782.24~-2.90%~32.15~675,329
+PFS~Provident Financial Services Inc~Financial~Banks - Regional~USA~2.38B~10.27~1.68%~18.20~472,729
+SBCF~Seacoast Banking Corp. Of Florida~Financial~Banks - Regional~USA~2.37B~16.94~0.55%~27.58~798,003
+DIOD~Diodes, Inc~Technology~Semiconductors~USA~2.36B~37.16~7.93%~50.91~830,809
+INSP~Inspire Medical Systems Inc~Healthcare~Medical Devices~USA~2.34B~45.85~2.71%~79.14~1,722,242
+HTFL~Heartflow Inc~Healthcare~Health Information Services~USA~2.33B~-~51.32%~28.75~7,005,323
+CURB~Curbline Properties Corp~Real Estate~REIT - Retail~USA~2.32B~139.24~-2.22%~22.07~465,497
+AMSC~American Superconductor Corp~Industrials~Specialty Industrial Machinery~USA~2.30B~129.12~-6.10%~50.99~1,244,076
+HURN~Huron Consulting Group Inc~Industrials~Consulting Services~USA~2.30B~23.23~0.96%~133.00~173,992
+PSIX~Power Solutions International Inc~Industrials~Specialty Industrial Machinery~USA~2.29B~20.72~13.57%~99.70~2,163,336
+EVTC~Evertec Inc~Technology~Software - Infrastructure~USA~2.28B~16.77~0.59%~35.70~232,679
+SXI~Standex International Corp~Industrials~Specialty Industrial Machinery~USA~2.26B~40.43~-2.53%~187.67~120,355
+HUT~Hut 8 Corp~Financial~Capital Markets~USA~2.24B~13.79~-2.82%~19.45~5,377,740
+KEN~Kenon Holdings Ltd~Utilities~Utilities - Independent Power Producers~Singapore~2.24B~3.76~0.07%~42.97~6,657
+TRMK~Trustmark Corp~Financial~Banks - Regional~USA~2.23B~10.40~1.34%~36.95~157,748
+WWW~Wolverine World Wide, Inc~Consumer Cyclical~Footwear & Accessories~USA~2.23B~26.51~-1.12%~27.44~3,338,140
+HG~Hamilton Insurance Group Ltd~Financial~Insurance - Reinsurance~Bermuda~2.23B~5.93~0.40%~22.38~316,969
+CXW~CoreCivic Inc~Industrials~Security & Protection Services~USA~2.19B~21.61~2.50%~20.50~1,575,517
+OSW~OneSpaWorld Holdings Limited~Consumer Cyclical~Leisure~Bahamas~2.19B~31.48~-1.66%~21.35~314,724
+EPAC~Enerpac Tool Group Corp~Industrials~Specialty Industrial Machinery~USA~2.17B~24.75~-0.44%~40.28~406,101
+AUGO~Aura Minerals Inc~Basic Materials~Gold~USA~2.17B~-~2.78%~26.25~292,482
+OLN~Olin Corp~Basic Materials~Chemicals~USA~2.17B~-~-1.61%~18.92~2,216,527
+BANR~Banner Corp~Financial~Banks - Regional~USA~2.16B~11.92~0.97%~62.51~158,617
+APPN~Appian Corp~Technology~Software - Infrastructure~USA~2.16B~-~-0.31%~29.09~2,181,162
+VCYT~Veracyte Inc~Healthcare~Diagnostics & Research~USA~2.15B~82.27~-1.12%~27.37~1,544,799
+SYBT~Stock Yards Bancorp Inc~Financial~Banks - Regional~USA~2.15B~16.78~0.84%~73.02~50,682
+CENX~Century Aluminum Co~Basic Materials~Aluminum~USA~2.15B~20.70~1.63%~23.01~2,813,414
+NBTB~NBT Bancorp. Inc~Financial~Banks - Regional~USA~2.14B~14.74~0.74%~40.95~131,433
+SLDE~Slide Insurance Holdings Inc~Financial~Insurance - Property & Casualty~USA~2.14B~1.57~-0.87%~17.13~693,541
+PRCT~Procept BioRobotics Corp~Healthcare~Medical Devices~USA~2.14B~-~-2.98%~38.41~2,344,916
+PGY~Pagaya Technologies Ltd~Technology~Software - Infrastructure~USA~2.13B~-~-6.37%~28.67~5,922,733
+XMTR~Xometry Inc~Industrials~Specialty Industrial Machinery~USA~2.12B~-~-3.34%~41.64~944,961
+VICR~Vicor Corp~Technology~Electronic Components~USA~2.10B~32.27~1.78%~46.84~349,753
+TRUP~Trupanion Inc~Financial~Insurance - Property & Casualty~USA~2.10B~191.49~0.12%~48.81~1,388,526
+IVT~InvenTrust Properties Corp~Real Estate~REIT - Retail~USA~2.09B~18.87~-0.66%~26.99~390,656
+ALKT~Alkami Technology Inc~Technology~Software - Application~USA~2.09B~-~-3.64%~20.12~1,434,902
+LMAT~Lemaitre Vascular Inc~Healthcare~Medical Instruments & Supplies~USA~2.09B~44.82~-2.10%~92.28~149,596
+TRIP~TripAdvisor Inc~Consumer Cyclical~Travel Services~USA~2.09B~37.77~11.68%~17.97~11,275,290
+AGIO~Agios Pharmaceuticals Inc~Healthcare~Biotechnology~USA~2.08B~3.24~-3.51%~35.76~478,112
+FBNC~First Bancorp~Financial~Banks - Regional~USA~2.04B~21.00~0.57%~49.29~107,560
+VITL~Vital Farms Inc~Consumer Defensive~Farm Products~USA~2.03B~40.33~3.69%~45.48~2,161,558
+PRDO~Perdoceo Education Corporation~Consumer Defensive~Education & Training Services~USA~2.03B~13.56~1.23%~31.24~836,939
+ADUS~Addus HomeCare Corporation~Healthcare~Medical Care Facilities~USA~2.03B~24.30~1.00%~110.19~143,903
+SEI~Solaris Energy Infrastructure Inc~Energy~Oil & Gas Equipment & Services~USA~2.03B~50.74~-2.03%~29.99~2,198,320
+EFSC~Enterprise Financial Services Corp~Financial~Banks - Regional~USA~2.02B~10.36~0.59%~54.64~71,925
+TARS~Tarsus Pharmaceuticals Inc~Healthcare~Biotechnology~USA~2.02B~-~-0.21%~47.85~760,798
+HNI~HNI Corp~Consumer Cyclical~Furnishings, Fixtures & Appliances~USA~1.99B~14.09~-0.60%~43.35~1,007,058
+BUSE~First Busey Corp~Financial~Banks - Regional~USA~1.99B~19.92~1.00%~22.30~450,679
+TGS~Transportadora de Gas del Sur ADR~Energy~Oil & Gas Integrated~Argentina~1.97B~10.64~-3.14%~28.40~239,074
+SKWD~Skyward Specialty Insurance Group Inc~Financial~Insurance - Property & Casualty~USA~1.97B~15.38~-0.96%~48.72~352,404
+HRMY~Harmony Biosciences Holdings Inc~Healthcare~Biotechnology~USA~1.97B~11.02~0.00%~34.19~413,410
+PGNY~Progyny Inc~Healthcare~Healthcare Plans~USA~1.96B~38.79~-0.91%~22.85~2,655,392
+HTH~Hilltop Holdings Inc~Financial~Financial Conglomerates~USA~1.94B~13.84~1.32%~30.76~432,839
+PRGS~Progress Software Corp~Technology~Software - Infrastructure~USA~1.89B~33.63~0.69%~43.92~891,058
+AGM~Federal Agricultural Mortgage Corp~Financial~Credit Services~USA~1.89B~10.46~3.28%~177.64~102,776
+PAR~Par Technology Corp~Technology~Software - Application~USA~1.89B~-~-19.47%~46.73~5,339,244
+STC~Stewart Information Services Corp~Financial~Insurance - Property & Casualty~USA~1.89B~21.70~-0.41%~67.41~116,318
+FIVN~Five9 Inc~Technology~Software - Infrastructure~USA~1.88B~270.10~-3.56%~24.39~2,427,332
+NIC~Nicolet Bankshares Inc~Financial~Banks - Regional~USA~1.88B~14.50~0.84%~126.36~38,180
+ZIM~Zim Integrated Shipping Services Ltd~Industrials~Marine Shipping~Israel~1.87B~0.79~-2.70%~15.50~3,311,030
+SHOO~Steven Madden Ltd~Consumer Cyclical~Footwear & Accessories~USA~1.85B~20.01~-0.82%~25.44~1,754,915
+PLUS~ePlus Inc~Technology~Software - Application~USA~1.84B~16.12~9.42%~69.26~599,372
+COCO~Vita Coco Company Inc~Consumer Defensive~Beverages - Non-Alcoholic~USA~1.84B~30.04~-1.37%~32.44~370,403
+CDLR~Cadeler AS ADR~Industrials~Engineering & Construction~Denmark~1.84B~19.41~-1.32%~20.92~34,330
+FIHL~Fidelis Insurance Holdings Ltd~Financial~Insurance - Diversified~Bermuda~1.83B~-~2.38%~16.79~603,420
+VCEL~Vericel Corp~Healthcare~Biotechnology~USA~1.83B~290.62~0.25%~36.24~449,982
+AKO-B~Embotelladora Andina S.A. ADR~Consumer Defensive~Beverages - Non-Alcoholic~Chile~1.83B~12.91~0.56%~23.16~9,510
+SCS~Steelcase, Inc~Consumer Cyclical~Furnishings, Fixtures & Appliances~USA~1.82B~15.39~-0.75%~15.88~4,372,940
+MSGE~Madison Square Garden Entertainment Corp~Consumer Cyclical~Leisure~USA~1.80B~13.91~-0.08%~38.02~181,243
+HMN~Horace Mann Educators Corp~Financial~Insurance - Property & Casualty~USA~1.80B~13.08~1.64%~44.11~253,802
+EYE~National Vision Holdings Inc~Consumer Cyclical~Specialty Retail~USA~1.79B~-~-6.33%~22.64~2,546,444
+NTST~Netstreit Corp~Real Estate~REIT - Retail~USA~1.79B~-~-0.11%~18.54~1,020,137
+SRPT~Sarepta Therapeutics Inc~Healthcare~Biotechnology~USA~1.78B~-~1.50%~18.23~10,325,048
+ACHC~Acadia Healthcare Company Inc~Healthcare~Medical Care Facilities~USA~1.78B~12.68~5.71%~19.24~2,850,657
+HTO~H2O America~Utilities~Utilities - Regulated Water~USA~1.77B~16.46~0.06%~50.25~169,368
+CTRI~Centuri Holdings Inc~Utilities~Utilities - Regulated Gas~USA~1.77B~-~-5.75%~19.98~7,791,395
+MCRI~Monarch Casino & Resort, Inc~Consumer Cyclical~Resorts & Casinos~USA~1.77B~18.16~-0.42%~96.80~80,325
+ANIP~ANI Pharmaceuticals Inc~Healthcare~Drug Manufacturers - Specialty & Generic~USA~1.77B~-~18.07%~81.48~2,103,662
+CASH~Pathward Financial Inc~Financial~Banks - Regional~USA~1.76B~9.77~2.06%~73.81~151,754
+ARR~ARMOUR Residential REIT Inc~Real Estate~REIT - Mortgage~USA~1.76B~-~-1.26%~15.62~7,142,973
+ATRC~Atricure Inc~Healthcare~Medical Instruments & Supplies~USA~1.75B~-~-1.64%~35.31~398,416
+BLBD~Blue Bird Corp~Industrials~Farm & Heavy Construction Machinery~USA~1.75B~15.80~5.79%~55.34~3,070,355
+AORT~Artivion Inc~Healthcare~Medical Devices~USA~1.75B~-~25.23%~40.95~1,711,175
+CHCO~City Holding Co~Financial~Banks - Regional~USA~1.74B~14.50~1.19%~120.30~110,258
+RAMP~LiveRamp Holdings Inc~Technology~Software - Infrastructure~USA~1.74B~123.18~-4.82%~26.46~1,380,472
+DAC~Danaos Corporation~Industrials~Marine Shipping~Greece~1.73B~3.90~0.35%~94.63~48,075
+TPB~Turning Point Brands Inc~Consumer Defensive~Tobacco~USA~1.73B~40.46~2.78%~96.76~348,929
+SII~Sprott Inc~Financial~Asset Management~Canada~1.73B~34.84~-0.13%~67.02~157,675
+DXPE~DXP Enterprises, Inc~Industrials~Industrial Distribution~USA~1.73B~21.01~5.49%~110.01~248,330
+HP~Helmerich & Payne, Inc~Energy~Oil & Gas Drilling~USA~1.72B~-~8.20%~17.29~3,924,365
+BKV~BKV Corp~Energy~Oil & Gas E&P~USA~1.69B~-~1.11%~20.00~378,478
+MNTN~MNTN Inc~Technology~Software - Application~USA~1.68B~-~-12.61%~21.83~1,469,874
+FORTY~Formula Systems (1985) Ltd. ADR~Technology~Information Technology Services~Israel~1.68B~20.98~1.14%~109.50~174
+LTC~LTC Properties, Inc~Real Estate~REIT - Healthcare Facilities~USA~1.65B~19.64~1.47%~35.83~276,513
+WLDN~Willdan Group Inc~Industrials~Engineering & Construction~USA~1.65B~47.42~27.54%~113.65~1,096,979
+BELFB~Bel Fuse Inc~Technology~Electronic Components~USA~1.64B~32.56~-0.02%~132.58~156,473
+NWN~Northwest Natural Holding Co~Utilities~Utilities - Regulated Gas~USA~1.64B~15.79~-0.20%~39.97~193,168
+ENOV~Enovis Corp~Healthcare~Medical Devices~USA~1.63B~-~-0.28%~28.44~1,485,712
+HCI~HCI Group Inc~Financial~Insurance - Property & Casualty~USA~1.62B~12.44~1.78%~140.33~171,677
+GTY~Getty Realty Corp~Real Estate~REIT - Retail~USA~1.61B~24.80~0.28%~28.50~376,978
+PHR~Phreesia Inc~Healthcare~Health Information Services~USA~1.61B~-~0.63%~27.01~388,293
+IMCR~Immunocore Holdings plc ADR~Healthcare~Biotechnology~United Kingdom~1.60B~-~0.13%~31.97~386,413
+AAMI~Acadian Asset Management Inc~Financial~Asset Management~USA~1.60B~18.63~0.79%~44.65~175,237
+UFPT~UFP Technologies Inc~Healthcare~Medical Devices~USA~1.58B~23.83~-0.32%~205.56~142,169
+UNFI~United Natural Foods Inc~Consumer Defensive~Food Distribution~USA~1.58B~-~-1.77%~26.11~470,385
+NYAX~Nayax Ltd~Technology~Software - Infrastructure~Israel~1.56B~245.70~-0.21%~42.53~34,934
+NHC~National Healthcare Corp~Healthcare~Medical Care Facilities~USA~1.56B~14.97~4.12%~100.38~51,865
+CECO~Ceco Environmental Corp~Industrials~Pollution & Treatment Controls~USA~1.55B~30.69~-0.20%~43.93~415,785
+NTCT~Netscout Systems Inc~Technology~Software - Infrastructure~USA~1.55B~21.58~1.46%~21.59~708,555
+TWST~Twist Bioscience Corp~Healthcare~Diagnostics & Research~USA~1.55B~-~2.56%~25.64~1,968,799
+ACMR~ACM Research Inc~Technology~Semiconductor Equipment & Materials~USA~1.53B~14.52~-1.36%~23.94~1,433,545
+TASK~TaskUs Inc~Technology~Information Technology Services~USA~1.53B~25.26~0.12%~17.04~159,834
+NVEE~NV5 Global Inc~Industrials~Engineering & Construction~USA~1.51B~41.26~0.00%~22.56~0
+TVTX~Travere Therapeutics Inc~Healthcare~Biotechnology~USA~1.51B~-~0.18%~16.94~1,843,104
+ZD~Ziff Davis Inc~Communication Services~Advertising Agencies~USA~1.50B~25.25~-2.68%~36.68~1,175,086
+AKO-A~Embotelladora Andina S.A. ADR~Consumer Defensive~Beverages - Non-Alcoholic~Chile~1.49B~11.57~0.00%~18.87~25
+SEDG~Solaredge Technologies Inc~Technology~Solar~Israel~1.48B~-~2.13%~24.94~4,117,126
+LNN~Lindsay Corporation~Industrials~Farm & Heavy Construction Machinery~USA~1.48B~19.51~0.32%~135.87~33,728
+UTI~Universal Technical Institute Inc~Consumer Defensive~Education & Training Services~USA~1.46B~23.60~-1.00%~26.86~1,761,846
+FLOC~Flowco Holdings Inc~Energy~Oil & Gas Equipment & Services~USA~1.45B~-~1.84%~16.05~247,738
+TILE~Interface Inc~Consumer Cyclical~Furnishings, Fixtures & Appliances~USA~1.45B~15.37~-0.04%~24.87~367,808
+TWFG~TWFG Inc~Financial~Insurance Brokers~USA~1.45B~34.80~-5.00%~25.83~374,504
+KARO~Karooooo Ltd~Technology~Software - Application~Singapore~1.45B~27.37~1.25%~46.86~57,629
+TRS~Trimas Corporation~Consumer Cyclical~Packaging & Containers~USA~1.44B~39.00~1.17%~35.53~645,540
+GABC~German American Bancorp Inc~Financial~Banks - Regional~USA~1.43B~14.51~-0.03%~38.19~55,403
+PD~Pagerduty Inc~Technology~Software - Application~USA~1.43B~-~-0.83%~15.46~2,388,957
+OPRA~Opera Ltd ADR~Communication Services~Internet Content & Information~Norway~1.42B~21.84~-2.18%~15.92~338,658
+DSGR~Distribution Solutions Group Inc~Industrials~Industrial Distribution~USA~1.42B~366.35~0.07%~30.70~53,961
+LOB~Live Oak Bancshares Inc~Financial~Banks - Regional~USA~1.42B~25.41~1.67%~31.05~184,573
+SDGR~Schrodinger Inc~Healthcare~Health Information Services~USA~1.41B~-~-0.77%~19.21~1,482,106
+ASTH~Astrana Health Inc~Healthcare~Medical Care Facilities~USA~1.40B~54.40~30.85%~28.08~1,808,242
+SILA~Sila Realty Trust Inc~Real Estate~REIT - Healthcare Facilities~USA~1.40B~35.80~0.63%~25.39~196,589
+RVLV~Revolve Group Inc~Consumer Cyclical~Internet Retail~USA~1.40B~31.21~-0.46%~19.64~1,466,231
+ARIS~Aris Water Solutions Inc~Utilities~Utilities - Regulated Water~USA~1.40B~28.65~-0.67%~23.62~3,984,907
+CCEC~Capital Clean Energy Carriers Corp~Industrials~Marine Shipping~Greece~1.40B~7.43~4.71%~23.79~18,997
+UMH~UMH Properties Inc~Real Estate~REIT - Residential~USA~1.39B~122.20~-1.03%~16.35~287,078
+OUST~Ouster Inc~Technology~Electronic Components~USA~1.39B~-~11.69%~25.80~7,378,863
+INOD~Innodata Inc~Technology~Information Technology Services~USA~1.39B~34.97~1.63%~43.53~2,537,458
+SMA~Smartstop Self Storage REIT Inc~Real Estate~REIT - Industrial~USA~1.36B~-~-1.85%~33.98~281,702
+MLKN~MillerKnoll Inc~Consumer Cyclical~Furnishings, Fixtures & Appliances~USA~1.35B~-~0.30%~19.92~415,562
+AAOI~Applied Optoelectronics Inc~Technology~Communication Equipment~USA~1.35B~-~-3.31%~21.59~12,199,715
+BASE~Couchbase Inc~Technology~Software - Infrastructure~USA~1.34B~-~-0.08%~24.30~363,657
+USPH~U.S. Physical Therapy, Inc~Healthcare~Medical Care Facilities~USA~1.33B~38.36~4.69%~87.68~294,510
+LMB~Limbach Holdings Inc~Industrials~Building Products & Equipment~USA~1.33B~39.09~-1.04%~114.39~246,938
+FOR~Forestar Group Inc~Real Estate~Real Estate - Development~USA~1.32B~8.16~-0.31%~26.00~169,153
+DRD~DRDGold Ltd. ADR~Basic Materials~Gold~South Africa~1.32B~14.15~-3.47%~15.29~352,830
+MXL~MaxLinear Inc~Technology~Semiconductors~USA~1.32B~-~-1.18%~15.13~1,809,875
+ANDE~Andersons Inc~Consumer Defensive~Food Distribution~USA~1.30B~16.16~0.77%~37.94~424,975
+LASR~nLIGHT Inc~Technology~Semiconductors~USA~1.29B~-~27.75%~26.15~2,723,396
+GRDN~Guardian Pharmacy Services Inc~Healthcare~Medical Care Facilities~USA~1.29B~-~-2.49%~19.97~136,048
+HDL~Super Hi International Holding LTD. ADR~Consumer Cyclical~Restaurants~Singapore~1.28B~33.09~-1.70%~19.66~2,360
+CSWC~Capital Southwest Corp~Financial~Asset Management~USA~1.27B~14.39~1.78%~22.90~510,734
+HROW~Harrow Inc~Healthcare~Drug Manufacturers - Specialty & Generic~USA~1.26B~-~3.67%~34.43~531,106
+ATEN~A10 Networks Inc~Technology~Software - Infrastructure~USA~1.26B~25.44~-2.41%~17.41~958,665
+UPBD~Upbound Group Inc~Technology~Software - Application~USA~1.25B~12.06~-1.23%~21.62~936,045
+GHLD~Guild Holdings Co~Financial~Mortgage Finance~USA~1.25B~51.33~0.60%~20.02~122,996
+CDRE~Cadre Holdings Inc~Industrials~Aerospace & Defense~USA~1.24B~32.85~-1.71%~30.55~584,684
+CRAI~CRA International Inc~Industrials~Consulting Services~USA~1.23B~22.59~-0.39%~186.42~57,064
+ROOT~Root Inc~Financial~Insurance - Property & Casualty~USA~1.23B~18.57~-2.18%~88.26~1,431,911
+PENG~Penguin Solutions Inc~Technology~Information Technology Services~USA~1.22B~-~1.84%~23.26~482,262
+BBSI~Barrett Business Services Inc~Industrials~Staffing & Employment Services~USA~1.21B~23.20~0.60%~47.15~187,832
+IRS~Irsa Inversiones Y Representaciones S.A. ADR~Real Estate~Real Estate Services~Argentina~1.20B~9.94~-1.63%~15.70~154,689
+KALU~Kaiser Aluminum Corp~Basic Materials~Aluminum~USA~1.20B~18.99~0.46%~73.93~88,958
+GRAL~GRAIL Inc~Healthcare~Diagnostics & Research~USA~1.18B~-~-0.42%~32.82~645,651
+FOXF~Fox Factory Holding Corp~Consumer Cyclical~Auto Parts~USA~1.17B~-~-6.74%~28.07~1,565,414
+BFC~Bank First Corp~Financial~Banks - Regional~USA~1.15B~16.84~0.78%~116.45~41,370
+CNOB~ConnectOne Bancorp Inc~Financial~Banks - Regional~USA~1.15B~26.59~0.62%~22.83~203,782
+JCAP~Jefferson Capital Inc~Financial~Credit Services~USA~1.14B~8.35~2.92%~17.61~261,325
+PAHC~Phibro Animal Health Corp~Healthcare~Drug Manufacturers - Specialty & Generic~USA~1.14B~35.96~2.82%~28.10~241,993
+MMI~Marcus & Millichap Inc~Real Estate~Real Estate Services~USA~1.13B~-~1.15%~29.07~162,411
+INVX~Innovex International Inc~Energy~Oil & Gas Equipment & Services~USA~1.11B~5.61~1.44%~16.20~343,787
+PRLB~Proto Labs Inc~Industrials~Metal Fabrication~USA~1.11B~77.47~0.71%~46.62~235,307
+TRIN~Trinity Capital Inc~Financial~Asset Management~USA~1.11B~7.09~2.20%~15.82~1,059,576
+SCL~Stepan Co~Basic Materials~Specialty Chemicals~USA~1.11B~19.31~-0.77%~48.91~68,294
+COLL~Collegium Pharmaceutical Inc~Healthcare~Drug Manufacturers - Specialty & Generic~USA~1.10B~33.72~6.04%~34.93~809,607
+NVGS~Navigator Holdings Ltd~Energy~Oil & Gas Midstream~United Kingdom~1.10B~12.48~0.63%~15.86~301,452
+OMDA~Omada Health Inc~Healthcare~Health Information Services~USA~1.09B~-~-2.26%~19.02~931,440
+GRC~Gorman-Rupp Co~Industrials~Specialty Industrial Machinery~USA~1.08B~20.86~-0.46%~41.17~45,364
+CYD~China Yuchai International~Consumer Cyclical~Auto Manufacturers~Singapore~1.08B~17.56~11.82%~28.75~792,826
+FWRG~First Watch Restaurant Group Inc~Consumer Cyclical~Restaurants~USA~1.08B~270.03~-0.73%~17.66~938,600
+GSL~Global Ship Lease Inc~Industrials~Marine Shipping~Greece~1.06B~2.78~-0.63%~29.90~389,112
+AMRC~Ameresco Inc~Industrials~Engineering & Construction~USA~1.06B~17.28~0.50%~20.11~623,701
+SAFT~Safety Insurance Group, Inc~Financial~Insurance - Property & Casualty~USA~1.06B~12.42~-0.35%~70.95~77,994
+RDWR~Radware~Technology~Software - Infrastructure~Israel~1.05B~76.48~-1.09%~24.58~146,008
+UAN~CVR Partners LP~Basic Materials~Agricultural Inputs~USA~1.02B~11.60~0.63%~96.53~59,883
+WLFC~Willis Lease Finance Corp~Industrials~Rental & Leasing Services~USA~1.02B~8.89~0.23%~149.53~67,176
+GLIBK~GCI Liberty Inc~Communication Services~Telecom Services~USA~1.02B~11.96~-1.62%~35.42~387,513
+GLIBA~GCI Liberty Inc~Communication Services~Telecom Services~USA~1.02B~12.00~-1.22%~35.52~69,195
+BOW~Bowhead Specialty Holdings Inc~Financial~Insurance - Property & Casualty~USA~1.02B~21.09~-0.74%~31.00~835,714
+DGNX~Diginex Ltd~Industrials~Consulting Services~United Kingdom~1.01B~-~-5.16%~44.10~28,122
+ESTA~Establishment Labs Holdings Inc~Healthcare~Medical Devices~USA~1.01B~-~-3.23%~34.80~807,837
+DEA~Easterly Government Properties Inc~Real Estate~REIT - Office~USA~1.00B~56.09~-1.34%~22.07~374,781
+VERB~Verb Technology Company Inc~Technology~Software - Application~USA~996.63M~-~-14.98%~16.80~732,792
+BCSF~Bain Capital Specialty Finance Inc~Financial~Asset Management~USA~986.00M~9.14~1.74%~15.20~327,843
+MGIC~Magic Software Enterprises Ltd~Technology~Information Technology Services~Israel~980.02M~26.09~-0.77%~19.96~21,396
+CTBI~Community Trust Bancorp, Inc~Financial~Banks - Regional~USA~969.66M~10.54~0.79%~53.54~42,711
+EIG~Employers Holdings Inc~Financial~Insurance - Specialty~USA~968.68M~10.03~0.07%~41.20~219,026
+VTS~Vitesse Energy Inc~Energy~Oil & Gas E&P~USA~959.55M~23.88~0.89%~24.85~211,467
+CSR~Centerspace~Real Estate~REIT - Residential~USA~948.45M~-~-0.94%~53.51~76,795
+KRUS~Kura Sushi USA Inc~Consumer Cyclical~Restaurants~USA~938.61M~-~-6.64%~77.61~301,482
+HSII~Heidrick & Struggles International, Inc~Industrials~Staffing & Employment Services~USA~938.11M~28.47~-0.33%~45.24~79,064
+EZPW~EZCorp, Inc~Financial~Credit Services~USA~930.49M~12.39~0.00%~15.28~589,662
+XPEL~XPEL Inc~Consumer Cyclical~Auto Parts~USA~928.98M~19.12~-3.84%~33.58~242,994
+MEG~Montrose Environmental Group Inc~Industrials~Waste Management~USA~922.04M~-~6.52%~26.13~943,688
+EXOD~Exodus Movement Inc~Technology~Software - Infrastructure~USA~921.04M~18.10~1.79%~31.90~152,877
+FWRD~Forward Air Corp~Industrials~Integrated Freight & Logistics~USA~920.30M~-~1.92%~30.25~452,599
+HNRG~Hallador Energy Co~Energy~Thermal Coal~USA~911.95M~-~6.26%~21.22~1,821,724
+NGVC~Natural Grocers by Vitamin Cottage Inc~Consumer Defensive~Grocery Stores~USA~906.69M~21.03~6.70%~39.50~704,422
+DCBO~Docebo Inc~Technology~Software - Application~Canada~905.49M~44.00~5.09%~30.56~192,165
+NX~Quanex Building Products Corp~Industrials~Building Products & Equipment~USA~902.45M~33.06~-0.30%~19.63~345,754
+ECPG~Encore Capital Group, Inc~Financial~Credit Services~USA~902.06M~-~-0.61%~39.20~400,068
+TMP~Tompkins Financial Corp~Financial~Banks - Regional~USA~899.66M~11.23~-0.05%~62.34~37,551
+PNTG~Pennant Group Inc~Healthcare~Medical Care Facilities~USA~898.61M~33.25~7.79%~26.00~1,024,984
+ASIC~Ategrity Specialty Insurance Company Holdings~Financial~Insurance - Property & Casualty~USA~898.50M~161.78~-3.10%~19.09~130,243
+FMBH~First Mid Bancshares Inc~Financial~Banks - Regional~USA~894.31M~10.58~0.27%~37.28~47,975
+CMP~Compass Minerals International Inc~Basic Materials~Other Industrial Metals & Mining~USA~892.34M~-~3.57%~21.44~448,498
+IRMD~Iradimed Corp~Healthcare~Medical Devices~USA~889.51M~43.37~1.39%~69.93~28,321
+CBL~CBL& Associates Properties, Inc~Real Estate~REIT - Retail~USA~873.24M~13.50~0.39%~28.23~101,614
+EVER~EverQuote Inc~Communication Services~Internet Content & Information~USA~867.18M~19.13~-1.62%~23.75~567,265
+QNST~QuinStreet Inc~Communication Services~Advertising Agencies~USA~865.10M~193.75~-6.23%~15.19~896,962
+ATLC~Atlanticus Holdings Corp~Financial~Credit Services~USA~859.43M~9.99~14.53%~56.82~66,714
+BHRB~Burke & Herbert Financial Services Corp~Financial~Banks - Regional~USA~858.01M~8.30~1.31%~57.18~44,638
+BH~Biglari Holdings Inc~Consumer Cyclical~Restaurants~USA~851.34M~21.62~-2.16%~275.24~19,286
+AMSF~Amerisafe Inc~Financial~Insurance - Specialty~USA~850.59M~16.99~0.43%~44.79~92,399
+SMP~Standard Motor Products, Inc~Consumer Cyclical~Auto Parts~USA~822.12M~12.67~2.44%~37.39~515,744
+UVSP~Univest Financial Corp~Financial~Banks - Regional~USA~822.10M~10.43~1.10%~28.54~88,305
+YB~Yuanbao Inc. ADR~Technology~Software - Application~China~821.16M~-~-3.50%~26.16~23,812
+URGN~UroGen Pharma Ltd~Healthcare~Biotechnology~USA~820.96M~-~-4.55%~17.75~1,177,608
+UTL~Unitil Corp~Utilities~Utilities - Diversified~USA~809.56M~17.06~1.08%~49.69~63,592
+FVRR~Fiverr International Ltd~Communication Services~Internet Content & Information~Israel~800.33M~45.71~-5.24%~21.71~1,229,670
+BFS~Saul Centers, Inc~Real Estate~REIT - Retail~USA~796.80M~24.81~-0.06%~32.70~59,316
+ESQ~Esquire Financial Holdings Inc~Financial~Banks - Regional~USA~791.74M~17.31~0.62%~93.57~131,047
+ODC~Oil-Dri Corp. Of America~Basic Materials~Specialty Chemicals~USA~786.43M~16.82~1.99%~57.95~69,058
+PLPC~Preformed Line Products Co~Industrials~Electrical Equipment & Parts~USA~783.64M~18.59~3.03%~159.12~20,178
+PDFS~PDF Solutions Inc~Technology~Software - Application~USA~779.19M~905.05~-11.05%~19.73~958,414
+NBN~Northeast Bank~Financial~Banks - Regional~USA~772.84M~9.62~2.85%~96.88~61,302
+AOSL~Alpha & Omega Semiconductor Ltd~Technology~Semiconductors~USA~768.70M~-~4.62%~25.83~301,078
+AC~Associated Capital Group Inc~Financial~Asset Management~USA~767.70M~14.34~0.86%~36.37~3,940
+FDUS~Fidus Investment Corp~Financial~Asset Management~USA~756.07M~9.17~4.09%~21.37~417,155
+LINC~Lincoln Educational Services Corp~Consumer Defensive~Education & Training Services~USA~750.33M~61.35~0.89%~23.75~532,165
+OPY~Oppenheimer Holdings Inc~Financial~Capital Markets~USA~749.26M~9.29~0.87%~71.90~36,073
+LQDT~Liquidity Services Inc~Consumer Cyclical~Internet Retail~USA~748.75M~29.02~1.27%~23.97~566,659
+UFCS~United Fire Group Inc~Financial~Insurance - Property & Casualty~USA~740.80M~8.26~0.07%~29.06~91,965
+TRNS~Transcat Inc~Industrials~Specialty Business Services~USA~737.88M~55.19~-1.04%~79.18~100,107
+TREE~LendingTree Inc~Financial~Financial Conglomerates~USA~737.74M~-~0.01%~54.17~238,319
+NTGR~Netgear Inc~Technology~Communication Equipment~USA~729.28M~11.67~1.66%~25.14~476,255
+MBWM~Mercantile Bank Corp~Financial~Banks - Regional~USA~723.55M~8.85~1.09%~44.53~38,556
+MCB~Metropolitan Bank Holding Corp~Financial~Banks - Regional~USA~723.45M~11.25~2.19%~69.42~53,579
+HIPO~Hippo Holdings Inc~Financial~Insurance - Property & Casualty~USA~721.56M~-~-3.38%~28.83~234,140
+SSTK~Shutterstock Inc~Communication Services~Internet Content & Information~USA~712.32M~11.13~-1.38%~20.08~285,999
+NPK~National Presto Industries, Inc~Industrials~Aerospace & Defense~USA~712.16M~17.07~-0.06%~99.64~64,911
+IIIN~Insteel Industries, Inc~Industrials~Metal Fabrication~USA~696.23M~22.52~1.36%~35.87~83,681
+BFST~Business First Bancshares Inc~Financial~Banks - Regional~USA~687.29M~9.21~0.92%~23.13~62,357
+SIBN~SI-BONE Inc~Healthcare~Medical Devices~USA~676.45M~-~-3.92%~15.68~371,646
+HBNC~Horizon Bancorp Inc (IN)~Financial~Banks - Regional~USA~671.16M~12.92~1.26%~15.22~117,791
+CCBG~Capital City Bank Group, Inc~Financial~Banks - Regional~USA~667.47M~11.46~1.09%~39.11~32,759
+UVE~Universal Insurance Holdings Inc~Financial~Insurance - Property & Casualty~USA~664.64M~10.28~0.73%~23.47~135,787
+CCNE~CNB Financial Corp (PA)~Financial~Banks - Regional~USA~659.06M~9.41~2.71%~22.36~167,548
+BBW~Build A Bear Workshop Inc~Consumer Cyclical~Specialty Retail~USA~652.64M~11.87~-0.60%~49.41~144,289
+VEL~Velocity Financial Inc~Financial~Mortgage Finance~USA~641.52M~8.04~7.65%~17.58~172,936
+FSBC~Five Star Bancorp~Financial~Banks - Regional~USA~636.77M~12.21~1.95%~29.80~25,344
+BWMN~Bowman Consulting Group Ltd~Industrials~Engineering & Construction~USA~636.47M~59.55~3.29%~36.90~200,448
+TRST~Trustco Bank Corp~Financial~Banks - Regional~USA~634.31M~11.87~1.40%~33.35~77,252
+THFF~First Financial Corp~Financial~Banks - Regional~USA~631.76M~10.18~1.41%~53.31~42,276
+CAC~Camden National Corp~Financial~Banks - Regional~USA~631.46M~11.83~1.80%~37.32~43,642
+MPB~Mid Penn Bancorp, Inc~Financial~Banks - Regional~USA~630.40M~11.48~0.51%~27.41~48,745
+EDN~Empresa Distribuidora y Comercial Norte S.A. ADR~Utilities~Utilities - Regulated Electric~Argentina~624.83M~5.03~-3.12%~28.26~117,797
+ORRF~Orrstown Financial Services, Inc~Financial~Banks - Regional~USA~624.27M~14.32~1.23%~32.00~116,285
+FLGT~Fulgent Genetics Inc~Healthcare~Diagnostics & Research~USA~623.20M~-~-0.22%~20.36~224,313
+SCHL~Scholastic Corp~Communication Services~Publishing~USA~614.47M~-~-0.49%~24.53~175,700
+CVLG~Covenant Logistics Group Inc~Industrials~Trucking~USA~613.71M~17.69~-1.20%~23.11~61,049
+MBUU~Malibu Boats Inc~Consumer Cyclical~Recreational Vehicles~USA~612.19M~-~-1.12%~31.90~125,277
+NBBK~NB Bancorp Inc~Financial~Banks - Regional~USA~604.27M~12.92~0.12%~17.12~119,798
+PRAA~PRA Group Inc~Financial~Credit Services~USA~602.13M~6.64~-1.60%~15.41~266,504
+ICHR~Ichor Holdings Ltd~Technology~Semiconductor Equipment & Materials~USA~598.67M~-~4.68%~17.44~2,498,311
+SPFI~South Plains Financial Inc~Financial~Banks - Regional~USA~596.21M~11.46~1.97%~36.72~45,656
+RDVT~Red Violet Inc~Technology~Software - Application~USA~590.56M~70.17~-0.45%~42.25~116,322
+ANAB~AnaptysBio Inc~Healthcare~Biotechnology~USA~588.78M~-~3.24%~21.03~1,049,965
+SMBC~Southern Missouri Bancorp, Inc~Financial~Banks - Regional~USA~588.28M~10.06~0.41%~52.06~17,848
+LEGH~Legacy Housing Corp~Consumer Cyclical~Residential Construction~USA~584.55M~10.89~3.82%~24.49~110,969
+RIGL~Rigel Pharmaceuticals~Healthcare~Biotechnology~USA~568.61M~5.86~4.14%~31.70~1,373,576
+DJCO~Daily Journal Corporation~Technology~Software - Application~USA~566.41M~5.36~-1.01%~411.21~70,455
+SMBK~SmartFinancial Inc~Financial~Banks - Regional~USA~565.49M~13.45~0.88%~33.23~34,530
+NBR~Nabors Industries Ltd~Energy~Oil & Gas Drilling~Bermuda~558.35M~-~6.35%~35.48~950,424
+LYTS~LSI Industries Inc~Technology~Electronic Components~USA~550.58M~25.68~0.60%~18.35~48,021
+GBFH~GBank Financial Holdings Inc~Financial~Banks - Regional~USA~543.69M~27.87~1.84%~38.10~33,311
+AMRK~A-Mark Precious Metals Inc~Financial~Capital Markets~USA~542.98M~14.83~-0.59%~22.05~204,026
+APEI~American Public Education Inc~Consumer Defensive~Education & Training Services~USA~538.94M~28.28~2.76%~29.83~349,119
+CTO~CTO Realty Growth Inc~Real Estate~REIT - Diversified~USA~538.23M~-~-0.55%~16.34~190,281
+WYFI~Whitefiber Inc~Technology~Software - Application~USA~533.30M~-~-5.67%~15.30~3,456,958
+CLMB~Climb Global Solutions Inc~Technology~Electronics & Computer Distribution~USA~530.84M~23.89~1.30%~114.97~36,254
+GHM~Graham Corp~Industrials~Specialty Industrial Machinery~USA~530.13M~38.54~-1.93%~48.30~109,599
+USNA~Usana Health Sciences Inc~Consumer Defensive~Packaged Foods~USA~527.14M~16.01~-0.48%~28.85~93,458
+ALRS~Alerus Financial Corp~Financial~Banks - Regional~USA~526.72M~12.34~1.22%~20.74~80,656
+CBNK~Capital Bancorp Inc~Financial~Banks - Regional~USA~522.27M~11.78~1.06%~31.53~61,786
+CEVA~Ceva Inc~Technology~Semiconductors~USA~519.46M~-~2.55%~21.72~322,444
+SHBI~Shore Bancshares Inc~Financial~Banks - Regional~USA~513.63M~9.54~1.25%~15.37~106,289
+TSSI~TSS Inc~Technology~Information Technology Services~USA~504.16M~56.25~-8.86%~20.15~4,148,668
+KRT~Karat Packaging Inc~Consumer Cyclical~Packaging & Containers~USA~503.12M~15.77~-6.28%~25.06~123,391
+TCBX~Third Coast Bancshares Inc~Financial~Banks - Regional~USA~502.05M~12.07~1.54%~36.22~26,765
+BCAL~California BanCorp~Financial~Banks - Regional~USA~493.32M~17.59~0.26%~15.22~65,470
+OLP~One Liberty Properties, Inc~Real Estate~REIT - Diversified~USA~490.10M~17.55~-0.13%~22.69~56,799
+NUTX~Nutex Health Inc~Healthcare~Medical Care Facilities~USA~488.41M~7.39~-1.47%~87.92~108,618
+NOA~North American Construction Group Ltd~Energy~Oil & Gas Equipment & Services~Canada~482.65M~18.83~2.37%~16.40~143,132
+BYRN~Byrna Technologies Inc~Industrials~Aerospace & Defense~USA~480.19M~34.04~-0.42%~21.15~372,589
+PFIS~Peoples Financial Services Corp~Financial~Banks - Regional~USA~479.55M~14.34~1.48%~47.98~12,397
+KIDS~OrthoPediatrics corp~Healthcare~Medical Devices~USA~474.14M~-~-1.51%~18.91~157,582
+UNTY~Unity Bancorp, Inc~Financial~Banks - Regional~USA~472.86M~9.52~1.40%~47.13~34,779
+TATT~TAT Technologies Ltd~Industrials~Aerospace & Defense~Israel~465.16M~31.39~-2.09%~37.01~103,740
+SNDA~Sonida Senior Living Inc~Healthcare~Medical Care Facilities~USA~459.94M~-~0.45%~24.38~20,400
+ETON~Eton Pharmaceuticals Inc~Healthcare~Drug Manufacturers - Specialty & Generic~USA~459.65M~-~12.32%~17.14~803,613
+SMC~Summit Midstream Corp~Energy~Oil & Gas Midstream~USA~458.63M~-~-1.61%~24.44~51,506
+AROW~Arrow Financial Corp~Financial~Banks - Regional~USA~458.07M~14.97~3.47%~27.47~36,532
+TRC~Tejon Ranch Co~Industrials~Conglomerates~USA~458.00M~-~0.12%~17.03~138,534
+NRIM~Northrim Bancorp, Inc~Financial~Banks - Regional~USA~456.17M~10.32~1.37%~82.60~37,381
+CMCL~Caledonia Mining Corporation Plc~Basic Materials~Gold~United Kingdom~450.73M~17.62~2.68%~23.36~246,801
+ACNB~ACNB Corp~Financial~Banks - Regional~USA~444.14M~15.73~1.22%~42.43~9,211
+PGC~Peapack-Gladstone Financial Corp~Financial~Banks - Regional~USA~442.51M~13.70~0.16%~24.95~69,977
+GNE~Genie Energy Ltd~Utilities~Utilities - Regulated Electric~USA~434.09M~50.80~0.50%~16.17~297,150
+GRVY~Gravity Co Ltd ADR~Communication Services~Electronic Gaming & Multimedia~South Korea~432.64M~7.50~-2.51%~62.25~23,137
+COFS~Choiceone Financial Services, Inc~Financial~Banks - Regional~USA~432.00M~23.24~1.30%~28.83~31,323
+BWB~Bridgewater Bancshares Inc~Financial~Banks - Regional~USA~429.00M~12.86~1.10%~15.61~38,368
+ITIC~Investors Title Co~Financial~Insurance - Specialty~USA~417.09M~12.64~-0.12%~221.12~47,754
+PRTC~PureTech Health Plc ADR~Healthcare~Biotechnology~USA~416.24M~8.40~-3.90%~17.25~2,313
+RRBI~Red River Bancshares Inc~Financial~Banks - Regional~USA~412.63M~10.89~1.71%~61.74~7,286
+HBCP~Home Bancorp Inc~Financial~Banks - Regional~USA~396.09M~9.70~1.12%~50.62~23,040
+ATEX~Anterix Inc~Communication Services~Telecom Services~USA~395.04M~-~-0.70%~21.13~159,977
+GCBC~Greene County Bancorp Inc~Financial~Banks - Regional~USA~391.62M~12.58~0.97%~23.00~6,957
+DHIL~Diamond Hill Investment Group, Inc~Financial~Asset Management~USA~388.09M~8.09~1.05%~142.41~27,898
+GRRR~Gorilla Technology Group Inc~Technology~Software - Infrastructure~United Kingdom~386.73M~-~8.46%~17.06~1,355,401
+IPI~Intrepid Potash Inc~Basic Materials~Agricultural Inputs~USA~381.24M~-~-2.62%~28.63~343,427
+FRBA~First Bank (NJ)~Financial~Banks - Regional~USA~380.28M~10.00~0.87%~15.13~28,378
+IBEX~IBEX Ltd~Technology~Information Technology Services~USA~378.71M~12.43~1.22%~28.32~66,760
+SPOK~Spok Holdings Inc~Healthcare~Health Information Services~USA~374.96M~22.04~0.66%~18.21~94,280
+BMRC~Bank of Marin Bancorp~Financial~Banks - Regional~USA~359.83M~51.47~1.46%~22.19~68,607
+CWBC~Community West Bancshares~Financial~Banks - Regional~USA~358.73M~13.55~1.29%~18.82~22,275
+IDR~Idaho Strategic Resources Inc~Basic Materials~Gold~USA~357.27M~38.07~9.18%~24.63~685,025
+ESEA~Euroseas Ltd~Industrials~Marine Shipping~Greece~349.84M~2.69~-2.60%~49.93~25,150
+PKE~Park Aerospace Corp~Industrials~Aerospace & Defense~USA~347.08M~50.40~-0.85%~17.48~84,457
+RM~Regional Management Corp~Financial~Credit Services~USA~346.69M~10.20~3.06%~35.38~42,358
+AII~American Integrity Insurance Group Inc~Financial~Insurance - Property & Casualty~USA~343.88M~0.03~-0.45%~17.57~45,364
+SNWV~Sanuwave Health Inc~Healthcare~Medical Devices~USA~340.66M~-~15.85%~39.76~85,332
+MLP~Maui Land & Pineapple Co., Inc~Real Estate~Real Estate Services~USA~333.44M~-~-0.71%~16.89~3,812
+CIX~Compx International, Inc~Industrials~Security & Protection Services~USA~332.85M~17.92~-1.78%~27.01~8,090
+FMAO~Farmers & Merchants Bancorp Inc~Financial~Banks - Regional~USA~331.71M~11.32~2.11%~24.17~13,250
+RBB~RBB Bancorp~Financial~Banks - Regional~USA~326.95M~14.28~1.21%~18.43~55,650
+ALMU~Aeluma Inc~Technology~Semiconductors~USA~325.54M~-~-2.00%~20.61~258,107
+USCB~USCB Financial Holdings Inc~Financial~Banks - Regional~USA~324.58M~11.01~0.68%~16.19~8,204
+DIN~Dine Brands Global Inc~Consumer Cyclical~Restaurants~USA~323.89M~7.04~0.81%~21.06~885,404
+OPRX~OptimizeRx Corp~Healthcare~Health Information Services~USA~319.97M~-~34.74%~17.30~2,326,689
+XOMA~XOMA Royalty Corp~Healthcare~Biotechnology~USA~317.12M~-~2.55%~26.50~38,873
+OBT~Orange County Bancorp Inc~Financial~Banks - Regional~USA~310.96M~9.28~1.15%~23.73~36,415
+ISSC~Innovative Solutions And Support Inc~Industrials~Aerospace & Defense~USA~310.89M~28.72~6.64%~17.66~527,133
+NGS~Natural Gas Services Group, Inc~Energy~Oil & Gas Equipment & Services~USA~310.49M~18.31~2.95%~24.78~47,797
+TRAK~ReposiTrak Inc~Technology~Software - Application~USA~304.67M~50.21~0.97%~16.67~60,107
+SEG~Seaport Entertainment Group Inc~Real Estate~Real Estate Services~USA~298.58M~-~1.86%~23.52~102,940
+PCB~PCB Bancorp~Financial~Banks - Regional~USA~298.06M~9.76~0.34%~20.83~11,188
+EVI~EVI Industries Inc~Industrials~Industrial Distribution~USA~295.49M~47.12~-0.04%~23.16~3,440
+WILC~G. Willi-Food International Ltd~Consumer Defensive~Food Distribution~Israel~295.42M~15.29~-0.61%~21.28~11,534
+PNRG~PrimeEnergy Resources Corp~Energy~Oil & Gas E&P~USA~290.37M~8.21~4.84%~174.87~157,812
+FEIM~Frequency Electronics, Inc~Technology~Communication Equipment~USA~287.27M~11.94~4.87%~29.53~251,054
+FNLC~First Bancorp Inc (ME)~Financial~Banks - Regional~USA~283.64M~9.77~1.20%~25.32~10,418
+ATGL~Alpha Technology Group Ltd~Technology~Software - Infrastructure~Hong Kong~280.30M~-~2.31%~18.36~1,216
+CBAN~Colony Bankcorp, Inc~Financial~Banks - Regional~USA~278.33M~10.10~0.13%~15.94~38,418
+NC~Nacco Industries Inc~Energy~Thermal Coal~USA~276.34M~8.73~0.95%~37.14~2,951
+FRGE~Forge Global Holdings Inc~Financial~Capital Markets~USA~269.25M~-~-0.18%~21.84~120,564
+CTRN~Citi Trends Inc~Consumer Cyclical~Apparel Retail~USA~261.76M~-~3.54%~31.56~55,655
+PKBK~Parke Bancorp Inc~Financial~Banks - Regional~USA~246.30M~8.11~1.17%~20.79~8,884
+TSBK~Timberland Bancorp, Inc~Financial~Banks - Regional~USA~244.86M~9.12~-0.26%~30.99~5,492
+OZ~Belpointe PREP LLC~Real Estate~Real Estate - Development~USA~241.02M~-~-1.57%~62.01~3,182
+FINW~FinWise Bancorp~Financial~Banks - Regional~USA~239.06M~18.54~-1.74%~18.09~13,095
+FDBC~Fidelity D&D Bancorp, Inc~Financial~Banks - Regional~USA~233.47M~9.88~1.48%~40.48~3,778
+NWFL~Norwood Financial Corp~Financial~Banks - Regional~USA~229.48M~101.81~1.04%~24.18~10,718
+MBCN~Middlefield Banc Corp~Financial~Banks - Regional~USA~225.55M~12.44~2.12%~27.91~2,495
+TVRD~Tvardi Therapeutics Inc~Healthcare~Biotechnology~USA~223.96M~-~3.48%~23.92~14,114
+BPRN~Princeton Bancorp Inc~Financial~Banks - Regional~USA~221.11M~33.86~0.79%~31.91~5,029
+TCX~Tucows, Inc~Technology~Software - Infrastructure~Canada~220.46M~-~10.10%~19.90~20,272
+SMTI~Sanara MedTech Inc~Healthcare~Medical Instruments & Supplies~USA~220.42M~-~1.81%~24.80~37,206
+RGCO~RGC Resources, Inc~Utilities~Utilities - Regulated Gas~USA~219.43M~16.53~1.72%~21.28~11,024
+FUNC~First United Corp~Financial~Banks - Regional~USA~212.24M~8.95~2.31%~32.76~12,546
+CCRD~CoreCard Corporation~Technology~Software - Application~USA~212.11M~31.68~0.81%~27.22~33,746
+KINS~Kingstone Cos. Inc~Financial~Insurance - Property & Casualty~USA~211.10M~7.49~-6.98%~15.07~582,964
+PPIH~Perma-Pipe International Holdings Inc~Industrials~Building Products & Equipment~USA~209.70M~17.00~6.96%~26.27~155,711
+CFFI~C & F Financial Corp~Financial~Banks - Regional~USA~207.30M~8.47~0.09%~64.00~3,100
+NEN~New England Realty Associates LP~Real Estate~Real Estate Services~USA~201.63M~15.69~-0.66%~72.01~2,297
+RCKY~Rocky Brands, Inc~Consumer Cyclical~Footwear & Accessories~USA~198.43M~10.69~-1.34%~26.57~75,358
+SMID~Smith-Midland Corp~Basic Materials~Building Materials~USA~198.13M~20.15~2.98%~37.35~9,022
+FCCO~First Community Corp~Financial~Banks - Regional~USA~191.66M~11.20~1.38%~24.95~14,424
+FXNC~First National Corp. (Strasburg, VA)~Financial~Banks - Regional~USA~191.42M~21.51~1.33%~21.30~19,446
+INBK~First Internet Bancorp~Financial~Banks - Regional~USA~190.99M~12.45~0.78%~21.92~15,659
+NKSH~National Bankshares Inc~Financial~Banks - Regional~USA~184.22M~16.32~3.95%~28.95~10,338
+ASMB~Assembly Biosciences Inc~Healthcare~Biotechnology~USA~183.90M~-~12.96%~23.97~480,655
+FLXS~Flexsteel Industries, Inc~Consumer Cyclical~Furnishings, Fixtures & Appliances~USA~180.71M~13.49~2.73%~34.27~7,909
+FRAF~Franklin Financial Services Corp~Financial~Banks - Regional~USA~179.62M~12.34~3.36%~40.29~17,441
+EFSI~Eagle Financial Services, Inc~Financial~Banks - Regional~USA~177.97M~15.31~0.27%~33.09~18,753
+FSFG~First Savings Financial Group Inc~Financial~Banks - Regional~USA~177.06M~8.25~0.35%~25.59~9,987
+ZEPP~Zepp Health Corporation ADR~Technology~Consumer Electronics~Netherlands~174.94M~-~2.26%~24.85~270,874
+RCMT~RCM Technologies, Inc~Industrials~Conglomerates~USA~168.44M~12.87~0.00%~22.73~38,699
+BVFL~BV Financial Inc~Financial~Banks - Regional~USA~162.14M~14.87~0.85%~15.40~29,876
+OVBC~Ohio Valley Banc Corp~Financial~Banks - Regional~USA~161.40M~12.82~0.03%~34.26~5,252
+ELMD~Electromed Inc~Healthcare~Medical Devices~USA~156.32M~23.36~-0.05%~18.64~23,958
+KEQU~Kewaunee Scientific Corporation~Consumer Cyclical~Furnishings, Fixtures & Appliances~USA~156.19M~13.84~-1.58%~53.00~2,903
+PDEX~Pro-Dex Inc. (co)~Healthcare~Medical Instruments & Supplies~USA~155.71M~17.06~2.62%~47.75~21,906
+LARK~Landmark Bancorp Inc~Financial~Banks - Regional~USA~142.50M~8.79~1.07%~24.66~4,097
+ECBK~ECB Bancorp Inc~Financial~Banks - Regional~USA~142.19M~24.76~0.13%~15.75~14,805
+COE~51 Talk Online Education Group ADR~Consumer Defensive~Education & Training Services~Singapore~134.64M~-~1.68%~32.60~3,843
+SBFG~SB Financial Group Inc~Financial~Banks - Regional~USA~130.99M~11.33~2.99%~20.69~13,503
+MPTI~M-tron Industries Inc~Technology~Electronic Components~USA~127.20M~15.98~-3.00%~43.60~49,232
+EBMT~Eagle Bancorp Montana Inc~Financial~Banks - Regional~USA~126.52M~9.89~1.08%~15.91~11,081
+ESP~Espey Manufacturing & Electronics Corp~Industrials~Electrical Equipment & Parts~USA~121.84M~16.05~0.16%~43.03~22,275
+FCAP~First Capital Inc~Financial~Banks - Regional~USA~119.55M~9.06~0.37%~35.63~3,057
+UNB~Union Bankshares, Inc~Financial~Banks - Regional~USA~118.91M~13.48~0.58%~26.20~5,047
+SFBC~Sound Financial Bancorp Inc~Financial~Banks - Regional~USA~118.19M~18.98~0.02%~46.06~6,507
+FRD~Friedman Industries, Inc~Basic Materials~Steel~USA~113.23M~13.22~3.95%~16.04~27,942
+MGYR~Magyar Bancorp Inc~Financial~Banks - Regional~USA~111.62M~11.09~1.17%~17.25~350
+FONR~Fonar Corp~Healthcare~Diagnostics & Research~USA~97.24M~12.61~-2.41%~15.41~12,025
+PFX~PhenixFIN Corp~Financial~Asset Management~USA~96.88M~16.11~-2.67%~49.13~319
+NCSM~NCS Multistage Holdings Inc~Energy~Oil & Gas Equipment & Services~USA~83.92M~6.92~-2.51%~33.03~7,238
+ACFN~Acorn Energy Inc~Technology~Scientific & Technical Instruments~USA~69.19M~9.74~-8.29%~27.66~56,986
+CPBI~Central Plains Bancshares Inc~Financial~Banks - Regional~USA~64.35M~16.05~0.59%~15.25~20,440
+BDL~Flanigan's Enterprises, Inc~Consumer Cyclical~Restaurants~USA~57.90M~14.30~-5.63%~31.15~1,240
+RGS~Regis Corp~Consumer Cyclical~Personal Services~USA~47.31M~0.52~-1.67%~19.42~6,162
+PBBK~PB Bankshares Inc~Financial~Banks - Regional~USA~46.83M~19.63~-0.27%~18.35~6,655
+SLGL~Sol-Gel Technologies Ltd~Healthcare~Biotechnology~Israel~44.54M~-~9.45%~15.99~16,603
+BNC~CEA Industries Inc~Industrials~Farm & Heavy Construction Machinery~USA~14.39M~-~3.70%~17.10~346,241
