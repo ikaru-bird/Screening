@@ -19,36 +19,39 @@ class CheckData():
 # コンストラクタ
 #---------------------------------------#
     def __init__(self, out_path, chart_dir, ma_short, ma_mid, ma_s_long, ma_long, rs_csv1, rs_csv2, txt_path):
-        
+
         # 移動平均の期間をセット
         self.ma_short   = ma_short
         self.ma_mid     = ma_mid
         self.ma_s_long  = ma_s_long
         self.ma_long    = ma_long
-        
+
         # チャートを出力する期間
         self.outPeriod = 7
-        
+
         # データ処理用DataFrame(空箱)
         self.df = pd.DataFrame()
-        
+
         # ファイル名・ティッカー文字列格納用
         self.strBaseName = "---"
         self.strTicker   = "---"
-        
+
         # 今日の日付をセット
         self.today = dt.datetime.now()
-        
+
         # CSVの読込時に日付で絞り込む場合は指定
 #       self.start_dt = self.today - dt.timedelta(days=455)  # 65週前の日付
 #       self.start_dt = self.today - dt.timedelta(days=728)  # 104週前の日付
-        
+
         # チャートの出力先
         self.base_dir = chart_dir
-        
+
         # チャート出力クラスの作成
         self.chart = DrawChart(self.ma_short, self.ma_mid, self.ma_s_long, self.ma_long, rs_csv1, rs_csv2, txt_path)
-        
+
+        # 決算情報クラスのインスタンスを保持する変数
+        self.ern_info = None
+
         # ファイルの存在チェック
         is_file = os.path.isfile(out_path)
         if is_file == True:
@@ -68,6 +71,12 @@ class CheckData():
     def __del__(self):
         # 出力ファイルを閉じる
         self.w.close()
+
+#---------------------------------------#
+# EarningsInfoオブジェクトをセット
+#---------------------------------------#
+    def set_earnings_info(self, ern_info):
+        self.ern_info = ern_info
 
 #------------------------------------------------#
 # トレンドテンプレート判定処理スタート（メイン）
@@ -100,7 +109,7 @@ class CheckData():
 # 買いサイン判定処理スタート（メイン）
 #------------------------------------------------#
     def isBuySign(self):
-        
+
     # 処理呼び出し
         # Cup with Handle判定
         res = self.Cup_with_Handle_Check()
@@ -217,10 +226,10 @@ class CheckData():
         df0 = self.df
 
         start_dt = self.today - dt.timedelta(days=728)  # 104週前の日付
-        try:
-            df0.index = df0.index.tz_localize(None)     # INDEXのタイムゾーンを取り除く
-        except Exception as e:
-            print(e)
+
+        if df0.index.tzinfo is not None:
+            df0.index = df0.index.tz_localize(None)
+
         df0 = df0.query('@start_dt <= index')           # データ範囲を絞り込み
 
     # 直近の日付、終値
@@ -248,10 +257,15 @@ class CheckData():
             idxlastm = df0.index[idx_pos - 20]
         else:
             idxlastm = df0.index[0]  # データ不足時は最古の比較対象を使用
-        if (df0.loc[idxtoday, 'DIFF'] > 0) and (df0.loc[idxlastm, 'DIFF'] > 0):
-            pass
+
+        if len(df0) > 20 and 'DIFF' in df0.columns and not pd.isna(df0.loc[idxtoday, 'DIFF']) and not pd.isna(df0.loc[idxlastm, 'DIFF']):
+            if (df0.loc[idxtoday, 'DIFF'] > 0) and (df0.loc[idxlastm, 'DIFF'] > 0):
+                pass
+            else:
+                return 2, start_dt
         else:
             return 2, start_dt
+
 
     # ④ 50日移動平均線が150日、200日移動平均線より上
         if (df0.loc[idxtoday, 'MA50'] >= df0.loc[idxtoday, 'MA150']) and (df0.loc[idxtoday, 'MA50'] >= df0.loc[idxtoday, 'MA200']):
@@ -268,11 +282,11 @@ class CheckData():
     # ⑥ 現在の株価が52週安値より少なくとも30％高い
         start_dt = self.today - dt.timedelta(days=365)  # 52週前の日付
         df1 = df0.query('@start_dt <= index')           # データ範囲を絞り込み
-        
+
         rows   = df1['Low']
         min    = rows.min()
         idxmin = rows.idxmin()
-        
+
         if close_p >= min * 1.3:
             pass
         else:
@@ -282,7 +296,7 @@ class CheckData():
         rows   = df0['High']
         max    = rows.max()
         idxmax = rows.idxmax()
-        
+
         if close_p >= max * 0.75:
             return 7, idxtoday
         else:
@@ -451,7 +465,7 @@ class CheckData():
             df1 = df0.query('index > @under_ma50_dt and Close > @neckline_p and Close > MA50')
             if len(df1.index) > 0:
                 over_ma50_dt = df1.index[0]
-                
+
                 # 50日移動平均割れ
                 df1 = df0.query('index > @over_ma50_dt and Close > @neckline_p and Close < MA50')
                 if len(df1.index) > 0:
@@ -497,7 +511,7 @@ class CheckData():
     #①最高値を探す(90日以前)
         df1  = df0[: self.today - dt.timedelta(days=90)]
         rows = df1['High']
-        
+
         if len(df1.index) > 0:
             max    = rows.max()
             idxmax = rows.idxmax()
@@ -608,7 +622,7 @@ class CheckData():
     #①最高値を探す(90日以前)
         df1  = df0[: self.today - dt.timedelta(days=90)]
         rows = df1['High']
-        
+
         if len(df1.index) > 0:
             max    = rows.max()
             idxmax = rows.idxmax()
@@ -715,7 +729,7 @@ class CheckData():
     #①最高値を探す(60日以前)
         df1  = df0[: self.today - dt.timedelta(days=60)]
         rows = df1['High']
-        
+
         if len(df1.index) > 0:
             max    = rows.max()
             idxmax = rows.idxmax()
@@ -794,7 +808,7 @@ class CheckData():
 # Double Bottom2判定処理
 #---------------------------------------#
     def DoubleBottom_Check2(self):
-    
+
     # Dataframeを参照渡し
         df0 = self.df
 
@@ -804,7 +818,7 @@ class CheckData():
     #①最高値を探す(60日以前)
         df1  = df0[: self.today - dt.timedelta(days=60)]
         rows = df1['High']
-        
+
         if len(df1.index) > 0:
             max    = rows.max()
             idxmax = rows.idxmax()
@@ -927,25 +941,25 @@ class CheckData():
             base_sdt = df2.index[0]                # ベース開始日
             base_edt = df2.index[-1]               # ベース終了日
             base_len = (base_edt - idxmax).days    # ベース構成日数
-            
+
             # ベースの平均値を計算
             base_avg = df2.Close.mean()
-            
+
             # ベースの標準偏差を計算
             base_std = df2.Close.std()
-            
+
             # 標準偏差÷平均値を計算
             base_rate = base_std / base_avg
-            
+
             # ベースの最安値、最高値、最安日を取得
             df1 = df0[base_sdt : base_edt]
             base_min = df1['Close'].min()
             base_max = df1['Close'].max()
             base_bdt = df1['Close'].idxmin()
-            
+
             # ベースの中間日を取得
             base_mdt = base_sdt + dt.timedelta(days=int(base_len/2))
-            
+
             # ベース構成日数(最高値日から7～65週間)とベースの値幅約5%
             if (base_len >= 49) and (base_len <= 455) and (base_rate <= 0.05) and (base_min >= base_p1) and (base_max <= base_p2):
                 alist.append((base_sdt, df0.loc[base_sdt,"Close"])) # ベースの開始
@@ -970,11 +984,11 @@ class CheckData():
     # STEP4 and 5判定
         if len(df2.index) > 0:
             cup_edt = df2.index[0]                        # カップ形成日（仮）
-            
+
             # ハンドル部分の構成期間
             handle_edt1 = cup_edt                         # カップ形成日
             handle_edt2 = cup_edt + dt.timedelta(days=60) # カップ形成日から2ヵ月後
-            
+
             # 期間中の高値
             df2 = df0.query('@handle_edt1 <= index <= @handle_edt2')
             rows      = df2['High']
@@ -988,7 +1002,7 @@ class CheckData():
             # ハンドル部分の価格
             handle_p1 = handle_p0 * 0.88  # ハンドル下限
             handle_p2 = handle_p0 * 0.95  # ハンドル上限
-            
+
         # 1～2週間後に5～12%下落があり、かつ50日週移動平均線より上
             df3 = df0.query('@handle_edt1 <= index <= @handle_edt2 & @handle_p1 <= Low <= @handle_p2 & MA50 <= Close')
 
@@ -1001,16 +1015,16 @@ class CheckData():
                 else:
                     alist.append((cup_edt, df0.loc[cup_edt,"High"]))
                     return 4, cup_edt, alist
-                
+
         # ⑤下落があれば、安値前の高値がpivot、安値がハンドル(STEP5)
             else:
                 # ハンドル部分
                 rows = df3['Low']
                 cwh_dt = rows.idxmin()
-                
+
                 # カップの高値
                 pvt_p   = handle_p0
-                
+
                 alist.append((cup_edt, df0.loc[cup_edt,"High"]))  # カップの終了日をチャートに追加
                 alist.append((cwh_dt, df0.loc[cwh_dt,"Low"]))     # ハンドルの形成日をチャートに追加
         else:
@@ -1088,13 +1102,13 @@ class CheckData():
             base_sdt = df2.index[0]                # ベース開始日
             base_edt = df2.index[-1]               # ベース終了日
             base_len = (base_edt - idxmax).days    # ベース構成日数
-            
+
             # ベースの最安値、最高値、最安日を取得
             df1 = df0[base_sdt : base_edt]
             base_min = df1['Close'].min()
             base_max = df1['Close'].max()
             base_bdt = df1['Close'].idxmin()
-            
+
             # ベース構成日数(最高値日から約4～8週間)と最安値が高値-15%を下回らない
             if (base_len >= 28) and (base_len <= 56) and (base_min >= base_p1) and (base_max <= base_p2):
                 alist.append((base_sdt, df0.loc[base_sdt,"Close"])) # ベースの開始
@@ -1104,7 +1118,7 @@ class CheckData():
                 return 2, idxmax, alist
         else:
             return 2, idxmax, alist
-        
+
     #④ピボット判定
     #　直近価格がピボットポイントを超える
         df2 = df0.query('@base_edt < index & High >= @max')
@@ -1130,95 +1144,95 @@ class CheckData():
 
         # Dataframeを複製
         df0 = self.df.copy()
-        
+
         # 補助線描画用リスト
         alist = []
-        
+
         # ベース期間を日付に変換
         base_length_min = dt.timedelta(weeks=base_weeks_min)
         base_length_max = dt.timedelta(weeks=base_weeks_max)
-        
+
         # 直近の高値の日付を取得
         try:
             recent_max_date = df0['Close'].idxmax()
         except:
             return 0, None, alist
-        
+
         # 直近の高値の日付が範囲外の場合は終了
         base_duration = df0.index[-1] - recent_max_date
         if base_length_min <= base_duration <= base_length_max:
             return 0, None, alist
-        
+
         # 直近の高値の日付以降のデータに絞る
         df0 = df0.loc[recent_max_date:]
-        
+
         # ボラティリティ調整による動的な価格下落を検出
         price_volatility = df0['Close'].pct_change().std()
         dynamic_drop_min = price_volatility * multiplier_min
         dynamic_drop_max = price_volatility * multiplier_max
-        
+
         # 直近高値のローリング
         recent_max = df0['Close'].rolling(window=self.ma_mid).max()
 #       print(f"Price Volatility: {price_volatility}")
 #       print(f"Dynamic Drop Min: {dynamic_drop_min}")
 #       print(f"Dynamic Drop Max: {dynamic_drop_max}")
-        
+
         # 動的しきい値によるベースマスク
         base_mask = (
-            (df0['Close'] <= recent_max * (1 - dynamic_drop_min)) & 
+            (df0['Close'] <= recent_max * (1 - dynamic_drop_min)) &
             (df0['Close'] >= recent_max * (1 - dynamic_drop_max))
         )
         base_periods = df0[base_mask]
-        
+
 #       print(f"Base Periods Count: {len(base_periods)}")
         if not base_periods.empty:
             base_start_date = base_periods.index[0]
             base_end_date   = base_periods.index[-1]
-            
+
             # ベース期間内の最高値
             recent_max_date = df0.loc[base_start_date:base_end_date, 'Close'].idxmax()
-            
+
             # 最高値の位置を検証
             if not (base_start_date <= recent_max_date <= base_end_date):
                 return 0, None, alist
-            
+
             # ベース期間を評価
             base_duration = base_end_date - recent_max_date
             if not (base_length_min <= base_duration <= base_length_max):
                 return 0, None, alist
-            
+
             # ベース期間の最安値
             base_min_date  = df0.loc[recent_max_date:base_end_date, 'Close'].idxmin()
             base_min_value = df0.loc[base_min_date, "Close"]
-            
+
             # 出来高分析
             # 直近の出来高平均と過去の出来高平均を比較
             recent_volume   = df0['Volume'].loc[recent_max_date:base_end_date].rolling(window=self.ma_short).mean()
             previous_volume = df0['Volume'].loc[:recent_max_date].rolling(window=self.ma_mid).mean().iloc[-1]
-            
+
             # 直近の出来高減少
             volume_reduction_ratio = (previous_volume - recent_volume.mean()) / previous_volume
-            
+
             # トレンド分析の改善
             long_term_ma = df0['Close'].rolling(window=self.ma_long).mean()
             trend_slope = long_term_ma.diff()
-            
+
             # 状況の総合的な確認
             condition_checks = [
                 volume_reduction_ratio > vol_reduction,        # 出来高が減少
                 trend_slope.iloc[-1] > 0,                      # 200日移動平均線の傾きがプラス
                 df0['Close'].iloc[-1] > long_term_ma.iloc[-1]  # 現在の株価が200日移動平均線を上回っている
             ]
-            
+
             # 条件を満たす場合の処理
             if all(condition_checks):
                 # 補助線描画用リストに追加
                 alist.append((recent_max_date, df0.loc[recent_max_date, "Close"]))  # ベースの開始
                 alist.append((base_min_date, base_min_value))                       # ベースの最安値
                 alist.append((base_end_date, df0.loc[base_end_date, "Close"]))      # ベースの終了
-                
+
                 return 1, base_end_date, alist
-        
+
         # 条件に合わない場合は0を返す
         return 0, None, alist
 
@@ -1254,7 +1268,7 @@ class CheckData():
 # CSVを読取りDataframeに格納
 #---------------------------------------#
     def csvSetDF(self, doc):
-        
+
         # CSVを読取
         df = pd.read_csv(doc, index_col=0, parse_dates=True, dtype={'Date':object,'Open':float,'High':float,'Low':float,'Close':float,'Adj Close':float,'Volume':float}, on_bad_lines='skip')
         df = df.dropna(how='all')                       # 欠損値を除外
@@ -1286,10 +1300,10 @@ class CheckData():
 # CSVファイル書込み・チャート作成処理
 #------------------------------------------------#
     def writeFlles(self, res, strLabel):
-        
+
         # メッセージ出力
         print(self.strTicker + " is ::: " + strLabel + " :::")
-        
+
         # ローソク足チャートを作成
 
         # リストの数が3の場合:日付でソート、それ以外:空のリストをセット)
@@ -1308,7 +1322,7 @@ class CheckData():
         # UDレシオの計算(10レコードの推移)
         ud_ratio1 = self.calcUDRatio(df0.head(-10))
         ud_ratio2 = self.calcUDRatio(df0)
-        
+
         if (ud_ratio1 <= ud_ratio2) and (ud_ratio2 >= 1):
             if ud_ratio1 < 1:
                 ud_mark = "*"
@@ -1318,7 +1332,7 @@ class CheckData():
             ud_mark = "/"
         else:
             ud_mark = "X"
-        
+
         ud_val = str(ud_ratio1) + " => "+ str(ud_ratio2)
         # print('U/D Ratio:{0} ::: {1}'.format(ud_val, ud_mark))
 
@@ -1342,7 +1356,7 @@ class CheckData():
                         break  # ループを抜ける
 
             # チャート出力
-            info = self.chart.makeChart(Out_DIR, df0, self.strTicker, self.strBaseName, strLabel, ud_val + ' ::: ' + ud_mark , alist)
+            info = self.chart.makeChart(Out_DIR, df0, self.strTicker, self.strBaseName, strLabel, ud_val + ' ::: ' + ud_mark , alist, ern_info=self.ern_info)
 
             # CSVファイルの書き込み
             if info != ["-","-","-","-","-","-"]:  # infoがデフォルト値（全部"-"）でなければCSV出力
