@@ -1,1 +1,2 @@
 THG~THG Plc~Consumer Cyclical~Internet Retail~1000000000~0~0~Jun 24/a~100000~1.0
+META~Meta Platforms, Inc.~Communications~Internet & Web Services~1195860000000~29.58~23.11~Apr 24/a~32000000~474.22
