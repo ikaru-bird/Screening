@@ -59,7 +59,7 @@ class CheckData():
 #           self.w = open(out_path, mode="w", encoding="CP932", errors="ignore")
             self.w = open(out_path, mode="w", encoding="utf-8", errors="ignore")
             # ファイルのヘッダー出力
-            self.w.write("\"日付\",\"タイプ\",\"コード\",\"会社名\",\"業種区分\",\"業種RS\",\"UDVR\",\"UDVR.prev\",\"UD判定\",\"VOLUME\",\"fwdPER\",\"Price\"\n")
+            self.w.write("\"日付\",\"タイプ\",\"コード\",\"会社名\",\"業種区分\",\"業種RS\",\"UDVR\",\"UDVR.prev\",\"UD判定\",\"VOLUME\",\"Price\"\n")
             self.w.flush()
 
 #---------------------------------------#
@@ -1351,9 +1351,8 @@ class CheckData():
             info = self.chart.makeChart(Out_DIR, df0, self.strTicker, self.strBaseName, strLabel, ud_val + ' ::: ' + ud_mark , alist)
 
             # CSVファイルの書き込み
-            if info != ["-","-","-","-","-","-"]:  # infoがデフォルト値（全部"-"）でなければCSV出力
-#               outTxt = str(res[1].date()) + "," + strLabel + ",\"" + self.strTicker + "\",\"" + info[1] + "\",\"" + info[2] + "\"," + info[4] + "," + str(ud_ratio2) + "," + str(ud_ratio1) + ",\"" + ud_mark + "\",\"" + info[3] + "\",\"" + info[5] + "\",\"" + str(round(df0['Close'][-1],2)) + "\"\n"
-                outTxt = str(res[1].date()) + "," + strLabel + ",\"" + self.strTicker + "\",\"" + info[1] + "\",\"" + info[2] + "\"," + info[4] + "," + str(ud_ratio2) + "," + str(ud_ratio1) + ",\"" + ud_mark + "\",\"" + info[3] + "\",\"" + info[5] + "\",\"" + str(round(df0['Close'].iloc[-1], 2)) + "\"\n"
+            if info != ["-","-","-","-","-"]:  # infoがデフォルト値（全部"-"）でなければCSV出力
+                outTxt = str(res[1].date()) + "," + strLabel + ",\"" + self.strTicker + "\",\"" + info[1] + "\",\"" + info[2] + "\"," + info[4] + "," + str(ud_ratio2) + "," + str(ud_ratio1) + ",\"" + ud_mark + "\",\"" + info[3] + "\",\"" + str(round(df0['Close'].iloc[-1], 2)) + "\"\n"
                 print("  Name   : " + info[1])
                 print("  Sector : " + info[2])
                 print("  UDVR   : " + ud_val + "  " + ud_mark)
