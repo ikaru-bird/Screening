@@ -43,9 +43,9 @@ class CheckData():
             df = pd.read_csv(doc, index_col=0)
             # Definitive fix for index issues:
             # 1. Convert index to datetime, coercing errors into NaT (Not a Time)
-            df.index = pd.to_datetime(df.index, errors='coerce')
-            # 2. Drop any rows where the index is NaT
-            df.dropna(subset=[df.index.name], inplace=True)
+            df.index = pd.to_datetime(df.index, errors='coerce', utc=True)
+            # 2. Drop any rows where the index is NaT (Not a Time)
+            df = df[df.index.notna()]
             # 3. If the index is timezone-aware, make it naive for consistency
             if hasattr(df.index, 'tzinfo') and df.index.tzinfo is not None:
                 df.index = df.index.tz_localize(None)
@@ -54,7 +54,7 @@ class CheckData():
             df['MA50']   = df['Close'].rolling(self.ma_mid).mean()
             df['MA150']  = df['Close'].rolling(self.ma_s_long).mean()
             df['MA200']  = df['Close'].rolling(self.ma_long).mean()
-            df['DIFF']   = df['MA200'].pct_change(20)
+            df['DIFF']   = df['MA200'].pct_change(20, fill_method=None)
             df['MA_VOL'] = df['Volume'].rolling(self.ma_mid).mean()
             self.df = df
             self.strBaseName = os.path.splitext(os.path.basename(doc))[0]
@@ -104,6 +104,13 @@ class CheckData():
             print(f"{self.strTicker} is ::: Trend Templete :::")
             self.isBuySign()
 
+    def isTrendTempleteAll(self):
+        res = self.TrendTemplete_Check()
+        td_abs = abs(self.today - res[1])
+        if (res[0] >= 7):
+            strLabel = "trend templete"
+            self.writeFlles(res, strLabel)
+    
     def isBuySign(self):
         # This is just one of many patterns, add the rest if needed
         res = self.Cup_with_Handle_Check()

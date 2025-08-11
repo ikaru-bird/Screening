@@ -119,8 +119,12 @@ class EarningsInfo():
         results['Annual EPS Growth'] = self._check_annual_eps_growth()
         results['Quarterly EPS YoY Growth'] = self._check_quarterly_eps_yoy_growth()
         results['Consecutive Quarterly EPS Growth'] = self._check_consecutive_quarterly_eps_growth()
-        all_passed = all(res[0] for res in results.values())
-        return all_passed, results
+
+        # 4項目中3項目以上がTrueならPassとする
+        num_passed = sum(res[0] for res in results.values())
+        final_pass = num_passed >= 3
+
+        return final_pass, results
 
     def getQuarterlyEarnings(self):
         """チャート表示用に四半期決算情報を整形する"""
