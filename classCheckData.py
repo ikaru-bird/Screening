@@ -43,9 +43,9 @@ class CheckData():
             df = pd.read_csv(doc, index_col=0)
             # Definitive fix for index issues:
             # 1. Convert index to datetime, coercing errors into NaT (Not a Time)
-            df.index = pd.to_datetime(df.index, errors='coerce')
-            # 2. Drop any rows where the index is NaT
-            df.dropna(subset=[df.index.name], inplace=True)
+            df.index = pd.to_datetime(df.index, errors='coerce', utc=True)
+            # 2. Drop any rows where the index is NaT (Not a Time)
+            df = df[df.index.notna()]
             # 3. If the index is timezone-aware, make it naive for consistency
             if hasattr(df.index, 'tzinfo') and df.index.tzinfo is not None:
                 df.index = df.index.tz_localize(None)
