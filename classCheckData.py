@@ -54,7 +54,7 @@ class CheckData():
             df['MA50']   = df['Close'].rolling(self.ma_mid).mean()
             df['MA150']  = df['Close'].rolling(self.ma_s_long).mean()
             df['MA200']  = df['Close'].rolling(self.ma_long).mean()
-            df['DIFF']   = df['MA200'].pct_change(20)
+            df['DIFF']   = df['MA200'].pct_change(20, fill_method=None)
             df['MA_VOL'] = df['Volume'].rolling(self.ma_mid).mean()
             self.df = df
             self.strBaseName = os.path.splitext(os.path.basename(doc))[0]
