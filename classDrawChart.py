@@ -150,13 +150,10 @@ class DrawChart():
         plt.suptitle(strTitle)
 
         data.append(["Type/Step", strLabel])
-        data.append(["Sector", sector])
-        data.append(["Industry", industry])
+        data.append(["Sector\nIndustry", sector + "\n" + industry])
         data.append(["ROE", strROE])
-        data.append(["RS (Stock)", str_tPercentile])
-        data.append(["RS (Ind.)", f"{str_iPercentile} (Rank: {str_idxTickers})"])
         data.append(["Earnings", strErngs])
-        data.append(["52wk High", str52H])
+        data.append(["RS Rating",  str_tPercentile + " (ind:" + str_iPercentile + " / rank:" + str_idxTickers + "th)"])
         data.append(["UDVR", strUDval])
 
         ax1_tbl = ax1.table(cellText=data, cellLoc='left', bbox=[0, 0, 1, 1])
@@ -189,6 +186,5 @@ class DrawChart():
         info[2] = industry
         info[3] = strVolMA
         info[4] = str_iPercentile
-        info[5] = "N/A"
 
         return info
