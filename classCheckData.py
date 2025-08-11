@@ -104,6 +104,13 @@ class CheckData():
             print(f"{self.strTicker} is ::: Trend Templete :::")
             self.isBuySign()
 
+    def isTrendTempleteAll(self):
+        res = self.TrendTemplete_Check()
+        td_abs = abs(self.today - res[1])
+        if (res[0] >= 7):
+            strLabel = "trend templete"
+            self.writeFlles(res, strLabel)
+    
     def isBuySign(self):
         # This is just one of many patterns, add the rest if needed
         res = self.Cup_with_Handle_Check()
