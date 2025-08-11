@@ -37,7 +37,7 @@ i = 0
 if(os.path.exists(in_path)):
     with open(in_path, 'r', encoding='utf-8') as f:
         for line in f.readlines():
-            toks = line.split('~')
+            toks = line.strip().split('~')
             symbol[i] = toks[0]
             i += 1
 
