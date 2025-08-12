@@ -186,6 +186,8 @@ class DrawChart():
             if pos[1] == 0:
                 cell.set_facecolor('#dcdcdc') # 背景着色
                 cell.set_width(0.25) # Adjusted column width
+                text = cell.get_text()
+                text.set_x(0.05)  # 0.0で左寄せ（デフォルトは0.5付近）
             else:
                 cell.set_width(0.75) # Adjusted column width
 
