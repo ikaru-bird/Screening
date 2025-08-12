@@ -104,20 +104,25 @@ class DrawChart():
             mpf.make_addplot(df['Signal'], type='scatter', markersize=50, marker='^', color='#049DBF', ax=ax2)
         ]
 
+        # 銘柄関連情報を取得(テキストファイルから)
         ticker_txt = self.txt_info.getTickerInfo(strTicker)
         strNextErnDt = ticker_txt[5]
         
-        ticker_obj = yf.Ticker(strTicker)
-        try:
-            ticker_info = ticker_obj.info
-        except:
-            ticker_info = {}
+        # 銘柄関連情報を取得(yfinanceから)
+        #ticker_obj = yf.Ticker(strTicker)
+        #try:
+        #    ticker_info = ticker_obj.info
+        #except:
+        #    ticker_info = {}
 
-        shortName = ticker_info.get('shortName', "N/A")
-        sector = ticker_info.get('sector', "N/A")
-        industry = ticker_info.get('industry', "N/A")
-        roe = ticker_info.get('returnOnEquity')
-        strROE = f"{roe:.1%}" if self.isfloat(roe) else "N/A"
+        # shortName = ticker_info.get('shortName', "N/A")
+        shortName = ticker_txt[0]
+        # sector = ticker_info.get('sector', "N/A")
+        sector = ticker_txt[1]
+        # industry = ticker_info.get('industry', "N/A")
+        industry = ticker_txt[2]
+        # roe = ticker_info.get('returnOnEquity')
+        # strROE = f"{roe:.1%}" if self.isfloat(roe) else "N/A"
 
         rs_info1 = self.rs.getTickerRS(strTicker)
         str_tPercentile = str(rs_info1[2])
@@ -186,9 +191,8 @@ class DrawChart():
             if pos[1] == 0:
                 cell.set_facecolor('#dcdcdc') # 背景着色
                 cell.set_width(0.25) # Adjusted column width
-                cell.PAD = 0.01  # デフォルトは0.1前後
                 text = cell.get_text()
-                text.set_x(0.0)  # 0.0で左寄せ（デフォルトは0.5付近）
+                text.set_x(0.05)  # 0.0で左寄せ（デフォルトは0.5付近）
             else:
                 cell.set_width(0.75) # Adjusted column width
 
