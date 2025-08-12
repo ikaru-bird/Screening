@@ -162,18 +162,27 @@ class DrawChart():
         strTitle  = f"{strTicker} :: {shortName} {strVolMA}"
         plt.suptitle(strTitle)
 
-        data.append(["Type/Step\nSector\nIndustry", strLabel + "\n" + sector + "\n" + industry])
-        data.append(["RS Rating\nUDVR",  str_tPercentile + " (ind:" + str_iPercentile + " / rank:" + str_idxTickers + "th)" + "\n" + strUDval])
-        data.append(["Fundamentals", fundamental_text])
+        data.append(["Type/Step", strLabel])
+        data.append(["Sector\nIndustry", sector + "\n" + industry])
+        data.append(["Funds", fundamental_text])
         data.append(["Earnings", strErngs])
-        data.append(["Next Earnings", strNextErnDt])
+        data.append(["NextEarnings", strNextErnDt])
+        data.append(["RS Rating",  str_tPercentile + " (ind:" + str_iPercentile + " / rank:" + str_idxTickers + "th)"])
+        data.append(["UDVR", strUDval])
         
         ax1_tbl = ax1.table(cellText=data, cellLoc='left', bbox=[0, 0, 1, 1])
         ax1_tbl.auto_set_font_size(False)
-        ax1_tbl.set_fontsize(8) # Reduced font size to fit more text
+        ax1_tbl.set_fontsize(9)
 
+        num_rows = len(data)
         for pos, cell in ax1_tbl.get_celld().items():
-            cell.set_height(1/len(data))
+            if pos[0] == 2:                      # Funds
+                cell.set_height(1.5/num_rows)    # 1.5倍の高さを設定
+            elif pos[0] == 3:                    # Earnings
+                cell.set_height(4/num_rows)      # 4倍の高さを設定
+            else:
+                cell.set_height(1/num_rows)
+            
             if pos[1] == 0:
                 cell.set_width(0.25) # Adjusted column width
             else:
