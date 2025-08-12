@@ -5,7 +5,9 @@ import sys
 sys.path.append('/content/drive/MyDrive/Colab Notebooks/my-modules')
 
 import os, fnmatch
+import yfinance as yf
 from classCheckData import CheckData
+from classEarningsInfo import EarningsInfo
 
 # パラメータの受取り
 args      = sys.argv
@@ -32,6 +34,15 @@ for path, dirs, files in os.walk(in_dir):
         # csvをDataframeに格納
         ckdt.csvSetDF(doc)
 
+        # 決算情報をセット
+        try:
+            ticker_obj = yf.Ticker(ckdt.strTicker)
+            ern_info = EarningsInfo(ticker_obj)
+            ckdt.set_earnings_info(ern_info)
+        except Exception as e:
+            print(f"Could not fetch earnings info for {ckdt.strTicker}: {e}")
+            # エラーが発生しても処理は続行
+
         # 処理呼び出し
         print('TICKER:{0}'.format(ckdt.strTicker))
 
@@ -41,4 +52,3 @@ for path, dirs, files in os.walk(in_dir):
 
 # データ処理クラスの破棄
 del ckdt
-

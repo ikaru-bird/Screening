@@ -49,6 +49,9 @@ class CheckData():
         # チャート出力クラスの作成
         self.chart = DrawChart(self.ma_short, self.ma_mid, self.ma_s_long, self.ma_long, rs_csv1, rs_csv2, txt_path)
 
+        # 決算情報(空箱)
+        self.ern_info = None
+
         # ファイルの存在チェック
         is_file = os.path.isfile(out_path)
         if is_file == True:
