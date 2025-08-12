@@ -177,7 +177,7 @@ class DrawChart():
         for pos, cell in ax1_tbl.get_celld().items():
             if pos[0] == 2:     # Funds
                 cell.set_height(2/num_rows)  # 2倍の高さを設定
-            elif pos[0] == 3::  # Earnings
+            elif pos[0] == 3:   # Earnings
                 cell.set_height(2/num_rows)  # 2倍の高さを設定
             else:
                 cell.set_height(1/num_rows)
