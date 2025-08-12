@@ -42,8 +42,8 @@ df0              = input_book.parse(input_sheet_name[0], encoding='utf-8')
 
 # 列名の変更・値の置換・型変更
 df1 = df0.rename(columns={"市場・商品区分": "SEGMENT", "規模コード": "SIZE"})
-# Replace '-' with 99 to avoid FutureWarning
-df1['SIZE'] = df1['SIZE'].replace('-', 99)
+# Replace '-' with string '99' to avoid mixing types, then convert to int
+df1['SIZE'] = df1['SIZE'].replace('-', '99')
 df1['SIZE'] = df1['SIZE'].astype(int)
 
 # df1 = df1.query("SEGMENT == 'プライム（内国株式）'") # プライム市場のみ
