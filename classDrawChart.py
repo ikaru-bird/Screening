@@ -137,7 +137,10 @@ class DrawChart():
         fundamental_text_lines = []
         for check_name, (res, reason) in fundamental_results.items():
             status = "O" if res else "X"
-            fundamental_text_lines.append(f"{status}: {check_name} ({reason})")
+            if check_name == 'EPS Quarterly Growth':
+                fundamental_text_lines.append(f"{status} : {check_name} {reason}")
+            else:
+                fundamental_text_lines.append(f"{status} : {check_name} : {reason}")
         fundamental_text = "\n".join(fundamental_text_lines)
         # -----------------------------
 

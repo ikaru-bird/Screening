@@ -77,7 +77,7 @@ for i in range(0, n + 1):
         # ログとしてチェック結果を表示
         for check_name, (res, reason) in results.items():
             status = "O" if res else "X"
-            print(f"  - {status}: {check_name} ({reason})")
+            print(f"  - {status} : {check_name} : {reason}")
 
         if not passed:
             print(f"-> {ticker_str} did not pass fundamental screening. Skipping.\n")
