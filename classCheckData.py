@@ -1348,7 +1348,7 @@ class CheckData():
                         break  # ループを抜ける
 
             # チャート出力
-            info = self.chart.makeChart(Out_DIR, df0, self.strTicker, self.strBaseName, strLabel, ud_val + ' ::: ' + ud_mark , alist)
+            info = self.chart.makeChart(Out_DIR, df0, self.strTicker, self.strBaseName, strLabel, ud_val + ' ::: ' + ud_mark , alist, ern_info=self.ern_info)
 
             # CSVファイルの書き込み
             if info != ["-","-","-","-","-"]:  # infoがデフォルト値（全部"-"）でなければCSV出力
