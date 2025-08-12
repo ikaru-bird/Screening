@@ -14,12 +14,14 @@ class EarningsInfo():
         self.quarterly_income_stmt = None
         self.earnings_history = None
         self.revenue_estimate = None
+        self.earnings_estimate = None
         try:
             # Data is fetched on demand from the ticker object
             self.income_stmt = self.ticker.income_stmt
             self.quarterly_income_stmt = self.ticker.quarterly_income_stmt
             self.earnings_history = self.ticker.earnings_history
             self.revenue_estimate = self.ticker.revenue_estimate
+            self.earnings_estimate = self.ticker.earnings_estimate
         except Exception as e:
             print(f"Could not fetch financial data for {self.ticker.ticker}: {e}")
 
@@ -136,44 +138,77 @@ class EarningsInfo():
         return f"{val/1e6:.1f}M"
 
     def get_formatted_earnings_summary(self):
-        """Formats the quarterly earnings data for chart display."""
+        """Formats the quarterly earnings data for chart display based on user-specified format."""
+        lines = []
+
+        # --- Next Quarter Estimates ---
         try:
-            if self.earnings_history is None or self.quarterly_income_stmt is None or self.revenue_estimate is None:
-                return "N/A"
+            next_qtr_rev_str = "N/A"
+            if self.revenue_estimate is not None and not self.revenue_estimate.empty and '+1q' in self.revenue_estimate.index:
+                next_qtr_rev_val = self.revenue_estimate.loc['+1q', 'avg']
+                next_qtr_rev_str = self._format_million(next_qtr_rev_val)
+
+            next_qtr_eps_str = "N/A"
+            if self.earnings_estimate is not None and not self.earnings_estimate.empty and '+1q' in self.earnings_estimate.index:
+                next_qtr_eps_val = self.earnings_estimate.loc['+1q', 'avg']
+                if self.isfloat(next_qtr_eps_val):
+                    next_qtr_eps_str = f"{next_qtr_eps_val:.2f}"
+
+            if next_qtr_rev_str != "N/A" or next_qtr_eps_str != "N/A":
+                lines.append("Next Qtr.")
+                lines.append(f"  Revenue : {next_qtr_rev_str}")
+                lines.append(f"  EPS : {next_qtr_eps_str}")
+        except Exception:
+            pass # Ignore if estimates can't be fetched
+
+        # --- Past Quarters History ---
+        try:
+            if self.earnings_history is None or self.earnings_history.empty:
+                if not lines:
+                     return "N/A"
+                else:
+                     return "\n".join(lines)
 
             earnings_df = self.earnings_history.tail(4).sort_index(ascending=False)
 
-            lines = []
             for i in range(min(len(earnings_df), 4)):
                 report_date_dt = earnings_df.index[i]
                 report_date = report_date_dt.strftime('%Y-%m-%d')
+                lines.append(f"{report_date}")
 
+                # --- Revenue (Actuals only) ---
+                actual_revenue_str = "N/A"
+                if self.quarterly_income_stmt is not None and not self.quarterly_income_stmt.empty and 'Total Revenue' in self.quarterly_income_stmt.index:
+                    try:
+                        matching_rev_date = self.quarterly_income_stmt.columns[abs(self.quarterly_income_stmt.columns - report_date_dt).argmin()]
+                        if abs(matching_rev_date - report_date_dt).days < 30:
+                            actual_revenue = self.quarterly_income_stmt.loc['Total Revenue', matching_rev_date]
+                            actual_revenue_str = self._format_million(actual_revenue)
+                    except Exception:
+                        pass
+                lines.append(f"  Revenue : {actual_revenue_str}")
+
+                # --- EPS (Actual vs Estimate) ---
                 actual_eps = earnings_df['epsActual'].iloc[i]
                 estimated_eps = earnings_df['epsEstimate'].iloc[i]
 
-                matching_rev_idx = abs(self.quarterly_income_stmt.index - report_date_dt).argmin()
-                matching_rev_date = self.quarterly_income_stmt.index[matching_rev_idx]
-                actual_revenue = self.quarterly_income_stmt.loc[matching_rev_date, 'Total Revenue']
+                if self.isfloat(actual_eps) and self.isfloat(estimated_eps):
+                    eps_beat_char = "O" if actual_eps > estimated_eps else "X"
+                    lines.append(f"{eps_beat_char} EPS : {actual_eps:.2f} vs {estimated_eps:.2f}")
+                else:
+                    actual_eps_str = f"{actual_eps:.2f}" if self.isfloat(actual_eps) else "N/A"
+                    est_eps_str = f"{estimated_eps:.2f}" if self.isfloat(estimated_eps) else "N/A"
+                    lines.append(f"- EPS : {actual_eps_str} vs {est_eps_str}")
 
-                estimated_revenue = "N/A"
-                if self.revenue_estimate is not None and i < len(self.revenue_estimate):
-                     est_rev_series = self.revenue_estimate.iloc[i]
-                     if 'avg' in est_rev_series:
-                         estimated_revenue = est_rev_series['avg']
-
-                eps_beat_char = "O" if actual_eps > estimated_eps else "X"
-
-                rev_beat_char = "N/A"
-                if self.isfloat(actual_revenue) and self.isfloat(estimated_revenue):
-                    rev_beat_char = "O" if actual_revenue > estimated_revenue else "X"
-
-                lines.append(f"{report_date}")
-                lines.append(f" {rev_beat_char} : Revenue : {self._format_million(actual_revenue)} vs {self._format_million(estimated_revenue)}")
-                lines.append(f" {eps_beat_char} : EPS : {actual_eps:.2f} vs {estimated_eps:.2f}")
-
-            return "\n".join(lines)
         except Exception as e:
+            if lines:
+                return "\n".join(lines)
             return "N/A"
+
+        if not lines:
+            return "N/A"
+
+        return "\n".join(lines)
 
     # The following methods are kept for compatibility with original DrawChart, but are now deprecated
     def getAnnualEPS(self):
