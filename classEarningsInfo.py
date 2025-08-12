@@ -15,15 +15,24 @@ class EarningsInfo():
         self.earnings_history = None
         self.revenue_estimate = None
         self.earnings_estimate = None
+        self.fundamental_data_unavailable = False # Flag for missing data
         try:
             # Data is fetched on demand from the ticker object
             self.income_stmt = self.ticker.income_stmt
             self.quarterly_income_stmt = self.ticker.quarterly_income_stmt
+
+            # For some tickers (like ETFs), these can be empty DataFrames instead of raising errors.
+            # Check if the core financial statements are empty.
+            if self.income_stmt.empty and self.quarterly_income_stmt.empty:
+                self.fundamental_data_unavailable = True
+
             self.earnings_history = self.ticker.earnings_history
             self.revenue_estimate = self.ticker.revenue_estimate
             self.earnings_estimate = self.ticker.earnings_estimate
         except Exception as e:
-            print(f"Could not fetch financial data for {self.ticker.ticker}: {e}")
+            # Fallback for other potential errors
+            self.fundamental_data_unavailable = True
+            print(f"Note: An exception occurred while fetching data for {self.ticker.ticker}, treating as pass. Error: {e}")
 
     def isfloat(self, s):
         try:
@@ -120,6 +129,10 @@ class EarningsInfo():
             return False, f"error"
 
     def get_fundamental_screening_results(self, roe):
+        # If fundamental data was not available (e.g. for an ETF), pass the screening
+        if self.fundamental_data_unavailable:
+            return True, {'Status': ('Pass', 'Fundamental data not available (e.g., ETF)')}
+
         results = {}
         results['ROE'] = self._check_roe(roe)
         results['EPS Annual Growth'] = self._check_annual_eps_growth()
