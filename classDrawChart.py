@@ -162,11 +162,11 @@ class DrawChart():
         strTitle  = f"{strTicker} :: {shortName} {strVolMA}"
         plt.suptitle(strTitle)
 
-        data.append(["Type/Step\nSector", strLabel])
-        data.append(["nSector\nIndustry", sector + "\n" + industry])
+        data.append(["Type/Step", strLabel])
+        data.append(["Sector\nIndustry", sector + "\n" + industry])
         data.append(["Funds", fundamental_text])
         data.append(["Earnings", strErngs])
-        data.append(["Next Earnings", strNextErnDt])
+        data.append(["NextEarnings", strNextErnDt])
         data.append(["RS Rating",  str_tPercentile + " (ind:" + str_iPercentile + " / rank:" + str_idxTickers + "th)"])
         data.append(["UDVR", strUDval])
         
@@ -176,10 +176,10 @@ class DrawChart():
 
         num_rows = len(data)
         for pos, cell in ax1_tbl.get_celld().items():
-            if pos[0] == 2:     # Funds
-                cell.set_height(2/num_rows)  # 2倍の高さを設定
-            elif pos[0] == 3:   # Earnings
-                cell.set_height(2/num_rows)  # 2倍の高さを設定
+            if pos[0] == 2:                      # Funds
+                cell.set_height(1.5/num_rows)    # 1.5倍の高さを設定
+            elif pos[0] == 3:                    # Earnings
+                cell.set_height(3.5/num_rows)    # 3.5倍の高さを設定
             else:
                 cell.set_height(1/num_rows)
             
