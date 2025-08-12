@@ -184,6 +184,7 @@ class DrawChart():
                 cell.set_height(1/num_rows)
             
             if pos[1] == 0:
+                cell.set_facecolor('#dcdcdc') # 背景着色
                 cell.set_width(0.25) # Adjusted column width
             else:
                 cell.set_width(0.75) # Adjusted column width
