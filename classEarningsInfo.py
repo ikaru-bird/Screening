@@ -151,14 +151,10 @@ class EarningsInfo():
                 actual_eps = earnings_df['epsActual'].iloc[i]
                 estimated_eps = earnings_df['epsEstimate'].iloc[i]
 
-                matching_rev_date = self.quarterly_income_stmt.index[
-                    self.quarterly_income_stmt.index.get_loc(report_date_dt, method='nearest')
-                ]
+                matching_rev_idx = abs(self.quarterly_income_stmt.index - report_date_dt).argmin()
+                matching_rev_date = self.quarterly_income_stmt.index[matching_rev_idx]
                 actual_revenue = self.quarterly_income_stmt.loc[matching_rev_date, 'Total Revenue']
 
-                # Find the corresponding revenue estimate
-                # The revenue_estimate index is often named 'period' and is like '0q', '-1q'
-                # We will assume the order matches the earnings history
                 estimated_revenue = "N/A"
                 if self.revenue_estimate is not None and i < len(self.revenue_estimate):
                      est_rev_series = self.revenue_estimate.iloc[i]
