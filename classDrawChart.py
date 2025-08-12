@@ -179,7 +179,7 @@ class DrawChart():
             if pos[0] == 2:                      # Funds
                 cell.set_height(1.5/num_rows)    # 1.5倍の高さを設定
             elif pos[0] == 3:                    # Earnings
-                cell.set_height(3.5/num_rows)    # 3.5倍の高さを設定
+                cell.set_height(4/num_rows)      # 4倍の高さを設定
             else:
                 cell.set_height(1/num_rows)
             
