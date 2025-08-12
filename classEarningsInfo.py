@@ -13,13 +13,15 @@ class EarningsInfo():
         self.income_stmt = None
         self.quarterly_income_stmt = None
         self.earnings_history = None
+        self.revenue_estimate = None
         try:
             # Data is fetched on demand from the ticker object
             self.income_stmt = self.ticker.income_stmt
             self.quarterly_income_stmt = self.ticker.quarterly_income_stmt
             self.earnings_history = self.ticker.earnings_history
+            self.revenue_estimate = self.ticker.revenue_estimate
         except Exception as e:
-            print(f"Could not fetch income statements for {self.ticker.ticker}: {e}")
+            print(f"Could not fetch financial data for {self.ticker.ticker}: {e}")
 
     def isfloat(self, s):
         try:
@@ -136,41 +138,46 @@ class EarningsInfo():
     def get_formatted_earnings_summary(self):
         """Formats the quarterly earnings data for chart display."""
         try:
-            if self.earnings_history is None or self.quarterly_income_stmt is None:
+            if self.earnings_history is None or self.quarterly_income_stmt is None or self.revenue_estimate is None:
                 return "N/A"
 
-            # 過去4四半期に絞る
             earnings_df = self.earnings_history.tail(4).sort_index(ascending=False)
 
             lines = []
             for i in range(min(len(earnings_df), 4)):
-                report_date = earnings_df.index[i].strftime('%Y-%m-%d')
+                report_date_dt = earnings_df.index[i]
+                report_date = report_date_dt.strftime('%Y-%m-%d')
 
-                actual_eps = earnings_df['Reported EPS'].iloc[i]
-                estimated_eps = earnings_df['EPS Estimate'].iloc[i]
+                actual_eps = earnings_df['epsActual'].iloc[i]
+                estimated_eps = earnings_df['epsEstimate'].iloc[i]
 
-                # 対応する収益レポートを見つける
-                # 日付が一番近いものを採用
                 matching_rev_date = self.quarterly_income_stmt.index[
-                    self.quarterly_income_stmt.index.get_loc(earnings_df.index[i], method='nearest')
+                    self.quarterly_income_stmt.index.get_loc(report_date_dt, method='nearest')
                 ]
                 actual_revenue = self.quarterly_income_stmt.loc[matching_rev_date, 'Total Revenue']
 
-                # 予想収益はearnings_historyにはないので、ここではN/Aとする
-                # (より正確な情報を得るには別のAPIソースが必要になる可能性がある)
+                # Find the corresponding revenue estimate
+                # The revenue_estimate index is often named 'period' and is like '0q', '-1q'
+                # We will assume the order matches the earnings history
                 estimated_revenue = "N/A"
+                if self.revenue_estimate is not None and i < len(self.revenue_estimate):
+                     est_rev_series = self.revenue_estimate.iloc[i]
+                     if 'avg' in est_rev_series:
+                         estimated_revenue = est_rev_series['avg']
 
-                eps_beat = "O" if actual_eps > estimated_eps else "X"
-                rev_beat = "N/A" # 予想収益がないため
+                eps_beat_char = "O" if actual_eps > estimated_eps else "X"
+
+                rev_beat_char = "N/A"
+                if self.isfloat(actual_revenue) and self.isfloat(estimated_revenue):
+                    rev_beat_char = "O" if actual_revenue > estimated_revenue else "X"
 
                 lines.append(f"{report_date}")
-                lines.append(f" - Revenue : {self._format_million(actual_revenue)} vs {estimated_revenue} : {rev_beat}")
-                lines.append(f" - EPS : {actual_eps:.2f} vs {estimated_eps:.2f} : {eps_beat}")
+                lines.append(f" {rev_beat_char} : Revenue : {self._format_million(actual_revenue)} vs {self._format_million(estimated_revenue)}")
+                lines.append(f" {eps_beat_char} : EPS : {actual_eps:.2f} vs {estimated_eps:.2f}")
 
             return "\n".join(lines)
         except Exception as e:
-            # print(f"Error formatting earnings: {e}")
-            return "N/A" # エラー時はN/Aを返す
+            return "N/A"
 
     # The following methods are kept for compatibility with original DrawChart, but are now deprecated
     def getAnnualEPS(self):
