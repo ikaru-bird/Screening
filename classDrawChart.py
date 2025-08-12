@@ -104,6 +104,9 @@ class DrawChart():
             mpf.make_addplot(df['Signal'], type='scatter', markersize=50, marker='^', color='#049DBF', ax=ax2)
         ]
 
+        ticker_txt = self.txt_info.getTickerInfo(strTicker)
+        strNextErnDt = ticker_txt[5]
+        
         ticker_obj = yf.Ticker(strTicker)
         try:
             ticker_info = ticker_obj.info
@@ -149,13 +152,13 @@ class DrawChart():
         strTitle  = f"{strTicker} :: {shortName} {strVolMA}"
         plt.suptitle(strTitle)
 
-        data.append(["Type/Step", strLabel])
+        data.append(["Type/Step\nROE", strLabel] + "\n" + strROE)
+        data.append(["RS Rating\nUDVR",  str_tPercentile + " (ind:" + str_iPercentile + " / rank:" + str_idxTickers + "th)" + "\n" + strUDval])
         data.append(["Sector\nIndustry", sector + "\n" + industry])
-        data.append(["ROE", strROE])
+        data.append(["EPS", "-----"])
         data.append(["Earnings", strErngs])
-        data.append(["RS Rating",  str_tPercentile + " (ind:" + str_iPercentile + " / rank:" + str_idxTickers + "th)"])
-        data.append(["UDVR", strUDval])
-
+        data.append(["Next Earnings", strNextErnDt])
+        
         ax1_tbl = ax1.table(cellText=data, cellLoc='left', bbox=[0, 0, 1, 1])
         ax1_tbl.auto_set_font_size(False)
         ax1_tbl.set_fontsize(9)
