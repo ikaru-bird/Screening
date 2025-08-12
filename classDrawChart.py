@@ -131,6 +131,16 @@ class DrawChart():
             str_idxTickers = "----"
 
         ern = ern_info if ern_info is not None else EarningsInfo(ticker_obj)
+
+        # --- Fundamental Screening ---
+        _, fundamental_results = ern.get_fundamental_screening_results(roe)
+        fundamental_text_lines = []
+        for check_name, (res, reason) in fundamental_results.items():
+            status = "O" if res else "X"
+            fundamental_text_lines.append(f"{status}: {check_name} ({reason})")
+        fundamental_text = "\n".join(fundamental_text_lines)
+        # -----------------------------
+
         strErngs = ern.getQuarterlyEarnings()
 
         str52H = "----"
@@ -155,20 +165,20 @@ class DrawChart():
         data.append(["Type/Step\nROE", strLabel + "\n" + strROE])
         data.append(["RS Rating\nUDVR",  str_tPercentile + " (ind:" + str_iPercentile + " / rank:" + str_idxTickers + "th)" + "\n" + strUDval])
         data.append(["Sector\nIndustry", sector + "\n" + industry])
-        data.append(["EPS", "-----"])
+        data.append(["Fundamentals", fundamental_text])
         data.append(["Earnings", strErngs])
         data.append(["Next Earnings", strNextErnDt])
         
         ax1_tbl = ax1.table(cellText=data, cellLoc='left', bbox=[0, 0, 1, 1])
         ax1_tbl.auto_set_font_size(False)
-        ax1_tbl.set_fontsize(9)
+        ax1_tbl.set_fontsize(8) # Reduced font size to fit more text
 
         for pos, cell in ax1_tbl.get_celld().items():
             cell.set_height(1/len(data))
             if pos[1] == 0:
-                cell.set_width(0.35)
+                cell.set_width(0.25) # Adjusted column width
             else:
-                cell.set_width(0.65)
+                cell.set_width(0.75) # Adjusted column width
 
         try:
             mpf.plot(df, ax=ax2, type='candle', style='yahoo', datetime_format='%Y/%m/%d',
