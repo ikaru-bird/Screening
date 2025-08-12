@@ -174,6 +174,7 @@ class DrawChart():
         ax1_tbl.auto_set_font_size(False)
         ax1_tbl.set_fontsize(9)
 
+        num_rows = len(data)
         for pos, cell in ax1_tbl.get_celld().items():
             if pos[0] == 2:     # Funds
                 cell.set_height(2/num_rows)  # 2倍の高さを設定
