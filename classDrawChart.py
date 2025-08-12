@@ -152,7 +152,7 @@ class DrawChart():
         strTitle  = f"{strTicker} :: {shortName} {strVolMA}"
         plt.suptitle(strTitle)
 
-        data.append(["Type/Step\nROE", strLabel] + "\n" + strROE)
+        data.append(["Type/Step\nROE", strLabel + "\n" + strROE])
         data.append(["RS Rating\nUDVR",  str_tPercentile + " (ind:" + str_iPercentile + " / rank:" + str_idxTickers + "th)" + "\n" + strUDval])
         data.append(["Sector\nIndustry", sector + "\n" + industry])
         data.append(["EPS", "-----"])
