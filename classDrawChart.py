@@ -109,11 +109,11 @@ class DrawChart():
         strNextErnDt = ticker_txt[5]
         
         # 銘柄関連情報を取得(yfinanceから)
-        #ticker_obj = yf.Ticker(strTicker)
-        #try:
-        #    ticker_info = ticker_obj.info
-        #except:
-        #    ticker_info = {}
+        ticker_obj = yf.Ticker(strTicker)
+        try:
+            ticker_info = ticker_obj.info
+        except:
+            ticker_info = {}
 
         # shortName = ticker_info.get('shortName', "N/A")
         shortName = ticker_txt[0]
@@ -121,8 +121,8 @@ class DrawChart():
         sector = ticker_txt[1]
         # industry = ticker_info.get('industry', "N/A")
         industry = ticker_txt[2]
-        # roe = ticker_info.get('returnOnEquity')
-        # strROE = f"{roe:.1%}" if self.isfloat(roe) else "N/A"
+        roe = ticker_info.get('returnOnEquity')
+        strROE = f"{roe:.1%}" if self.isfloat(roe) else "N/A"
 
         rs_info1 = self.rs.getTickerRS(strTicker)
         str_tPercentile = str(rs_info1[2])
