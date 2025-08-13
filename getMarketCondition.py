@@ -25,14 +25,14 @@ def calculate_technical_indicators(data):
 
 def assess_market_conditions(stock_data, market_name):
     # 最新のデータポイントをスカラー値として取得
-    latest_close = stock_data['Close'].iloc[-1]
-    latest_sma20 = stock_data['SMA_20'].iloc[-1]
-    latest_sma50 = stock_data['SMA_50'].iloc[-1]
-    latest_bb_upper = stock_data['BB_upper'].iloc[-1]
-    latest_bb_lower = stock_data['BB_lower'].iloc[-1]
-    latest_rsi = stock_data['RSI'].iloc[-1]
-    latest_macd = stock_data['MACD'].iloc[-1]
-    latest_signal = stock_data['Signal'].iloc[-1]
+    latest_close = stock_data['Close'].iloc[-1].item()
+    latest_sma20 = stock_data['SMA_20'].iloc[-1].item()
+    latest_sma50 = stock_data['SMA_50'].iloc[-1].item()
+    latest_bb_upper = stock_data['BB_upper'].iloc[-1].item()
+    latest_bb_lower = stock_data['BB_lower'].iloc[-1].item()
+    latest_rsi = stock_data['RSI'].iloc[-1].item()
+    latest_macd = stock_data['MACD'].iloc[-1].item()
+    latest_signal = stock_data['Signal'].iloc[-1].item()
 
     if ((latest_close > latest_sma20) and
         (latest_close > latest_sma50) and
