@@ -34,7 +34,7 @@ def assess_market_conditions(stock_data, market_name):
     latest_macd = stock_data['MACD'].iloc[-1].item()
     latest_signal = stock_data['Signal'].iloc[-1].item()
 
-    if ((latest_close > latest_sma20) and 
+    if ((latest_close > latest_sma20) and
         (latest_close > latest_sma50) and
         (latest_sma20 > latest_sma50) and
         (latest_bb_lower < latest_close < latest_bb_upper) and
@@ -42,7 +42,7 @@ def assess_market_conditions(stock_data, market_name):
         (latest_macd > latest_signal)):
         market_condition = 'Investment Grade'
         signal_color = 'green'
-    elif ((latest_close > latest_sma20) and 
+    elif ((latest_close > latest_sma20) and
           (latest_close > latest_sma50) and
           ((latest_sma20 < latest_sma50) or
            (latest_bb_upper <= latest_close) or
@@ -89,22 +89,22 @@ def assess_market_conditions(stock_data, market_name):
 
     # テキストとマーカーの座標を計算
     text_x = stock_data.index[-1]
-    text_y = latest_close - 0.05 * (stock_data['Close'].max() - stock_data['Close'].min())
+    text_y = float(latest_close - 0.05 * (stock_data['Close'].max() - stock_data['Close'].min()))
     plt.text(text_x, text_y, f'{market_condition}\n\n{reason}', ha='right', va='top', fontsize=10, bbox=dict(facecolor='white', alpha=0.5))
 
     # マーカーを描画
     marker_x = stock_data.index[-1]
-    marker_y = latest_close
+    marker_y = float(latest_close)
     plt.scatter(marker_x, marker_y, color=signal_color, marker='o', s=100)
     plt.savefig(f'./_files/images/{market_name}_market_condition.png')
 #   plt.show()
 
 if __name__ == '__main__':
-    
+
     # パラメータ受取り
     args = sys.argv
     symbol = args[1]
-    
+
     # 日付のセット
     end_date = (datetime.now() + timedelta(days=1))
     start_date = end_date - timedelta(days=365)
