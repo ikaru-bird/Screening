@@ -34,7 +34,7 @@ def assess_market_conditions(stock_data, market_name):
     latest_macd = stock_data['MACD'].iloc[-1].item()
     latest_signal = stock_data['Signal'].iloc[-1].item()
 
-    if ((latest_close > latest_sma20) and 
+    if ((latest_close > latest_sma20) and
         (latest_close > latest_sma50) and
         (latest_sma20 > latest_sma50) and
         (latest_bb_lower < latest_close < latest_bb_upper) and
@@ -42,7 +42,7 @@ def assess_market_conditions(stock_data, market_name):
         (latest_macd > latest_signal)):
         market_condition = 'Investment Grade'
         signal_color = 'green'
-    elif ((latest_close > latest_sma20) and 
+    elif ((latest_close > latest_sma20) and
           (latest_close > latest_sma50) and
           ((latest_sma20 < latest_sma50) or
            (latest_bb_upper <= latest_close) or
@@ -100,11 +100,11 @@ def assess_market_conditions(stock_data, market_name):
 #   plt.show()
 
 if __name__ == '__main__':
-    
+
     # パラメータ受取り
     args = sys.argv
     symbol = args[1]
-    
+
     # 日付のセット
     end_date = (datetime.now() + timedelta(days=1))
     start_date = end_date - timedelta(days=365)
