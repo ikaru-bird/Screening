@@ -79,7 +79,7 @@ class EarningsInfo():
         try:
             eps_data = self._get_eps_from_stmt(self.quarterly_income_stmt)
             if eps_data is None or len(eps_data) < 5:
-                return False, "data < 5 quarters"
+                return True, "data < 5 quarters"
 
             eps0 = eps_data.iloc[0]
             eps4 = eps_data.iloc[4]
