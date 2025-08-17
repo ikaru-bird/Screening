@@ -12,6 +12,7 @@ import numpy as np
 import mplfinance as mpf
 import matplotlib
 matplotlib.use('Agg')
+import textwrap
 import matplotlib.pyplot as plt
 from matplotlib import gridspec
 from classTickerInfo import TickerInfo
@@ -74,7 +75,7 @@ class DrawChart():
         data = []
 
         fig = plt.figure(figsize=(12, 6.75), dpi=100)
-        fig.subplots_adjust(top=0.93, bottom=0.05, left=0.02, right=0.92, wspace=0.02, hspace=0.0)
+        fig.subplots_adjust(top=0.88, bottom=0.05, left=0.02, right=0.92, wspace=0.02, hspace=0.0)
         gs = gridspec.GridSpec(ncols=2, nrows=3, width_ratios=[1, 2], height_ratios=[4, 2, 1])
 
         ax1 = fig.add_subplot(gs[:,0])
@@ -166,6 +167,29 @@ class DrawChart():
 
         strTitle  = f"{strTicker} :: {shortName} {strVolMA}"
         plt.suptitle(strTitle)
+
+        # 会社概要を追加
+        businessSummary = ticker_info.get('longBusinessSummary')
+        if businessSummary:
+            # 概要が長すぎる場合、330文字に制限
+            if len(businessSummary) > 330:
+                businessSummary = businessSummary[:330] + "..."
+
+            # 描画領域の横幅を基準に折り返し文字数を計算
+            # Figureの横幅(inch) * 72(point/inch) = Figureの横幅(point)
+            # フォントサイズ8ptの文字のおおよその幅を4.5ptと仮定 (0.6 * 8pt)
+            # 左右のマージンを考慮(left=0.02, right=0.92 -> 0.9の幅)
+            fig_width_pt = fig.get_size_inches()[0] * 72
+            text_area_width_pt = fig_width_pt * (0.92 - 0.02)
+            # 厳密にはフォントによって違うが、平均的な英数字の幅で計算
+            avg_char_width_pt = 8 * 0.55
+            wrap_width = int(text_area_width_pt / avg_char_width_pt)
+
+            wrapped_summary = '\n'.join(textwrap.wrap(businessSummary, width=wrap_width))
+
+            # suptitleの下にテキストを描画
+            plt.figtext(0.5, 0.97, wrapped_summary, ha='center', va='top', fontsize=8)
+
 
         data.append(["Type/Step", strLabel])
         data.append(["Sector\nIndustry", sector + "\n" + industry])
