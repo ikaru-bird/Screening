@@ -148,7 +148,7 @@ class DrawChart():
             elif res is False:
                 status = "X"
             else:
-                status = "-"
+                status = "--"
             fundamental_text_lines.append(f"{status} : {check_name} : {reason}")
         fundamental_text = "\n".join(fundamental_text_lines)
         # -----------------------------
