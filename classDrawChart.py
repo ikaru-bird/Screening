@@ -12,6 +12,7 @@ import numpy as np
 import mplfinance as mpf
 import matplotlib
 matplotlib.use('Agg')
+import textwrap
 import matplotlib.pyplot as plt
 from matplotlib import gridspec
 from classTickerInfo import TickerInfo
@@ -74,7 +75,7 @@ class DrawChart():
         data = []
 
         fig = plt.figure(figsize=(12, 6.75), dpi=100)
-        fig.subplots_adjust(top=0.93, bottom=0.05, left=0.02, right=0.92, wspace=0.02, hspace=0.0)
+        fig.subplots_adjust(top=0.88, bottom=0.05, left=0.02, right=0.92, wspace=0.02, hspace=0.0)
         gs = gridspec.GridSpec(ncols=2, nrows=3, width_ratios=[1, 2], height_ratios=[4, 2, 1])
 
         ax1 = fig.add_subplot(gs[:,0])
@@ -166,6 +167,24 @@ class DrawChart():
 
         strTitle  = f"{strTicker} :: {shortName} {strVolMA}"
         plt.suptitle(strTitle)
+
+        # 会社概要を追加
+        businessSummary = ticker_info.get('longBusinessSummary')
+        if businessSummary:
+            # 概要が長すぎる場合、1000文字に制限
+            if len(businessSummary) > 1000:
+                businessSummary = businessSummary[:1000] + "..."
+
+            # 画面サイズに合わせてテキストを折り返し
+            # fig.textはfigure座標(0-1)なので、それに基づいてラップ幅を計算する方がロバスト
+            # 左右に5%ずつのマージンを想定
+            # 1文字あたりのおおよその幅を0.01と仮定
+            wrap_width = int(0.9 / (8 * 0.005)) # 0.9 is 90% width, 8 is fontsize
+            wrapped_summary = '\n'.join(textwrap.wrap(businessSummary, width=wrap_width))
+
+            # suptitleの下にテキストを描画
+            plt.figtext(0.5, 0.97, wrapped_summary, ha='center', va='top', fontsize=8, wrap=True)
+
 
         data.append(["Type/Step", strLabel])
         data.append(["Sector\nIndustry", sector + "\n" + industry])
