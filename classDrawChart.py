@@ -75,7 +75,7 @@ class DrawChart():
         data = []
 
         fig = plt.figure(figsize=(12, 6.75), dpi=100)
-        fig.subplots_adjust(top=0.88, bottom=0.05, left=0.02, right=0.92, wspace=0.02, hspace=0.0)
+        fig.subplots_adjust(top=0.85, bottom=0.05, left=0.02, right=0.92, wspace=0.02, hspace=0.0)
         gs = gridspec.GridSpec(ncols=2, nrows=3, width_ratios=[1, 2], height_ratios=[4, 2, 1])
 
         ax1 = fig.add_subplot(gs[:,0])
@@ -188,7 +188,7 @@ class DrawChart():
             wrapped_summary = '\n'.join(textwrap.wrap(businessSummary, width=wrap_width))
 
             # suptitleの下にテキストを描画
-            plt.figtext(0.5, 0.97, wrapped_summary, ha='center', va='top', fontsize=8)
+            plt.figtext(0.5, 0.96, wrapped_summary, ha='center', va='top', fontsize=8)
 
 
         data.append(["Type/Step", strLabel])
