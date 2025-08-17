@@ -171,9 +171,9 @@ class DrawChart():
         # 会社概要を追加
         businessSummary = ticker_info.get('longBusinessSummary')
         if businessSummary:
-            # 概要が長すぎる場合、330文字に制限
-            if len(businessSummary) > 330:
-                businessSummary = businessSummary[:330] + "..."
+            # 概要が長すぎる場合、500文字に制限
+            if len(businessSummary) > 500:
+                businessSummary = businessSummary[:500] + "..."
 
             # 描画領域の横幅を基準に折り返し文字数を計算
             # Figureの横幅(inch) * 72(point/inch) = Figureの横幅(point)
@@ -188,7 +188,7 @@ class DrawChart():
             wrapped_summary = '\n'.join(textwrap.wrap(businessSummary, width=wrap_width))
 
             # suptitleの下にテキストを描画
-            plt.figtext(0.5, 0.85, wrapped_summary, ha='center', va='top', fontsize=8)
+            plt.figtext(0.5, 0.94, wrapped_summary, ha='center', va='top', fontsize=8)
 
 
         data.append(["Type/Step", strLabel])
