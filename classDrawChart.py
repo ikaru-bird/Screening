@@ -188,7 +188,7 @@ class DrawChart():
             wrapped_summary = '\n'.join(textwrap.wrap(businessSummary, width=wrap_width))
 
             # suptitleの下にテキストを描画
-            plt.figtext(0.5, 0.97, wrapped_summary, ha='center', va='top', fontsize=8)
+            plt.figtext(0.5, 0.85, wrapped_summary, ha='center', va='top', fontsize=8)
 
 
         data.append(["Type/Step", strLabel])
