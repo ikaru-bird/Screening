@@ -171,19 +171,24 @@ class DrawChart():
         # 会社概要を追加
         businessSummary = ticker_info.get('longBusinessSummary')
         if businessSummary:
-            # 概要が長すぎる場合、1000文字に制限
-            if len(businessSummary) > 1000:
-                businessSummary = businessSummary[:1000] + "..."
+            # 概要が長すぎる場合、500文字に制限
+            if len(businessSummary) > 500:
+                businessSummary = businessSummary[:500] + "..."
 
-            # 画面サイズに合わせてテキストを折り返し
-            # fig.textはfigure座標(0-1)なので、それに基づいてラップ幅を計算する方がロバスト
-            # 左右に5%ずつのマージンを想定
-            # 1文字あたりのおおよその幅を0.01と仮定
-            wrap_width = int(0.9 / (8 * 0.005)) # 0.9 is 90% width, 8 is fontsize
+            # 描画領域の横幅を基準に折り返し文字数を計算
+            # Figureの横幅(inch) * 72(point/inch) = Figureの横幅(point)
+            # フォントサイズ8ptの文字のおおよその幅を4.5ptと仮定 (0.6 * 8pt)
+            # 左右のマージンを考慮(left=0.02, right=0.92 -> 0.9の幅)
+            fig_width_pt = fig.get_size_inches()[0] * 72
+            text_area_width_pt = fig_width_pt * (0.92 - 0.02)
+            # 厳密にはフォントによって違うが、平均的な英数字の幅で計算
+            avg_char_width_pt = 8 * 0.55
+            wrap_width = int(text_area_width_pt / avg_char_width_pt)
+
             wrapped_summary = '\n'.join(textwrap.wrap(businessSummary, width=wrap_width))
 
             # suptitleの下にテキストを描画
-            plt.figtext(0.5, 0.97, wrapped_summary, ha='center', va='top', fontsize=8, wrap=True)
+            plt.figtext(0.5, 0.97, wrapped_summary, ha='center', va='top', fontsize=8)
 
 
         data.append(["Type/Step", strLabel])
