@@ -76,7 +76,12 @@ for i in range(0, n + 1):
 
         # ログとしてチェック結果を表示
         for check_name, (res, reason) in results.items():
-            status = "O" if res else "X"
+            if res is True:
+                status = "O"
+            elif res is False:
+                status = "X"
+            else:
+                status = "-"
             print(f"  - {status} : {check_name} : {reason}")
 
         if not passed:

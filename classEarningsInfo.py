@@ -6,6 +6,7 @@ sys.path.append('/content/drive/MyDrive/Colab Notebooks/my-modules')
 import pandas as pd
 import datetime as dt
 import yfinance as yf # Import yfinance here
+import math
 
 class EarningsInfo():
     def __init__(self, ticker_obj):
@@ -27,10 +28,10 @@ class EarningsInfo():
 
     def isfloat(self, s):
         try:
-            float(str(s))
+            f = float(str(s))
+            return not (math.isnan(f) or math.isinf(f))
         except (ValueError, TypeError):
             return False
-        return True
 
     def _get_eps_from_stmt(self, stmt):
         if stmt is None:

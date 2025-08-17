@@ -9,6 +9,7 @@ import time
 import pandas as pd
 import yfinance as yf
 import numpy as np
+import math
 import mplfinance as mpf
 import matplotlib
 matplotlib.use('Agg')
@@ -50,10 +51,10 @@ class DrawChart():
 
     def isfloat(self, s):
         try:
-            float(str(s))
+            f = float(str(s))
+            return not (math.isnan(f) or math.isinf(f))
         except (ValueError, TypeError):
             return False
-        return True
 
     def calc_macd(self, df, es, el, sg):
         macd = pd.DataFrame()
