@@ -35,9 +35,24 @@ class EarningsInfo():
     def _get_eps_from_stmt(self, stmt):
         if stmt is None:
             return None
+
+        eps_series = None
+
+        # Try 'Basic EPS' first
         if 'Basic EPS' in stmt.index:
-            return stmt.loc['Basic EPS']
-        return None
+            series = stmt.loc['Basic EPS']
+            # Check if the series contains at least one valid number
+            if series.notna().any():
+                eps_series = series
+
+        # If 'Basic EPS' is not good, try 'Diluted EPS'
+        if eps_series is None and 'Diluted EPS' in stmt.index:
+            series = stmt.loc['Diluted EPS']
+            # Check if the series contains at least one valid number
+            if series.notna().any():
+                eps_series = series
+
+        return eps_series
 
     def _check_roe(self, roe):
         if not self.isfloat(roe):
