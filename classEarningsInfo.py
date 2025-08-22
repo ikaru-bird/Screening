@@ -5,6 +5,7 @@ sys.path.append('/content/drive/MyDrive/Colab Notebooks/my-modules')
 
 import pandas as pd
 import datetime as dt
+import math
 import yfinance as yf # Import yfinance here
 
 class EarningsInfo():
@@ -26,11 +27,16 @@ class EarningsInfo():
             print(f"Could not fetch financial data for {self.ticker.ticker}: {e}")
 
     def isfloat(self, s):
-        try:
-            float(str(s))
-        except (ValueError, TypeError):
+        if s is None:
             return False
-        return True
+        try:
+            # Try converting to float
+            f = float(s)
+            # Return False if the value is NaN, True otherwise
+            return not math.isnan(f)
+        except (ValueError, TypeError):
+            # If conversion fails, it's not a valid float
+            return False
 
     def _get_eps_from_stmt(self, stmt):
         if stmt is None:
@@ -83,6 +89,9 @@ class EarningsInfo():
             g3 = (eps2 - eps3) / abs(eps3)
             avg_growth = (g1 + g2 + g3) / 3
 
+            if math.isnan(avg_growth):
+                return None, "average growth unavailable"
+
             if avg_growth < 0.25:
                 return False, f"{avg_growth:.1%} < 25%"
 
@@ -125,7 +134,7 @@ class EarningsInfo():
             eps1 = eps_data.iloc[1]
 
             if not self.isfloat(eps0) or not self.isfloat(eps1):
-                 return None, "invalid data"
+                 return None, "quarterly EPS growth unavailable"
 
             if eps0 <= eps1:
                 return False, f"{eps1:.2f} -> {eps0:.2f}"
