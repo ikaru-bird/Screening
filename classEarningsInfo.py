@@ -64,10 +64,13 @@ class EarningsInfo():
                     return True, f"turnaround ({eps3:.2f} -> {eps0:.2f})"
                  return False, f"not consistently positive"
 
-            g1 = (eps0 - eps1) / abs(eps1)
-            g2 = (eps1 - eps2) / abs(eps2)
-            g3 = (eps2 - eps3) / abs(eps3)
+            g1 = (eps0 - eps1) / abs(eps1) if abs(eps1) != 0 else 0
+            g2 = (eps1 - eps2) / abs(eps2) if abs(eps2) != 0 else 0
+            g3 = (eps2 - eps3) / abs(eps3) if abs(eps3) != 0 else 0
             avg_growth = (g1 + g2 + g3) / 3
+
+            if math.isnan(avg_growth):
+                return None, "average growth unavailable"
 
             if avg_growth < 0.25:
                 return False, f"{avg_growth:.1%} < 25%"
@@ -80,7 +83,11 @@ class EarningsInfo():
         try:
             eps_data = self._get_eps_from_stmt(self.quarterly_income_stmt)
             if eps_data is None or len(eps_data) < 5:
-                return None, "data < 5 quarters"
+                # Fallback to earnings_history
+                if self.earnings_history is not None and not self.earnings_history.empty and len(self.earnings_history) >= 5:
+                    eps_data = self.earnings_history['epsActual']
+                else:
+                    return None, "data < 5 quarters"
 
             eps0 = eps_data.iloc[0]
             eps4 = eps_data.iloc[4]
@@ -93,7 +100,7 @@ class EarningsInfo():
             if eps4 <= 0:
                 return True, f"turned positive ({eps4:.2f} -> {eps0:.2f})"
 
-            growth = (eps0 - eps4) / abs(eps4)
+            growth = (eps0 - eps4) / abs(eps4) if abs(eps4) != 0 else 0
             if growth < 0.25:
                 return False, f"{growth:.1%} < 25%"
 
@@ -105,13 +112,17 @@ class EarningsInfo():
         try:
             eps_data = self._get_eps_from_stmt(self.quarterly_income_stmt)
             if eps_data is None or len(eps_data) < 2:
-                return None, "data < 2 quarters"
+                # Fallback to earnings_history
+                if self.earnings_history is not None and not self.earnings_history.empty and len(self.earnings_history) >= 2:
+                    eps_data = self.earnings_history['epsActual']
+                else:
+                    return None, "data < 2 quarters"
 
             eps0 = eps_data.iloc[0]
             eps1 = eps_data.iloc[1]
 
             if not self.isfloat(eps0) or not self.isfloat(eps1):
-                 return None, "invalid data"
+                 return None, "quarterly EPS growth unavailable"
 
             if eps0 <= eps1:
                 return False, f"{eps1:.2f} -> {eps0:.2f}"

@@ -1,0 +1,10 @@
+1332.T~Nippon Suisan Kaisha, Ltd.~Fishery, Agriculture & Forestry~Fishery, Agriculture & Forestry~JP~10.5~10.2~2024-05-14~100000~100
+1333.T~Maruha Nichiro Corporation~Fishery, Agriculture & Forestry~Fishery, Agriculture & Forestry~JP~12.1~11.5~2024-05-14~100000~100
+1377.T~SAKATA SEED CORPORATION~Fishery, Agriculture & Forestry~Fishery, Agriculture & Forestry~JP~15.2~14.8~2024-05-14~100000~100
+1414.T~SHO-BOND Holdings Co., Ltd.~Construction & Materials~Construction & Materials~JP~20.1~19.5~2024-05-14~100000~100
+1417.T~MIRAIT ONE Corporation~Construction & Materials~Construction & Materials~JP~13.4~12.9~2024-05-14~100000~100
+1419.T~Tam 홈 Co., Ltd.~Construction & Materials~Construction & Materials~JP~8.9~8.5~2024-05-14~100000~100
+1514.T~Sumiseki Holdings, Inc.~Mining~Mining~JP~5.3~5.1~2024-05-14~100000~100
+1515.T~Nittetsu Mining Co., Ltd.~Mining~Mining~JP~7.8~7.5~2024-05-14~100000~100
+1518.T~Mitsui Matsushima Holdings Co., Ltd.~Mining~Mining~JP~3.1~3.0~2024-05-14~100000~100
+1605.T~INPEX CORPORATION~Mining~Mining~JP~6.7~6.5~2024-05-14~100000~100

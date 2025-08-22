@@ -1,0 +1,78 @@
+--- 1/10: Checking NVDA ---
+  - O : ROE : 115.5% >= 15%
+  - O : EPS Annual Growth : 226.0% >= 25%
+  - O : EPS YoY Growth : 28.3% >= 25%
+  - X : EPS Quarterly Growth : 0.90 -> 0.77
+-> NVDA PASSED fundamental screening. Proceeding to technical analysis.
+-> Finished technical analysis for NVDA.
+
+--- 2/10: Checking MSFT ---
+  - O : ROE : 33.3% >= 15%
+  - X : EPS Annual Growth : 12.6% < 25%
+  - X : EPS YoY Growth : 23.6% < 25%
+  - O : EPS Quarterly Growth : 3.47 -> 3.66
+-> MSFT did not pass fundamental screening. Skipping.
+
+--- 3/10: Checking GOOG ---
+  - O : ROE : 34.8% >= 15%
+  - X : EPS Annual Growth : 15.7% < 25%
+  - X : EPS YoY Growth : 22.0% < 25%
+  - X : EPS Quarterly Growth : 2.84 -> 2.33
+-> GOOG did not pass fundamental screening. Skipping.
+
+--- 4/10: Checking AMZN ---
+  - O : ROE : 24.8% >= 15%
+  - X : EPS Annual Growth : not consistently positive
+  - O : EPS YoY Growth : 32.6% >= 25%
+  - O : EPS Quarterly Growth : 1.62 -> 1.71
+-> AMZN PASSED fundamental screening. Proceeding to technical analysis.
+-> Finished technical analysis for AMZN.
+
+--- 5/10: Checking META ---
+  - O : ROE : 40.6% >= 15%
+  - O : EPS Annual Growth : 33.2% >= 25%
+  - O : EPS YoY Growth : 37.1% >= 25%
+  - O : EPS Quarterly Growth : 6.59 -> 7.28
+-> META PASSED fundamental screening. Proceeding to technical analysis.
+META is ::: Trend Templete :::
+-> Finished technical analysis for META.
+
+--- 6/10: Checking AVGO ---
+  - O : ROE : 19.0% >= 15%
+  - X : EPS Annual Growth : 12.1% < 25%
+  - O : EPS YoY Growth : 128.3% >= 25%
+  - X : EPS Quarterly Growth : 1.17 -> 1.05
+-> AVGO did not pass fundamental screening. Skipping.
+
+--- 7/10: Checking TSM ---
+  - O : ROE : 34.2% >= 15%
+  - O : EPS Annual Growth : 30.1% >= 25%
+  - O : EPS YoY Growth : 60.7% >= 25%
+  - O : EPS Quarterly Growth : 69.75 -> 76.80
+-> TSM PASSED fundamental screening. Proceeding to technical analysis.
+TSM is ::: Trend Templete :::
+-> Finished technical analysis for TSM.
+
+--- 8/10: Checking V ---
+  - O : ROE : 51.8% >= 15%
+  - X : EPS Annual Growth : 20.1% < 25%
+  - X : EPS YoY Growth : 12.1% < 25%
+  - O : EPS Quarterly Growth : 2.32 -> 2.69
+-> V did not pass fundamental screening. Skipping.
+
+--- 9/10: Checking LLY ---
+  - O : ROE : 86.3% >= 15%
+  - O : EPS Annual Growth : 34.3% >= 25%
+  - O : EPS YoY Growth : 91.8% >= 25%
+  - O : EPS Quarterly Growth : 3.07 -> 6.31
+-> LLY PASSED fundamental screening. Proceeding to technical analysis.
+-> Finished technical analysis for LLY.
+
+--- 10/10: Checking MA ---
+  - O : ROE : 176.9% >= 15%
+  - X : EPS Annual Growth : 16.5% < 25%
+  - X : EPS YoY Growth : invalid data
+  - X : EPS Quarterly Growth : quarterly EPS growth unavailable
+-> MA PASSED fundamental screening. Proceeding to technical analysis.
+MA is ::: Trend Templete :::
+-> Finished technical analysis for MA.
