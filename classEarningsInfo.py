@@ -6,6 +6,7 @@ sys.path.append('/content/drive/MyDrive/Colab Notebooks/my-modules')
 import pandas as pd
 import datetime as dt
 import yfinance as yf # Import yfinance here
+import math
 
 class EarningsInfo():
     def __init__(self, ticker_obj):
@@ -27,10 +28,10 @@ class EarningsInfo():
 
     def isfloat(self, s):
         try:
-            float(str(s))
+            f = float(str(s))
+            return not (math.isnan(f) or math.isinf(f))
         except (ValueError, TypeError):
             return False
-        return True
 
     def _get_eps_from_stmt(self, stmt):
         if stmt is None:
@@ -41,7 +42,7 @@ class EarningsInfo():
 
     def _check_roe(self, roe):
         if not self.isfloat(roe):
-            return Null, "N/A"
+            return None, "N/A"
         if float(roe) < 0.15:
             return False, f"{float(roe):.1%} < 15%"
         return True, f"{float(roe):.1%} >= 15%"
@@ -50,13 +51,13 @@ class EarningsInfo():
         try:
             eps_data = self._get_eps_from_stmt(self.income_stmt)
             if eps_data is None or len(eps_data) < 4:
-                return Null, "data < 4 years"
+                return None, "data < 4 years"
 
             eps_list = eps_data.head(4).tolist()
             eps0, eps1, eps2, eps3 = eps_list
 
             if any(not self.isfloat(e) for e in eps_list):
-                return Null, "invalid data"
+                return None, "invalid data"
 
             if eps0 <= 0 or eps1 <= 0 or eps2 <= 0 or eps3 <= 0:
                  if eps0 > 0 and eps3 < 0:
@@ -73,19 +74,19 @@ class EarningsInfo():
 
             return True, f"{avg_growth:.1%} >= 25%"
         except Exception as e:
-            return Null, f"error"
+            return None, f"error"
 
     def _check_quarterly_eps_yoy_growth(self):
         try:
             eps_data = self._get_eps_from_stmt(self.quarterly_income_stmt)
             if eps_data is None or len(eps_data) < 5:
-                return Null, "data < 5 quarters"
+                return None, "data < 5 quarters"
 
             eps0 = eps_data.iloc[0]
             eps4 = eps_data.iloc[4]
 
             if not self.isfloat(eps0) or not self.isfloat(eps4):
-                 return Null, "invalid data"
+                 return None, "invalid data"
 
             if eps0 <= 0:
                 return False, f"latest quarter({eps0:.2f}) not positive"
@@ -98,26 +99,26 @@ class EarningsInfo():
 
             return True, f"{growth:.1%} >= 25%"
         except Exception as e:
-            return Null, f"error"
+            return None, f"error"
 
     def _check_consecutive_quarterly_eps_growth(self):
         try:
             eps_data = self._get_eps_from_stmt(self.quarterly_income_stmt)
             if eps_data is None or len(eps_data) < 2:
-                return Null, "data < 2 quarters"
+                return None, "data < 2 quarters"
 
             eps0 = eps_data.iloc[0]
             eps1 = eps_data.iloc[1]
 
             if not self.isfloat(eps0) or not self.isfloat(eps1):
-                 return Null, "invalid data"
+                 return None, "invalid data"
 
             if eps0 <= eps1:
                 return False, f"{eps1:.2f} -> {eps0:.2f}"
 
             return True, f"{eps1:.2f} -> {eps0:.2f}"
         except Exception as e:
-            return Null, f"error"
+            return None, f"error"
 
     def get_fundamental_screening_results(self, roe):
         results = {}
