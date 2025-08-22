@@ -1,5 +1,0 @@
---- Starting test for META.csv ---
--> Successfully loaded DataFrame for META.csv.
-DataFrame has 500 rows.
--> Test PASSED: No errors occurred during csvSetDF execution.
---- Finished test for META.csv ---
