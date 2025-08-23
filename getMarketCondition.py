@@ -89,7 +89,7 @@ def assess_market_conditions(stock_data, market_name):
 
     # テキストとマーカーの座標を計算
     text_x = stock_data.index[-1]
-    text_y = latest_close - 0.05 * (stock_data['Close'].max() - stock_data['Close'].min())
+    text_y = latest_close - 0.05 * (stock_data['Close'].max().item() - stock_data['Close'].min().item())
     plt.text(text_x, text_y, f'{market_condition}\n\n{reason}', ha='right', va='top', fontsize=10, bbox=dict(facecolor='white', alpha=0.5))
 
     # マーカーを描画
