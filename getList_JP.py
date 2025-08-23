@@ -46,7 +46,7 @@ df1 = df0.rename(columns={"市場・商品区分": "SEGMENT", "規模コード":
 df1['SIZE'] = df1['SIZE'].replace('-', 99)
 df1['SIZE'] = df1['SIZE'].astype(int)
 
-# df1 = df1.query("SEGMENT == 'プライム（内国株式）'") # プライム市場のみ
+# df1 = df1.query("SEGMENT == 'プライム（内国株式）'")  # プライム市場のみ
 # df1 = df1.query("SEGMENT.str.contains('内国株式')")  # 国内株式全部
 # df1 = df1.query("SEGMENT.str.contains('内国株式') and SIZE <= 4")  # 国内株式+TOPIX Mid400以上
 # df1 = df1.query("SEGMENT.str.contains('内国株式') and SIZE <= 6")  # 国内株式+TOPIX Small1以上
@@ -123,4 +123,5 @@ with open(outpath, 'w', encoding='utf-8') as f:
 #       f.write(str(item[1])+'.T~' + str(item[2]) + '~' + str(item[7]) + '~' + str(item[5]) + '~~~~' + Ern_dt[:Ern_dt.rfind(' ')] + '~~\n')
 #       f.write(str(item[1])+'.T~' + zenkaku_to_hankaku(str(item[2])) + '~' + str(item[7]) + '~' + industry + '~~~~' + Ern_dt[:Ern_dt.rfind(' ')] + '~~\n')
         f.write(str(item.iloc[1]) + '.T~' + zenkaku_to_hankaku(str(item.iloc[2])) + '~' + str(item.iloc[7]) + '~' + industry + '~~~~' + Ern_dt[:Ern_dt.rfind(' ')] + '~~\n')
+
 
