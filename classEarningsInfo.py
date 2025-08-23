@@ -62,7 +62,7 @@ class EarningsInfo():
             if eps0 <= 0 or eps1 <= 0 or eps2 <= 0 or eps3 <= 0:
                  if eps0 > 0 and eps3 < 0:
                     return True, f"turnaround ({eps3:.2f} -> {eps0:.2f})"
-                 return False, f"not consistently positive"
+                 return False, f"not positive"
 
             g1 = (eps0 - eps1) / abs(eps1) if abs(eps1) != 0 else 0
             g2 = (eps1 - eps2) / abs(eps2) if abs(eps2) != 0 else 0
@@ -70,7 +70,7 @@ class EarningsInfo():
             avg_growth = (g1 + g2 + g3) / 3
 
             if math.isnan(avg_growth):
-                return None, "average growth unavailable"
+                return None, "unavailable"
 
             if avg_growth < 0.25:
                 return False, f"{avg_growth:.1%} < 25%"
@@ -122,7 +122,7 @@ class EarningsInfo():
             eps1 = eps_data.iloc[1]
 
             if not self.isfloat(eps0) or not self.isfloat(eps1):
-                 return None, "quarterly EPS growth unavailable"
+                 return None, "unavailable"
 
             if eps0 <= eps1:
                 return False, f"{eps1:.2f} -> {eps0:.2f}"
