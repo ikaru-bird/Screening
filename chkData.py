@@ -75,19 +75,19 @@ for i in range(0, n + 1):
         passed, results = ern_info.get_fundamental_screening_results(roe)
 
         # ログとしてチェック結果を表示
-        for check_name, (res, reason) in results.items():
-            status = "O" if res else "X"
-            print(f"  - {status} : {check_name} : {reason}")
+        # for check_name, (res, reason) in results.items():
+        #     status = "O" if res else "X"
+        #     print(f"  - {status} : {check_name} : {reason}")
 
         if not passed:
-            print(f"-> {ticker_str} did not pass fundamental screening. Skipping.\n")
+        #     print(f"{ticker_str} did not pass fundamental screening. Skipping.\n")
             continue
 
     except Exception as e:
         print(f"##ERROR## Could not perform fundamental screen for {ticker_str}: {e}\n")
         continue
 
-    print(f"-> {ticker_str} PASSED fundamental screening. Proceeding to technical analysis.")
+    print(f"{ticker_str} PASSED fundamental screening.")
 
     # ==================================================
     # STAGE 2: TECHNICAL ANALYSIS (Price Data)
@@ -138,7 +138,7 @@ for i in range(0, n + 1):
         ckdt.isON_Minervini()
         ckdt.isGranville()
         ckdt.isGoldernCross()
-        print(f"-> Finished technical analysis for {ticker_str}.\n")
+        # print(f"-> Finished technical analysis for {ticker_str}.\n")
 
     except Exception as e:
         print(f"##ERROR## during technical analysis for {ticker_str}: {e}\n")

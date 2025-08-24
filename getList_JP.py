@@ -47,13 +47,13 @@ df1['SIZE'] = df1['SIZE'].replace('-', 99)
 df1['SIZE'] = df1['SIZE'].astype(int)
 
 # df1 = df1.query("SEGMENT == 'プライム（内国株式）'")  # プライム市場のみ
-# df1 = df1.query("SEGMENT.str.contains('内国株式')")  # 国内株式全部
+# df1 = df1.query("SEGMENT.str.contains('内国株式')")   # 国内株式全部
 # df1 = df1.query("SEGMENT.str.contains('内国株式') and SIZE <= 4")  # 国内株式+TOPIX Mid400以上
-# df1 = df1.query("SEGMENT.str.contains('内国株式') and SIZE <= 6")  # 国内株式+TOPIX Small1以上
-df1   = df1.query("SEGMENT.str.contains('内国株式') and SIZE <= 7")  # 国内株式+TOPIX Small2以上
-# df1 = df1.query("SEGMENT == 'プライム（内国株式）' and SIZE <= 6")  # プライム+TOPIX Small1以上
-# df1 = df1.query("SEGMENT == 'プライム（内国株式）' and SIZE <= 7")  # プライム+TOPIX Small2以上
-# df1   = df1.query("SEGMENT == 'プライム（内国株式）' or SEGMENT == 'スタンダード（内国株式）'")  # プライム+スタンダード
+df1   = df1.query("SEGMENT.str.contains('内国株式') and SIZE <= 6")  # 国内株式+TOPIX Small1以上
+# df1 = df1.query("SEGMENT.str.contains('内国株式') and SIZE <= 7")  # 国内株式+TOPIX Small2以上
+# df1 = df1.query("SEGMENT == 'プライム（内国株式）' and SIZE <= 6") # プライム+TOPIX Small1以上
+# df1 = df1.query("SEGMENT == 'プライム（内国株式）' and SIZE <= 7") # プライム+TOPIX Small2以上
+# df1 = df1.query("SEGMENT == 'プライム（内国株式）' or SEGMENT == 'スタンダード（内国株式）'")  # プライム+スタンダード
 
 # 決算カレンダーの空箱
 cal_df = pd.DataFrame(columns=["DATE","CODE","会社名","決算期末","業種名","種別","市場区分"])
