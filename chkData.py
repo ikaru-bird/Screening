@@ -26,11 +26,12 @@ ma_long     = int(args[8])
 dt_interval = args[9]
 rs_csv1     = args[10]
 rs_csv2     = args[11]
+timezone_str = args[12]
 
 symbol = np.full((5000),0,dtype=object)
 
 # データ処理クラスの作成
-ckdt = CheckData(out_file, chart_dir, ma_short, ma_mid, ma_s_long, ma_long, rs_csv1, rs_csv2, in_path)
+ckdt = CheckData(out_file, chart_dir, ma_short, ma_mid, ma_s_long, ma_long, rs_csv1, rs_csv2, in_path, timezone_str)
 
 # inputファイルから銘柄群のシンボルを取得
 i = 0
