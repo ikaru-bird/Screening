@@ -34,7 +34,7 @@ else:
     # Default to US, check if input file contains Japanese tickers
     timezone_str = 'America/New_York'
     try:
-        if '.T' in open(in_path).read():
+        if '.T' in open(in_path, encoding='utf-8').read():
             timezone_str = 'Asia/Tokyo'
     except FileNotFoundError:
         pass # Input file might not exist yet, default is fine
