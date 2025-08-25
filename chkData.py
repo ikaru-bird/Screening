@@ -26,7 +26,18 @@ ma_long     = int(args[8])
 dt_interval = args[9]
 rs_csv1     = args[10]
 rs_csv2     = args[11]
-timezone_str = args[12]
+
+# Handle optional timezone argument for backward compatibility
+if len(args) > 12:
+    timezone_str = args[12]
+else:
+    # Default to US, check if input file contains Japanese tickers
+    timezone_str = 'America/New_York'
+    try:
+        if '.T' in open(in_path).read():
+            timezone_str = 'Asia/Tokyo'
+    except FileNotFoundError:
+        pass # Input file might not exist yet, default is fine
 
 symbol = np.full((5000),0,dtype=object)
 
