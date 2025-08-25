@@ -8,6 +8,7 @@ import os, fnmatch
 import pandas as pd
 import datetime as dt
 import time
+import pytz
 from classDrawChart import DrawChart
 
 #---------------------------------------#
@@ -101,7 +102,7 @@ class CheckData():
 #---------------------------------------#
 # コンストラクタ
 #---------------------------------------#
-    def __init__(self, out_path, chart_dir, ma_short, ma_mid, ma_s_long, ma_long, rs_csv1, rs_csv2, txt_path):
+    def __init__(self, out_path, chart_dir, ma_short, ma_mid, ma_s_long, ma_long, rs_csv1, rs_csv2, txt_path, timezone_str):
 
         # パラメータをセット
         self.params = self.PATTERN_PARAMS
@@ -123,7 +124,8 @@ class CheckData():
         self.strTicker   = "---"
 
         # 今日の日付をセット
-        self.today = dt.datetime.now()
+        self.today = dt.datetime.now(pytz.utc)
+        self.display_tz = pytz.timezone(timezone_str)
 
         # CSVの読込時に日付で絞り込む場合は指定
 #       self.start_dt = self.today - dt.timedelta(days=455)  # 65週前の日付
@@ -300,7 +302,7 @@ class CheckData():
 
         start_dt = self.today - dt.timedelta(days=p['data_period_days'])
         try:
-            df0.index = df0.index.tz_localize(None)     # INDEXのタイムゾーンを取り除く
+            pass
         except Exception as e:
             print(e)
         df0 = df0.query('@start_dt <= index')           # データ範囲を絞り込み
@@ -1246,8 +1248,11 @@ class CheckData():
         # ud_markが'*','O','/'の場合、チャート出力
         if ud_mark in ["*","O","/"]:
 
+            # タイムゾーンを変換して日付を取得
+            signal_local_time = res[1].astimezone(self.display_tz)
+
             # ディレクトリが存在しない場合、ディレクトリを作成
-            Out_DIR = self.base_dir + str(res[1].date())
+            Out_DIR = self.base_dir + str(signal_local_time.date())
             if not os.path.exists(Out_DIR):
 #               os.makedirs(Out_DIR)
                 i = 0
@@ -1267,7 +1272,7 @@ class CheckData():
 
             # CSVファイルの書き込み
             if info != ["-","-","-","-","-"]:  # infoがデフォルト値（全部"-"）でなければCSV出力
-                outTxt = str(res[1].date()) + "," + strLabel + ",\"" + self.strTicker + "\",\"" + info[1] + "\",\"" + info[2] + "\"," + info[4] + "," + str(ud_ratio2) + "," + str(ud_ratio1) + ",\"" + ud_mark + "\",\"" + info[3] + "\",\"" + str(round(df0['Close'].iloc[-1], 2)) + "\"\n"
+                outTxt = str(signal_local_time.date()) + "," + strLabel + ",\"" + self.strTicker + "\",\"" + info[1] + "\",\"" + info[2] + "\"," + info[4] + "," + str(ud_ratio2) + "," + str(ud_ratio1) + ",\"" + ud_mark + "\",\"" + info[3] + "\",\"" + str(round(df0['Close'].iloc[-1], 2)) + "\"\n"
                 print("  Name   : " + info[1])
                 print("  Sector : " + info[2])
                 print("  UDVR   : " + ud_val + "  " + ud_mark)
