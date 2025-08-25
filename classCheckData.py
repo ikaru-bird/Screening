@@ -102,7 +102,7 @@ class CheckData():
 #---------------------------------------#
 # コンストラクタ
 #---------------------------------------#
-    def __init__(self, out_path, chart_dir, ma_short, ma_mid, ma_s_long, ma_long, rs_csv1, rs_csv2, txt_path, timezone_str):
+    def __init__(self, out_path, chart_dir, ma_short, ma_mid, ma_s_long, ma_long, rs_csv1, rs_csv2, txt_path, timezone_str="UTC"):
 
         # パラメータをセット
         self.params = self.PATTERN_PARAMS
