@@ -24,8 +24,8 @@ ma_mid      = int(args[6])
 ma_s_long   = int(args[7])
 ma_long     = int(args[8])
 dt_interval = args[9]
-rs_csv1     = args[10]
-rs_csv2     = args[11]
+rs_csv1     = args[11]
+rs_csv2     = args[10]
 
 # Handle optional timezone argument for backward compatibility
 if len(args) > 12:

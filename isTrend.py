@@ -22,8 +22,22 @@ rs_csv1   = args[8]
 rs_csv2   = args[9]
 txt_path  = args[10]
 
+# Handle optional timezone argument
+if len(args) > 11:
+    timezone_str = args[11]
+else:
+    # Default to US, check if input directory contains Japanese tickers
+    timezone_str = 'America/New_York'
+    try:
+        # Check for any file with '.T' which indicates a Tokyo ticker
+        if any('.T' in filename for filename in os.listdir(in_dir)):
+            timezone_str = 'Asia/Tokyo'
+    except (FileNotFoundError, IndexError):
+        # If directory doesn't exist or is empty, default is fine
+        pass
+
 # データ処理クラスの作成
-ckdt = CheckData(out_file, chart_dir, ma_short, ma_mid, ma_s_long, ma_long, rs_csv1, rs_csv2, txt_path)
+ckdt = CheckData(out_file, chart_dir, ma_short, ma_mid, ma_s_long, ma_long, rs_csv1, rs_csv2, txt_path, timezone_str)
 
 # 探索ディレクトリ内をループ処理
 for path, dirs, files in os.walk(in_dir):

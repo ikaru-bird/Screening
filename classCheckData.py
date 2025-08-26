@@ -1181,8 +1181,16 @@ class CheckData():
         # CSVを読取
         df = pd.read_csv(doc, index_col=0, on_bad_lines='skip')
         df = df.dropna(how='all')                       # 欠損値を除外
-        # インデックスを強制的にDatetimeIndexに変換し、タイムゾーンをUTCに統一
-        df.index = pd.to_datetime(df.index, utc=True)
+
+        # インデックスをDatetimeIndexに変換
+        df.index = pd.to_datetime(df.index)
+
+        # タイムゾーンが未設定の場合、display_tzで現地時間として解釈
+        if df.index.tzinfo is None:
+            df.index = df.index.tz_localize(self.display_tz)
+
+        # 内部処理のためUTCに統一
+        df.index = df.index.tz_convert('UTC')
 
     # 移動平均を計算
         df['MA10']   = df['Close'].rolling(self.ma_short).mean()  # 10日移動平均
