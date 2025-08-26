@@ -1182,15 +1182,21 @@ class CheckData():
         df = pd.read_csv(doc, index_col=0, on_bad_lines='skip')
         df = df.dropna(how='all')                       # 欠損値を除外
 
-        # インデックスをDatetimeIndexに変換
-        df.index = pd.to_datetime(df.index)
+        # タイムゾーンの扱いに堅牢な方法でインデックスを変換
+        try:
+            # まず、そのままDatetimeIndexへの変換を試みる
+            df.index = pd.to_datetime(df.index)
 
-        # タイムゾーンが未設定の場合、display_tzで現地時間として解釈
-        if df.index.tzinfo is None:
-            df.index = df.index.tz_localize(self.display_tz)
+            # タイムゾーンが未設定(naive)の場合、指定されたタイムゾーンで現地時間として解釈(日本株など)
+            if df.index.tzinfo is None:
+                df.index = df.index.tz_localize(self.display_tz)
 
-        # 内部処理のためUTCに統一
-        df.index = df.index.tz_convert('UTC')
+            # 最終的にすべてをUTCに統一
+            df.index = df.index.tz_convert('UTC')
+
+        except (TypeError, AttributeError):
+            # 混合タイムゾーンなどで上記が失敗した場合(米国株など)、pandasの警告に従いutc=Trueで直接変換
+            df.index = pd.to_datetime(df.index, utc=True)
 
     # 移動平均を計算
         df['MA10']   = df['Close'].rolling(self.ma_short).mean()  # 10日移動平均

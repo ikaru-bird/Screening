@@ -58,8 +58,8 @@ class RelativeStrength():
         if self.rs_df2.empty:
             return ["----", "----", "----"]
 
-        # QueryでDataframeを検索
-        df = self.rs_df2.query("Ticker == @str_ticker")
+        # QueryでDataframeを検索 (query is sometimes unstable, use boolean indexing)
+        df = self.rs_df2[self.rs_df2['Ticker'] == str_ticker]
 
         if len(df) == 0:
             Rank             = "----"
