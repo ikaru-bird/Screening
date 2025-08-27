@@ -102,7 +102,7 @@ class CheckData():
 #---------------------------------------#
 # コンストラクタ
 #---------------------------------------#
-    def __init__(self, out_path, chart_dir, ma_short, ma_mid, ma_s_long, ma_long, rs_csv1, rs_csv2, txt_path, timezone_str="UTC"):
+    def __init__(self, out_path, chart_dir, ma_short, ma_mid, ma_s_long, ma_long, rs_csv1, rs_csv2, txt_path, timezone_str=None):
 
         # パラメータをセット
         self.params = self.PATTERN_PARAMS
@@ -125,7 +125,10 @@ class CheckData():
 
         # 今日の日付をセット
         self.today = dt.datetime.now(pytz.utc)
-        self.display_tz = pytz.timezone(timezone_str)
+        if timezone_str:
+            self.display_tz = pytz.timezone(timezone_str)
+        else:
+            self.display_tz = None
 
         # CSVの読込時に日付で絞り込む場合は指定
 #       self.start_dt = self.today - dt.timedelta(days=455)  # 65週前の日付
@@ -1202,6 +1205,13 @@ class CheckData():
             self.strTicker = self.strBaseName[:-2]
         else:
             self.strTicker = self.strBaseName
+
+        # タイムゾーンが指定されていない場合、ティッカーから推測して設定
+        if self.display_tz is None:
+            if '.T' in self.strTicker:
+                self.display_tz = pytz.timezone('Asia/Tokyo')
+            else:
+                self.display_tz = pytz.timezone('America/New_York')
 
         return
 
