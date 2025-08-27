@@ -59,7 +59,12 @@ class RelativeStrength():
             return ["----", "----", "----"]
 
         # QueryでDataframeを検索
-        df = self.rs_df2.query("Tickers == @str_ticker")
+        if 'Ticker' in self.rs_df2.columns:
+            df = self.rs_df2.query("Ticker == @str_ticker")
+        elif 'Tickers' in self.rs_df2.columns:
+            df = self.rs_df2.query("Tickers == @str_ticker")
+        else:
+            df = pd.DataFrame() # 空のDataFrameを作成
 
         if len(df) == 0:
             Rank             = "----"
