@@ -234,6 +234,8 @@ def calc_rs(stock_codes, rs_result_csv, rs_sector_csv):
 # --------------------------------------------- #
 # 業種別RSの計算
 # --------------------------------------------- #
+    # Industry列のNaNを文字列（'_UNCLASSIFIED_'）に置換
+    rs_result2['Industry'] = rs_result2['Industry'].fillna('_UNCLASSIFIED_')
     # 業種区分ごとの平均値を計算・並び替え・インデックスのリセット
     rs_sector = rs_result2[['Industry','Relative Strength','Diff','RS_1W','RS_1M','RS_3M','RS_6M','RS Momentum','RM_1W','RM_1M','RM_3M','RM_6M']].groupby('Industry').mean()
     rs_sector = rs_sector.sort_values('Relative Strength', ascending=False)
