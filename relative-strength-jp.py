@@ -25,7 +25,7 @@ if __name__ == "__main__":
     stock_codes = pd.read_excel(url, sheet_name='Sheet1')
 #   stock_codes = stock_codes.rename(columns={'コード': 'Ticker', "市場・商品区分":"SEGMENT", '33業種区分':'Industry', '規模コード':'SIZE'})
     stock_codes = stock_codes.rename(columns={'コード': 'Ticker', "市場・商品区分":"SEGMENT", '33業種区分':'Sector', '規模コード':'SIZE'})
-    stock_codes = stock_codes.replace({'SIZE':{'-':99}})
+    stock_codes['SIZE'] = stock_codes['SIZE'].replace('-', 99)
     stock_codes['SIZE'] = stock_codes['SIZE'].astype(int)
 
 #   stock_codes = stock_codes.query("SEGMENT.str.contains('内国株式')")               # 国内株式全部
