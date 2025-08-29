@@ -69,7 +69,7 @@ for i in range(0, n + 1):
     if not ticker_str:
         continue
 
-    print('{0} / {1} -#---- {2} -----#'.format(str(i + 1), str(n + 1), ticker_str))
+    print('{0}/{1} ----- {2} -----'.format(str(i + 1), str(n + 1), ticker_str))
 
     # ==================================================
     # STAGE 1: FUNDAMENTAL SCREENING
