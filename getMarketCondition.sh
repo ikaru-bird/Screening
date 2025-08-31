@@ -4,8 +4,8 @@ set -u
 
 SYMBOL_JP=^N225
 SYMBOL_US=^GSPC
+SCRIPT_DIR=.
 
 # 株式市場の投資環境を評価
-python ./_scripts/getMarketCondition.py $SYMBOL_JP
-python ./_scripts/getMarketCondition.py $SYMBOL_US
-
+python $SCRIPT_DIR/getMarketCondition.py $SYMBOL_JP
+python $SCRIPT_DIR/getMarketCondition.py $SYMBOL_US

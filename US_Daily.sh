@@ -15,7 +15,7 @@ RS_CSV1=$BASE_DIR/_files/RS/rs_industries_us.csv
 RS_CSV2=$BASE_DIR/_files/RS/rs_stocks_us.csv
 
 # Updated Finviz URL for better pre-filtering
-URL='https://finviz.com/screener.ashx?v=152&f=fa_salesqoq_o5,ind_stocksonly,sh_price_o15,ta_averagetruevolume_o100&ft=4&o=-marketcap'
+URL='https://finviz.com/screener.ashx?v=152&f=fa_epsqoq_o10,fa_epsyoy_o10,ind_stocksonly,sh_price_o10&ft=2&o=-marketcap&c=0,1,2,3,4,6,7,8,65,67,68'
 
 MA_S=10
 MA_M=50
