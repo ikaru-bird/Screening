@@ -49,8 +49,7 @@ fi
 
 echo "3. Checking Trend Template..."
 # トレンド・テンプレート判定
-# Note: isTrend.py does not exist in the repo, this line will fail if uncommented
-# python $SCRIPT_DIR/isTrend.py $STOCK_DIR $OUT_FILE2 $OUT_DIR/Trend- $MA_S $MA_M $MA_SL $MA_L $RS_CSV1 $RS_CSV2 $SCREEN_DATA1
+python $SCRIPT_DIR/isTrend.py $STOCK_DIR $OUT_FILE2 $OUT_DIR/Trend- $MA_S $MA_M $MA_SL $MA_L $RS_CSV1 $RS_CSV2 $SCREEN_DATA1
 
 # 終了時刻
 end_time=`date +%s`
