@@ -173,15 +173,21 @@ class CheckData():
 # トレンドテンプレート判定処理スタート（メイン）
 #------------------------------------------------#
     def isTrendTemplete(self):
-
-    # 処理呼び出し
+        """
+        トレンドテンプレートの条件を満たしているかチェックします。
+        満たしている場合はTrueを返し、後続の買いサイン判定を呼び出します。
+        このメソッドはchkData.pyのメインロジックから呼び出されることを想定しています。
+        """
         res = self.TrendTemplete_Check()
-        td_abs = abs(self.today - res[1])
-#       if (res[0] >= 7) and (td_abs.days <= self.outPeriod):
-        if (res[0] >= 7):
+        is_pass = (res[0] >= 7)
+
+        if is_pass:
             print(self.strTicker + " is ::: Trend Templete ::: ")
-            self.isBuySign()    # トレンドテンプレートの場合、買いサインの判定を呼び出す
-#           self.isGranville()  # グランビルの法則による買いサインの判定を呼び出す
+            # isBuySignの呼び出しは、ファンダメンタルチェックをパスした後に
+            # chkData.py側で制御するため、ここでは呼び出さない。
+            # self.isBuySign()
+
+        return is_pass
 
 #------------------------------------------------#
 # トレンドテンプレート判定処理スタート（全件チャート出力）
@@ -1183,21 +1189,6 @@ class CheckData():
 
         # CSVを読取
         df = pd.read_csv(doc, index_col=0, on_bad_lines='skip')
-        df = df.dropna(how='all')                       # 欠損値を除外
-        # インデックスを強制的にDatetimeIndexに変換し、タイムゾーンをUTCに統一
-        df.index = pd.to_datetime(df.index, utc=True)
-
-    # 移動平均を計算
-        df['MA10']   = df['Close'].rolling(self.ma_short).mean()  # 10日移動平均
-        df['MA50']   = df['Close'].rolling(self.ma_mid).mean()    # 50日移動平均
-        df['MA150']  = df['Close'].rolling(self.ma_s_long).mean() # 150日移動平均
-        df['MA200']  = df['Close'].rolling(self.ma_long).mean()   # 200日移動平均
-#       df['DIFF']   = df['MA200'].pct_change(20)                 # 200日移動平均の変化率
-        df['DIFF']   = df['MA200'].pct_change(20, fill_method=None)  # 200日移動平均の変化率
-        df['MA_VOL'] = df['Volume'].rolling(self.ma_mid).mean()   # 出来高50日移動平均
-
-    # インスタンス変数にセット
-        self.df = df
 
         # ティッカーの処理
         self.strBaseName = os.path.splitext(os.path.basename(doc))[0]
@@ -1205,6 +1196,31 @@ class CheckData():
             self.strTicker = self.strBaseName[:-2]
         else:
             self.strTicker = self.strBaseName
+
+        self.setDF(df, self.strTicker)
+
+        return
+
+#---------------------------------------#
+# DataFrameを直接セットし、指標を計算
+#---------------------------------------#
+    def setDF(self, df, ticker_str):
+        df = df.dropna(how='all')                       # 欠損値を除外
+        # インデックスを強制的にDatetimeIndexに変換し、タイムゾーンをUTCに統一
+        df.index = pd.to_datetime(df.index, utc=True)
+
+        # 移動平均を計算
+        df['MA10']   = df['Close'].rolling(self.ma_short).mean()
+        df['MA50']   = df['Close'].rolling(self.ma_mid).mean()
+        df['MA150']  = df['Close'].rolling(self.ma_s_long).mean()
+        df['MA200']  = df['Close'].rolling(self.ma_long).mean()
+        df['DIFF']   = df['MA200'].pct_change(20, fill_method=None)
+        df['MA_VOL'] = df['Volume'].rolling(self.ma_mid).mean()
+
+        # インスタンス変数にセット
+        self.df = df
+        self.strTicker = ticker_str
+        self.strBaseName = ticker_str # BaseName might not be relevant anymore
 
         # タイムゾーンが指定されていない場合、ティッカーから推測して設定
         if self.display_tz is None:
@@ -1222,7 +1238,6 @@ class CheckData():
 
         # メッセージ出力
         print(self.strTicker + " is ::: " + strLabel + " :::")
-
         # ローソク足チャートを作成
 
         # リストの数が3の場合:日付でソート、それ以外:空のリストをセット)
@@ -1258,11 +1273,18 @@ class CheckData():
         # ud_markが'*','O','/'の場合、チャート出力
         if ud_mark in ["*","O","/"]:
 
-            # タイムゾーンを変換して日付を取得
-            signal_local_time = res[1].astimezone(self.display_tz)
+            # yfinanceから取得したTimestampはUTCだが、日付部分は取引日を指している。
+            # ローカルタイムゾーンに変換すると日付がずれる可能性があるため、UTCのまま日付を抽出する。
+            date_str = str(res[1].date())
 
             # ディレクトリが存在しない場合、ディレクトリを作成
-            Out_DIR = self.base_dir + str(signal_local_time.date())
+            if self.base_dir.endswith('-'):
+                # isTrend.pyから "./output_US/Trend-" のようなプレフィックスで呼ばれた場合
+                Out_DIR = self.base_dir + date_str
+            else:
+                # chkData.pyから "./output_US/" のようなディレクトリで呼ばれた場合
+                Out_DIR = os.path.join(self.base_dir, date_str)
+
             if not os.path.exists(Out_DIR):
 #               os.makedirs(Out_DIR)
                 i = 0
@@ -1282,7 +1304,7 @@ class CheckData():
 
             # CSVファイルの書き込み
             if info != ["-","-","-","-","-"]:  # infoがデフォルト値（全部"-"）でなければCSV出力
-                outTxt = str(signal_local_time.date()) + "," + strLabel + ",\"" + self.strTicker + "\",\"" + info[1] + "\",\"" + info[2] + "\"," + info[4] + "," + str(ud_ratio2) + "," + str(ud_ratio1) + ",\"" + ud_mark + "\",\"" + info[3] + "\",\"" + str(round(df0['Close'].iloc[-1], 2)) + "\"\n"
+                outTxt = date_str + "," + strLabel + ",\"" + self.strTicker + "\",\"" + info[1] + "\",\"" + info[2] + "\"," + info[4] + "," + str(ud_ratio2) + "," + str(ud_ratio1) + ",\"" + ud_mark + "\",\"" + info[3] + "\",\"" + str(round(df0['Close'].iloc[-1], 2)) + "\"\n"
                 print("  Name   : " + info[1])
                 print("  Sector : " + info[2])
                 print("  UDVR   : " + ud_val + "  " + ud_mark)
