@@ -51,8 +51,8 @@ echo "1. Getting ticker list from Finviz..."
 python $SCRIPT_DIR/getList_US.py $SCREEN_DATA1 "$URL"
 
 echo "2. Starting fundamental and technical screening..."
-python $SCRIPT_DIR/chkData.py $SCREEN_DATA1 $STOCK_DIR1 $OUT_FILE1 $OUT_DIR $MA_S $MA_M $MA_SL $MA_L $INTVAL $RS_CSV1 $RS_CSV2
-python $SCRIPT_DIR/chkData.py $SCREEN_DATA2 $STOCK_DIR2 $OUT_FILE1 $OUT_DIR $MA_S $MA_M $MA_SL $MA_L $INTVAL $RS_CSV1 $RS_CSV2
+python $SCRIPT_DIR/chkData.py $SCREEN_DATA1 $STOCK_DIR1 $OUT_FILE1 $OUT_DIR $MA_S $MA_M $MA_SL $MA_L $INTVAL $RS_CSV1 $RS_CSV2 "America/New_York"
+python $SCRIPT_DIR/chkData.py $SCREEN_DATA2 $STOCK_DIR2 $OUT_FILE1 $OUT_DIR $MA_S $MA_M $MA_SL $MA_L $INTVAL $RS_CSV1 $RS_CSV2 "America/New_York"
 
 echo "3. Starting TrendTemplete screening...(indexes only)"
 python $SCRIPT_DIR/isTrend.py $STOCK_DIR2 $OUT_FILE2 $OUT_DIR/Trend- $MA_S $MA_M $MA_SL $MA_L $RS_CSV1 $RS_CSV2 $SCREEN_DATA2
