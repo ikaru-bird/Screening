@@ -17,16 +17,18 @@ import time
 # 3. In the main loop, perform a fast technical pre-screening (Trend Template).
 # 4. Only if the pre-screening passes, perform the slow, network-intensive
 #    fundamental analysis for that specific ticker.
+# 5. Crucially, save the price data for each ticker to a CSV file so that
+#    downstream scripts like isTrend.py can function correctly.
 # ==================================================
 
 # パラメータの受取り
 args = sys.argv
 if len(args) < 12:
-    print("Usage: python chkData.py <in_path> <out_dir> <out_file> <chart_dir> <ma_short> <ma_mid> <ma_s_long> <ma_long> <dt_interval> <rs_csv1> <rs_csv2> [timezone]")
+    print("Usage: python chkData.py <in_path> <stock_dir> <out_file> <chart_dir> <ma_short> <ma_mid> <ma_s_long> <ma_long> <dt_interval> <rs_csv1> <rs_csv2> [timezone]")
     sys.exit(1)
 
 in_path     = args[1]
-out_dir     = args[2]
+stock_dir   = args[2] # This is the directory for individual CSVs
 out_file    = args[3]
 chart_dir   = args[4]
 ma_short    = int(args[5])
@@ -48,8 +50,7 @@ with open(in_path, 'r', encoding='utf-8') as f:
     for line in f.readlines():
         parts = line.strip().split('~')
         if len(parts) > 0 and parts[0]:
-            # We only need the symbol for the download, but we'll keep the whole line for later
-            tickers_meta.append({'symbol': parts[0], 'roe_str': parts[5]}) # Assuming P/E is at index 5, let's adjust for ROE if available later
+            tickers_meta.append({'symbol': parts[0]})
 
 if not tickers_meta:
     print("No tickers found in input file.")
@@ -70,7 +71,7 @@ all_data = yf.download(
     auto_adjust=True,
     prepost=False,
     threads=True,
-    progress=False # Keep the log clean
+    progress=False
 )
 
 if all_data.empty:
@@ -92,16 +93,20 @@ for i, ticker_info in enumerate(tickers_meta):
 
     # Extract this ticker's data from the batch download
     try:
-        # yfinance returns a multi-index column DF. We select one ticker's data.
         symbol_data = all_data.loc[:, pd.IndexSlice[:, [ticker_str]]]
-        symbol_data.columns = symbol_data.columns.droplevel(1) # Drop the ticker level from column index
+        symbol_data.columns = symbol_data.columns.droplevel(1)
         symbol_data = symbol_data.dropna(how='all')
         if symbol_data.empty:
-            # print(f"-> No data for {ticker_str} in downloaded batch. Skipping.")
             continue
     except (KeyError, IndexError):
-        # print(f"-> Could not extract data for {ticker_str} from batch. Skipping.")
         continue
+
+    # STEP 5: Save individual CSV for downstream scripts (isTrend.py)
+    if ticker_str in NG_list:
+        fileName = os.path.join(stock_dir, f"{ticker_str}-X.csv")
+    else:
+        fileName = os.path.join(stock_dir, f"{ticker_str}.csv")
+    symbol_data.to_csv(fileName, header=True, index=True)
 
     # Use the new setDF method to prepare data without file I/O
     ckdt.setDF(symbol_data, ticker_str)
@@ -113,8 +118,6 @@ for i, ticker_info in enumerate(tickers_meta):
         # STAGE 2: Slow, on-demand fundamental screening
         try:
             ticker_obj = yf.Ticker(ticker_str)
-            # We can't get ROE from the finviz file, so we still need .info
-            # This is still a huge win as it's only called for a few tickers
             info = ticker_obj.info
             roe = info.get('returnOnEquity')
 
@@ -122,7 +125,6 @@ for i, ticker_info in enumerate(tickers_meta):
             passed, _ = ern_info.get_fundamental_screening_results(roe)
 
             if not passed:
-                # print(f"-> {ticker_str} did not pass fundamental screening. Skipping.")
                 continue
 
             print(f"{ticker_str} is ::: fundamentaly OK :::")
@@ -130,15 +132,12 @@ for i, ticker_info in enumerate(tickers_meta):
 
             # STAGE 3: Detailed technical analysis for tickers that passed all screens
             ckdt.set_earnings_info(ern_info)
-
-            # The call to isBuySign was removed from isTrendTemplete, so we call it here.
             ckdt.isBuySign()
             ckdt.isGranville()
             ckdt.isGoldernCross()
             ckdt.isON_Minervini()
 
         except Exception as e:
-            # This can happen if yfinance fails for a specific ticker (e.g., delisted)
             print(f"##ERROR## during on-demand data fetch or analysis for {ticker_str}: {e}")
             continue
 

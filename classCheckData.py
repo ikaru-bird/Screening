@@ -1238,7 +1238,6 @@ class CheckData():
 
         # メッセージ出力
         print(self.strTicker + " is ::: " + strLabel + " :::")
-
         # ローソク足チャートを作成
 
         # リストの数が3の場合:日付でソート、それ以外:空のリストをセット)
@@ -1274,11 +1273,18 @@ class CheckData():
         # ud_markが'*','O','/'の場合、チャート出力
         if ud_mark in ["*","O","/"]:
 
-            # タイムゾーンを変換して日付を取得
-            signal_local_time = res[1].astimezone(self.display_tz)
+            # yfinanceから取得したTimestampはUTCだが、日付部分は取引日を指している。
+            # ローカルタイムゾーンに変換すると日付がずれる可能性があるため、UTCのまま日付を抽出する。
+            date_str = str(res[1].date())
 
             # ディレクトリが存在しない場合、ディレクトリを作成
-            Out_DIR = self.base_dir + str(signal_local_time.date())
+            if self.base_dir.endswith('-'):
+                # isTrend.pyから "./output_US/Trend-" のようなプレフィックスで呼ばれた場合
+                Out_DIR = self.base_dir + date_str
+            else:
+                # chkData.pyから "./output_US/" のようなディレクトリで呼ばれた場合
+                Out_DIR = os.path.join(self.base_dir, date_str)
+
             if not os.path.exists(Out_DIR):
 #               os.makedirs(Out_DIR)
                 i = 0
@@ -1298,7 +1304,7 @@ class CheckData():
 
             # CSVファイルの書き込み
             if info != ["-","-","-","-","-"]:  # infoがデフォルト値（全部"-"）でなければCSV出力
-                outTxt = str(signal_local_time.date()) + "," + strLabel + ",\"" + self.strTicker + "\",\"" + info[1] + "\",\"" + info[2] + "\"," + info[4] + "," + str(ud_ratio2) + "," + str(ud_ratio1) + ",\"" + ud_mark + "\",\"" + info[3] + "\",\"" + str(round(df0['Close'].iloc[-1], 2)) + "\"\n"
+                outTxt = date_str + "," + strLabel + ",\"" + self.strTicker + "\",\"" + info[1] + "\",\"" + info[2] + "\"," + info[4] + "," + str(ud_ratio2) + "," + str(ud_ratio1) + ",\"" + ud_mark + "\",\"" + info[3] + "\",\"" + str(round(df0['Close'].iloc[-1], 2)) + "\"\n"
                 print("  Name   : " + info[1])
                 print("  Sector : " + info[2])
                 print("  UDVR   : " + ud_val + "  " + ud_mark)
