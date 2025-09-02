@@ -4,7 +4,7 @@ set -u
 
 # --- Path Configuration ---
 BASE_DIR=.
-SCRIPT_DIR=$BASE_DIR
+SCRIPT_DIR=$BASE_DIR/_scripts
 INPUT_DIR=$BASE_DIR/_files/RS
 OUTPUT_DIR=$BASE_DIR/_files/RS
 CHUNK_DIR=$INPUT_DIR/chunks
@@ -29,7 +29,7 @@ CHUNK_SIZE=200
 WAIT_SECONDS=5
 
 # --- Cleanup and Setup ---
-echo "--- Initializing directories ---"
+# echo "--- Initializing directories ---"
 rm -rf $CHUNK_DIR $RESULT_DIR
 mkdir -p $CHUNK_DIR $RESULT_DIR
 # Ensure placeholder for industry cache exists
@@ -44,26 +44,26 @@ echo "--- Step 1: Generating Ticker Lists ---"
 python3 $SCRIPT_DIR/getList_US.py "$US_INPUT_ALL" "$URL1"
 # For JP, we need to run the python script in a special mode
 JP_RS_MODE=generate_list python3 $SCRIPT_DIR/relative-strength-jp.py "$JP_INPUT_ALL" "$IND_TXT"
-echo "Ticker list generation complete."
+# echo "Ticker list generation complete."
 echo
 
 # 2. Process US Stocks in Chunks
 echo "--- Step 2: Processing US Stocks in Chunks ---"
 split -l $CHUNK_SIZE "$US_INPUT_ALL" "$CHUNK_DIR/us_chunk_"
 us_chunks=($CHUNK_DIR/us_chunk_*)
-echo "Split US stocks into ${#us_chunks[@]} chunks of $CHUNK_SIZE tickers."
+# echo "Split US stocks into ${#us_chunks[@]} chunks of $CHUNK_SIZE tickers."
 
 for chunk_file in "${us_chunks[@]}"; do
     chunk_name=$(basename "$chunk_file")
-    echo "Processing US chunk: $chunk_name..."
+    # echo "Processing US chunk: $chunk_name..."
     python3 "$SCRIPT_DIR/relative-strength-us.py" \
         "$chunk_file" \
         "$RESULT_DIR/stocks_$chunk_name.csv" \
         "$RESULT_DIR/industries_$chunk_name.csv"
-    echo "Waiting for $WAIT_SECONDS seconds..."
+    # echo "Waiting for $WAIT_SECONDS seconds..."
     sleep $WAIT_SECONDS
 done
-echo "Finished processing all US chunks."
+# echo "Finished processing all US chunks."
 echo
 
 # 3. Process JP Stocks in Chunks
@@ -72,14 +72,14 @@ echo "--- Step 3: Processing JP Stocks in Chunks ---"
 header=$(head -n 1 "$JP_INPUT_ALL")
 tail -n +2 "$JP_INPUT_ALL" | split -l $CHUNK_SIZE - "$CHUNK_DIR/jp_chunk_"
 jp_chunks=($CHUNK_DIR/jp_chunk_*)
-echo "Split JP stocks into ${#jp_chunks[@]} chunks of $CHUNK_SIZE tickers."
+# echo "Split JP stocks into ${#jp_chunks[@]} chunks of $CHUNK_SIZE tickers."
 
 for chunk_file in "${jp_chunks[@]}"; do
     chunk_name=$(basename "$chunk_file")
-    echo "Processing JP chunk: $chunk_name..."
+    # echo "Processing JP chunk: $chunk_name..."
     # Add header back to the chunk
     tmp_chunk_file="$CHUNK_DIR/${chunk_name}_with_header.csv"
-    echo "$header" > "$tmp_chunk_file"
+    # echo "$header" > "$tmp_chunk_file"
     cat "$chunk_file" >> "$tmp_chunk_file"
 
     JP_RS_MODE=process_chunk python3 "$SCRIPT_DIR/relative-strength-jp.py" \
@@ -88,10 +88,10 @@ for chunk_file in "${jp_chunks[@]}"; do
         "$RESULT_DIR/industries_$chunk_name.csv"
 
     rm "$tmp_chunk_file"
-    echo "Waiting for $WAIT_SECONDS seconds..."
+    # echo "Waiting for $WAIT_SECONDS seconds..."
     sleep $WAIT_SECONDS
 done
-echo "Finished processing all JP chunks."
+# echo "Finished processing all JP chunks."
 echo
 
 # 4. Combine Chunked Results
