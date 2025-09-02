@@ -7,7 +7,7 @@ BASE_DIR=.
 SCRIPT_DIR=$BASE_DIR
 INPUT_DIR=$BASE_DIR/_files/RS
 OUTPUT_DIR=$BASE_DIR/_files/RS
-CHUNK_DIR=$INPUT_DIR/chunks_raw_tickers
+CHUNK_DIR=$INPUT_DIR/chunks_tickers
 RAW_DATA_DIR=$INPUT_DIR/raw_data_pkl
 COMBINED_DATA_DIR=$INPUT_DIR/combined_raw_data
 
@@ -32,8 +32,8 @@ start_time=$(date +%s)
 
 # --- STAGE 1: Generate Master Ticker Lists ---
 echo "--- Stage 1: Generating Master Ticker Lists ---"
-python3 "$SCRIPT_DIR/getList_US.py" "$US_TICKER_LIST" "$URL_US_TICKERS"
-python3 "$SCRIPT_DIR/generate_jp_list.py" "$JP_TICKER_LIST" "$IND_TXT_CACHE"
+python3 "$SCRIPT_DIR/relative-strength-us.py" --mode get_list "$URL_US_TICKERS" "$US_TICKER_LIST"
+python3 "$SCRIPT_DIR/relative-strength-jp.py" --mode get_list "$JP_TICKER_LIST" "$IND_TXT_CACHE"
 echo "Ticker list generation complete."
 echo
 
@@ -46,12 +46,13 @@ echo "Split US tickers into ${#us_chunks[@]} chunks."
 for file in "${us_chunks[@]}"; do
     fname=$(basename "$file")
     echo "Downloading US chunk: $fname..."
-    python3 "$SCRIPT_DIR/download_data.py" "$file" "$RAW_DATA_DIR/us_raw_$fname.pkl"
+    python3 "$SCRIPT_DIR/relative-strength-us.py" --mode download "$file" "$RAW_DATA_DIR/us_raw_$fname.pkl"
     echo "Waiting for $WAIT_SECONDS seconds..."
     sleep $WAIT_SECONDS
 done
 
-# JP Chunks (temporary file to pass tickers without header)
+# JP Chunks
+# Create a temporary file with just the ticker symbols for splitting
 tmp_jp_tickers="$CHUNK_DIR/jp_tickers_only.txt"
 tail -n +2 "$JP_TICKER_LIST" | cut -d, -f1 > "$tmp_jp_tickers"
 split -l $CHUNK_SIZE "$tmp_jp_tickers" "$CHUNK_DIR/jp_tickers_"
@@ -61,7 +62,12 @@ echo "Split JP tickers into ${#jp_chunks[@]} chunks."
 for file in "${jp_chunks[@]}"; do
     fname=$(basename "$file")
     echo "Downloading JP chunk: $fname..."
-    python3 "$SCRIPT_DIR/download_data.py" "$file" "$RAW_DATA_DIR/jp_raw_$fname.pkl"
+    # The download function in the JP script needs a CSV with a 'Ticker' column, so we create a temp one
+    tmp_jp_chunk_csv="$CHUNK_DIR/${fname}.csv"
+    echo "Ticker" > "$tmp_jp_chunk_csv"
+    cat "$file" >> "$tmp_jp_chunk_csv"
+    python3 "$SCRIPT_DIR/relative-strength-jp.py" --mode download "$tmp_jp_chunk_csv" "$RAW_DATA_DIR/jp_raw_$fname.pkl"
+    rm "$tmp_jp_chunk_csv"
     echo "Waiting for $WAIT_SECONDS seconds..."
     sleep $WAIT_SECONDS
 done
@@ -70,20 +76,20 @@ echo
 
 # --- STAGE 3: Combine Raw Data ---
 echo "--- Stage 3: Combining Raw Data Files ---"
-python3 "$SCRIPT_DIR/combine_raw_data.py" "$RAW_DATA_DIR" "$COMBINED_DATA_DIR/us_raw_data.pkl" --pattern="us_raw_*.pkl"
-python3 "$SCRIPT_DIR/combine_raw_data.py" "$RAW_DATA_DIR" "$COMBINED_DATA_DIR/jp_raw_data.pkl" --pattern="jp_raw_*.pkl"
+python3 "$SCRIPT_DIR/relative-strength-us.py" --mode combine "$RAW_DATA_DIR" "$COMBINED_DATA_DIR/us_raw_data.pkl" "us_raw_*.pkl"
+python3 "$SCRIPT_DIR/relative-strength-jp.py" --mode combine "$RAW_DATA_DIR" "$COMBINED_DATA_DIR/jp_raw_data.pkl" "jp_raw_*.pkl"
 echo "Raw data combination complete."
 echo
 
 # --- STAGE 4: Calculate RS Values (Single Run) ---
 echo "--- Stage 4: Calculating RS Values ---"
-python3 "$SCRIPT_DIR/relative-strength-us.py" \
+python3 "$SCRIPT_DIR/relative-strength-us.py" --mode calculate \
     "$US_TICKER_LIST" \
     "$COMBINED_DATA_DIR/us_raw_data.pkl" \
     "$OUTPUT_DIR/rs_stocks_us.csv" \
     "$OUTPUT_DIR/rs_industries_us.csv"
 
-python3 "$SCRIPT_DIR/relative-strength-jp.py" \
+python3 "$SCRIPT_DIR/relative-strength-jp.py" --mode calculate \
     "$JP_TICKER_LIST" \
     "$COMBINED_DATA_DIR/jp_raw_data.pkl" \
     "$OUTPUT_DIR/rs_stocks_jp.csv" \
