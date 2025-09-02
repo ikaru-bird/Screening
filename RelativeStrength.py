@@ -51,7 +51,10 @@ def calculate_percentile(calp_df, column_name1, column_name2):
     calp_df[column_name1] = pd.to_numeric(calp_df[column_name1], errors='coerce').fillna(0)
     # パーセンタイルの計算
     total_rows = len(calp_df)
-    calp_df[column_name2] = (calp_df[column_name1].rank(ascending=True, method='average') - 1) / (total_rows - 1) * 100
+    if total_rows > 1:
+        calp_df[column_name2] = (calp_df[column_name1].rank(ascending=True, method='average') - 1) / (total_rows - 1) * 100
+    else:
+        calp_df[column_name2] = 100 # If only one row, it's 100th percentile
     calp_df[column_name2] = calp_df[column_name2].round().clip(1, 99).astype(int)
     return
 
@@ -103,7 +106,7 @@ def calc_rs(stock_codes, rs_result_csv, rs_sector_csv):
         start=start_date,
         end=end_date,
         interval="1d",
-        auto_adjust=False, #
+        auto_adjust=False,
         prepost=False,
         threads=True,
         progress=False
@@ -114,7 +117,11 @@ def calc_rs(stock_codes, rs_result_csv, rs_sector_csv):
         return
 
     # Close price dataframeをffillで補完
-    all_history['Close'] = all_history['Close'].ffill()
+    if isinstance(all_history.columns, pd.MultiIndex):
+        all_history['Close'] = all_history['Close'].ffill()
+    else: # single ticker case
+        all_history['Close'] = all_history['Close'].ffill()
+
 
     print("Price data download complete. Starting RS calculation...")
     # --- END: Bulk data download ---
@@ -134,9 +141,17 @@ def calc_rs(stock_codes, rs_result_csv, rs_sector_csv):
         try:
             # 銘柄の株価データを抽出
             if isinstance(all_history.columns, pd.MultiIndex):
+                # If a ticker was not found, it will be missing from the columns
+                if code not in all_history.columns.get_level_values(1):
+                    continue
                 history = all_history.xs(code, level=1, axis=1)
             else:
-                history = all_history
+                # Handle the case where only one ticker was passed to yf.download
+                # and it was successful.
+                if len(all_tickers) == 1 and all_tickers[0] == code:
+                    history = all_history
+                else: # Should not happen if MultiIndex check is correct, but as a safeguard.
+                    continue
 
             if history.empty or 'Close' not in history.columns or history['Close'].isnull().all():
                 continue

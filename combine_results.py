@@ -2,75 +2,76 @@ import pandas as pd
 import glob
 import os
 
-def combine_csvs(file_pattern, output_file):
+def calculate_percentile(df, column_name, result_column_name):
+    """A helper function to calculate and assign percentiles."""
+    total_rows = len(df)
+    if total_rows > 1:
+        df[result_column_name] = (df[column_name].rank(ascending=True, method='average') - 1) / (total_rows - 1) * 100
+    else:
+        df[result_column_name] = 100
+    df[result_column_name] = df[result_column_name].round().clip(1, 99).astype(int)
+    return df
+
+def combine_and_process_data(results_dir, stocks_pattern, industries_pattern, final_stocks_file, final_industries_file):
     """
-    Finds all CSV files matching a pattern, concatenates them,
-    and saves the result to a new CSV file.
+    Main logic to combine and process chunked results.
     """
-    files = glob.glob(file_pattern)
-    if not files:
-        print(f"No files found for pattern: {file_pattern}")
+    # 1. Combine all stock results into a single DataFrame
+    stock_files = glob.glob(os.path.join(results_dir, stocks_pattern))
+    if not stock_files:
+        print(f"No stock files found for pattern: {stocks_pattern}")
         return
 
-    df_list = [pd.read_csv(f) for f in files]
-    combined_df = pd.concat(df_list, ignore_index=True)
+    print(f"Combining {len(stock_files)} stock data files...")
+    stock_df_list = [pd.read_csv(f) for f in stock_files]
+    combined_stocks_df = pd.concat(stock_df_list, ignore_index=True)
+    combined_stocks_df.drop_duplicates(subset=['Ticker'], keep='first', inplace=True)
 
-    # This is a stock file. Sort by Relative Strength and re-rank.
-    combined_df = combined_df.sort_values('Relative Strength', ascending=False)
-    combined_df.drop_duplicates(subset=['Ticker'], keep='first', inplace=True)
-    combined_df['Rank'] = range(1, len(combined_df) + 1)
-    combined_df = combined_df.set_index('Rank', drop=True)
+    # 2. Recalculate ranks and percentiles for the combined stocks
+    combined_stocks_df.sort_values('Relative Strength', ascending=False, inplace=True)
+    combined_stocks_df.reset_index(drop=True, inplace=True)
+    combined_stocks_df['Rank'] = range(1, len(combined_stocks_df) + 1)
 
-    combined_df.to_csv(output_file)
-    print(f"Combined {len(files)} files into {output_file}")
+    percentile_cols = {
+        'Relative Strength': 'Percentile', 'RS_1W': '1 Week Ago', 'RS_1M': '1 Month Ago',
+        'RS_3M': '3 Months Ago', 'RS_6M': '6 Months Ago'
+    }
+    for data_col, percentile_col in percentile_cols.items():
+        combined_stocks_df = calculate_percentile(combined_stocks_df, data_col, percentile_col)
 
+    # 3. Recalculate industry data from the combined stock data
+    print("Recalculating industry rankings...")
+    industry_cols = ['Industry', 'Relative Strength', 'Diff', 'RS_1W', 'RS_1M', 'RS_3M', 'RS_6M',
+                     'RS Momentum', 'RM_1W', 'RM_1M', 'RM_3M', 'RM_6M']
+    rs_sector = combined_stocks_df[industry_cols].groupby('Industry').mean()
+    rs_sector.sort_values('Relative Strength', ascending=False, inplace=True)
+    rs_sector.reset_index(inplace=True)
+    rs_sector['Rank'] = range(1, len(rs_sector) + 1)
 
-def recalculate_industries(combined_stocks_file, output_industries_file):
-    """
-    Recalculates the industry rankings from the combined stock data.
-    This is more accurate than just merging the partial industry files.
-    """
-    stocks_df = pd.read_csv(combined_stocks_file, index_col='Rank')
+    for data_col, percentile_col in percentile_cols.items():
+        rs_sector = calculate_percentile(rs_sector, data_col, percentile_col)
 
-    # Define columns to aggregate. Exclude the RS_*W/M columns that were dropped.
-    agg_cols = ['Industry','Relative Strength','Diff','RS Momentum','RM_1W','RM_1M','RM_3M','RM_6M']
+    tickers_by_industry = combined_stocks_df.groupby('Industry')['Ticker'].apply(lambda x: ','.join(x)).reset_index(name='Tickers')
+    rs_sector = pd.merge(rs_sector, tickers_by_industry, on='Industry')
 
-    # This logic is copied from RelativeStrength.py
-    rs_sector = stocks_df[agg_cols].groupby('Industry').mean()
-    rs_sector = rs_sector.sort_values('Relative Strength', ascending=False)
-    rs_sector2 = rs_sector.reset_index(drop=False)
+    # 4. Prepare final DataFrames by dropping temporary columns and setting index
+    cols_to_drop = ['RS_1W', 'RS_1M', 'RS_3M', 'RS_6M']
 
-    rs_sector2['Rank'] = rs_sector2.index + 1
+    final_stocks_output = combined_stocks_df.drop(columns=cols_to_drop, errors='ignore').set_index('Rank')
+    final_industries_output = rs_sector.drop(columns=cols_to_drop, errors='ignore').set_index('Rank')
 
-    # Re-calculate percentiles on the main RS column
-    total_rows = len(rs_sector2)
-    rs_sector2['Percentile'] = (rs_sector2['Relative Strength'].rank(ascending=True, method='average') - 1) / (total_rows - 1) * 100
-    rs_sector2['Percentile'] = rs_sector2['Percentile'].round().clip(1, 99).astype(int)
-
-    # We cannot calculate percentiles for RS_1W etc. as they are not in the source stocks_df
-    # We also cannot calculate the 'Diff' column accurately without RS_1W.
-    # The original script calculates Diff on the stock level, then averages it. We will do the same.
-    # The 'Diff' column is already averaged by the groupby().mean() call above.
-
-    rs_sector2['Tickers'] = ""
-    for sector_name in rs_sector2['Industry']:
-        tickers_str = ','.join(stocks_df[stocks_df['Industry'] == sector_name]['Ticker'].tolist())
-        rs_sector2.loc[rs_sector2['Industry'] == sector_name, 'Tickers'] = tickers_str
-
-    rs_sector2 = rs_sector2.set_index('Rank', drop=True)
-
-    # We don't need to drop columns as we didn't include them in the aggregation
-
-    rs_sector2.to_csv(output_industries_file)
-    print(f"Recalculated and saved industry data to {output_industries_file}")
-
+    # 5. Save final files
+    final_stocks_output.to_csv(final_stocks_file)
+    final_industries_output.to_csv(final_industries_file)
+    print(f"Successfully created final stock file: {final_stocks_file}")
+    print(f"Successfully created final industry file: {final_industries_file}")
 
 if __name__ == "__main__":
-    # Combine stock files
-    stock_pattern = '_files/RS/us_results/rs_stocks_us_*.csv'
-    final_stock_file = '_files/RS/rs_stocks_us.csv'
-    combine_csvs(stock_pattern, final_stock_file)
-
-    # Recalculate industries from the combined stock file
-    final_industry_file = '_files/RS/rs_industries_us.csv'
-    recalculate_industries(final_stock_file, final_industry_file)
+    us_results_dir = '_files/RS/results'
+    combine_and_process_data(
+        results_dir=us_results_dir,
+        stocks_pattern='stocks_us_chunk_*.csv',
+        industries_pattern='industries_us_chunk_*.csv',
+        final_stocks_file='_files/RS/rs_stocks_us.csv',
+        final_industries_file='_files/RS/rs_industries_us.csv'
+    )
