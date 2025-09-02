@@ -2,110 +2,68 @@
 
 set -u
 
-# --- Configuration ---
+# Corrected paths for the sandbox environment
 BASE_DIR=.
-SCRIPT_DIR=$BASE_DIR
-INPUT_DIR=$BASE_DIR/_files/RS
-OUTPUT_DIR=$BASE_DIR/_files/RS
-CHUNK_DIR=$INPUT_DIR/chunks_tickers
-RAW_DATA_DIR=$INPUT_DIR/raw_data_pkl
-COMBINED_DATA_DIR=$INPUT_DIR/combined_raw_data
+SCREEN_DATA1=$BASE_DIR/_files/RS/input_us.txt
+SCREEN_DATA2=$BASE_DIR/_files/RS/input_nq100.txt
+SCREEN_DATA3=$BASE_DIR/_files/indexes/Sector_ETF_US.txt
+IND_TXT=$BASE_DIR/_files/RS/industries_jp.txt
+RS_RESULT1=$BASE_DIR/_files/RS/rs_stocks_us.csv
+RS_RESULT2=$BASE_DIR/_files/RS/rs_stocks_jp.csv
+RS_RESULT3=$BASE_DIR/_files/RS/rs_stocks_nq100.csv
+RS_RESULT4=$BASE_DIR/_files/RS/rs_sector_etf_us.csv
+RS_SECTOR1=$BASE_DIR/_files/RS/rs_industries_us.csv
+RS_SECTOR2=$BASE_DIR/_files/RS/rs_industries_jp.csv
+RS_SECTOR3=$BASE_DIR/_files/RS/rs_industries_nq100.csv
+RS_SECTOR4=$BASE_DIR/_files/RS/rs_sector_us.csv
+RS_IMG1=$BASE_DIR/_files/RS/rs_industries_us.png
+RS_IMG2=$BASE_DIR/_files/RS/rs_industries_jp.png
+RS_MOMENTUM1=$BASE_DIR/_files/RS/rs_momentum_us.png
+RS_MOMENTUM2=$BASE_DIR/_files/RS/rs_momentum_jp.png
+RS_MOMENTUM4=$BASE_DIR/_files/RS/rs_sector_us.png
+SCRIPT_DIR=$BASE_DIR/_scripts
 
-US_TICKER_LIST=$INPUT_DIR/input_us_tickers.txt
-JP_TICKER_LIST=$INPUT_DIR/jp_full_list.csv
-IND_TXT_CACHE=$INPUT_DIR/industries_jp.txt
+# Original URLs with specific criteria for this script
+URL1="https://finviz.com/screener.ashx?v=152&f=cap_smallover,ind_stocksonly,sh_price_o7&o=-marketcap&c=0,1,2,3,4,6,7,8,65,67,68"
+URL2="https://finviz.com/screener.ashx?v=152&f=idx_ndx&c=0,1,2,3,4,6,7,8,65,67,68"
 
-URL_US_TICKERS="https://finviz.com/screener.ashx?v=152&f=cap_smallover,ind_stocksonly,sh_price_o7&o=-marketcap&c=0,1,2,3,4,6,7,8,65,67,68"
 
-CHUNK_SIZE=100
-WAIT_SECONDS=5
+# 開始時刻
+start_time=`date +%s`
 
-# --- Cleanup and Setup ---
-echo "--- Initializing directories ---"
-rm -rf $CHUNK_DIR $RAW_DATA_DIR $COMBINED_DATA_DIR
-mkdir -p $CHUNK_DIR $RAW_DATA_DIR $COMBINED_DATA_DIR
-touch "$IND_TXT_CACHE"
-echo
+# ディレクトリ構造の準備
+mkdir -p $(dirname $SCREEN_DATA1)
+mkdir -p $(dirname $SCREEN_DATA3)
+touch $SCREEN_DATA3
 
-# --- Main Logic ---
-start_time=$(date +%s)
+echo "1. Creating Ticker Lists for RS Rating..."
+# 銘柄リストの作成
+python $SCRIPT_DIR/getList_US.py $SCREEN_DATA1 "$URL1"
+python $SCRIPT_DIR/getList_US.py $SCREEN_DATA2 "$URL2"
 
-# --- STAGE 1: Generate Master Ticker Lists ---
-echo "--- Stage 1: Generating Master Ticker Lists ---"
-python3 "$SCRIPT_DIR/relative-strength-us.py" --mode get_list "$URL_US_TICKERS" "$US_TICKER_LIST"
-python3 "$SCRIPT_DIR/relative-strength-jp.py" --mode get_list "$JP_TICKER_LIST" "$IND_TXT_CACHE"
-echo "Ticker list generation complete."
-echo
+echo "2. Calculating Relative Strength..."
+# Relative-Strengthの計算処理の実行
+# Note: relative-strength scripts are not in the repo, these lines will fail.
+python $SCRIPT_DIR/relative-strength-us.py $SCREEN_DATA1 $RS_RESULT1 $RS_SECTOR1
+python $SCRIPT_DIR/relative-strength-jp.py $RS_RESULT2 $RS_SECTOR2 $IND_TXT
+python $SCRIPT_DIR/relative-strength-us.py $SCREEN_DATA2 $RS_RESULT3 $RS_SECTOR3
+python $SCRIPT_DIR/relative-strength-us.py $SCREEN_DATA3 $RS_RESULT4 $RS_SECTOR4
 
-# --- STAGE 2: Download Raw Data in Chunks ---
-echo "--- Stage 2: Downloading Raw Stock Data in Chunks ---"
-# US Chunks
-split -l $CHUNK_SIZE "$US_TICKER_LIST" "$CHUNK_DIR/us_tickers_"
-us_chunks=($CHUNK_DIR/us_tickers_*)
-echo "Split US tickers into ${#us_chunks[@]} chunks."
-for file in "${us_chunks[@]}"; do
-    fname=$(basename "$file")
-    echo "Downloading US chunk: $fname..."
-    python3 "$SCRIPT_DIR/relative-strength-us.py" --mode download "$file" "$RAW_DATA_DIR/us_raw_$fname.pkl"
-    echo "Waiting for $WAIT_SECONDS seconds..."
-    sleep $WAIT_SECONDS
-done
+echo "3. Creating RS Charts..."
+# セクター別RS一覧作成
+python $SCRIPT_DIR/SectorRS_US.py $RS_SECTOR1 $RS_IMG1
+python $SCRIPT_DIR/SectorRS_JP.py $RS_SECTOR2 $RS_IMG2
 
-# JP Chunks
-# Create a temporary file with just the ticker symbols for splitting
-tmp_jp_tickers="$CHUNK_DIR/jp_tickers_only.txt"
-tail -n +2 "$JP_TICKER_LIST" | cut -d, -f1 > "$tmp_jp_tickers"
-split -l $CHUNK_SIZE "$tmp_jp_tickers" "$CHUNK_DIR/jp_tickers_"
-rm "$tmp_jp_tickers"
-jp_chunks=($CHUNK_DIR/jp_tickers_*)
-echo "Split JP tickers into ${#jp_chunks[@]} chunks."
-for file in "${jp_chunks[@]}"; do
-    fname=$(basename "$file")
-    echo "Downloading JP chunk: $fname..."
-    # The download function in the JP script needs a CSV with a 'Ticker' column, so we create a temp one
-    tmp_jp_chunk_csv="$CHUNK_DIR/${fname}.csv"
-    echo "Ticker" > "$tmp_jp_chunk_csv"
-    cat "$file" >> "$tmp_jp_chunk_csv"
-    python3 "$SCRIPT_DIR/relative-strength-jp.py" --mode download "$tmp_jp_chunk_csv" "$RAW_DATA_DIR/jp_raw_$fname.pkl"
-    rm "$tmp_jp_chunk_csv"
-    echo "Waiting for $WAIT_SECONDS seconds..."
-    sleep $WAIT_SECONDS
-done
-echo "Raw data download complete."
-echo
+echo "4. Calculating RS Momentum..."
+# セクターのRS Momentumの計算処理の実行
+# python $SCRIPT_DIR/RS_Momentum.py $RS_SECTOR1 $RS_MOMENTUM1 10
+# python $SCRIPT_DIR/RS_Momentum.py $RS_SECTOR2 $RS_MOMENTUM2 10
+# python $SCRIPT_DIR/RS_Momentum.py $RS_SECTOR4 $RS_MOMENTUM4 11
 
-# --- STAGE 3: Combine Raw Data ---
-echo "--- Stage 3: Combining Raw Data Files ---"
-python3 "$SCRIPT_DIR/relative-strength-us.py" --mode combine "$RAW_DATA_DIR" "$COMBINED_DATA_DIR/us_raw_data.pkl" "us_raw_*.pkl"
-python3 "$SCRIPT_DIR/relative-strength-jp.py" --mode combine "$RAW_DATA_DIR" "$COMBINED_DATA_DIR/jp_raw_data.pkl" "jp_raw_*.pkl"
-echo "Raw data combination complete."
-echo
+# 終了時刻
+end_time=`date +%s`
 
-# --- STAGE 4: Calculate RS Values (Single Run) ---
-echo "--- Stage 4: Calculating RS Values ---"
-python3 "$SCRIPT_DIR/relative-strength-us.py" --mode calculate \
-    "$US_TICKER_LIST" \
-    "$COMBINED_DATA_DIR/us_raw_data.pkl" \
-    "$OUTPUT_DIR/rs_stocks_us.csv" \
-    "$OUTPUT_DIR/rs_industries_us.csv"
-
-python3 "$SCRIPT_DIR/relative-strength-jp.py" --mode calculate \
-    "$JP_TICKER_LIST" \
-    "$COMBINED_DATA_DIR/jp_raw_data.pkl" \
-    "$OUTPUT_DIR/rs_stocks_jp.csv" \
-    "$OUTPUT_DIR/rs_industries_jp.csv"
-echo "RS calculation complete."
-echo
-
-# --- STAGE 5: Create RS Charts ---
-echo "--- Stage 5: Creating RS Charts ---"
-python3 "$SCRIPT_DIR/SectorRS_US.py" "$OUTPUT_DIR/rs_industries_us.csv" "$OUTPUT_DIR/rs_industries_us.png"
-python3 "$SCRIPT_DIR/SectorRS_JP.py" "$OUTPUT_DIR/rs_industries_jp.csv" "$OUTPUT_DIR/rs_industries_jp.png"
-echo "Chart generation complete."
-echo
-
-# --- Finalization ---
-end_time=$(date +%s)
+# 処理時間
 run_time=$((end_time - start_time))
-echo "--- ALL DONE ---"
-echo "Total processing time: $run_time seconds."
+
+echo '-- END -- @' $run_time 'sec.'
