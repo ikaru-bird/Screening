@@ -10,29 +10,32 @@ import RelativeStrength as rs
 # --------------------------------------------- #
 if __name__ == "__main__":
 
-    #パラメータ受取り
-    if len(sys.argv) < 4:
-        print("Usage: python relative-strength-us.py <input_chunk_file> <rs_result_csv> <rs_sector_csv>")
+    if len(sys.argv) < 5:
+        print("Usage: python relative-strength-us.py <ticker_list_file> <raw_data_pickle> <rs_result_csv> <rs_sector_csv>")
         sys.exit(1)
 
-    in_path       = sys.argv[1]
-    rs_result_csv = sys.argv[2]
-    rs_sector_csv = sys.argv[3]
+    ticker_list_file = sys.argv[1]
+    raw_data_pickle = sys.argv[2]
+    rs_result_csv = sys.argv[3]
+    rs_sector_csv = sys.argv[4]
 
-    # inputファイルから銘柄群のシンボルを取得
-    # The new shell script provides a chunk file with a header.
-    # The original getList_US.py does not have a header.
-    # To handle both, we can try to read with a header and if it fails, read without.
-    # However, the shell script now controls the workflow, so we can assume the format.
-    # The input file is now just a list of tickers, one per line.
+    print("--- Processing US Stocks ---")
 
-    # The getList_US.py script creates a file with a header and '~' separator.
+    # Load the ticker list to get metadata (Sector, Industry, etc.)
     columns = ["Ticker", "Company", "Sector", "Industry", "Market Cap", "P/E", "Fwd P/E", "Earnings", "Volume", "Price"]
     try:
-        stock_codes = pd.read_csv(in_path, sep="~", header=None, names=columns)
+        stock_codes = pd.read_csv(ticker_list_file, sep="~", header=None, names=columns)
     except pd.errors.EmptyDataError:
-        print(f"Input file {in_path} is empty, skipping.")
+        print(f"Ticker list file {ticker_list_file} is empty, skipping.")
         sys.exit(0)
 
-    # 処理実行
-    rs.calc_rs(stock_codes, rs_result_csv, rs_sector_csv)
+    # Load the pre-downloaded raw historical data
+    try:
+        all_history = pd.read_pickle(raw_data_pickle)
+    except FileNotFoundError:
+        print(f"Raw data file not found: {raw_data_pickle}. Please run the download stage first.")
+        sys.exit(1)
+
+    # Execute the calculation
+    rs.calc_rs(stock_codes, all_history, rs_result_csv, rs_sector_csv)
+    print("--- US Stock Processing Complete ---")
