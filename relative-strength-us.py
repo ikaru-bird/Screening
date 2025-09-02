@@ -10,34 +10,63 @@ import glob
 from datetime import datetime, timedelta
 import io
 
-# Note: The logic from getList_US.py is now integrated here.
 import requests
 from bs4 import BeautifulSoup
+import time
+import re
 
 def get_ticker_list(url, output_file):
-    """Fetches ticker list from a Finviz URL."""
-    print(f"Fetching tickers from: {url}")
+    """Fetches ticker list from a Finviz URL, handling pagination."""
+    print(f"Fetching tickers from base URL: {url}")
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"}
+
+    # Finviz URLs for pagination are of the form &r=21, &r=41, etc.
+    # First, get the total number of stocks to determine the number of pages.
     response = requests.get(url, headers=headers)
     soup = BeautifulSoup(response.content, 'lxml')
 
-    table = soup.find('table', {'class': 'screener_table'})
-    if table is None:
-        print("Could not find screener table on Finviz page.")
-        return
+    # Find total number of stocks
+    total_stocks_text = soup.find(text=re.compile(r"Total: \d+"))
+    if not total_stocks_text:
+        print("Could not determine total number of stocks. Processing first page only.")
+        total_stocks = 20
+    else:
+        total_stocks = int(re.search(r'\d+', total_stocks_text).group())
 
-    # Use io.StringIO to wrap the html string to avoid FutureWarning
-    df = pd.read_html(io.StringIO(str(table)), header=0)[0]
+    print(f"Found {total_stocks} total tickers. Fetching all pages...")
+
+    all_tickers_df = pd.DataFrame()
+
+    # Loop through pages. Finviz shows 20 stocks per page.
+    for i in range(1, total_stocks, 20):
+        paginated_url = f"{url}&r={i}"
+        print(f"Fetching page: {paginated_url}")
+
+        response = requests.get(paginated_url, headers=headers)
+        soup = BeautifulSoup(response.content, 'lxml')
+        table = soup.find('table', {'class': 'screener_table'})
+
+        if table is None:
+            print(f"Could not find screener table on page {i}. Stopping.")
+            break
+
+        df = pd.read_html(io.StringIO(str(table)), header=0)[0]
+        all_tickers_df = pd.concat([all_tickers_df, df], ignore_index=True)
+        time.sleep(0.5) # Be respectful to the server
+
+    # Clean up the dataframe
+    all_tickers_df.rename(columns={'No.': 'No'}, inplace=True)
+    all_tickers_df.drop(columns=['No'], inplace=True)
+    all_tickers_df.drop_duplicates(subset=['Ticker'], inplace=True)
 
     with open(output_file, 'w', encoding='utf-8') as f:
-        # Define columns based on what Finviz provides, ensure order is correct
         columns_to_write = ['Ticker', 'Company', 'Sector', 'Industry', 'Market Cap', 'P/E', 'Fwd P/E', 'PEG', 'Volume', 'Price']
-        # Filter df columns to only those that exist
-        df_cols = [col for col in columns_to_write if col in df.columns]
-        for index, row in df[df_cols].iterrows():
+        df_cols = [col for col in columns_to_write if col in all_tickers_df.columns]
+        for index, row in all_tickers_df[df_cols].iterrows():
             f.write("~".join(map(str, row.values)) + "\n")
 
-    print(f"Saved {len(df)} tickers to {output_file}")
+    print(f"Saved {len(all_tickers_df)} unique tickers to {output_file}")
+
 
 def download_raw_data(ticker_list_file, output_pickle_file):
     """Downloads raw historical data for a list of tickers."""
@@ -91,7 +120,6 @@ def combine_raw_data(input_dir, output_pickle_file, pattern):
 def run_calculation(ticker_list_file, raw_data_pickle, rs_result_csv, rs_sector_csv):
     """Runs the final RS calculation."""
     print("--- Running Final RS Calculation for US Stocks ---")
-    # This column list needs to match what get_ticker_list writes
     columns = ["Ticker", "Company", "Sector", "Industry", "Market Cap", "P/E", "Fwd P/E", "PEG", "Volume", "Price"]
     try:
         stock_codes = pd.read_csv(ticker_list_file, sep="~", header=None, names=columns)

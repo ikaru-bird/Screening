@@ -21,9 +21,13 @@ def get_ticker_list(output_file, industry_cache_file):
     """
     print("Fetching stock list from JPX...")
     url = 'https://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/data_j.xls'
-    stock_codes = pd.read_excel(url, sheet_name='Sheet1')
+    stock_codes_raw = pd.read_excel(url, sheet_name='Sheet1')
 
-    stock_codes = stock_codes.rename(columns={'コード': 'Ticker', "市場・商品区分":"SEGMENT", '33業種区分':'Sector', '規模コード':'SIZE'})
+    # Filter out non-ticker rows before processing
+    stock_codes_raw = stock_codes_raw[pd.to_numeric(stock_codes_raw['コード'], errors='coerce').notna()]
+    stock_codes_raw['コード'] = stock_codes_raw['コード'].astype(int)
+
+    stock_codes = stock_codes_raw.rename(columns={'コード': 'Ticker', "市場・商品区分":"SEGMENT", '33業種区分':'Sector', '規模コード':'SIZE'})
     stock_codes['SIZE'] = stock_codes['SIZE'].replace('-', '99').astype(int)
 
     print("Filtering for Prime and Standard markets...")
@@ -40,7 +44,6 @@ def get_ticker_list(output_file, industry_cache_file):
 
     missing_industries = []
     print("Checking for industries in local cache...")
-    # Ensure Industry column is object type to prevent FutureWarning on assignment
     stock_codes2['Industry'] = stock_codes2['Industry'].astype('object')
     for index, data in stock_codes2.iterrows():
         industry = ind.searchIndustry(df_tbl, data['Ticker'])
@@ -75,7 +78,6 @@ def download_raw_data(ticker_list_file, output_pickle_file):
     import yfinance as yf
     try:
         tickers_df = pd.read_csv(ticker_list_file)
-        # Ensure tickers are strings to prevent yfinance TypeError
         tickers = tickers_df['Ticker'].astype(str).dropna().unique().tolist()
     except Exception as e:
         print(f"Could not read ticker file {ticker_list_file}: {e}", file=sys.stderr)

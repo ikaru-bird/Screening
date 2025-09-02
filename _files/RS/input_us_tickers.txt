@@ -1,2 +1,2 @@
-NVDA~NVIDIA Corp~Technology~Semiconductors~4232.57B~49.57~27.55~0~174.18
-MSFT~Microsoft Corporation~Technology~Software - Infrastructure~3766.31B~37.14~27.69~0~506.69
+NVDA~NVIDIA Corp~Technology~Semiconductors~4133.23B~48.41~26.9~28946724~170.09
+MSFT~Microsoft Corporation~Technology~Software - Infrastructure~3734.08B~36.83~27.45~1888068~502.35
