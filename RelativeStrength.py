@@ -90,9 +90,6 @@ def calc_rs(stock_codes, rs_result_csv, rs_sector_csv):
 # --------------------------------------------- #
 # 個別RSの計算
 # --------------------------------------------- #
-    # 結果を格納するDataFrame
-    rs_result = pd.DataFrame(columns=["Industry","Ticker","Relative Strength","Diff","RS_1W","RS_1M","RS_3M","RS_6M","RS Momentum","RM_1W","RM_1M","RM_3M","RM_6M"])
-
     # --- START: Bulk data download ---
     all_tickers = stock_codes['Ticker'].unique().tolist()
     print(f"Found {len(all_tickers)} unique tickers. Downloading all price data in a single batch...")
@@ -100,7 +97,6 @@ def calc_rs(stock_codes, rs_result_csv, rs_sector_csv):
     start_date = (datetime.now() - timedelta(days=2*365)).strftime("%Y-%m-%d")
     end_date   = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
 
-    # yfinanceから株価データを一括取得
     all_history = yf.download(
         tickers=all_tickers,
         start=start_date,
@@ -116,90 +112,66 @@ def calc_rs(stock_codes, rs_result_csv, rs_sector_csv):
         print("Could not download any price data from yfinance. Exiting.")
         return
 
-    # Close price dataframeをffillで補完
     if isinstance(all_history.columns, pd.MultiIndex):
         all_history['Close'] = all_history['Close'].ffill()
-    else: # single ticker case
+    else:
         all_history['Close'] = all_history['Close'].ffill()
-
 
     print("Price data download complete. Starting RS calculation...")
     # --- END: Bulk data download ---
 
-    # タイムゾーンと日付の準備 (タイムゾーン情報を削除)
     now = datetime.now()
     W1_ago = now - timedelta(days=7)
     M1_ago = now - timedelta(days=30)
     M3_ago = now - timedelta(days=90)
     M6_ago = now - timedelta(days=180)
 
-    # stock_codesからtickerとindustryをループ処理
+    results_list = [] # Use a list to collect results, more efficient than pd.concat
     for index, row in stock_codes.iterrows():
         code = row['Ticker']
         sector = row['Industry']
 
         try:
-            # 銘柄の株価データを抽出
             if isinstance(all_history.columns, pd.MultiIndex):
-                # If a ticker was not found, it will be missing from the columns
                 if code not in all_history.columns.get_level_values(1):
                     continue
-                history = all_history.xs(code, level=1, axis=1)
+                history = all_history.xs(code, level=1, axis=1).copy()
             else:
-                # Handle the case where only one ticker was passed to yf.download
-                # and it was successful.
                 if len(all_tickers) == 1 and all_tickers[0] == code:
-                    history = all_history
-                else: # Should not happen if MultiIndex check is correct, but as a safeguard.
+                    history = all_history.copy()
+                else:
                     continue
 
             if history.empty or 'Close' not in history.columns or history['Close'].isnull().all():
                 continue
 
-            # 直近1週間のデータがない場合はスキップ
             if len(history.loc[history.index >= W1_ago]) == 0:
                 continue
 
-            # 各期間のデータ取得
             history_1w = history.loc[history.index <= W1_ago]
             history_1m = history.loc[history.index <= M1_ago]
             history_3m = history.loc[history.index <= M3_ago]
             history_6m = history.loc[history.index <= M6_ago]
 
-            # RSとRS Momentumの計算
             relative_strength_0 = calculate_relative_strength(history) if not history.empty else 0
-            rs_momentum_0 = calculate_rs_momentum(history) if not history.empty else 0
-
             if relative_strength_0 >= 2000:
                 print(f"# Skip  (Code={code}): relative_strength_0 is {relative_strength_0}")
                 continue
 
-            relative_strength_w = calculate_relative_strength(history_1w) if not history_1w.empty else 0
-            rs_momentum_w = calculate_rs_momentum(history_1w) if not history_1w.empty else 0
-            relative_strength_1 = calculate_relative_strength(history_1m) if not history_1m.empty else 0
-            rs_momentum_1 = calculate_rs_momentum(history_1m) if not history_1m.empty else 0
-            relative_strength_3 = calculate_relative_strength(history_3m) if not history_3m.empty else 0
-            rs_momentum_3 = calculate_rs_momentum(history_3m) if not history_3m.empty else 0
-            relative_strength_6 = calculate_relative_strength(history_6m) if not history_6m.empty else 0
-            rs_momentum_6 = calculate_rs_momentum(history_6m) if not history_6m.empty else 0
-
-            # 結果をDataFrameに追加
-            new_row = pd.DataFrame([{
+            results_list.append({
                 "Industry": sector,
                 "Ticker": code,
                 "Relative Strength": relative_strength_0,
-                "RS_1W": relative_strength_w,
-                "RS_1M": relative_strength_1,
-                "RS_3M": relative_strength_3,
-                "RS_6M": relative_strength_6,
-                "RS Momentum": rs_momentum_0,
-                "RM_1W": rs_momentum_w,
-                "RM_1M": rs_momentum_1,
-                "RM_3M": rs_momentum_3,
-                "RM_6M": rs_momentum_6
-            }])
-
-            rs_result = pd.concat([rs_result, new_row], ignore_index=True)
+                "RS_1W": calculate_relative_strength(history_1w) if not history_1w.empty else 0,
+                "RS_1M": calculate_relative_strength(history_1m) if not history_1m.empty else 0,
+                "RS_3M": calculate_relative_strength(history_3m) if not history_3m.empty else 0,
+                "RS_6M": calculate_relative_strength(history_6m) if not history_6m.empty else 0,
+                "RS Momentum": calculate_rs_momentum(history) if not history.empty else 0,
+                "RM_1W": calculate_rs_momentum(history_1w) if not history_1w.empty else 0,
+                "RM_1M": calculate_rs_momentum(history_1m) if not history_1m.empty else 0,
+                "RM_3M": calculate_rs_momentum(history_3m) if not history_3m.empty else 0,
+                "RM_6M": calculate_rs_momentum(history_6m) if not history_6m.empty else 0
+            })
 
         except KeyError:
             continue
@@ -207,9 +179,11 @@ def calc_rs(stock_codes, rs_result_csv, rs_sector_csv):
             print(f"# Error (Code={code}): {str(e)}")
             continue
 
-    if rs_result.empty:
+    if not results_list:
         print("No tickers were processed successfully. Exiting.")
         return
+
+    rs_result = pd.DataFrame(results_list)
 
     # 銘柄のPercentile計算
     calculate_percentile(rs_result, 'Relative Strength', 'Percentile')
@@ -261,11 +235,8 @@ def calc_rs(stock_codes, rs_result_csv, rs_sector_csv):
     # indexの変更
     rs_sector2 = rs_sector2.set_index('Rank', drop=True)
 
-    # 不要列の削除
-    rs_result2.drop(['RS_1W','RS_1M','RS_3M','RS_6M'], axis=1, inplace=True)
-    rs_sector2.drop(['RS_1W','RS_1M','RS_3M','RS_6M'], axis=1, inplace=True)
-
     # 結果をCSVファイルに保存
+    # NOTE: The combining scripts will handle dropping of temporary columns.
     rs_result2.to_csv(rs_result_csv)
     rs_sector2.to_csv(rs_sector_csv)
 

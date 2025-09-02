@@ -64,7 +64,7 @@ if __name__ == "__main__":
             with open(jp_ind_txt, mode='a', encoding='utf-8') as f:
                 f.writelines(new_industry_lines)
 
-        stock_codes2['Industry'].fillna('---', inplace=True)
+        stock_codes2['Industry'] = stock_codes2['Industry'].fillna('---')
 
         stock_codes2.to_csv(output_list_file, index=False)
         print(f"Full ticker list saved to {output_list_file}")
