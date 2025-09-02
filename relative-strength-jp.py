@@ -40,6 +40,8 @@ def get_ticker_list(output_file, industry_cache_file):
 
     missing_industries = []
     print("Checking for industries in local cache...")
+    # Ensure Industry column is object type to prevent FutureWarning on assignment
+    stock_codes2['Industry'] = stock_codes2['Industry'].astype('object')
     for index, data in stock_codes2.iterrows():
         industry = ind.searchIndustry(df_tbl, data['Ticker'])
         if industry == "-----":
@@ -72,9 +74,9 @@ def download_raw_data(ticker_list_file, output_pickle_file):
     """Downloads raw historical data for a list of tickers."""
     import yfinance as yf
     try:
-        # For JP list, tickers are in the 'Ticker' column of the CSV
         tickers_df = pd.read_csv(ticker_list_file)
-        tickers = tickers_df['Ticker'].dropna().unique().tolist()
+        # Ensure tickers are strings to prevent yfinance TypeError
+        tickers = tickers_df['Ticker'].astype(str).dropna().unique().tolist()
     except Exception as e:
         print(f"Could not read ticker file {ticker_list_file}: {e}", file=sys.stderr)
         return

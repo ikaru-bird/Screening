@@ -52,7 +52,6 @@ for file in "${us_chunks[@]}"; do
 done
 
 # JP Chunks
-# Create a temporary file with just the ticker symbols for splitting
 tmp_jp_tickers="$CHUNK_DIR/jp_tickers_only.txt"
 tail -n +2 "$JP_TICKER_LIST" | cut -d, -f1 > "$tmp_jp_tickers"
 split -l $CHUNK_SIZE "$tmp_jp_tickers" "$CHUNK_DIR/jp_tickers_"
@@ -62,7 +61,6 @@ echo "Split JP tickers into ${#jp_chunks[@]} chunks."
 for file in "${jp_chunks[@]}"; do
     fname=$(basename "$file")
     echo "Downloading JP chunk: $fname..."
-    # The download function in the JP script needs a CSV with a 'Ticker' column, so we create a temp one
     tmp_jp_chunk_csv="$CHUNK_DIR/${fname}.csv"
     echo "Ticker" > "$tmp_jp_chunk_csv"
     cat "$file" >> "$tmp_jp_chunk_csv"

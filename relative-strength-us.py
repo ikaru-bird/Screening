@@ -8,11 +8,11 @@ import argparse
 import os
 import glob
 from datetime import datetime, timedelta
+import io
 
 # Note: The logic from getList_US.py is now integrated here.
 import requests
 from bs4 import BeautifulSoup
-import time
 
 def get_ticker_list(url, output_file):
     """Fetches ticker list from a Finviz URL."""
@@ -26,11 +26,16 @@ def get_ticker_list(url, output_file):
         print("Could not find screener table on Finviz page.")
         return
 
-    df = pd.read_html(str(table), header=0)[0]
+    # Use io.StringIO to wrap the html string to avoid FutureWarning
+    df = pd.read_html(io.StringIO(str(table)), header=0)[0]
 
     with open(output_file, 'w', encoding='utf-8') as f:
-        for index, row in df.iterrows():
-            f.write(f"{row['Ticker']}~{row['Company']}~{row['Sector']}~{row['Industry']}~{row['Market Cap']}~{row['P/E']}~{row['Fwd P/E']}~{row['Earnings']}~{row['Volume']}~{row['Price']}\n")
+        # Define columns based on what Finviz provides, ensure order is correct
+        columns_to_write = ['Ticker', 'Company', 'Sector', 'Industry', 'Market Cap', 'P/E', 'Fwd P/E', 'PEG', 'Volume', 'Price']
+        # Filter df columns to only those that exist
+        df_cols = [col for col in columns_to_write if col in df.columns]
+        for index, row in df[df_cols].iterrows():
+            f.write("~".join(map(str, row.values)) + "\n")
 
     print(f"Saved {len(df)} tickers to {output_file}")
 
@@ -86,7 +91,8 @@ def combine_raw_data(input_dir, output_pickle_file, pattern):
 def run_calculation(ticker_list_file, raw_data_pickle, rs_result_csv, rs_sector_csv):
     """Runs the final RS calculation."""
     print("--- Running Final RS Calculation for US Stocks ---")
-    columns = ["Ticker", "Company", "Sector", "Industry", "Market Cap", "P/E", "Fwd P/E", "Earnings", "Volume", "Price"]
+    # This column list needs to match what get_ticker_list writes
+    columns = ["Ticker", "Company", "Sector", "Industry", "Market Cap", "P/E", "Fwd P/E", "PEG", "Volume", "Price"]
     try:
         stock_codes = pd.read_csv(ticker_list_file, sep="~", header=None, names=columns)
     except pd.errors.EmptyDataError:
@@ -105,7 +111,6 @@ def run_calculation(ticker_list_file, raw_data_pickle, rs_result_csv, rs_sector_
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="US Relative Strength Calculation Script")
     parser.add_argument("--mode", required=True, choices=['get_list', 'download', 'combine', 'calculate'], help="Execution mode")
-    # Using parse_known_args to allow for flexible argument passing depending on the mode
     args, remaining_argv = parser.parse_known_args()
 
     if args.mode == 'get_list':

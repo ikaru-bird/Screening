@@ -1,0 +1,3 @@
+Rank,Industry,Relative Strength,Diff,RS Momentum,RM_1W,RM_1M,RM_3M,RM_6M,Percentile,1 Week Ago,1 Month Ago,3 Months Ago,6 Months Ago,Tickers
+1,Semiconductors,32.19,-2.3200000000000003,0.29,0.55,0.64,0.62,0.29,99,99,99,99,99,NVDA
+2,Software - Infrastructure,17.39,-0.05000000000000071,0.24,0.27,0.69,0.64,0.4,1,1,1,1,1,MSFT
