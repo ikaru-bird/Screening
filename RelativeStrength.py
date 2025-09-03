@@ -118,7 +118,7 @@ def calc_rs(stock_codes, rs_result_csv, rs_sector_csv):
 
             # 次のチャンクへ進む前に5秒待機
             if i < len(ticker_chunks) - 1:
-                print("Waiting for 5 seconds to avoid rate limiting...")
+                # print("Waiting for 5 seconds to avoid rate limiting...")
                 time.sleep(5)
 
         except Exception as e:
