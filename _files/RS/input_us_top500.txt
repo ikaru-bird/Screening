@@ -1,0 +1,500 @@
+NVDA~NVIDIA Corp~Technology~Semiconductors~4149.95B~48.61~27.01~Aug 27/a~229,865,178~170.78
+MSFT~Microsoft Corporation~Technology~Software - Infrastructure~3754.64B~37.03~27.60~Jul 30/a~18,036,048~505.12
+AAPL~Apple Inc~Technology~Consumer Electronics~3409.13B~34.92~28.92~Jul 31/a~43,019,393~229.72
+GOOG~Alphabet Inc~Communication Services~Internet Content & Information~2559.71B~22.58~19.92~Jul 23/a~27,195,801~211.99
+GOOGL~Alphabet Inc~Communication Services~Internet Content & Information~2559.41B~22.51~19.86~Jul 23/a~42,766,392~211.35
+AMZN~Amazon.com Inc~Consumer Cyclical~Internet Retail~2403.23B~34.39~29.77~Jul 31/a~38,675,986~225.34
+META~Meta Platforms Inc~Communication Services~Internet Content & Information~1846.57B~26.62~24.58~Jul 30/a~9,266,708~735.11
+AVGO~Broadcom Inc~Technology~Semiconductors~1402.76B~112.11~36.27~Sep 04/a~19,599,726~298.24
+TSM~Taiwan Semiconductor Manufacturing ADR~Technology~Semiconductors~1184.40B~26.00~20.21~Jul 17/b~13,940,615~228.39
+BRK-B~Berkshire Hathaway Inc~Financial~Insurance - Diversified~1081.57B~17.17~23.28~Aug 04/b~4,964,631~501.14
+BRK-A~Berkshire Hathaway Inc~Financial~Insurance - Diversified~1079.57B~17.16~23.28~Aug 02/a~369~751128.31
+TSLA~Tesla Inc~Consumer Cyclical~Auto Manufacturers~1062.33B~190.73~133.85~Jul 23/a~58,007,725~329.36
+JPM~JPMorgan Chase & Co~Financial~Banks - Diversified~824.10B~15.38~14.56~Jul 15/b~7,218,213~299.70
+WMT~Walmart Inc~Consumer Defensive~Discount Stores~780.88B~36.92~33.34~Aug 21/b~15,321,840~97.85
+LLY~Lilly(Eli) & Co~Healthcare~Drug Manufacturers - General~695.83B~48.75~24.38~Aug 07/b~3,219,959~735.19
+V~Visa Inc~Financial~Credit Services~674.45B~34.56~27.25~Jul 29/a~4,899,229~350.07
+ORCL~Oracle Corp~Technology~Software - Infrastructure~632.83B~51.90~27.73~Sep 09/a~10,441,744~225.30
+MA~Mastercard Incorporated~Financial~Credit Services~535.06B~39.93~31.16~Jul 31/b~2,282,508~591.87
+NFLX~Netflix Inc~Communication Services~Entertainment~515.91B~51.74~37.61~Jul 17/a~2,295,945~1214.11
+XOM~Exxon Mobil Corp~Energy~Oil & Gas Integrated~488.95B~16.26~15.09~Aug 01/b~15,197,025~114.69
+JNJ~Johnson & Johnson~Healthcare~Drug Manufacturers - General~428.83B~19.04~15.72~Jul 16/b~9,025,687~178.06
+COST~Costco Wholesale Corp~Consumer Defensive~Discount Stores~416.35B~53.25~46.79~Sep 25/a~1,790,031~938.82
+HD~Home Depot, Inc~Consumer Cyclical~Home Improvement Retail~404.44B~27.60~24.99~Aug 19/b~3,327,636~406.31
+ABBV~Abbvie Inc~Healthcare~Drug Manufacturers - General~374.37B~100.85~14.88~Jul 31/b~4,333,385~211.92
+BAC~Bank Of America Corp~Financial~Banks - Diversified~373.46B~14.77~11.81~Jul 16/b~50,129,309~50.42
+PLTR~Palantir Technologies Inc~Technology~Software - Infrastructure~372.67B~522.07~187.29~Aug 04/a~65,221,337~157.09
+PG~Procter & Gamble Co~Consumer Defensive~Household & Personal Products~370.07B~24.28~21.25~Jul 29/b~6,423,822~157.99
+HDB~HDFC Bank Ltd. ADR~Financial~Banks - Regional~357.70B~43.13~15.71~Jul 19/a~2,976,808~69.89
+CVX~Chevron Corp~Energy~Oil & Gas Integrated~331.33B~20.89~17.19~Aug 01/b~8,373,843~161.83
+SAP~Sap SE ADR~Technology~Software - Application~310.02B~44.05~31.79~Jul 22/a~1,594,260~266.20
+BABA~Alibaba Group Holding Ltd ADR~Consumer Cyclical~Internet Retail~309.61B~16.16~13.69~Aug 29/b~41,344,377~138.55
+KO~Coca-Cola Co~Consumer Defensive~Beverages - Non-Alcoholic~297.21B~24.47~21.44~Jul 22/b~24,753,368~69.06
+GE~GE Aerospace~Industrials~Aerospace & Defense~292.03B~38.44~39.84~Jul 17/b~4,076,819~275.39
+TMUS~T-Mobile US Inc~Communication Services~Telecom Services~287.98B~24.13~19.73~Jul 23/a~4,052,393~255.89
+ASML~ASML Holding NV~Technology~Semiconductor Equipment & Materials~285.46B~27.81~24.87~Jul 16/b~1,863,444~725.85
+UNH~Unitedhealth Group Inc~Healthcare~Healthcare Plans~279.67B~13.38~17.01~Jul 29/b~10,900,738~308.80
+CSCO~Cisco Systems, Inc~Technology~Communication Equipment~268.49B~25.94~15.60~Aug 13/a~18,920,398~67.80
+AMD~Advanced Micro Devices Inc~Technology~Semiconductors~263.42B~93.43~27.25~Aug 05/a~38,545,003~162.32
+WFC~Wells Fargo & Co~Financial~Banks - Diversified~261.98B~14.03~12.19~Jul 15/b~13,321,705~81.78
+PM~Philip Morris International Inc~Consumer Defensive~Tobacco~260.57B~31.77~19.94~Jul 22/b~6,011,162~167.40
+TM~Toyota Motor Corporation ADR~Consumer Cyclical~Auto Manufacturers~252.29B~8.92~9.42~Aug 07/b~249,752~193.57
+AZN~Astrazeneca plc ADR~Healthcare~Drug Manufacturers - General~248.63B~30.08~15.53~Jul 29/b~2,986,887~80.19
+CRM~Salesforce Inc~Technology~Software - Application~241.73B~39.55~19.99~Sep 03/a~9,282,527~252.86
+NVS~Novartis AG ADR~Healthcare~Drug Manufacturers - General~240.31B~18.34~13.69~Jul 17/b~899,275~126.64
+MS~Morgan Stanley~Financial~Capital Markets~237.61B~16.87~15.47~Jul 16/b~5,328,491~148.85
+AXP~American Express Co~Financial~Credit Services~230.46B~23.25~19.16~Jul 18/b~3,224,749~331.18
+ABT~Abbott Laboratories~Healthcare~Medical Devices~228.80B~16.44~23.17~Jul 17/b~5,771,314~131.46
+MCD~McDonald's Corp~Consumer Cyclical~Restaurants~225.33B~27.05~23.60~Aug 06/b~3,257,953~315.76
+IBM~International Business Machines Corp~Technology~Information Technology Services~224.96B~39.17~20.24~Jul 23/a~3,465,555~241.50
+HSBC~HSBC Holdings plc ADR~Financial~Banks - Diversified~222.45B~12.76~8.97~Jul 30/b~1,121,489~64.08
+LIN~Linde Plc~Basic Materials~Specialty Chemicals~222.33B~33.71~26.40~Aug 01/b~1,261,461~474.14
+GS~Goldman Sachs Group, Inc~Financial~Capital Markets~221.24B~16.10~13.78~Jul 16/b~2,278,033~730.85
+SHEL~Shell Plc ADR~Energy~Oil & Gas Integrated~215.17B~17.07~11.11~Jul 31/b~3,450,928~73.79
+MRK~Merck & Co Inc~Healthcare~Drug Manufacturers - General~213.51B~13.18~8.87~Jul 29/b~11,636,250~85.48
+DIS~Walt Disney Co~Communication Services~Entertainment~212.64B~18.54~18.25~Aug 06/b~6,011,562~118.27
+RTX~RTX Corp~Industrials~Aerospace & Defense~211.50B~34.72~23.78~Jul 22/b~3,258,062~158.01
+BX~Blackstone Inc~Financial~Asset Management~208.24B~45.77~26.06~Jul 24/b~3,511,805~169.55
+T~AT&T, Inc~Communication Services~Telecom Services~207.93B~16.58~13.07~Jul 23/b~31,550,386~29.08
+PEP~PepsiCo Inc~Consumer Defensive~Beverages - Non-Alcoholic~205.74B~27.40~17.70~Jul 17/b~17,329,612~150.28
+RY~Royal Bank Of Canada~Financial~Banks - Diversified~204.14B~15.27~13.39~Aug 27/b~737,580~144.75
+CAT~Caterpillar Inc~Industrials~Farm & Heavy Construction Machinery~194.91B~21.16~19.59~Aug 05/b~2,327,240~416.05
+UBER~Uber Technologies Inc~Technology~Software - Application~193.55B~15.75~25.87~Aug 06/b~12,852,684~92.81
+NVO~Novo Nordisk ADR~Healthcare~Drug Manufacturers - General~189.78B~15.53~13.52~Aug 06/b~11,602,525~56.38
+NOW~ServiceNow Inc~Technology~Software - Application~189.58B~114.71~45.49~Jul 23/a~1,247,453~911.42
+VZ~Verizon Communications Inc~Communication Services~Telecom Services~184.68B~10.18~9.00~Jul 21/b~21,107,185~43.80
+INTU~Intuit Inc~Technology~Software - Application~184.66B~48.28~25.05~Aug 21/a~1,679,283~661.99
+TMO~Thermo Fisher Scientific Inc~Healthcare~Diagnostics & Research~184.10B~28.22~19.99~Jul 23/b~1,298,033~487.53
+BLK~Blackrock Inc~Financial~Asset Management~181.91B~26.94~21.32~Jul 15/b~391,266~1114.77
+TXN~Texas Instruments Inc~Technology~Semiconductors~181.65B~36.53~29.97~Jul 22/a~6,235,149~199.81
+SHOP~Shopify Inc~Technology~Software - Application~180.70B~77.22~76.39~Aug 06/b~5,073,952~139.04
+BA~Boeing Co~Industrials~Aerospace & Defense~179.50B~-~70.18~Jul 29/b~6,330,125~237.38
+BKNG~Booking Holdings Inc~Consumer Cyclical~Travel Services~178.43B~38.29~21.38~Jul 29/a~244,371~5505.55
+MUFG~Mitsubishi UFJ Financial Group, Inc. ADR~Financial~Banks - Diversified~174.96B~14.28~11.52~Aug 04/a~3,518,284~15.32
+C~Citigroup Inc~Financial~Banks - Diversified~174.48B~14.01~9.64~Jul 15/b~15,122,896~94.78
+SCHW~Charles Schwab Corp~Financial~Capital Markets~174.48B~25.88~17.69~Jul 18/b~7,739,756~96.12
+QCOM~Qualcomm, Inc~Technology~Semiconductors~171.32B~15.31~13.09~Jul 30/a~7,514,027~158.78
+ANET~Arista Networks Inc~Technology~Computer Hardware~170.77B~53.43~41.66~Aug 05/a~7,410,876~135.87
+PDD~PDD Holdings Inc ADR~Consumer Cyclical~Internet Retail~169.00B~13.27~10.22~Aug 25/b~8,207,585~121.69
+ISRG~Intuitive Surgical Inc~Healthcare~Medical Instruments & Supplies~168.15B~65.46~50.66~Jul 22/a~2,228,929~469.07
+SPGI~S&P Global Inc~Financial~Financial Data & Stock Exchanges~164.75B~41.48~28.04~Jul 31/b~1,069,465~539.64
+APP~Applovin Corp~Communication Services~Advertising Agencies~162.95B~71.57~35.80~Aug 06/a~5,268,161~481.73
+SONY~Sony Group Corporation ADR~Technology~Consumer Electronics~161.81B~21.32~19.67~Aug 07/b~4,916,855~26.95
+ACN~Accenture plc~Technology~Information Technology Services~159.56B~20.39~18.56~Sep 25/b~3,537,282~256.17
+BSX~Boston Scientific Corp~Healthcare~Medical Devices~158.04B~63.48~31.36~Jul 23/b~7,766,069~106.66
+GEV~GE Vernova Inc~Industrials~Specialty Industrial Machinery~157.80B~138.71~46.52~Jul 23/b~5,260,303~579.68
+UL~Unilever plc ADR~Consumer Defensive~Household & Personal Products~155.79B~26.09~17.49~Jul 31/b~3,224,673~63.54
+AMGN~AMGEN Inc~Healthcare~Drug Manufacturers - General~154.47B~23.47~13.24~Aug 05/a~1,946,452~286.92
+TJX~TJX Companies, Inc~Consumer Cyclical~Apparel Retail~154.22B~31.62~27.38~Aug 20/b~5,281,545~138.57
+NEE~NextEra Energy Inc~Utilities~Utilities - Regulated Electric~149.61B~25.31~18.25~Jul 23/b~8,652,383~72.65
+SYK~Stryker Corp~Healthcare~Medical Devices~149.08B~51.60~26.03~Jul 31/a~1,140,975~389.94
+ADBE~Adobe Inc~Technology~Software - Application~146.62B~22.10~14.93~Sep 11/a~4,223,796~345.63
+DHR~Danaher Corp~Healthcare~Diagnostics & Research~145.92B~43.28~23.73~Jul 22/b~2,388,960~203.79
+LOW~Lowe's Cos., Inc~Consumer Cyclical~Home Improvement Retail~145.11B~21.26~19.52~Aug 20/b~1,782,707~258.74
+PGR~Progressive Corp~Financial~Insurance - Property & Casualty~144.13B~13.84~15.01~Jul 16/b~2,353,054~245.86
+COF~Capital One Financial Corp~Financial~Credit Services~142.79B~18.75~11.18~Jul 22/a~3,463,751~223.27
+PFE~Pfizer Inc~Healthcare~Drug Manufacturers - General~142.03B~13.28~7.95~Aug 05/b~44,224,801~24.98
+BHP~BHP Group Limited ADR~Basic Materials~Other Industrial Metals & Mining~141.35B~15.68~14.90~Aug 18/a~2,753,555~55.67
+SAN~Banco Santander S.A. ADR~Financial~Banks - Diversified~140.37B~10.31~8.71~Jul 31/b~2,948,418~9.44
+ARM~Arm Holdings plc. ADR~Technology~Semiconductors~140.15B~201.52~58.89~Jul 30/a~5,812,563~132.34
+GILD~Gilead Sciences, Inc~Healthcare~Drug Manufacturers - General~139.85B~22.42~13.08~Aug 07/a~4,406,734~112.71
+SPOT~Spotify Technology S.A~Communication Services~Internet Content & Information~139.80B~165.74~52.15~Jul 29/b~1,043,823~689.62
+HON~Honeywell International Inc~Industrials~Conglomerates~138.15B~24.74~19.13~Jul 24/b~3,249,675~217.60
+TTE~TotalEnergies SE ADR~Energy~Oil & Gas Integrated~137.90B~11.18~8.58~Jul 25/b~856,473~62.59
+ETN~Eaton Corporation plc~Industrials~Specialty Industrial Machinery~133.82B~34.58~25.02~Aug 05/b~2,461,971~343.75
+APH~Amphenol Corp~Technology~Electronic Components~133.39B~43.59~31.79~Jul 23/b~6,986,059~109.25
+MU~Micron Technology Inc~Technology~Semiconductors~132.59B~21.39~9.18~Sep 23/a~12,410,217~118.48
+UNP~Union Pacific Corp~Industrials~Railroads~131.65B~19.28~17.15~Jul 24/b~3,544,669~221.99
+TD~Toronto Dominion Bank~Financial~Banks - Diversified~130.55B~8.96~11.72~Aug 28/b~1,917,670~74.53
+DE~Deere & Co~Industrials~Farm & Heavy Construction Machinery~128.89B~24.93~22.92~Aug 14/b~1,600,484~476.78
+PANW~Palo Alto Networks Inc~Technology~Software - Infrastructure~127.17B~119.07~44.28~Aug 18/a~6,926,334~190.52
+CMCSA~Comcast Corp~Communication Services~Telecom Services~126.02B~5.64~7.54~Jul 31/b~20,291,154~34.13
+UBS~UBS Group AG~Financial~Banks - Diversified~125.69B~20.99~13.02~Jul 30/b~1,903,733~39.66
+AMAT~Applied Materials Inc~Technology~Semiconductor Equipment & Materials~125.53B~18.79~16.55~Aug 14/a~7,674,877~157.57
+COP~Conoco Phillips~Energy~Oil & Gas E&P~123.63B~13.28~14.61~Aug 07/b~5,190,125~98.99
+KKR~KKR & Co. Inc~Financial~Asset Management~123.61B~66.54~20.60~Jul 31/b~2,418,407~138.74
+LRCX~Lam Research Corp~Technology~Semiconductor Equipment & Materials~122.80B~23.33~19.20~Jul 30/a~14,682,573~97.03
+ADI~Analog Devices Inc~Technology~Semiconductors~122.16B~63.17~26.54~Aug 20/b~2,726,985~248.32
+ADP~Automatic Data Processing Inc~Technology~Software - Application~121.42B~30.03~25.01~Jul 30/b~1,647,680~299.77
+SNY~Sanofi ADR~Healthcare~Drug Manufacturers - General~120.66B~12.38~9.99~Jul 31/b~2,276,107~49.58
+MELI~MercadoLibre Inc~Consumer Cyclical~Internet Retail~120.65B~58.77~36.40~Aug 04/a~359,659~2379.76
+BTI~British American Tobacco Plc ADR~Consumer Defensive~Tobacco~120.63B~30.80~11.43~Jul 31/b~7,176,499~55.24
+MDT~Medtronic Plc~Healthcare~Medical Devices~119.71B~25.77~15.37~Aug 19/b~7,149,967~93.33
+MO~Altria Group Inc~Consumer Defensive~Tobacco~112.77B~12.97~11.99~Jul 30/b~6,916,484~67.13
+IBN~ICICI Bank Ltd. ADR~Financial~Banks - Regional~112.63B~18.64~16.81~Jul 19/a~3,255,246~31.55
+WELL~Welltower Inc~Real Estate~REIT - Healthcare Facilities~112.04B~138.56~69.31~Jul 28/a~2,652,121~167.74
+KLAC~KLA Corp~Technology~Semiconductor Equipment & Materials~111.69B~27.84~21.84~Jul 31/a~1,241,228~846.35
+CB~Chubb Limited~Financial~Insurance - Property & Casualty~110.36B~12.21~10.82~Jul 22/a~1,700,306~276.81
+NKE~Nike, Inc~Consumer Cyclical~Footwear & Accessories~109.72B~34.40~30.48~Jun 26/a~15,055,047~74.29
+SNPS~Synopsys, Inc~Technology~Software - Infrastructure~109.55B~42.63~35.38~Sep 09/a~1,388,006~592.01
+BN~Brookfield Corporation~Financial~Asset Management~109.37B~153.87~15.52~Aug 07/b~3,245,741~66.32
+BUD~Anheuser-Busch InBev SA/NV ADR~Consumer Defensive~Beverages - Brewers~106.21B~17.49~14.67~Jul 31/b~1,912,946~61.37
+INTC~Intel Corp~Technology~Semiconductors~105.97B~-~35.01~Jul 24/a~57,351,909~24.21
+PLD~Prologis Inc~Real Estate~REIT - Industrial~105.79B~30.32~38.42~Jul 16/b~3,395,570~111.30
+LMT~Lockheed Martin Corp~Industrials~Aerospace & Defense~105.64B~25.48~15.44~Jul 22/b~1,340,959~452.50
+ENB~Enbridge Inc~Energy~Oil & Gas Midstream~105.32B~23.75~20.77~Aug 01/b~3,761,833~48.30
+SMFG~Sumitomo Mitsui Financial Group Inc ADR~Financial~Banks - Diversified~105.10B~13.45~12.40~Jul 31/a~1,629,702~16.47
+DASH~DoorDash Inc~Consumer Cyclical~Internet Retail~104.28B~135.81~62.27~Aug 06/a~2,682,256~244.10
+BBVA~Banco Bilbao Vizcaya Argentaria S.A. ADR~Financial~Banks - Diversified~104.06B~9.17~8.33~Jul 31/b~1,007,406~18.08
+CRWD~Crowdstrike Holdings Inc~Technology~Software - Infrastructure~103.77B~-~87.06~Aug 27/a~3,749,849~413.50
+VRTX~Vertex Pharmaceuticals, Inc~Healthcare~Biotechnology~102.81B~28.66~19.44~Aug 04/a~1,855,334~401.00
+SBUX~Starbucks Corp~Consumer Cyclical~Restaurants~102.05B~38.83~33.53~Jul 29/a~10,448,683~89.78
+SO~Southern Company~Utilities~Utilities - Regulated Electric~101.30B~23.78~20.06~Jul 31/b~3,467,372~92.09
+MMC~Marsh & McLennan Cos., Inc~Financial~Insurance Brokers~101.00B~24.66~19.82~Jul 17/b~2,892,542~205.44
+ICE~Intercontinental Exchange Inc~Financial~Financial Data & Stock Exchanges~100.23B~33.61~22.70~Jul 31/b~3,226,343~175.09
+SE~Sea Ltd ADR~Consumer Cyclical~Internet Retail~97.70B~90.71~32.93~Aug 12/b~5,164,933~178.78
+MSTR~Strategy Inc~Technology~Software - Application~96.87B~30.07~-~Jul 31/a~11,086,224~341.62
+BMY~Bristol-Myers Squibb Co~Healthcare~Drug Manufacturers - General~96.50B~19.13~7.87~Jul 31/b~9,506,837~47.41
+RCL~Royal Caribbean Group~Consumer Cyclical~Travel Services~96.18B~26.69~19.29~Jul 29/b~1,711,108~354.08
+CEG~Constellation Energy Corporation~Utilities~Utilities - Renewable~95.97B~32.06~26.91~Aug 07/b~2,425,184~307.19
+CME~CME Group Inc~Financial~Financial Data & Stock Exchanges~95.64B~25.69~22.89~Jul 23/b~2,846,470~265.40
+BAM~Brookfield Asset Management Ltd~Financial~Asset Management~95.38B~39.91~31.50~Aug 06/b~3,147,631~59.13
+HCA~HCA Healthcare Inc~Healthcare~Medical Care Facilities~95.03B~17.06~14.31~Jul 25/b~955,603~406.14
+PH~Parker-Hannifin Corp~Industrials~Specialty Industrial Machinery~95.00B~27.65~23.53~Aug 07/b~520,231~749.93
+DUK~Duke Energy Corp~Utilities~Utilities - Regulated Electric~94.78B~19.93~18.15~Aug 05/b~2,449,045~121.89
+STRC~Strategy Inc. - VR PRF PERPETUAL USD 100 - Ser A~Technology~Software - Application~94.56B~-~-~-~682,736~97.48
+CVS~CVS Health Corp~Healthcare~Healthcare Plans~93.97B~20.67~10.35~Jul 31/b~8,985,353~74.09
+AMT~American Tower Corp~Real Estate~REIT - Specialty~93.88B~72.78~28.28~Jul 29/b~2,601,186~200.49
+CDNS~Cadence Design Systems, Inc~Technology~Software - Application~93.41B~92.76~43.07~Jul 28/a~1,194,743~342.81
+TT~Trane Technologies plc~Industrials~Building Products & Equipment~91.44B~32.61~27.91~Jul 30/b~1,300,217~410.93
+WM~Waste Management, Inc~Industrials~Waste Management~90.93B~33.49~26.42~Jul 28/a~2,548,339~225.73
+BP~BP plc ADR~Energy~Oil & Gas Integrated~90.82B~159.56~12.31~Aug 05/b~8,459,880~35.23
+SHW~Sherwin-Williams Co~Basic Materials~Specialty Chemicals~89.99B~35.84~28.27~Jul 22/b~1,469,136~360.92
+HOOD~Robinhood Markets Inc~Financial~Capital Markets~89.61B~51.22~54.19~Jul 30/a~40,758,940~100.84
+MCO~Moody's Corp~Financial~Financial Data & Stock Exchanges~89.43B~42.37~31.95~Jul 23/b~714,763~498.50
+RBLX~Roblox Corporation~Communication Services~Electronic Gaming & Multimedia~89.06B~-~-~Jul 31/b~7,878,077~128.47
+BMO~Bank of Montreal~Financial~Banks - Diversified~87.86B~14.85~12.55~Aug 26/b~697,875~121.68
+RACE~Ferrari N.V~Consumer Cyclical~Auto Manufacturers~87.70B~50.79~41.39~Jul 31/b~405,524~492.08
+ORLY~O'Reilly Automotive, Inc~Consumer Cyclical~Auto Parts~87.56B~36.91~31.17~Jul 23/a~3,685,454~103.19
+GD~General Dynamics Corp~Industrials~Aerospace & Defense~87.26B~21.78~19.09~Jul 23/b~874,194~324.39
+NTES~NetEase Inc ADR~Communication Services~Electronic Gaming & Multimedia~86.29B~18.41~15.03~Aug 14/b~782,809~135.71
+MCK~Mckesson Corporation~Healthcare~Medical Distribution~86.03B~27.60~16.46~Aug 06/a~785,697~691.62
+NOC~Northrop Grumman Corp~Industrials~Aerospace & Defense~84.38B~21.67~20.47~Jul 22/b~635,545~589.32
+NEM~Newmont Corp~Basic Materials~Gold~83.33B~13.62~13.89~Jul 24/a~15,170,040~75.86
+RELX~RELX Plc ADR~Industrials~Specialty Business Services~83.06B~33.97~23.91~Jul 24/b~2,777,713~45.44
+CTAS~Cintas Corporation~Industrials~Specialty Business Services~82.82B~46.69~38.42~Jul 17/b~2,451,229~205.51
+MMM~3M Co~Industrials~Conglomerates~82.17B~21.46~18.09~Jul 18/b~2,744,872~154.27
+DELL~Dell Technologies Inc~Technology~Computer Hardware~82.11B~17.78~10.93~Aug 28/a~8,955,776~120.96
+PNC~PNC Financial Services Group Inc~Financial~Banks - Regional~80.90B~14.04~11.75~Jul 16/b~1,646,658~205.42
+CI~Cigna Group~Healthcare~Healthcare Plans~80.27B~16.42~9.11~Jul 31/b~1,431,110~300.72
+AON~Aon plc~Financial~Insurance Brokers~80.20B~31.14~19.47~Jul 25/b~1,236,060~371.96
+TRI~Thomson-Reuters Corp~Industrials~Specialty Business Services~80.03B~49.07~40.71~Aug 06/b~844,475~177.65
+MDLZ~Mondelez International Inc~Consumer Defensive~Confectioners~79.95B~22.56~18.61~Jul 29/a~7,812,928~61.79
+MSI~Motorola Solutions Inc~Technology~Communication Equipment~79.80B~38.55~29.75~Aug 07/a~1,614,945~479.00
+ABNB~Airbnb Inc~Consumer Cyclical~Travel Services~79.29B~30.78~26.59~Aug 06/a~4,027,381~127.59
+SCCO~Southern Copper Corporation~Basic Materials~Copper~78.99B~21.85~21.06~Jul 29/b~893,450~97.25
+CVNA~Carvana Co~Consumer Cyclical~Auto & Truck Dealerships~78.85B~91.74~56.67~Jul 30/a~2,138,887~366.39
+GSK~GSK Plc ADR~Healthcare~Drug Manufacturers - General~78.50B~18.16~8.02~Jul 30/b~4,325,732~38.96
+COIN~Coinbase Global Inc~Financial~Financial Data & Stock Exchanges~78.00B~29.37~40.91~Jul 31/a~6,781,892~303.56
+SNOW~Snowflake Inc~Technology~Software - Application~77.94B~-~141.67~Aug 27/a~7,211,114~233.60
+ECL~Ecolab, Inc~Basic Materials~Specialty Chemicals~77.94B~36.75~32.30~Jul 29/b~988,782~274.79
+APO~Apollo Global Management Inc~Financial~Asset Management~77.70B~25.63~14.70~Aug 05/b~3,645,484~135.84
+RIO~Rio Tinto plc ADR~Basic Materials~Other Industrial Metals & Mining~77.61B~9.82~10.46~Jul 30/b~2,155,418~61.89
+AJG~Arthur J. Gallagher & Co~Financial~Insurance Brokers~77.58B~45.61~22.41~Jul 31/a~1,673,354~302.57
+BNS~Bank Of Nova Scotia~Financial~Banks - Diversified~77.36B~16.60~10.89~Aug 26/b~1,822,571~62.11
+ITW~Illinois Tool Works, Inc~Industrials~Specialty Industrial Machinery~76.45B~23.01~23.40~Jul 30/b~898,204~262.26
+EQIX~Equinix Inc~Real Estate~REIT - Specialty~75.51B~75.53~51.64~Jul 30/a~457,855~771.56
+USB~U.S. Bancorp~Financial~Banks - Regional~75.51B~11.61~10.15~Jul 17/b~7,052,921~48.52
+CRH~CRH Plc~Basic Materials~Building Materials~74.85B~23.26~17.95~Aug 06/a~4,067,070~111.28
+FI~Fiserv, Inc~Technology~Information Technology Services~74.35B~22.86~11.54~Jul 23/b~4,911,843~136.78
+AEM~Agnico Eagle Mines Ltd~Basic Materials~Gold~74.22B~25.12~19.35~Jul 30/a~5,524,814~147.74
+EMR~Emerson Electric Co~Industrials~Specialty Industrial Machinery~73.94B~28.22~20.06~Aug 06/b~2,771,659~131.38
+BK~Bank Of New York Mellon Corp~Financial~Banks - Diversified~73.84B~15.99~13.40~Jul 15/b~3,307,681~104.70
+TDG~Transdigm Group Incorporated~Industrials~Aerospace & Defense~73.53B~43.32~30.59~Aug 05/b~434,575~1304.88
+RSG~Republic Services, Inc~Industrials~Waste Management~72.78B~34.46~30.84~Jul 29/a~988,893~233.12
+ELV~Elevance Health Inc~Healthcare~Healthcare Plans~72.58B~13.72~10.13~Jul 17/b~1,950,072~322.33
+NET~Cloudflare Inc~Technology~Software - Infrastructure~72.50B~-~187.40~Jul 31/a~1,892,889~208.05
+UPS~United Parcel Service, Inc~Industrials~Integrated Freight & Logistics~72.24B~12.67~11.82~Jul 29/b~10,036,578~85.23
+CM~Canadian Imperial Bank Of Commerce~Financial~Banks - Diversified~72.17B~13.03~12.00~Aug 28/b~1,150,471~77.25
+MAR~Marriott International, Inc~Consumer Cyclical~Lodging~71.80B~29.84~23.46~Aug 05/b~1,422,935~264.48
+NU~Nu Holdings Ltd~Financial~Banks - Regional~71.61B~31.63~18.13~Aug 14/a~50,538,188~14.86
+INFY~Infosys Ltd ADR~Technology~Information Technology Services~70.17B~21.89~19.69~Jul 23/b~13,501,574~16.89
+CP~Canadian Pacific Kansas City Limited~Industrials~Railroads~70.16B~23.75~19.24~Jul 30/a~2,119,387~76.43
+WMB~Williams Cos Inc~Energy~Oil & Gas Midstream~70.07B~28.95~23.70~Aug 04/a~7,831,541~57.38
+AZO~Autozone Inc~Consumer Cyclical~Auto Parts~69.92B~28.29~25.11~Sep 23/b~95,044~4179.84
+HWM~Howmet Aerospace Inc~Industrials~Aerospace & Defense~69.83B~50.62~40.06~Jul 31/b~1,974,355~173.22
+JCI~Johnson Controls International plc~Industrials~Building Products & Equipment~69.34B~31.47~24.26~Jul 29/b~4,497,209~105.96
+EPD~Enterprise Products Partners L P~Energy~Oil & Gas Midstream~69.29B~11.96~11.02~Jul 28/b~2,728,946~32.00
+EOG~EOG Resources, Inc~Energy~Oil & Gas E&P~68.85B~12.26~11.35~Aug 08/b~2,224,840~126.10
+BCS~Barclays plc ADR~Financial~Banks - Diversified~68.72B~8.87~7.12~Jul 29/b~9,790,927~19.56
+ING~ING Groep N.V. ADR~Financial~Banks - Diversified~68.38B~-~8.86~Jul 31/b~2,570,936~23.95
+ADSK~Autodesk Inc~Technology~Software - Application~68.28B~66.12~28.25~Aug 28/a~2,664,184~319.16
+CL~Colgate-Palmolive Co~Consumer Defensive~Household & Personal Products~68.21B~23.72~21.42~Aug 01/b~5,288,115~84.39
+ZTS~Zoetis Inc~Healthcare~Drug Manufacturers - Specialty & Generic~67.75B~26.30~22.14~Aug 05/b~2,177,324~152.88
+SPG~Simon Property Group, Inc~Real Estate~REIT - Retail~67.47B~25.32~26.41~Aug 04/a~2,825,674~178.87
+NGG~National Grid Plc ADR~Utilities~Utilities - Regulated Electric~67.45B~17.72~11.53~May 15/b~941,353~67.98
+CNQ~Canadian Natural Resources Ltd~Energy~Oil & Gas E&P~66.98B~11.34~13.34~Aug 07/b~6,226,245~32.00
+DB~Deutsche Bank AG~Financial~Banks - Regional~66.90B~10.58~9.09~Jul 24/b~3,159,919~34.73
+PYPL~PayPal Holdings Inc~Financial~Credit Services~66.16B~14.83~11.89~Jul 29/b~10,456,984~69.25
+APD~Air Products & Chemicals Inc~Basic Materials~Specialty Chemicals~65.03B~42.00~22.57~Jul 31/b~868,383~292.19
+HLT~Hilton Worldwide Holdings Inc~Consumer Cyclical~Lodging~64.92B~42.40~30.56~Jul 23/b~1,855,917~276.01
+FCX~Freeport-McMoRan Inc~Basic Materials~Copper~64.52B~34.04~17.27~Jul 23/b~12,145,014~44.94
+VST~Vistra Corp~Utilities~Utilities - Independent Power Producers~62.96B~29.48~21.03~Aug 07/b~4,228,014~185.81
+EQNR~Equinor ASA ADR~Energy~Oil & Gas Integrated~62.82B~8.20~8.11~Jul 23/b~2,530,408~24.78
+NSC~Norfolk Southern Corp~Industrials~Railroads~62.43B~18.80~19.78~Jul 29/b~1,718,642~278.25
+URI~United Rentals, Inc~Industrials~Rental & Leasing Services~61.69B~24.80~20.02~Jul 23/a~468,558~958.77
+TRV~Travelers Companies Inc~Financial~Insurance - Property & Casualty~61.54B~12.09~10.69~Jul 17/b~1,408,811~273.35
+DEO~Diageo plc ADR~Consumer Defensive~Beverages - Wineries & Distilleries~61.50B~26.14~15.38~Aug 05/b~1,093,884~110.70
+REGN~Regeneron Pharmaceuticals, Inc~Healthcare~Biotechnology~61.25B~14.56~14.28~Aug 01/b~1,019,723~577.90
+MNST~Monster Beverage Corp~Consumer Defensive~Beverages - Non-Alcoholic~61.19B~39.13~29.48~Aug 07/a~3,845,222~62.67
+WDAY~Workday Inc~Technology~Software - Application~61.11B~105.85~22.37~Aug 21/a~3,936,444~228.89
+AMX~America Movil S.A.B.DE C.V. ADR~Communication Services~Telecom Services~60.94B~21.18~11.58~Jul 22/b~1,865,670~19.91
+ET~Energy Transfer LP~Energy~Oil & Gas Midstream~60.76B~13.66~11.49~Aug 06/a~8,457,754~17.70
+TEL~TE Connectivity plc~Technology~Electronic Components~60.44B~42.24~21.51~Jul 23/b~1,946,875~204.56
+CNI~Canadian National Railway Co~Industrials~Railroads~60.32B~18.58~15.92~Jul 22/a~1,086,108~96.63
+CSX~CSX Corp~Industrials~Railroads~60.01B~19.78~16.62~Jul 23/a~10,973,318~32.19
+TFC~Truist Financial Corporation~Financial~Banks - Regional~59.86B~12.61~10.52~Jul 18/b~6,962,931~46.42
+KMI~Kinder Morgan Inc~Energy~Oil & Gas Midstream~59.42B~21.94~19.82~Jul 16/a~10,938,628~26.74
+FTNT~Fortinet Inc~Technology~Software - Infrastructure~58.95B~30.70~27.75~Aug 06/a~7,348,980~76.93
+AEP~American Electric Power Company Inc~Utilities~Utilities - Regulated Electric~58.88B~16.13~17.48~Jul 30/b~2,528,073~110.09
+ARES~Ares Management Corp~Financial~Asset Management~58.74B~102.85~28.12~Aug 01/b~1,430,654~179.78
+NXPI~NXP Semiconductors NV~Technology~Semiconductors~58.66B~27.73~16.61~Jul 21/a~2,211,552~232.66
+GLW~Corning, Inc~Technology~Electronic Components~58.65B~72.49~23.78~Jul 29/b~7,600,842~68.47
+ALNY~Alnylam Pharmaceuticals Inc~Healthcare~Biotechnology~58.59B~-~80.41~Jul 31/b~1,072,140~447.00
+AXON~Axon Enterprise Inc~Industrials~Aerospace & Defense~58.38B~183.82~93.50~Aug 04/a~493,294~743.59
+COR~Cencora Inc~Healthcare~Medical Distribution~57.16B~30.33~16.91~Aug 06/b~1,307,128~294.85
+AFL~Aflac Inc~Financial~Insurance - Life~56.49B~23.88~14.51~Aug 05/a~2,980,012~105.62
+FAST~Fastenal Co~Industrials~Industrial Distribution~56.45B~47.54~39.81~Jul 14/b~4,781,446~49.19
+CMG~Chipotle Mexican Grill~Consumer Cyclical~Restaurants~55.98B~36.90~29.38~Jul 23/a~20,730,081~41.75
+ROP~Roper Technologies Inc~Technology~Software - Application~55.85B~36.47~23.82~Jul 21/b~680,844~518.99
+NWG~NatWest Group Plc ADR~Financial~Banks - Regional~55.78B~8.95~7.69~Jul 25/b~5,204,559~13.82
+GM~General Motors Company~Consumer Cyclical~Auto Manufacturers~55.73B~9.28~5.93~Jul 22/b~5,675,491~58.53
+MRVL~Marvell Technology Inc~Technology~Semiconductors~55.69B~-~19.21~Aug 28/a~36,167,300~64.60
+DLR~Digital Realty Trust Inc~Real Estate~REIT - Specialty~55.57B~42.71~98.73~Jul 24/a~1,404,692~162.95
+PWR~Quanta Services, Inc~Industrials~Engineering & Construction~55.20B~58.11~30.47~Jul 31/b~685,739~374.68
+MPC~Marathon Petroleum Corp~Energy~Oil & Gas Refining & Marketing~54.77B~26.69~15.71~Aug 05/b~2,245,499~180.15
+CMI~Cummins Inc~Industrials~Specialty Industrial Machinery~54.46B~18.59~15.78~Aug 05/b~635,628~395.23
+PSX~Phillips 66~Energy~Oil & Gas Refining & Marketing~54.09B~32.21~12.71~Jul 25/b~2,113,894~133.84
+SRE~Sempra~Utilities~Utilities - Diversified~54.08B~20.07~16.62~Aug 07/b~4,127,127~82.89
+CARR~Carrier Global Corp~Industrials~Building Products & Equipment~54.04B~25.34~18.39~Jul 29/b~6,414,352~63.50
+BDX~Becton Dickinson & Co~Healthcare~Medical Instruments & Supplies~53.93B~33.83~12.66~Aug 07/b~1,630,254~188.15
+SLB~Schlumberger Ltd~Energy~Oil & Gas Equipment & Services~53.88B~12.30~11.70~Jul 18/b~17,567,055~35.90
+TRP~TC Energy Corporation~Energy~Oil & Gas Midstream~53.76B~17.63~18.46~Jul 31/b~1,205,410~51.69
+NDAQ~Nasdaq Inc~Financial~Financial Data & Stock Exchanges~53.70B~35.96~25.22~Jul 24/b~3,107,425~93.59
+ALL~Allstate Corp~Financial~Insurance - Property & Casualty~53.58B~9.56~8.87~Jul 30/a~1,100,027~203.34
+MET~Metlife Inc~Financial~Insurance - Life~53.57B~13.65~8.00~Aug 06/a~3,836,445~80.56
+LNG~Cheniere Energy Inc~Energy~Oil & Gas Midstream~52.93B~14.04~16.96~Aug 07/b~1,663,170~240.86
+FDX~Fedex Corp~Industrials~Integrated Freight & Logistics~52.88B~13.29~10.42~Sep 18/a~2,073,281~224.18
+O~Realty Income Corp~Real Estate~REIT - Retail~52.79B~56.33~38.40~Aug 06/a~5,432,380~57.74
+FLUT~Flutter Entertainment Plc~Consumer Cyclical~Gambling~52.65B~147.28~24.59~Aug 07/a~2,516,527~299.00
+E~Eni Spa ADR~Energy~Oil & Gas Integrated~52.21B~20.78~10.26~Jul 25/b~471,128~35.47
+MPLX~MPLX LP~Energy~Oil & Gas Midstream~51.94B~12.10~10.90~Aug 05/b~1,483,259~50.97
+PCAR~Paccar Inc~Industrials~Farm & Heavy Construction Machinery~51.91B~16.94~15.69~Jul 22/b~2,690,954~98.86
+CPNG~Coupang Inc~Consumer Cyclical~Internet Retail~51.79B~143.05~51.47~Aug 05/a~7,366,935~28.41
+MFC~Manulife Financial Corp~Financial~Insurance - Life~51.77B~13.58~9.60~Aug 06/a~1,715,282~30.48
+LHX~L3Harris Technologies Inc~Industrials~Aerospace & Defense~51.47B~30.72~22.33~Jul 24/b~1,516,548~275.12
+IDXX~Idexx Laboratories, Inc~Healthcare~Diagnostics & Research~51.16B~53.22~45.18~Aug 04/b~439,835~639.45
+DHI~D.R. Horton Inc~Consumer Cyclical~Residential Construction~50.76B~13.65~13.99~Jul 22/b~3,264,414~170.26
+PSA~Public Storage~Real Estate~REIT - Industrial~50.56B~31.44~27.79~Jul 30/a~934,489~288.18
+D~Dominion Energy Inc~Utilities~Utilities - Regulated Electric~50.47B~20.43~16.46~Aug 01/b~3,837,488~59.14
+CTVA~Corteva Inc~Basic Materials~Agricultural Inputs~50.20B~35.97~20.39~Aug 06/a~3,246,723~73.92
+SU~Suncor Energy, Inc~Energy~Oil & Gas Integrated~50.12B~12.72~14.37~Aug 05/a~2,235,250~41.31
+ROST~Ross Stores, Inc~Consumer Cyclical~Apparel Retail~49.47B~24.03~22.15~Aug 21/a~3,132,461~151.25
+PAYX~Paychex Inc~Technology~Software - Application~48.98B~29.69~23.03~Jun 25/b~2,058,791~135.96
+GWW~W.W. Grainger Inc~Industrials~Industrial Distribution~48.64B~25.66~23.07~Aug 01/b~376,353~1016.86
+AMP~Ameriprise Financial Inc~Financial~Asset Management~48.34B~15.95~12.47~Jul 24/b~384,574~512.82
+EW~Edwards Lifesciences Corp~Healthcare~Medical Devices~48.01B~55.82~29.29~Jul 24/a~3,328,694~81.77
+VLO~Valero Energy Corp~Energy~Oil & Gas Refining & Marketing~47.93B~63.97~15.00~Jul 24/b~3,210,602~154.28
+CBRE~CBRE Group Inc~Real Estate~Real Estate Services~47.48B~44.70~22.01~Jul 29/b~1,926,051~159.56
+TAK~Takeda Pharmaceutical Co ADR~Healthcare~Drug Manufacturers - Specialty & Generic~47.36B~51.27~23.35~Jul 30/a~2,393,566~15.16
+VRT~Vertiv Holdings Co~Industrials~Electrical Equipment & Parts~47.36B~59.24~26.00~Jul 30/b~8,087,536~124.01
+OXY~Occidental Petroleum Corp~Energy~Oil & Gas E&P~47.30B~28.23~16.83~Aug 06/a~7,522,772~48.05
+WCN~Waste Connections Inc~Industrials~Waste Management~47.08B~73.60~31.43~Jul 23/a~1,271,623~182.85
+OKE~Oneok Inc~Energy~Oil & Gas Midstream~46.99B~14.55~12.15~Aug 04/a~4,883,542~74.62
+DDOG~Datadog Inc~Technology~Software - Application~46.97B~389.16~62.72~Aug 07/b~4,842,749~134.69
+CPRT~Copart, Inc~Industrials~Specialty Business Services~46.88B~32.04~28.55~Sep 04/a~8,260,592~48.48
+TCOM~Trip.com Group Ltd ADR~Consumer Cyclical~Travel Services~46.77B~19.80~17.33~Aug 27/a~4,386,155~71.59
+F~Ford Motor Co~Consumer Cyclical~Auto Manufacturers~46.64B~14.95~8.47~Jul 30/a~57,653,872~11.72
+XYZ~Block Inc~Technology~Software - Infrastructure~46.47B~16.31~21.35~Aug 07/a~6,792,416~76.23
+PBR~Petroleo Brasileiro S.A. Petrobras ADR~Energy~Oil & Gas Integrated~46.18B~5.85~5.25~Aug 08/a~14,574,067~12.41
+WPM~Wheaton Precious Metals Corp~Basic Materials~Gold~46.11B~58.50~40.56~Aug 07/a~3,258,397~101.57
+B~Barrick Mining Corp~Basic Materials~Gold~45.94B~16.90~10.54~Aug 11/b~21,659,468~26.93
+HMC~Honda Motor ADR~Consumer Cyclical~Auto Manufacturers~45.92B~11.84~8.66~Aug 06/a~689,057~33.72
+CRWV~CoreWeave Inc~Technology~Software - Infrastructure~45.60B~-~-~Aug 12/a~33,234,572~93.34
+IMO~Imperial Oil Ltd~Energy~Oil & Gas Integrated~45.42B~13.72~16.72~Aug 01/b~594,092~89.22
+KR~Kroger Co~Consumer Defensive~Grocery Stores~45.38B~18.66~13.02~Sep 11/b~6,332,416~68.64
+TEAM~Atlassian Corporation~Technology~Software - Application~45.30B~-~32.87~Aug 07/a~2,077,690~172.68
+FERG~Ferguson Enterprises Inc~Industrials~Industrial Distribution~45.29B~28.67~21.80~Sep 16/b~1,729,603~229.69
+GRMN~Garmin Ltd~Technology~Scientific & Technical Instruments~45.10B~28.91~26.87~Jul 30/b~1,259,134~234.29
+AIG~American International Group Inc~Financial~Insurance - Diversified~44.90B~15.02~10.44~Aug 06/a~6,011,322~81.05
+BKR~Baker Hughes Co~Energy~Oil & Gas Equipment & Services~44.72B~14.84~17.20~Jul 22/a~8,578,021~45.36
+TTWO~Take-Two Interactive Software, Inc~Communication Services~Electronic Gaming & Multimedia~44.45B~-~26.80~Aug 07/a~1,859,194~240.95
+VEEV~Veeva Systems Inc~Healthcare~Health Information Services~44.25B~55.39~31.94~Aug 27/a~1,495,619~269.98
+EXC~Exelon Corp~Utilities~Utilities - Regulated Electric~43.80B~16.46~15.36~Jul 31/b~5,041,290~43.37
+HLN~Haleon plc ADR~Healthcare~Drug Manufacturers - Specialty & Generic~43.76B~22.56~18.24~Jul 31/b~10,851,949~9.76
+VALE~Vale S.A. ADR~Basic Materials~Other Industrial Metals & Mining~43.41B~8.46~5.84~Jul 31/a~19,690,847~10.17
+FANG~Diamondback Energy Inc~Energy~Oil & Gas E&P~43.38B~10.65~12.15~Aug 04/a~1,558,599~149.86
+ARGX~Argen X SE ADR~Healthcare~Biotechnology~43.23B~35.91~28.40~Jul 31/b~348,854~706.41
+EA~Electronic Arts, Inc~Communication Services~Electronic Gaming & Multimedia~42.90B~43.05~18.78~Jul 29/a~2,359,093~171.45
+MSCI~MSCI Inc~Financial~Financial Data & Stock Exchanges~42.85B~36.70~28.82~Jul 22/b~845,212~553.91
+ZS~Zscaler Inc~Technology~Software - Infrastructure~42.75B~-~75.04~Sep 02/a~5,266,405~274.57
+KMB~Kimberly-Clark Corp~Consumer Defensive~Household & Personal Products~42.75B~17.76~16.67~Aug 01/b~2,018,802~128.84
+CCI~Crown Castle Inc~Real Estate~REIT - Specialty~42.72B~-~33.72~Jul 23/a~4,349,848~98.10
+JD~JD.com Inc ADR~Consumer Cyclical~Internet Retail~42.68B~8.92~8.56~Aug 14/b~16,013,349~31.58
+AME~Ametek Inc~Industrials~Specialty Industrial Machinery~42.68B~29.80~23.66~Jul 31/b~947,962~184.81
+XEL~Xcel Energy, Inc~Utilities~Utilities - Regulated Electric~42.67B~20.01~17.46~Jul 31/b~3,101,388~72.14
+DKNG~DraftKings Inc~Consumer Cyclical~Gambling~42.62B~-~37.25~Aug 06/a~6,192,718~47.91
+TGT~Target Corp~Consumer Defensive~Discount Stores~42.00B~10.78~11.62~Aug 20/b~12,941,393~92.44
+RDDT~Reddit Inc~Communication Services~Internet Content & Information~41.19B~185.75~70.68~Jul 31/a~4,544,079~220.06
+EBAY~EBay Inc~Consumer Cyclical~Internet Retail~41.08B~19.86~15.04~Jul 30/a~7,018,461~89.89
+PEG~Public Service Enterprise Group Inc~Utilities~Utilities - Regulated Electric~40.83B~20.66~18.63~Aug 05/b~2,395,271~81.81
+CCL~Carnival Corp~Consumer Cyclical~Travel Services~40.49B~16.89~13.46~Jun 24/b~15,231,943~31.16
+YUM~Yum Brands Inc~Consumer Cyclical~Restaurants~40.36B~28.72~21.78~Aug 05/b~1,619,013~145.44
+CHTR~Charter Communications Inc~Communication Services~Telecom Services~40.31B~7.19~6.10~Jul 25/b~1,723,042~264.42
+CCEP~Coca-Cola Europacific Partners Plc~Consumer Defensive~Beverages - Non-Alcoholic~40.29B~24.11~16.75~Aug 06/b~2,667,181~87.43
+DAL~Delta Air Lines, Inc~Industrials~Airlines~39.91B~8.87~8.83~Jul 10/b~6,923,168~61.13
+KVUE~Kenvue Inc~Consumer Defensive~Household & Personal Products~39.88B~28.23~18.41~Aug 07/b~11,719,474~20.78
+RMD~Resmed Inc~Healthcare~Medical Instruments & Supplies~39.68B~28.50~22.46~Jul 31/a~1,033,923~270.99
+MPWR~Monolithic Power System Inc~Technology~Semiconductors~39.45B~21.45~40.71~Jul 31/a~517,329~823.65
+KDP~Keurig Dr Pepper Inc~Consumer Defensive~Beverages - Non-Alcoholic~39.27B~25.65~13.26~Jul 24/b~29,136,705~28.91
+LVS~Las Vegas Sands Corp~Consumer Cyclical~Resorts & Casinos~39.13B~28.79~18.90~Jul 23/a~5,158,937~57.01
+ETR~Entergy Corp~Utilities~Utilities - Regulated Electric~39.02B~21.76~20.02~Jul 30/b~1,724,815~87.41
+ALC~Alcon Inc~Healthcare~Medical Instruments & Supplies~38.71B~36.32~22.16~Aug 19/a~2,698,094~78.27
+VMC~Vulcan Materials Co~Basic Materials~Building Materials~38.64B~40.89~29.68~Jul 31/b~1,143,576~292.49
+FER~Ferrovial S.E~Industrials~Engineering & Construction~38.60B~10.63~-~Jul 29/a~352,698~53.65
+SYY~Sysco Corp~Consumer Defensive~Food Distribution~38.52B~21.57~15.97~Jul 29/b~1,917,757~80.55
+HEI-A~Heico Corp~Industrials~Aerospace & Defense~38.50B~54.69~47.59~Aug 25/a~202,738~249.56
+LYV~Live Nation Entertainment Inc~Communication Services~Entertainment~38.38B~71.87~59.38~Aug 07/a~1,461,293~165.47
+HEI~Heico Corp~Industrials~Aerospace & Defense~38.27B~69.23~60.25~Aug 25/a~374,976~315.91
+ROK~Rockwell Automation Inc~Industrials~Specialty Industrial Machinery~37.98B~39.64~29.31~Aug 06/b~1,076,686~337.84
+PRU~Prudential Financial Inc~Financial~Insurance - Life~37.81B~23.76~7.28~Jul 30/a~2,020,255~107.41
+HSY~Hershey Company~Consumer Defensive~Confectioners~37.66B~24.69~27.81~Jul 30/b~1,206,450~185.78
+ITUB~Itau Unibanco Holding S.A. ADR~Financial~Banks - Regional~37.36B~10.02~8.24~Aug 05/a~33,433,926~7.01
+CSGP~Costar Group, Inc~Real Estate~Real Estate Services~37.33B~345.70~65.03~Jul 22/a~2,081,138~88.12
+HUM~Humana Inc~Healthcare~Healthcare Plans~37.29B~23.80~22.66~Jul 30/b~1,965,231~310.06
+MLM~Martin Marietta Materials, Inc~Basic Materials~Building Materials~37.17B~34.15~28.03~Aug 07/b~551,175~616.38
+HIG~Hartford Insurance Group Inc.(The)~Financial~Insurance - Property & Casualty~37.09B~11.96~10.01~Jul 28/a~1,278,224~131.91
+VRSK~Verisk Analytics Inc~Industrials~Consulting Services~37.02B~40.87~33.98~Jul 30/b~1,116,259~265.00
+TKO~TKO Group Holdings Inc~Communication Services~Entertainment~36.75B~85.34~34.76~Aug 06/a~671,507~185.35
+FNV~Franco-Nevada Corporation~Basic Materials~Gold~36.69B~46.76~33.81~Aug 11/b~1,085,956~190.40
+ONC~BeOne Medicines Ltd ADR~Healthcare~Biotechnology~36.39B~-~55.70~Aug 06/b~765,974~332.04
+STX~Seagate Technology Holdings Plc~Technology~Computer Hardware~36.26B~25.17~13.81~Jul 29/a~3,174,740~170.50
+FICO~Fair Isaac Corp~Technology~Software - Application~36.12B~58.86~42.63~Jul 30/a~334,456~1504.88
+RKT~Rocket Companies Inc~Financial~Mortgage Finance~36.11B~-~25.25~Jul 31/a~12,963,595~17.16
+TRGP~Targa Resources Corp~Energy~Oil & Gas Midstream~35.88B~23.87~17.08~Aug 07/b~1,221,846~166.72
+CAH~Cardinal Health, Inc~Healthcare~Medical Distribution~35.71B~23.22~14.06~Aug 12/b~1,767,252~149.55
+FIS~Fidelity National Information Services, Inc~Technology~Information Technology Services~35.68B~255.75~10.89~Aug 05/b~3,556,546~68.31
+VICI~VICI Properties Inc~Real Estate~REIT - Diversified~35.55B~12.75~11.73~Jul 30/a~6,307,638~33.34
+A~Agilent Technologies Inc~Healthcare~Diagnostics & Research~35.50B~29.36~20.82~Aug 27/a~2,412,745~125.21
+CTSH~Cognizant Technology Solutions Corp~Technology~Information Technology Services~35.06B~14.58~13.02~Jul 30/a~3,268,006~71.78
+ED~Consolidated Edison, Inc~Utilities~Utilities - Regulated Electric~35.06B~17.62~16.14~Aug 07/a~3,019,285~97.20
+MCHP~Microchip Technology, Inc~Technology~Semiconductors~34.32B~-~24.96~Aug 07/a~6,636,549~63.60
+LEN~Lennar Corp~Consumer Cyclical~Residential Construction~34.18B~10.97~13.65~Jun 16/a~2,399,173~132.68
+XYL~Xylem Inc~Industrials~Specialty Industrial Machinery~34.16B~36.48~26.03~Jul 31/b~1,328,311~140.35
+WEC~WEC Energy Group Inc~Utilities~Utilities - Regulated Electric~34.12B~20.32~18.99~Jul 30/b~1,835,375~106.02
+ACGL~Arch Capital Group Ltd~Financial~Insurance - Diversified~34.08B~9.43~9.89~Jul 29/a~2,096,398~91.32
+UAL~United Airlines Holdings Inc~Industrials~Airlines~33.89B~10.49~8.23~Jul 16/a~7,053,336~104.68
+CHT~Chunghwa Telecom ADR~Communication Services~Telecom Services~33.75B~28.54~25.44~Aug 05/b~144,026~43.51
+FWONK~Liberty Media Corp~Communication Services~Entertainment~33.75B~95.45~48.54~Aug 07/b~940,839~101.07
+PCG~PG&E Corp~Utilities~Utilities - Regulated Electric~33.67B~14.17~9.40~Jul 31/b~15,219,697~15.32
+OTIS~Otis Worldwide Corp~Industrials~Specialty Industrial Machinery~33.66B~22.68~19.17~Jul 23/b~2,125,734~85.77
+NUE~Nucor Corp~Basic Materials~Steel~33.60B~26.43~13.64~Jul 28/a~1,201,918~146.40
+RJF~Raymond James Financial, Inc~Financial~Asset Management~33.56B~16.52~14.40~Jul 23/a~996,100~168.32
+PUK~Prudential plc ADR~Financial~Insurance - Life~33.56B~10.22~11.16~Aug 26/a~769,443~26.23
+FWONA~Liberty Media Corp~Communication Services~Entertainment~33.50B~85.48~44.03~Aug 07/b~81,629~90.52
+LLYVA~Liberty Media Corp~Communication Services~Entertainment~33.34B~-~-~Aug 07/b~91,619~94.58
+LLYVK~Liberty Media Corp~Communication Services~Entertainment~33.33B~-~-~Aug 07/b~320,264~97.32
+WAB~Westinghouse Air Brake Technologies Corp~Industrials~Railroads~32.93B~28.75~19.15~Jul 24/b~812,752~192.62
+CCJ~Cameco Corp~Energy~Uranium~32.84B~85.79~48.85~Jul 31/b~4,947,604~75.42
+GEHC~GE HealthCare Technologies Inc~Healthcare~Medical Devices~32.69B~14.66~14.51~Jul 30/b~3,561,134~71.60
+EQT~EQT Corp~Energy~Oil & Gas E&P~32.69B~28.17~10.24~Jul 22/a~8,338,992~52.38
+EL~Estee Lauder Cos., Inc~Consumer Defensive~Household & Personal Products~32.67B~-~32.34~Aug 20/b~2,782,036~90.79
+TSCO~Tractor Supply Co~Consumer Cyclical~Specialty Retail~32.60B~30.26~26.44~Jul 24/b~3,230,278~61.52
+WDS~Woodside Energy Group Ltd ADR~Energy~Oil & Gas E&P~32.46B~11.12~21.90~Aug 18/a~815,553~17.13
+SLF~Sun Life Financial, Inc~Financial~Insurance - Diversified~32.43B~14.28~10.10~Aug 07/a~466,461~57.68
+RYAAY~Ryanair Holdings Plc ADR~Industrials~Airlines~32.37B~14.52~11.25~Jul 21/b~1,325,949~61.00
+STT~State Street Corp~Financial~Asset Management~32.13B~12.69~10.41~Jul 15/b~1,800,396~113.26
+UI~Ubiquiti Inc~Technology~Communication Equipment~31.97B~44.94~44.19~Aug 22/b~262,278~528.52
+FIG~Figma Inc~Technology~Software - Application~31.96B~-~-~Sep 03/a~7,944,642~65.57
+WTW~Willis Towers Watson Public Limited Co~Financial~Insurance Brokers~31.75B~227.45~16.95~Jul 31/b~537,343~325.46
+DD~DuPont de Nemours Inc~Basic Materials~Specialty Chemicals~31.73B~-~15.81~Aug 05/b~2,583,578~75.79
+VTR~Ventas Inc~Real Estate~REIT - Healthcare Facilities~31.65B~157.04~116.10~Jul 30/a~2,650,324~67.92
+VG~Venture Global Inc~Energy~Oil & Gas Midstream~31.56B~24.44~11.93~Aug 13/b~5,296,824~13.00
+ODFL~Old Dominion Freight Line, Inc~Industrials~Trucking~31.50B~29.28~26.84~Jul 30/b~1,794,008~149.90
+BRO~Brown & Brown, Inc~Financial~Insurance Brokers~31.48B~27.52~20.18~Jul 28/a~2,455,667~95.43
+IQV~IQVIA Holdings Inc~Healthcare~Diagnostics & Research~31.24B~26.61~14.26~Jul 22/b~1,258,877~183.74
+EXR~Extra Space Storage Inc~Real Estate~REIT - Industrial~31.21B~30.61~28.94~Jul 30/a~1,185,687~140.86
+MTB~M & T Bank Corp~Financial~Banks - Regional~31.10B~12.89~10.60~Jul 16/b~1,044,082~198.98
+IR~Ingersoll-Rand Inc~Industrials~Specialty Industrial Machinery~30.98B~60.85~21.00~Jul 31/a~2,197,304~77.94
+KHC~Kraft Heinz Co~Consumer Defensive~Packaged Foods~30.80B~-~9.78~Jul 30/b~43,294,211~26.02
+GFI~Gold Fields Ltd ADR~Basic Materials~Gold~30.78B~16.49~9.63~Aug 22/b~5,109,714~34.39
+INSM~Insmed Inc~Healthcare~Biotechnology~30.71B~-~-~Aug 07/b~4,852,620~145.30
+CVE~Cenovus Energy Inc~Energy~Oil & Gas Integrated~30.54B~16.66~16.36~Jul 31/b~12,960,288~16.97
+PBR-A~Petroleo Brasileiro S.A. Petrobras ADR~Energy~Oil & Gas Integrated~30.37B~5.41~4.86~Aug 08/a~4,089,162~11.48
+FITB~Fifth Third Bancorp~Financial~Banks - Regional~30.16B~14.18~11.33~Jul 17/b~4,966,169~45.57
+ADM~Archer Daniels Midland Co~Consumer Defensive~Farm Products~29.81B~27.31~13.24~Aug 05/b~3,837,619~62.05
+HPE~Hewlett Packard Enterprise Co~Technology~Communication Equipment~29.76B~23.43~10.68~Sep 03/a~27,781,675~22.68
+IX~Orix Corporation ADR~Financial~Financial Conglomerates~29.64B~11.97~1.98~Aug 07/a~108,246~26.18
+TW~Tradeweb Markets Inc~Financial~Capital Markets~29.55B~48.17~32.37~Jul 30/b~1,855,837~124.98
+SOFI~SoFi Technologies Inc~Financial~Credit Services~29.53B~50.24~44.92~Jul 29/b~75,758,105~24.91
+BR~Broadridge Financial Solutions, Inc~Technology~Information Technology Services~29.51B~35.52~24.70~Aug 05/b~706,182~251.96
+AU~AngloGold Ashanti Plc~Basic Materials~Gold~29.28B~24.95~10.48~Aug 01/b~5,773,688~58.14
+DXCM~Dexcom Inc~Healthcare~Medical Devices~29.14B~52.02~28.66~Jul 30/a~4,467,095~74.30
+AMRZ~Amrize Ltd~Basic Materials~Building Materials~29.11B~-~-~Aug 06/a~2,542,035~52.67
+LPLA~LPL Financial Holdings Inc~Financial~Capital Markets~29.03B~24.82~15.61~Jul 31/a~615,473~362.83
+EFX~Equifax, Inc~Industrials~Consulting Services~28.97B~45.76~25.74~Jul 22/b~1,557,863~234.03
+ALAB~Astera Labs Inc~Technology~Semiconductors~28.96B~305.52~84.91~Aug 05/a~5,806,966~174.24
+WBD~Warner Bros. Discovery Inc~Communication Services~Entertainment~28.77B~38.48~-~Aug 07/b~51,567,292~11.62
+AWK~American Water Works Co. Inc~Utilities~Utilities - Regulated Water~28.58B~25.46~23.17~Jul 30/a~1,018,637~141.41
+OWL~Blue Owl Capital Inc~Financial~Asset Management~28.57B~331.65~17.90~Jul 31/b~7,782,544~18.44
+KB~KB Financial Group Inc ADR~Financial~Banks - Regional~28.49B~7.45~6.58~Jul 24/b~113,985~78.25
+IBKR~Interactive Brokers Group Inc~Financial~Capital Markets~28.45B~33.51~29.48~Jul 17/a~7,333,865~63.90
+QSR~Restaurant Brands International Inc~Consumer Cyclical~Restaurants~28.42B~23.71~15.56~Aug 07/b~2,394,996~62.50
+WDC~Western Digital Corp~Technology~Computer Hardware~28.42B~15.95~11.73~Jul 30/a~5,768,934~81.91
+VOD~Vodafone Group plc ADR~Communication Services~Telecom Services~28.28B~-~10.02~May 20/b~7,941,384~11.72
+DTE~DTE Energy Co~Utilities~Utilities - Regulated Electric~28.16B~19.52~17.51~Jul 29/b~900,297~135.65
+KEYS~Keysight Technologies Inc~Technology~Scientific & Technical Instruments~28.15B~52.18~20.89~Aug 19/a~1,298,512~163.79
+SYF~Synchrony Financial~Financial~Credit Services~28.13B~9.19~8.24~Jul 22/b~3,264,814~75.62
+NTR~Nutrien Ltd~Basic Materials~Agricultural Inputs~28.08B~20.63~12.70~Aug 06/a~2,527,576~57.60
+NRG~NRG Energy Inc~Utilities~Utilities - Independent Power Producers~28.07B~61.41~16.20~Aug 06/b~2,499,182~145.11
+CRCL~Circle Internet Group Inc~Financial~Capital Markets~27.80B~-~-~Aug 12/b~10,177,360~120.14
+EME~Emcor Group, Inc~Industrials~Engineering & Construction~27.77B~25.75~22.63~Jul 31/b~298,632~620.41
+VIK~Viking Holdings Ltd~Consumer Cyclical~Travel Services~27.70B~33.64~19.68~Aug 19/b~1,500,183~62.46
+ROL~Rollins, Inc~Consumer Cyclical~Personal Services~27.46B~56.11~45.61~Jul 23/a~1,452,475~56.67
+K~Kellanova~Consumer Defensive~Packaged Foods~27.45B~20.63~20.86~Jul 31/b~2,300,298~78.94
+WRB~W.R. Berkley Corp~Financial~Insurance - Property & Casualty~27.30B~16.38~15.25~Jul 21/a~1,521,468~71.98
+HPQ~HP Inc~Technology~Computer Hardware~27.05B~10.53~8.59~Aug 27/a~13,260,871~28.94
+STLA~Stellantis N.V~Consumer Cyclical~Auto Manufacturers~27.04B~-~4.75~Jul 29/b~11,862,835~9.41
+AEE~Ameren Corp~Utilities~Utilities - Regulated Electric~26.97B~21.90~18.73~Aug 01/b~1,639,483~99.72
+BIDU~Baidu Inc ADR~Communication Services~Internet Content & Information~26.95B~8.84~11.12~Aug 20/b~7,120,160~96.29
+PPL~PPL Corp~Utilities~Utilities - Regulated Electric~26.93B~27.38~18.64~Jul 31/b~4,768,591~36.42
+SYM~Symbotic Inc~Industrials~Specialty Industrial Machinery~26.92B~-~133.59~Aug 06/a~1,520,077~45.59
+AVB~Avalonbay Communities Inc~Real Estate~REIT - Residential~26.91B~23.25~32.76~Jul 30/a~876,862~189.02
+AFRM~Affirm Holdings Inc~Technology~Software - Infrastructure~26.78B~641.84~54.01~Aug 28/a~13,840,018~82.22
+STZ~Constellation Brands Inc~Consumer Defensive~Beverages - Brewers~26.67B~-~11.08~Jul 01/a~6,075,171~151.26
+ATO~Atmos Energy Corp~Utilities~Utilities - Regulated Gas~26.56B~22.85~21.06~Aug 06/a~963,973~165.46
+TTD~Trade Desk Inc~Communication Services~Advertising Agencies~26.49B~65.32~49.87~Aug 07/a~7,766,498~54.18
+IRM~Iron Mountain Inc~Real Estate~REIT - Specialty~26.42B~651.57~38.54~Aug 06/b~1,768,561~89.46
+GIS~General Mills, Inc~Consumer Defensive~Packaged Foods~26.37B~12.06~12.93~Sep 17/b~6,250,703~49.32
+CQP~Cheniere Energy Partners LP~Energy~Oil & Gas Midstream~26.35B~13.16~12.77~Aug 07/b~75,712~54.44
+REG~Regency Centers Corporation~Real Estate~REIT - Retail~26.34B~33.73~29.98~Jul 29/a~1,744,506~72.33
+MTD~Mettler-Toledo International, Inc~Healthcare~Diagnostics & Research~26.28B~32.32~27.64~Jul 31/a~174,103~1276.00
+EXPE~Expedia Group Inc~Consumer Cyclical~Travel Services~26.24B~25.96~12.55~Aug 07/a~1,120,532~212.12
+KGC~Kinross Gold Corp~Basic Materials~Gold~26.16B~17.29~13.44~Jul 30/a~32,117,038~21.46
+VLTO~Veralto Corp~Industrials~Pollution & Treatment Controls~26.13B~29.48~25.42~Jul 28/a~887,676~105.28
+PHM~PulteGroup Inc~Consumer Cyclical~Residential Construction~26.06B~9.87~11.46~Jul 22/b~1,442,826~132.09
+IP~International Paper Co~Consumer Cyclical~Packaging & Containers~25.96B~-~15.69~Jul 31/b~3,543,636~49.17
+FOXA~Fox Corporation~Communication Services~Entertainment~25.96B~12.44~12.74~Aug 05/b~3,470,200~61.05
+HBAN~Huntington Bancshares, Inc~Financial~Banks - Regional~25.92B~13.16~11.09~Jul 18/b~30,102,554~17.68
+MDB~MongoDB Inc~Technology~Software - Infrastructure~25.90B~-~72.99~Aug 26/a~4,178,498~318.29
+FOX~Fox Corporation~Communication Services~Entertainment~25.88B~11.33~11.61~Aug 05/b~1,430,645~55.62
+PHG~Koninklijke Philips N.V. ADR~Healthcare~Medical Devices~25.72B~-~15.43~Jul 29/b~590,550~27.06
+TOST~Toast Inc~Technology~Software - Infrastructure~25.53B~127.70~36.49~Aug 05/a~8,637,396~43.79
+VRSN~Verisign Inc~Technology~Software - Infrastructure~25.52B~32.61~29.34~Jul 24/a~606,258~273.20
+PTC~PTC Inc~Technology~Software - Application~25.47B~50.13~28.71~Jul 30/a~809,481~212.64
+FCNCA~First Citizens Bancshares, Inc (NC)~Financial~Banks - Regional~25.35B~11.73~10.62~Jul 25/b~90,640~1987.45
+PSTG~Pure Storage Inc~Technology~Computer Hardware~25.32B~190.25~32.09~Aug 27/a~4,507,102~77.47
+TDY~Teledyne Technologies Inc~Technology~Scientific & Technical Instruments~25.22B~29.63~22.50~Jul 23/b~246,761~537.91
+FE~Firstenergy Corp~Utilities~Utilities - Regulated Electric~25.10B~19.19~16.01~Jul 30/a~3,152,927~43.47
+LULU~Lululemon Athletica inc~Consumer Cyclical~Apparel Retail~25.02B~13.66~13.10~Sep 04/a~4,402,690~200.21
+PINS~Pinterest Inc~Communication Services~Internet Content & Information~24.97B~13.13~17.23~Aug 07/a~6,367,291~36.73
+FTS~Fortis Inc~Utilities~Utilities - Regulated Electric~24.95B~20.34~19.14~Aug 01/b~521,245~49.54
+TU~Telus Corp~Communication Services~Telecom Services~24.92B~35.66~20.22~Aug 01/b~3,860,765~16.34
+HUBS~HubSpot Inc~Technology~Software - Application~24.85B~-~41.19~Aug 06/a~628,196~471.54
+NTRS~Northern Trust Corp~Financial~Asset Management~24.82B~15.25~14.23~Jul 23/b~918,876~129.77
+CNP~Centerpoint Energy Inc~Utilities~Utilities - Regulated Electric~24.77B~26.44~19.98~Jul 24/b~4,304,872~37.94
+PPG~PPG Industries, Inc~Basic Materials~Specialty Chemicals~24.73B~19.43~12.78~Jul 29/a~1,788,059~109.59
+MT~ArcelorMittal~Basic Materials~Steel~24.67B~9.90~7.48~Jul 31/b~1,188,689~32.44
+FIX~Comfort Systems USA, Inc~Industrials~Engineering & Construction~24.65B~35.90~26.84~Jul 24/a~362,882~698.61
+MKL~Markel Group Inc~Financial~Insurance - Property & Casualty~24.65B~11.68~18.53~Jul 31/b~41,763~1948.01
+ZM~Zoom Communications Inc~Technology~Software - Application~24.52B~21.58~13.81~Aug 21/a~2,873,394~81.93

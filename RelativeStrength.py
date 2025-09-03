@@ -84,28 +84,53 @@ def calculate_rs_momentum(data):
 def calc_rs(stock_codes, rs_result_csv, rs_sector_csv):
 
     # --------------------------------------------- #
-    # 全銘柄の株価データを一括取得
+    # 全銘柄の株価データを分割取得 (レートリミット対策)
     # --------------------------------------------- #
     all_tickers = stock_codes["Ticker"].unique().tolist()
-    print(f"Found {len(all_tickers)} tickers. Downloading all price data in a single batch...")
+    chunk_size = 200
+    all_data_list = []
+
+    # ティッカーリストをチャンクに分割
+    ticker_chunks = [all_tickers[i:i + chunk_size] for i in range(0, len(all_tickers), chunk_size)]
+
+    print(f"Found {len(all_tickers)} tickers. Downloading data in {len(ticker_chunks)} chunks of up to {chunk_size} tickers each.")
 
     start_date = (datetime.now() - timedelta(days=2*365)).strftime("%Y-%m-%d")
     end_date   = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
 
-    all_data = yf.download(
-        tickers=all_tickers,
-        start=start_date,
-        end=end_date,
-        interval="1d",
-        auto_adjust=True,
-        prepost=False,
-        threads=True,
-        progress=False
-    )
+    for i, chunk in enumerate(ticker_chunks):
+        print(f"Downloading chunk {i + 1}/{len(ticker_chunks)}...")
+        try:
+            data = yf.download(
+                tickers=chunk,
+                start=start_date,
+                end=end_date,
+                interval="1d",
+                auto_adjust=True,
+                prepost=False,
+                threads=True,
+                progress=False
+            )
+            if not data.empty:
+                all_data_list.append(data)
+            else:
+                print(f"Warning: No data returned for chunk {i + 1}.")
 
-    if all_data.empty:
-        print("Could not download any price data from yfinance.")
+            # 次のチャンクへ進む前に5秒待機
+            if i < len(ticker_chunks) - 1:
+                print("Waiting for 5 seconds to avoid rate limiting...")
+                time.sleep(5)
+
+        except Exception as e:
+            print(f"Error downloading chunk {i + 1}: {e}")
+            continue
+
+    if not all_data_list:
+        print("Could not download any price data from yfinance after all chunks.")
         return
+
+    # 分割ダウンロードしたデータを結合
+    all_data = pd.concat(all_data_list, axis=1)
 
     print("Price data download complete. Starting analysis...")
     # --------------------------------------------- #
