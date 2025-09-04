@@ -57,26 +57,49 @@ if not tickers_meta:
     sys.exit(0)
 
 ticker_symbols = [t['symbol'] for t in tickers_meta]
-print(f"Found {len(ticker_symbols)} tickers. Downloading all price data in a single batch...")
 
-# STEP 2: Batch download all historical price data
+# STEP 2: Batch download all historical price data in chunks
+chunk_size = 200
+all_data_list = []
+ticker_chunks = [ticker_symbols[i:i + chunk_size] for i in range(0, len(ticker_symbols), chunk_size)]
+
+print(f"Found {len(ticker_symbols)} tickers. Downloading data in {len(ticker_chunks)} chunks of up to {chunk_size} tickers each.")
+
 end_date = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
 start_date = (datetime.now() - timedelta(days=2*365)).strftime("%Y-%m-%d")
 
-all_data = yf.download(
-    tickers=ticker_symbols,
-    start=start_date,
-    end=end_date,
-    interval="1d" if dt_interval != "1wk" else "1wk",
-    auto_adjust=True,
-    prepost=False,
-    threads=True,
-    progress=False
-)
+for i, chunk in enumerate(ticker_chunks):
+    print(f"Downloading chunk {i + 1}/{len(ticker_chunks)}...")
+    try:
+        data = yf.download(
+            tickers=chunk,
+            start=start_date,
+            end=end_date,
+            interval="1d" if dt_interval != "1wk" else "1wk",
+            auto_adjust=True,
+            prepost=False,
+            threads=True,
+            progress=False
+        )
+        if not data.empty:
+            all_data_list.append(data)
+        else:
+            print(f"Warning: No data returned for chunk {i + 1}.")
 
-if all_data.empty:
-    print("Could not download any price data from yfinance.")
+        # Wait for 5 seconds before the next chunk to avoid rate limiting
+        if i < len(ticker_chunks) - 1:
+            time.sleep(5)
+
+    except Exception as e:
+        print(f"Error downloading chunk {i + 1}: {e}")
+        continue
+
+if not all_data_list:
+    print("Could not download any price data from yfinance after all chunks.")
     sys.exit(1)
+
+# Combine all downloaded data chunks
+all_data = pd.concat(all_data_list, axis=1)
 
 print("Price data download complete. Starting analysis...")
 
