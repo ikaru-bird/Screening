@@ -47,6 +47,7 @@ class CheckData():
                 {'depth': (0.9, 0.97),  'retracement': (1.0, 1.0)} # retracement is not checked for the last one
             ],
             'pivot_range': 0.01, # +/- 1%
+            'atr_factor': 0.5, # ATRによる動的調整のための係数
         },
         'vcp2': { # This is a variation, maybe merge later
             'peak_search_days': 90,
@@ -89,6 +90,7 @@ class CheckData():
             'base_min_rise_ratio': 1.2,
             'base_depth': (0.85, 0.95),
             'base_duration_weeks': (4, 8),
+            'breakout_volume_multiplier': 1.5, # ブレイクアウト時の出来高乗数
         },
         'on_minervini': {
             'base_weeks_min': 7,
@@ -597,6 +599,7 @@ class CheckData():
     # Dataframeを参照渡し
         df0 = self.df
         p = self.params['vcp']
+        atr_factor = p.get('atr_factor', 0.5) # ATR係数を取得、なければデフォルト値
 
     #①最高値を探す
         df1  = df0[: self.today - dt.timedelta(days=p['peak_search_days'])]
@@ -608,15 +611,24 @@ class CheckData():
         else:
             return 0, self.today
 
+        # 最高値時点のATRを取得し、動的調整値を計算
+        try:
+            atr_at_peak = df0.loc[idxmax, 'ATR']
+            atr_ratio = (atr_at_peak / max_val) * atr_factor
+        except (KeyError, ZeroDivisionError):
+            atr_ratio = 0 # ATRが計算できない場合は調整なし
+
     #②最高値以降の最安値を探す（1番底）
         df1  = df0[idxmax : self.today]
         rows = df1['Low']
         min_val = rows.min()
         idxmin = rows.idxmin()
 
-    # 最安値値判定
+    # 最安値値判定 (ATRで動的調整)
         c = p['contractions'][0]
-        if (min_val / max_val >= c['depth'][0]) and (min_val / max_val <= c['depth'][1]):
+        depth_lower_bound = c['depth'][0] - atr_ratio
+        depth_upper_bound = c['depth'][1] + atr_ratio
+        if (min_val / max_val >= depth_lower_bound) and (min_val / max_val <= depth_upper_bound):
             pass
         else:
             return 1, idxmax
@@ -646,9 +658,11 @@ class CheckData():
         min2 = rows.min()
         idxmin2 = rows.idxmin()
 
-    # 二番底判定
+    # 二番底判定 (ATRで動的調整)
         c = p['contractions'][1]
-        if (min2 / max2 >= c['depth'][0]) and (min2 / max2 <= c['depth'][1]):
+        depth_lower_bound = c['depth'][0] - atr_ratio
+        depth_upper_bound = c['depth'][1] + atr_ratio
+        if (min2 / max2 >= depth_lower_bound) and (min2 / max2 <= depth_upper_bound):
             pass
         else:
             return 3, idxmin2
@@ -675,9 +689,11 @@ class CheckData():
         min3 = rows.min()
         idxmin3 = rows.idxmin()
 
-    # 三番底判定
+    # 三番底判定 (ATRで動的調整)
         c = p['contractions'][2]
-        if (min3 / max3 >= c['depth'][0]) and (min3 / max3 <= c['depth'][1]):
+        depth_lower_bound = c['depth'][0] - atr_ratio
+        depth_upper_bound = c['depth'][1] + atr_ratio
+        if (min3 / max3 >= depth_lower_bound) and (min3 / max3 <= depth_upper_bound):
             pass
         else:
             return 5, idxmin2
@@ -820,10 +836,13 @@ class CheckData():
             return 0, dummy_dt, alist
 
     #②カップの頂点
-    #　期間の最安値日以降、直近30日以前の最高値が最安値の1.3倍以上
-        maxlim_dt = self.today - dt.timedelta(days=p['cup_peak_search_days'])
-        df1  = df0[idxmin : maxlim_dt]
-    #   df1  = df0[idxmin : self.today]
+    #　期間の最安値日以降、直近N取引日以前の最高値が最安値の1.3倍以上
+        df1 = df0.loc[idxmin:]
+        if len(df1) > p['cup_peak_search_days']:
+            df1 = df1.iloc[:-p['cup_peak_search_days']]
+        else:
+            return 1, dummy_dt, alist # データ不足
+
         if len(df1.index) > 0:
             rows = df1['High']
             max_val = rows.max()
@@ -852,7 +871,7 @@ class CheckData():
         if len(df2.index) > 0:
             base_sdt = df2.index[0]                # ベース開始日
             base_edt = df2.index[-1]               # ベース終了日
-            base_len = (base_edt - idxmax).days    # ベース構成日数
+            base_len = len(df0.loc[idxmax:base_edt]) # ベース構成日数 (取引日数)
 
             # ベースの平均値を計算
             base_avg = df2.Close.mean()
@@ -870,11 +889,12 @@ class CheckData():
             base_bdt = df1_base['Close'].idxmin()
 
             # ベースの中間日を取得
-            base_mdt = base_sdt + dt.timedelta(days=int(base_len/2))
+            base_mdt_pos = df0.index.get_loc(base_sdt) + int(len(df1_base)/2)
+            base_mdt = df0.index[base_mdt_pos]
 
             # ベース構成日数(最高値日から7～65週間)とベースの値幅約5%
-            base_duration_days_min = p['base_duration_weeks'][0] * 7
-            base_duration_days_max = p['base_duration_weeks'][1] * 7
+            base_duration_days_min = p['base_duration_weeks'][0] * 5 # 5取引日/週
+            base_duration_days_max = p['base_duration_weeks'][1] * 5 # 5取引日/週
             if (base_len >= base_duration_days_min) and (base_len <= base_duration_days_max) and (base_rate <= p['base_volatility_max_rate']) and (base_min >= base_p1) and (base_max <= base_p2):
                 alist.append((base_sdt, df0.loc[base_sdt,"Close"])) # ベースの開始
                 alist.append((base_bdt, df0.loc[base_bdt,"Low"]))   # ベースの最安
@@ -890,35 +910,48 @@ class CheckData():
         cup_p1 = max_val * p['cup_formation_range'][0]
         cup_p2 = max_val * p['cup_formation_range'][1]
 
-    # カップ右の構成期間(最高値から7～65週間)
-        base_edt1 = idxmax + dt.timedelta(days=p['cup_right_side_weeks'][0] * 7)
-        base_edt2 = idxmax + dt.timedelta(days=p['cup_right_side_weeks'][1] * 7)
-        df2 = df0.query('index >= @base_edt & @base_edt1 <= index <= @base_edt2 & @cup_p1 <= High')
+    # カップ右の構成期間(最高値から7～65週間) -> 取引日数で指定
+        try:
+            idxmax_pos = df0.index.get_loc(idxmax)
+            base_edt_pos = df0.index.get_loc(base_edt)
+
+            cup_right_start_pos = idxmax_pos + p['cup_right_side_weeks'][0] * 5
+            cup_right_end_pos = idxmax_pos + p['cup_right_side_weeks'][1] * 5
+
+            # 検索開始位置はベース終了日以降かつ、カップ右側期間の開始以降
+            search_start_pos = max(base_edt_pos, cup_right_start_pos)
+
+            df_cup_right_period = df0.iloc[search_start_pos:cup_right_end_pos]
+            df2 = df_cup_right_period.query('@cup_p1 <= High')
+        except (KeyError, IndexError):
+            return 3, base_sdt, alist
 
     # STEP4 and 5判定
         if len(df2.index) > 0:
-            cup_edt = df2.index[0]                        # カップ形成日（仮）
+            cup_edt = df2.index[0] # カップ形成日（仮）
+            cup_edt_pos = df0.index.get_loc(cup_edt)
 
-            # ハンドル部分の構成期間
-            handle_edt1 = cup_edt                         # カップ形成日
-            handle_edt2 = cup_edt + dt.timedelta(days=p['handle_duration_days'])
+            # ハンドル部分の構成期間(取引日数で探索)
+            handle_search_end_pos = cup_edt_pos + p['handle_duration_days']
+            df2_handle = df0.iloc[cup_edt_pos:handle_search_end_pos]
 
             # 期間中の高値
-            df2_handle = df0.query('@handle_edt1 <= index <= @handle_edt2')
             rows      = df2_handle['High']
             handle_p0 = rows.max()
-            cup_edt   = rows.idxmax()                     # カップ形成日を再セット
+            cup_edt   = rows.idxmax() # カップ形成日を再セット
+            cup_edt_pos = df0.index.get_loc(cup_edt) # 位置も再セット
 
-            # 期間を再セット
-            handle_edt1 = cup_edt + dt.timedelta(days=p['handle_start_delay_days'])
-            handle_edt2 = cup_edt + dt.timedelta(days=p['handle_duration_days'])
+            # ハンドル下落部分の探索期間を再セット
+            handle_dip_start_pos = cup_edt_pos + p['handle_start_delay_days']
+            handle_dip_end_pos = cup_edt_pos + p['handle_duration_days']
+            df3_period = df0.iloc[handle_dip_start_pos:handle_dip_end_pos]
 
             # ハンドル部分の価格
             handle_p1 = handle_p0 * p['handle_depth'][0]
             handle_p2 = handle_p0 * p['handle_depth'][1]
 
-        # 1～2週間後に5～12%下落があり、かつ50日週移動平均線より上
-            df3 = df0.query('@handle_edt1 <= index <= @handle_edt2 & @handle_p1 <= Low <= @handle_p2 & MA50 <= Close')
+            # 1～2週間後に5～12%下落があり、かつ50日週移動平均線より上
+            df3 = df3_period.query('@handle_p1 <= Low <= @handle_p2 & MA50 <= Close')
 
         # 下落がなければ、期間中の高値がpivot(STEP4)
             if len(df3.index) == 0:
@@ -945,11 +978,16 @@ class CheckData():
             return 3, base_sdt, alist
 
     #⑥ピボット判定
-    #　判定期間をセット
-        cwh_dtx = cwh_dt + dt.timedelta(days=p['breakout_check_days'])
+    #　判定期間をセット (取引日数)
+        try:
+            cwh_dt_pos = df0.index.get_loc(cwh_dt)
+            breakout_check_end_pos = cwh_dt_pos + p['breakout_check_days']
+            df_breakout_period = df0.iloc[cwh_dt_pos + 1 : breakout_check_end_pos]
+        except (KeyError, IndexError):
+            return 5, cwh_dt, alist
 
     #　直近価格がピボットポイントを超える
-        df2 = df0.query('@cwh_dt < index < @cwh_dtx & High >= @pvt_p')
+        df2 = df_breakout_period.query('High >= @pvt_p')
 
     # STEP6判定
         if len(df2.index) > 0:
@@ -967,6 +1005,7 @@ class CheckData():
     # Dataframeを参照渡し
         df0 = self.df
         p = self.params['flat_base']
+        breakout_vol_mult = p.get('breakout_volume_multiplier', 1.5)
 
     # 補助線描画用リスト
         alist= []
@@ -986,8 +1025,12 @@ class CheckData():
 
     #②ベースの頂点
     #　期間の最安値日以降、直近の最高値が最安値の1.2倍以上
-        maxlim_dt = self.today - dt.timedelta(days=p['peak_search_days_ago'])
-        df1  = df0[idxmin : maxlim_dt]
+        df1 = df0.loc[idxmin:]
+        if len(df1) > p['peak_search_days_ago']:
+            df1 = df1.iloc[:-p['peak_search_days_ago']]
+        else:
+            return 1, dummy_dt, alist # データ不足
+
         if len(df1.index) > 0:
             rows = df1['High']
             max_val = rows.max()
@@ -1016,7 +1059,7 @@ class CheckData():
         if len(df2.index) > 0:
             base_sdt = df2.index[0]                # ベース開始日
             base_edt = df2.index[-1]               # ベース終了日
-            base_len = (base_edt - idxmax).days    # ベース構成日数
+            base_len = len(df0.loc[idxmax:base_edt]) # ベース構成日数 (取引日数)
 
             # ベースの最安値、最高値、最安日を取得
             df1_base = df0[base_sdt : base_edt]
@@ -1025,8 +1068,8 @@ class CheckData():
             base_bdt = df1_base['Close'].idxmin()
 
             # ベース構成日数(最高値日から約4～8週間)と最安値が高値-15%を下回らない
-            base_duration_days_min = p['base_duration_weeks'][0] * 7
-            base_duration_days_max = p['base_duration_weeks'][1] * 7
+            base_duration_days_min = p['base_duration_weeks'][0] * 5
+            base_duration_days_max = p['base_duration_weeks'][1] * 5
             if (base_len >= base_duration_days_min) and (base_len <= base_duration_days_max) and (base_min >= base_p1) and (base_max <= base_p2):
                 alist.append((base_sdt, df0.loc[base_sdt,"Close"])) # ベースの開始
                 alist.append((base_bdt, df0.loc[base_bdt,"Low"]))   # ベースの最安
@@ -1036,9 +1079,9 @@ class CheckData():
         else:
             return 2, idxmax, alist
 
-    #④ピボット判定
-    #　直近価格がピボットポイントを超える
-        df2 = df0.query('@base_edt < index & High >= @max_val')
+    #④ピボット判定 (出来高条件を追加)
+    #　直近価格がピボットポイントを超え、かつ出来高が急増
+        df2 = df0.query('@base_edt < index & High >= @max_val & Volume > MA_VOL * @breakout_vol_mult')
 
     # STEP4判定
         if len(df2.index) > 0:
@@ -1216,6 +1259,13 @@ class CheckData():
         df['MA200']  = df['Close'].rolling(self.ma_long).mean()
         df['DIFF']   = df['MA200'].pct_change(20, fill_method=None)
         df['MA_VOL'] = df['Volume'].rolling(self.ma_mid).mean()
+
+        # ATR (Average True Range) を計算 (期間:14)
+        high_low = df['High'] - df['Low']
+        high_close = abs(df['High'] - df['Close'].shift())
+        low_close = abs(df['Low'] - df['Close'].shift())
+        tr = pd.concat([high_low, high_close, low_close], axis=1).max(axis=1)
+        df['ATR'] = tr.ewm(span=14, adjust=False).mean()
 
         # インスタンス変数にセット
         self.df = df
