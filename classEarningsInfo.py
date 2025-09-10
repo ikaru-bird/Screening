@@ -9,8 +9,9 @@ import yfinance as yf # Import yfinance here
 import math
 
 class EarningsInfo():
-    def __init__(self, ticker_obj):
+    def __init__(self, ticker_obj, info=None):
         self.ticker = ticker_obj
+        self.info = info if info is not None else {}
         self.income_stmt = None
         self.quarterly_income_stmt = None
         self.earnings_history = None
@@ -81,9 +82,16 @@ class EarningsInfo():
 
     def _check_quarterly_eps_yoy_growth(self):
         try:
+            # --- Primary Source: ticker.info ---
+            growth = self.info.get('earningsQuarterlyGrowth')
+            if self.isfloat(growth):
+                if growth < 0.25:
+                    return False, f"{growth:.1%} < 25%"
+                return True, f"{growth:.1%} >= 25%"
+
+            # --- Fallback Source: Statements/History ---
             eps_data = self._get_eps_from_stmt(self.quarterly_income_stmt)
             if eps_data is None or len(eps_data) < 5:
-                # Fallback to earnings_history
                 if self.earnings_history is not None and not self.earnings_history.empty and len(self.earnings_history) >= 5:
                     eps_data = self.earnings_history['epsActual']
                 else:
@@ -110,9 +118,17 @@ class EarningsInfo():
 
     def _check_consecutive_quarterly_eps_growth(self):
         try:
+            # --- Primary Source: ticker.info (using YoY as a proxy for strength) ---
+            growth = self.info.get('earningsQuarterlyGrowth')
+            if self.isfloat(growth):
+                if growth > 0.25: # Use same 25% threshold as YoY
+                    return True, f"{growth:.1%}"
+                else:
+                    return False, f"{growth:.1%}"
+
+            # --- Fallback Source: Statements/History ---
             eps_data = self._get_eps_from_stmt(self.quarterly_income_stmt)
             if eps_data is None or len(eps_data) < 2:
-                # Fallback to earnings_history
                 if self.earnings_history is not None and not self.earnings_history.empty and len(self.earnings_history) >= 2:
                     eps_data = self.earnings_history['epsActual']
                 else:
@@ -191,27 +207,31 @@ class EarningsInfo():
 
                 # --- Revenue (Actuals only) ---
                 actual_revenue_str = "N/A"
-                if self.quarterly_income_stmt is not None and not self.quarterly_income_stmt.empty and 'Total Revenue' in self.quarterly_income_stmt.index:
-                    try:
+                try:  # 売上高取得を個別にtry-catchで囲む
+                    if self.quarterly_income_stmt is not None and not self.quarterly_income_stmt.empty and 'Total Revenue' in self.quarterly_income_stmt.index:
                         matching_rev_date = self.quarterly_income_stmt.columns[abs(self.quarterly_income_stmt.columns - report_date_dt).argmin()]
                         if abs(matching_rev_date - report_date_dt).days < 30:
                             actual_revenue = self.quarterly_income_stmt.loc['Total Revenue', matching_rev_date]
                             actual_revenue_str = self._format_million(actual_revenue)
-                    except Exception:
-                        pass
+                except Exception:
+                    pass  # エラーが発生しても actual_revenue_str = "N/A" のまま続行
+                
                 lines.append(f"  Revenue : {actual_revenue_str}")
 
                 # --- EPS (Actual vs Estimate) ---
-                actual_eps = earnings_df['epsActual'].iloc[i]
-                estimated_eps = earnings_df['epsEstimate'].iloc[i]
+                try:  # EPS取得も個別にtry-catchで囲む
+                    actual_eps = earnings_df['epsActual'].iloc[i]
+                    estimated_eps = earnings_df['epsEstimate'].iloc[i]
 
-                if self.isfloat(actual_eps) and self.isfloat(estimated_eps):
-                    eps_beat_char = "O" if actual_eps > estimated_eps else "X"
-                    lines.append(f"{eps_beat_char} EPS : {actual_eps:.2f} vs {estimated_eps:.2f}")
-                else:
-                    actual_eps_str = f"{actual_eps:.2f}" if self.isfloat(actual_eps) else "N/A"
-                    est_eps_str = f"{estimated_eps:.2f}" if self.isfloat(estimated_eps) else "N/A"
-                    lines.append(f"- EPS : {actual_eps_str} vs {est_eps_str}")
+                    if self.isfloat(actual_eps) and self.isfloat(estimated_eps):
+                        eps_beat_char = "O" if actual_eps > estimated_eps else "X"
+                        lines.append(f"{eps_beat_char} EPS : {actual_eps:.2f} vs {estimated_eps:.2f}")
+                    else:
+                        actual_eps_str = f"{actual_eps:.2f}" if self.isfloat(actual_eps) else "N/A"
+                        est_eps_str = f"{estimated_eps:.2f}" if self.isfloat(estimated_eps) else "N/A"
+                        lines.append(f"-- EPS : {actual_eps_str} vs {est_eps_str}")
+                except Exception:
+                    lines.append("-- EPS : N/A vs N/A")  # EPSでエラーが発生した場合
 
         except Exception as e:
             if lines:
