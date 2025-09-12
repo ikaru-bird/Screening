@@ -1,0 +1,11 @@
+pandas
+numpy
+openpyxl
+yfinance
+mplfinance
+matplotlib
+japanize-matplotlib
+requests
+pytz
+beautifulsoup4
+ta

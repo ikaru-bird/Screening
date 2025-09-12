@@ -67,8 +67,11 @@ RSデータが準備できたら、`US_Daily.sh` や `JP_Weekly.sh` などを実
 
 ## 依存関係
 
-このプロジェクトを動作させるには、以下のPythonライブラリが必要です。`requirements.txt` ファイルは提供されていないため、手動でインストールする必要があります。
+このプロジェクトを動作させるには、いくつかのPythonライブラリが必要です。プロジェクトのルートに `requirements.txt` ファイルが含まれているので、以下のコマンドを使用して、必要なライブラリをすべてインストールできます。
 
 ```bash
-pip install pandas yfinance requests pytz beautifulsoup4 matplotlib japanize-matplotlib mplfinance numpy ta
+pip install -r requirements.txt
 ```
+
+主なライブラリは以下の通りです:
+`pandas`, `numpy`, `yfinance`, `requests`, `pytz`, `beautifulsoup4`, `matplotlib`, `japanize-matplotlib`, `mplfinance`, `ta`, `openpyxl`
