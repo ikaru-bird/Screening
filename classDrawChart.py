@@ -136,7 +136,7 @@ class DrawChart():
         except:
             str_idxTickers = "----"
 
-        ern = ern_info if ern_info is not None else EarningsInfo(ticker_obj)
+        ern = ern_info if ern_info is not None else EarningsInfo(ticker_obj, info=ticker_info)
 
         # --- Fundamental Screening ---
         _, fundamental_results = ern.get_fundamental_screening_results(roe)
