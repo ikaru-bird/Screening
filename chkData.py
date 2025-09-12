@@ -1,7 +1,4 @@
-# Googleドライブのライブラリを指定(for Google Colab)
 import sys
-sys.path.append('/content/drive/MyDrive/Colab Notebooks/my-modules')
-
 import os
 import pandas as pd
 import yfinance as yf
@@ -138,23 +135,14 @@ for i, ticker_info in enumerate(tickers_meta):
     if ckdt.isTrendTemplete():
         passed_technicals += 1
 
-        # STAGE 2: Slow, on-demand fundamental screening
+        # STAGE 2 & 3: Create earnings info object, then perform detailed technical analysis.
+        # The fundamental check is now inside the writeFlles method in classCheckData.
         try:
             ticker_obj = yf.Ticker(ticker_str)
-            info = ticker_obj.info
-            roe = info.get('returnOnEquity')
-
             ern_info = EarningsInfo(ticker_obj)
-            passed, _ = ern_info.get_fundamental_screening_results(roe)
+            ckdt.set_earnings_info(ern_info) # Set ern_info before technical checks
 
-            if not passed:
-                continue
-
-            print(f"{ticker_str} is ::: fundamentaly OK :::")
-            passed_fundamentals += 1
-
-            # STAGE 3: Detailed technical analysis for tickers that passed all screens
-            ckdt.set_earnings_info(ern_info)
+            # These methods will call writeFlles internally, which now performs the fundamental check.
             ckdt.isBuySign()
             ckdt.isGranville()
             ckdt.isGoldernCross()

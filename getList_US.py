@@ -1,9 +1,5 @@
 #moduleをインポート
-
-# Googleドライブのライブラリを指定(for Google Colab)
 import sys
-sys.path.append('/content/drive/MyDrive/Colab Notebooks/my-modules')
-
 from bs4 import BeautifulSoup
 import re
 import requests

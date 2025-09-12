@@ -1,9 +1,5 @@
 # coding: UTF-8
 
-# Googleドライブのライブラリを指定(for Google Colab)
-import sys
-sys.path.append('/content/drive/MyDrive/Colab Notebooks/my-modules')
-
 from urllib.parse import urlparse
 from html.parser import HTMLParser
 from bs4 import BeautifulSoup

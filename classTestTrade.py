@@ -1,9 +1,5 @@
 # coding: UTF-8
 
-# Googleドライブのライブラリを指定(for Google Colab)
-import sys
-sys.path.append('/content/drive/MyDrive/Colab Notebooks/my-modules')
-
 import os, fnmatch
 import pandas as pd
 import datetime as dt

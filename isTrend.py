@@ -1,9 +1,6 @@
 # coding: UTF-8
 
-# Googleドライブのライブラリを指定(for Google Colab)
 import sys
-sys.path.append('/content/drive/MyDrive/Colab Notebooks/my-modules')
-
 import os, fnmatch
 import yfinance as yf
 from classCheckData import CheckData
@@ -37,7 +34,11 @@ for path, dirs, files in os.walk(in_dir):
         # 決算情報をセット
         try:
             ticker_obj = yf.Ticker(ckdt.strTicker)
-            ern_info = EarningsInfo(ticker_obj)
+            try:
+                ticker_info = ticker_obj.info
+            except Exception:
+                ticker_info = {} # infoが取得できない場合は空の辞書を渡す
+            ern_info = EarningsInfo(ticker_obj, ticker_info)
             ckdt.set_earnings_info(ern_info)
         except Exception as e:
             print(f"Could not fetch earnings info for {ckdt.strTicker}: {e}")

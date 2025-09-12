@@ -1,9 +1,5 @@
 # coding: UTF-8
 
-# Googleドライブのライブラリを指定(for Google Colab)
-import sys
-sys.path.append('/content/drive/MyDrive/Colab Notebooks/my-modules')
-
 import os, fnmatch
 import pandas as pd
 import datetime as dt
@@ -1288,6 +1284,25 @@ class CheckData():
 
         # メッセージ出力
         print(self.strTicker + " is ::: " + strLabel + " :::")
+
+        # STAGE 2: ファンダメンタル・スクリーニング
+        # self.ern_infoがNoneの場合（isTrend.pyからの呼び出しなど）、チェックをスキップ
+        if self.ern_info is not None:
+            try:
+                info = self.ern_info.ticker.info
+                roe = info.get('returnOnEquity')
+                passed, _ = self.ern_info.get_fundamental_screening_results(roe)
+
+                if not passed:
+                    # print(f"##INFO## {self.strTicker} did not pass fundamental screening. Skipping chart/CSV output.")
+                    return # 条件を満たさない場合は後続処理を行わない
+
+                print(f"{self.strTicker} is ::: fundamentaly OK :::")
+
+            except Exception as e:
+                # print(f"##ERROR## during fundamental screening for {self.strTicker}: {e}")
+                return # エラーが発生した場合も後続処理をスキップ
+
         # ローソク足チャートを作成
 
         # リストの数が3の場合:日付でソート、それ以外:空のリストをセット)

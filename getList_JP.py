@@ -1,8 +1,5 @@
 # moduleをインポート
-
-# Googleドライブのライブラリを指定(for Google Colab)
 import sys
-sys.path.append('/content/drive/MyDrive/Colab Notebooks/my-modules')
 
 # 全角英数字を半角に変換
 import unicodedata

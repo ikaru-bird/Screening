@@ -1,8 +1,5 @@
 # coding: UTF-8
 
-import sys
-sys.path.append('/content/drive/MyDrive/Colab Notebooks/my-modules')
-
 import pandas as pd
 import datetime as dt
 import yfinance as yf # Import yfinance here
