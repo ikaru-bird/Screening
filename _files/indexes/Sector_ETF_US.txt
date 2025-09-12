@@ -1,0 +1,11 @@
+XLE~Energy Select Sector SPDR Fund~Energy~Energy~~~~~~
+XLB~Materials Select Sector SPDR Fund~Materials~Materials~~~~~~
+XLI~Industrial Select Sector SPDR Fund~Industrials~Industrials~~~~~~
+XLY~Consumer Discretionary Select Sector SPDR Fund~Consumer Discretionary~Consumer Discretionary~~~~~~
+XLP~Consumer Staples Select Sector SPDR Fund~Consumer Staples~Consumer Staples~~~~~~
+XLV~Health Care Select Sector SPDR Fund~Healthcare~Healthcare~~~~~~
+XLF~Financial Select Sector SPDR Fund~Financials~Financials~~~~~~
+XLK~Technology Select Sector SPDR Fund~Information Technology~Information Technology~~~~~~
+XLC~Communication Services Select Sector SPDR Fund~Communication Services~Communication Services~~~~~~
+XLU~Utilities Select Sector SPDR Fund~Utilities~Utilities~~~~~~
+XLRE~The Real Estate Select Sector SPDR Fund~Real Estate~Real Estate~~~~~~
