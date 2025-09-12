@@ -9,6 +9,29 @@ import yfinance as yf # Import yfinance here
 import math
 
 class EarningsInfo():
+    # --- ファンダメンタル・スクリーニングの閾値設定 ---
+    # ここで設定した値に基づいて、各ファンダメンタル項目が評価されます。
+    FUNDAMENTAL_THRESHOLDS = {
+        # ROE (自己資本利益率) の閾値。これを上回る必要があります。
+        'ROE_THRESHOLD': 0.15,
+
+        # 年次EPS（1株当たり利益）成長率の閾値。過去3年間の平均成長率がこれを上回る必要があります。
+        'ANNUAL_EPS_GROWTH_THRESHOLD': 0.25,
+
+        # 四半期EPSの前年同期比（YoY）成長率の閾値。これを上回る必要があります。
+        'QUARTERLY_EPS_YOY_GROWTH_THRESHOLD': 0.25,
+
+        # 最新の四半期EPSが、直前の四半期EPSを上回っているかのチェック。
+        # Trueの場合、成長が加速していると判断します。
+        # この項目は成長率ではなく、大小比較のみを行います。
+        # earningsQuarterlyGrowthが利用可能な場合は、その値がこの閾値を超えているかを見ます。
+        'CONSECUTIVE_QUARTERLY_EPS_GROWTH_THRESHOLD': 0.25,
+
+        # スクリーニングをパスするために必要な項目数。
+        # 上記4つの項目のうち、何項目がTrueまたはNone（データなし）であれば合格とするか。
+        'PASSING_CRITERIA_COUNT': 3
+    }
+
     def __init__(self, ticker_obj, info=None):
         self.ticker = ticker_obj
         self.info = info if info is not None else {}
@@ -42,13 +65,15 @@ class EarningsInfo():
         return None
 
     def _check_roe(self, roe):
+        threshold = self.FUNDAMENTAL_THRESHOLDS['ROE_THRESHOLD']
         if not self.isfloat(roe):
             return None, "N/A"
-        if float(roe) < 0.15:
-            return False, f"{float(roe):.1%} < 15%"
-        return True, f"{float(roe):.1%} >= 15%"
+        if float(roe) < threshold:
+            return False, f"{float(roe):.1%} < {threshold:.0%}"
+        return True, f"{float(roe):.1%} >= {threshold:.0%}"
 
     def _check_annual_eps_growth(self):
+        threshold = self.FUNDAMENTAL_THRESHOLDS['ANNUAL_EPS_GROWTH_THRESHOLD']
         try:
             eps_data = self._get_eps_from_stmt(self.income_stmt)
             if eps_data is None or len(eps_data) < 4:
@@ -73,21 +98,22 @@ class EarningsInfo():
             if math.isnan(avg_growth):
                 return None, "unavailable"
 
-            if avg_growth < 0.25:
-                return False, f"{avg_growth:.1%} < 25%"
+            if avg_growth < threshold:
+                return False, f"{avg_growth:.1%} < {threshold:.0%}"
 
-            return True, f"{avg_growth:.1%} >= 25%"
+            return True, f"{avg_growth:.1%} >= {threshold:.0%}"
         except Exception as e:
             return None, f"error"
 
     def _check_quarterly_eps_yoy_growth(self):
+        threshold = self.FUNDAMENTAL_THRESHOLDS['QUARTERLY_EPS_YOY_GROWTH_THRESHOLD']
         try:
             # --- Primary Source: ticker.info ---
             growth = self.info.get('earningsQuarterlyGrowth')
             if self.isfloat(growth):
-                if growth < 0.25:
-                    return False, f"{growth:.1%} < 25%"
-                return True, f"{growth:.1%} >= 25%"
+                if growth < threshold:
+                    return False, f"{growth:.1%} < {threshold:.0%}"
+                return True, f"{growth:.1%} >= {threshold:.0%}"
 
             # --- Fallback Source: Statements/History ---
             eps_data = self._get_eps_from_stmt(self.quarterly_income_stmt)
@@ -109,19 +135,20 @@ class EarningsInfo():
                 return True, f"turned positive ({eps4:.2f} -> {eps0:.2f})"
 
             growth = (eps0 - eps4) / abs(eps4) if abs(eps4) != 0 else 0
-            if growth < 0.25:
-                return False, f"{growth:.1%} < 25%"
+            if growth < threshold:
+                return False, f"{growth:.1%} < {threshold:.0%}"
 
-            return True, f"{growth:.1%} >= 25%"
+            return True, f"{growth:.1%} >= {threshold:.0%}"
         except Exception as e:
             return None, f"error"
 
     def _check_consecutive_quarterly_eps_growth(self):
+        threshold = self.FUNDAMENTAL_THRESHOLDS['CONSECUTIVE_QUARTERLY_EPS_GROWTH_THRESHOLD']
         try:
             # --- Primary Source: ticker.info (using YoY as a proxy for strength) ---
             growth = self.info.get('earningsQuarterlyGrowth')
             if self.isfloat(growth):
-                if growth > 0.25: # Use same 25% threshold as YoY
+                if growth > threshold: # Use same threshold as YoY
                     return True, f"{growth:.1%}"
                 else:
                     return False, f"{growth:.1%}"
@@ -154,10 +181,10 @@ class EarningsInfo():
         results['EPS YoY Growth'] = self._check_quarterly_eps_yoy_growth()
         results['EPS Quarterly Growth'] = self._check_consecutive_quarterly_eps_growth()
 
-        # 4項目中3項目以上がTrueまたはNullならPassとする
-        # num_passed = sum(res[0] for res in results.values())
+        # 4項目中、設定した数以上がTrueまたはNullならPassとする
+        passing_count = self.FUNDAMENTAL_THRESHOLDS['PASSING_CRITERIA_COUNT']
         num_passed = sum(1 for res in results.values() if res[0] is True or res[0] is None)
-        final_pass = num_passed >= 3
+        final_pass = num_passed >= passing_count
 
         return final_pass, results
 
