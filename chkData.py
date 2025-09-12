@@ -156,7 +156,7 @@ for i, ticker_info in enumerate(tickers_meta):
 print("\n--- Analysis Complete ---")
 print(f"Total Tickers Analyzed: {len(tickers_meta)}")
 print(f"Passed Technical Pre-screen (Trend Template): {passed_technicals}")
-print(f"Passed Fundamental Screen: {passed_fundamentals}")
+# print(f"Passed Fundamental Screen: {passed_fundamentals}")
 
 # データ処理クラスの破棄
 del ckdt
