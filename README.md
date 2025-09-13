@@ -14,60 +14,13 @@
 - **自動チャート作成**: 有効な買いシグナルごとに詳細な株価チャートを生成・保存します。
 - **日米市場のサポート**: 米国と日本の両市場を分析するためのスクリプトが含まれています。
 
-## 実行に関する重要な注意点
+## セットアップと手動修正ガイド
 
-**警告: このリポジトリのスクリプトは、現状のままでは実行できません。** 動作させるには、ユーザーによる手動でのコード修正が必須となります。
+**警告: このリポジトリのスクリプトは、現状のままでは実行できません。** 動作させるには、以下の手順に従って手動でのコード修正が必須となります。
 
-主な問題点は以下の通りです。
+### ステップ1: 依存関係のインストール
 
-1.  **ハードコードされた絶対パス**:
-    すべてのシェルスクリプト (`.sh` ファイル) には、特定のGoogle Drive環境を指す絶対パスがハードコードされています。
-    - **例 (`US_Daily.sh`内):** `cd '/content/drive/MyDrive/Screening/'`
-    - **修正方法:** この `cd` コマンドを削除し、他のファイルパス（例: `STOCK_DIR1=/content/_files/US/`）も、自身のプロジェクトディレクトリを指すように修正する必要があります。
-
-2.  **存在しないディレクトリへの参照**:
-    スクリプトは `_scripts` というディレクトリ内のPythonスクリプトを実行しようとしますが（例: `python $SCRIPT_DIR/getList_US.py`）、このディレクトリはリポジトリ内に存在しません。
-    - **修正方法:** Pythonスクリプトはリポジトリのルートディレクトリに存在するため、コマンドの `$SCRIPT_DIR/` の部分を削除する必要があります。
-
-## ワークフロー（修正後の想定）
-
-上記の問題を修正した場合、このエンジンのワークフローは大きく分けて2つのステージで構成されると想定されます。
-
-#### ステージ1: 相対強度（RS）データの生成
-スクリーニングの前提条件として、まず市場のRSデータを計算する必要があります。これは `relative-strength-us.py` や `relative-strength-jp.py` を直接実行することで行われると想定されます。
-
-#### ステージ2: 日次・週次スクリーニングの実行
-RSデータが準備できたら、`US_Daily.sh` や `JP_Weekly.sh` などを実行して、取引候補を特定します。
-
-## プロジェクト構造
-```
-.
-├── US_Daily.sh
-├── US_Weekly.sh
-├── JP_Daily.sh
-├── JP_Weekly.sh
-├── getRS_Rating.sh
-│
-├── getList_US.py
-├── getList_JP.py
-├── relative-strength-us.py
-├── relative-strength-jp.py
-├── chkData.py
-├── isTrend.py
-│
-├── classCheckData.py
-├── classDrawChart.py
-├── classEarningsInfo.py
-│
-├── _files/
-│   ├── RS/
-│   ├── indexes/
-└── ...
-```
-
-## 依存関係
-
-このプロジェクトを動作させるには、いくつかのPythonライブラリが必要です。プロジェクトのルートに `requirements.txt` ファイルが含まれているので、以下のコマンドを使用して、必要なライブラリをすべてインストールできます。
+まず、プロジェクトに必要なPythonライブラリをインストールします。
 
 ```bash
 pip install -r requirements.txt
@@ -75,3 +28,188 @@ pip install -r requirements.txt
 
 主なライブラリは以下の通りです:
 `pandas`, `numpy`, `yfinance`, `requests`, `pytz`, `beautifulsoup4`, `matplotlib`, `japanize-matplotlib`, `mplfinance`, `ta`, `openpyxl`
+
+### ステップ2: シェルスクリプトの修正
+
+各シェルスクリプト（`.sh`ファイル）には、開発者のローカル環境に依存したパスが含まれており、実行前に修正が必要です。
+
+#### 修正が必要な点
+1.  **`cd`コマンドの削除**: 特定のディレクトリへ移動する `cd '...'` という行を削除します。
+2.  **絶対パスの相対パスへの変更**: `/content/_files/...` のような絶対パスを、プロジェクトのルートディレクトリからの相対パス（例: `_files/...`）に修正します。
+3.  **Pythonスクリプト呼び出しの修正**: `python $SCRIPT_DIR/script.py` という形式のコマンドから、存在しないディレクトリを指す `$SCRIPT_DIR/` の部分を削除し、`python script.py` の形式に修正します。
+
+---
+
+#### ファイル別 修正手順
+
+<details>
+<summary><b>1. `US_Daily.sh` の修正</b></summary>
+
+- **削除する行:**
+  ```diff
+  - cd '/content/drive/MyDrive/Screening/'
+  ```
+- **修正する変数:**
+  ```diff
+  - STOCK_DIR1=/content/_files/US/
+  - STOCK_DIR2=/content/_files/US-INDEX/
+  - SCREEN_DATA1=/content/_files/US/input.txt
+  + STOCK_DIR1=_files/US/
+  + STOCK_DIR2=_files/US-INDEX/
+  + SCREEN_DATA1=_files/US/input.txt
+
+  - SCRIPT_DIR=$BASE_DIR/_scripts
+  + # SCRIPT_DIRの行は不要なため削除またはコメントアウトします
+  ```
+- **修正するコマンド:**
+  ```diff
+  - python $SCRIPT_DIR/getList_US.py ...
+  - python $SCRIPT_DIR/chkData.py ...
+  - python $SCRIPT_DIR/isTrend.py ...
+  + python getList_US.py ...
+  + python chkData.py ...
+  + python isTrend.py ...
+  ```
+</details>
+
+<details>
+<summary><b>2. `JP_Daily.sh` の修正</b></summary>
+
+- **削除する行:**
+  ```diff
+  - cd '/content/drive/MyDrive/Screening/'
+  ```
+- **修正する変数:**
+  ```diff
+  - STOCK_DIR=/content/_files/JP/
+  - SCREEN_DATA0=/content/_files/JP/data_j.xls
+  - SCREEN_DATA1=/content/_files/JP/input.txt
+  + STOCK_DIR=_files/JP/
+  + SCREEN_DATA0=_files/JP/data_j.xls
+  + SCREEN_DATA1=_files/JP/input.txt
+
+  - SCRIPT_DIR=$BASE_DIR/_scripts
+  + # SCRIPT_DIRの行は不要なため削除またはコメントアウトします
+  ```
+- **修正するコマンド:**
+  ```diff
+  - python $SCRIPT_DIR/getList_JP.py ...
+  - python $SCRIPT_DIR/chkData.py ...
+  + python getList_JP.py ...
+  + python chkData.py ...
+  ```
+</details>
+
+<details>
+<summary><b>3. `US_Weekly.sh` の修正</b></summary>
+
+- **修正する変数:**
+  ```diff
+  - STOCK_DIR=/content/_files/US/
+  - SCREEN_DATA1=/content/_files/US/input.txt
+  + STOCK_DIR=_files/US/
+  + SCREEN_DATA1=_files/US/input.txt
+
+  - SCRIPT_DIR=$BASE_DIR/_scripts
+  + # SCRIPT_DIRの行は不要なため削除またはコメントアウトします
+  ```
+- **修正するコマンド:**
+  ```diff
+  - python $SCRIPT_DIR/getList_US.py ...
+  - python $SCRIPT_DIR/chkData.py ...
+  - python $SCRIPT_DIR/isTrend.py ...
+  + python getList_US.py ...
+  + python chkData.py ...
+  + python isTrend.py ...
+  ```
+</details>
+
+<details>
+<summary><b>4. `JP_Weekly.sh` の修正</b></summary>
+
+- **削除する行:**
+  ```diff
+  - cd '/content/drive/My Drive/Screening/'
+  ```
+- **修正する変数:**
+  ```diff
+  - STOCK_DIR=/content/_files/JP/
+  - SCREEN_DATA0=/content/_files/JP/data_j.xls
+  - SCREEN_DATA1=/content/_files/JP/input.txt
+  + STOCK_DIR=_files/JP/
+  + SCREEN_DATA0=_files/JP/data_j.xls
+  + SCREEN_DATA1=_files/JP/input.txt
+
+  - SCRIPT_DIR=$BASE_DIR/_scripts
+  + # SCRIPT_DIRの行は不要なため削除またはコメントアウトします
+  ```
+- **修正するコマンド:**
+  ```diff
+  - python $SCRIPT_DIR/getList_JP.py ...
+  - python $SCRIPT_DIR/chkData.py ...
+  - python $SCRIPT_DIR/isTrend.py ...
+  + python getList_JP.py ...
+  + python chkData.py ...
+  + python isTrend.py ...
+  ```
+</details>
+
+<details>
+<summary><b>5. `getRS_Rating.sh` の修正</b></summary>
+
+- **修正する変数:**
+  ```diff
+  - SCRIPT_DIR=$BASE_DIR/_scripts
+  + # SCRIPT_DIRの行は不要なため削除またはコメントアウトします
+  ```
+- **修正するコマンド:**
+  `$SCRIPT_DIR/` の部分をすべての `python` コマンドから削除してください。
+</details>
+
+<details>
+<summary><b>6. `getMarketCondition.sh` の修正 (任意)</b></summary>
+このスクリプトは動作しますが、一貫性のために修正を推奨します。
+- **修正するコマンド:**
+  ```diff
+  - python $SCRIPT_DIR/getMarketCondition.py ...
+  + python getMarketCondition.py ...
+  ```
+</details>
+
+---
+
+## 使い方 (スクリプト修正後)
+
+スクリプトの修正が完了したら、以下の様にしてエンジンを実行できます。
+
+#### ステージ1: 相対強度（RS）データの生成
+まず、RSレーティングを計算するためのデータを生成します。
+```bash
+bash getRS_Rating.sh
+```
+
+#### ステージ2: 日次・週次スクリーニングの実行
+RSデータが準備できたら、日次または週次のスクリーニングを実行して取引候補を特定します。
+
+- **米国市場（日次）:**
+  ```bash
+  bash US_Daily.sh
+  ```
+- **日本市場（週次）:**
+  ```bash
+  bash JP_Weekly.sh
+  ```
+  （他のスクリプトも同様に実行可能です）
+
+## プロジェクト構造
+
+```
+.
+├── US_Daily.sh, JP_Daily.sh, etc.  # メイン実行スクリプト
+├── getList_US.py, chkData.py, etc. # コアロジックのPythonスクリプト
+├── _files/                           # データファイル
+│   ├── RS/                           # RS関連の入出力
+│   └── indexes/                      # インデックスリスト
+├── output_JP/, output_US/          # 出力ディレクトリ（スクリプト実行時に生成）
+└── requirements.txt                  # 依存ライブラリ
+```
