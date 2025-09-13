@@ -1227,7 +1227,7 @@ class CheckData():
     def csvSetDF(self, doc):
 
         # CSVを読取
-        df = pd.read_csv(doc, index_col=0, on_bad_lines='skip')
+        df = pd.read_csv(doc, index_col='Date', parse_dates=True, on_bad_lines='skip')
 
         # ティッカーの処理
         self.strBaseName = os.path.splitext(os.path.basename(doc))[0]
