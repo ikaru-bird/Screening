@@ -138,7 +138,12 @@ class DrawChart():
         _, fundamental_results = ern.get_fundamental_screening_results(roe)
         fundamental_text_lines = []
         for check_name, (res, reason) in fundamental_results.items():
-            status = "O" if res else "X"
+            if res is True:
+                status = "O"
+            elif res is False:
+                status = "X"
+            else: # res is None
+                status = "--"
             fundamental_text_lines.append(f"{status} : {check_name} : {reason}")
         fundamental_text = "\n".join(fundamental_text_lines)
         # -----------------------------
