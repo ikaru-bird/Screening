@@ -21,7 +21,7 @@ from classEarningsInfo import EarningsInfo
 import matplotlib.font_manager as fm
 import japanize_matplotlib
 try:
-    fp = fm.FontProperties(fname='/content/drive/MyDrive/Colab Notebooks/Fonts/Meiryo/meiryo.ttc')
+    fp = fm.FontProperties(fname='_files/Fonts/Meiryo/meiryo.ttc')
     plt.rcParams['font.family'] = fp.get_family()
 except:
     print("Could not load Meiryo font. Using default.")
