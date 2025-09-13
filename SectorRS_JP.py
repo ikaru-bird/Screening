@@ -13,8 +13,8 @@ import matplotlib.font_manager as fm
 # --------------------------------------------- #
 # Google Colab実行の場合（フォントファイルを指定）
 import japanize_matplotlib
-fp  = fm.FontProperties(fname='/content/drive/MyDrive/Colab Notebooks/Fonts/Meiryo/meiryo.ttc')
-fpb = fm.FontProperties(fname='/content/drive/MyDrive/Colab Notebooks/Fonts/Meiryo/meiryob.ttc')
+fp  = fm.FontProperties(fname='_files/Fonts/Meiryo/meiryo.ttc')
+fpb = fm.FontProperties(fname='_files/Fonts/Meiryo/meiryob.ttc')
 # --------------------------------------------- #
 # PC実行の場合（フォントに'メイリオ'を指定）
 # fp  = fm.FontProperties(family='Meiryo', weight='normal')
@@ -155,3 +155,4 @@ if __name__ == "__main__":
     
     # 処理実行
     draw_rs(rs_sector_csv, rs_sector_img)
+
