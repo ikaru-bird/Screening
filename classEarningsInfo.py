@@ -9,19 +9,19 @@ class EarningsInfo():
     # --- ファンダメンタル・スクリーニングの閾値設定 ---
     # ここで設定した値に基づいて、各ファンダメンタル項目が評価されます。
     FUNDAMENTAL_THRESHOLDS = {
-        # ROE (自己資本利益率) の閾値。これを上回る必要があります。(Strict:0.15 Midium:0.12)
+        # ROE (自己資本利益率) の閾値。これを上回る必要があります。(Strict:0.15 Midium:0.12 Low:0.10)
         'ROE_THRESHOLD': 0.12,
 
-        # 年次EPS（1株当たり利益）成長率の閾値。過去3年間の平均成長率がこれを上回る必要があります。(Strict:0.25 Midium:0.15)
+        # 年次EPS（1株当たり利益）成長率の閾値。過去3年間の平均成長率がこれを上回る必要があります。(Strict:0.25 Midium:0.15 Low:0.10)
         'ANNUAL_EPS_GROWTH_THRESHOLD': 0.15,
 
-        # 四半期EPSの前年同期比（YoY）成長率の閾値。これを上回る必要があります。(Strict:0.25 Midium:0.15)
+        # 四半期EPSの前年同期比（YoY）成長率の閾値。これを上回る必要があります。(Strict:0.25 Midium:0.15 Low:0.10)
         'QUARTERLY_EPS_YOY_GROWTH_THRESHOLD': 0.15,
 
         # 最新の四半期EPSが、直前の四半期EPSを上回っているかのチェック。
         # Trueの場合、成長が加速していると判断します。
         # この項目は成長率ではなく、大小比較のみを行います。
-        # earningsQuarterlyGrowthが利用可能な場合は、その値がこの閾値を超えているかを見ます。(Strict:0.25 Midium:0.15)
+        # earningsQuarterlyGrowthが利用可能な場合は、その値がこの閾値を超えているかを見ます。(Strict:0.25 Midium:0.15 Low:0.10)
         'CONSECUTIVE_QUARTERLY_EPS_GROWTH_THRESHOLD': 0.15,
 
         # スクリーニングをパスするために必要な項目数。
