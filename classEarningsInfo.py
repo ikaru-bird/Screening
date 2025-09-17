@@ -10,7 +10,7 @@ class EarningsInfo():
     # ここで設定した値に基づいて、各ファンダメンタル項目が評価されます。
     FUNDAMENTAL_THRESHOLDS = {
         # ROE (自己資本利益率) の閾値。これを上回る必要があります。(Strict:0.15 Midium:0.12)
-        'ROE_THRESHOLD': 0.15,
+        'ROE_THRESHOLD': 0.12,
 
         # 年次EPS（1株当たり利益）成長率の閾値。過去3年間の平均成長率がこれを上回る必要があります。(Strict:0.25 Midium:0.15)
         'ANNUAL_EPS_GROWTH_THRESHOLD': 0.15,
