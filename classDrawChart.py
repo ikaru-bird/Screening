@@ -106,11 +106,17 @@ class DrawChart():
         strNextErnDt = ticker_txt[5]
         
         # 銘柄関連情報を取得(yfinanceから)
-        ticker_obj = yf.Ticker(strTicker)
-        try:
-            ticker_info = ticker_obj.info
-        except:
-            ticker_info = {}
+        if ern_info:
+            ticker_obj = ern_info.ticker
+            ticker_info = ern_info.info
+            ern = ern_info
+        else:
+            ticker_obj = yf.Ticker(strTicker)
+            try:
+                ticker_info = ticker_obj.info
+            except:
+                ticker_info = {}
+            ern = EarningsInfo(ticker_obj, info=ticker_info)
 
         # shortName = ticker_info.get('shortName', "N/A")
         shortName = ticker_txt[0]
@@ -131,8 +137,6 @@ class DrawChart():
             str_idxTickers = str(idxTickers + 1)
         except:
             str_idxTickers = "----"
-
-        ern = ern_info if ern_info is not None else EarningsInfo(ticker_obj, info=ticker_info)
 
         # --- Fundamental Screening ---
         _, fundamental_results = ern.get_fundamental_screening_results(roe)

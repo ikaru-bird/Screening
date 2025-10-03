@@ -29,23 +29,84 @@ class EarningsInfo():
         'PASSING_CRITERIA_COUNT': 3
     }
 
+    _SENTINEL = object() # Sentinel value to check if a value has been fetched
+
     def __init__(self, ticker_obj, info=None):
         self.ticker = ticker_obj
         self.info = info if info is not None else {}
-        self.income_stmt = None
-        self.quarterly_income_stmt = None
-        self.earnings_history = None
-        self.revenue_estimate = None
-        self.earnings_estimate = None
-        try:
-            # Data is fetched on demand from the ticker object
-            self.income_stmt = self.ticker.income_stmt
-            self.quarterly_income_stmt = self.ticker.quarterly_income_stmt
-            self.earnings_history = self.ticker.earnings_history
-            self.revenue_estimate = self.ticker.revenue_estimate
-            self.earnings_estimate = self.ticker.earnings_estimate
-        except Exception as e:
-            print(f"Could not fetch financial data for {self.ticker.ticker}: {e}")
+        # Initialize internal cache variables with a sentinel value
+        # Data will be fetched on-demand via properties (lazy loading)
+        self._income_stmt = self._SENTINEL
+        self._quarterly_income_stmt = self._SENTINEL
+        self._earnings_history = self._SENTINEL
+        self._revenue_estimate = self._SENTINEL
+        self._earnings_estimate = self._SENTINEL
+
+    @property
+    def income_stmt(self):
+        if self._income_stmt is self._SENTINEL:
+            try:
+                # For indices, financial data is not available.
+                if self.info.get('quoteType') == 'INDEX':
+                    self._income_stmt = None
+                else:
+                    self._income_stmt = self.ticker.income_stmt
+            except Exception as e:
+                # print(f"Could not fetch income_stmt for {self.ticker.ticker}: {e}")
+                self._income_stmt = None # Cache failure as None
+        return self._income_stmt
+
+    @property
+    def quarterly_income_stmt(self):
+        if self._quarterly_income_stmt is self._SENTINEL:
+            try:
+                if self.info.get('quoteType') == 'INDEX':
+                    self._quarterly_income_stmt = None
+                else:
+                    self._quarterly_income_stmt = self.ticker.quarterly_income_stmt
+            except Exception as e:
+                # print(f"Could not fetch quarterly_income_stmt for {self.ticker.ticker}: {e}")
+                self._quarterly_income_stmt = None
+        return self._quarterly_income_stmt
+
+    @property
+    def earnings_history(self):
+        if self._earnings_history is self._SENTINEL:
+            try:
+                if self.info.get('quoteType') == 'INDEX':
+                    self._earnings_history = None
+                else:
+                    self._earnings_history = self.ticker.earnings_history
+            except Exception as e:
+                # print(f"Could not fetch earnings_history for {self.ticker.ticker}: {e}")
+                self._earnings_history = None
+        return self._earnings_history
+
+    @property
+    def revenue_estimate(self):
+        if self._revenue_estimate is self._SENTINEL:
+            try:
+                if self.info.get('quoteType') == 'INDEX':
+                    self._revenue_estimate = None
+                else:
+                    self._revenue_estimate = self.ticker.revenue_estimate
+            except Exception as e:
+                # print(f"Could not fetch revenue_estimate for {self.ticker.ticker}: {e}")
+                self._revenue_estimate = None
+        return self._revenue_estimate
+
+    @property
+    def earnings_estimate(self):
+        if self._earnings_estimate is self._SENTINEL:
+            try:
+                if self.info.get('quoteType') == 'INDEX':
+                    self._earnings_estimate = None
+                else:
+                    self._earnings_estimate = self.ticker.earnings_estimate
+            except Exception as e:
+                # print(f"Could not fetch earnings_estimate for {self.ticker.ticker}: {e}")
+                self._earnings_estimate = None
+        return self._earnings_estimate
 
     def isfloat(self, s):
         try:
