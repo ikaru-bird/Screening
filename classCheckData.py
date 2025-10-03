@@ -130,24 +130,21 @@ class CheckData():
         else:
             self.display_tz = None
 
-        # CSVの読込時に日付で絞り込む場合は指定
-#       self.start_dt = self.today - dt.timedelta(days=455)  # 65週前の日付
-#       self.start_dt = self.today - dt.timedelta(days=728)  # 104週前の日付
-
         # チャートの出力先
         self.base_dir = chart_dir
 
         # チャート出力クラスの作成
         self.chart = DrawChart(self.ma_short, self.ma_mid, self.ma_s_long, self.ma_long, rs_csv1, rs_csv2, txt_path)
 
+        # 銘柄ごとのEarningsInfoオブジェクトをキャッシュする辞書
+        self._ern_info_cache = {}
+
         # ファイルの存在チェック
         is_file = os.path.isfile(out_path)
         if is_file == True:
-#           self.w = open(out_path, mode="a", encoding="CP932", errors="ignore")
             self.w = open(out_path, mode="a", encoding="utf-8", errors="ignore")
         else:
             # 出力ファイルの作成
-#           self.w = open(out_path, mode="w", encoding="CP932", errors="ignore")
             self.w = open(out_path, mode="w", encoding="utf-8", errors="ignore")
             # ファイルのヘッダー出力
             self.w.write("\"日付\",\"タイプ\",\"コード\",\"会社名\",\"業種区分\",\"業種RS\",\"UDVR\",\"UDVR.prev\",\"UD判定\",\"VOLUME\",\"Price\"\n")
@@ -160,36 +157,19 @@ class CheckData():
         # 出力ファイルを閉じる
         self.w.close()
 
-#------------------------------------------------#
-# トレンドテンプレート判定処理スタート（メイン）
-#------------------------------------------------#
-    def isTrendTemplete(self):
+#---------------------------------------#
+# 決算情報の取得とファンダメンタル分析
+#---------------------------------------#
+    def _get_and_screen_earnings_info(self):
         """
-        トレンドテンプレートの条件を満たしているかチェックします。
-        満たしている場合はTrueを返し、後続の買いサイン判定を呼び出します。
-        このメソッドはchkData.pyのメインロジックから呼び出されることを想定しています。
+        現在のティッカーの決算情報を取得し、ファンダメンタル分析を実行します。
+        結果はキャッシュされ、API呼び出しはティッカーごとに1回しか行われません。
+        分析をパスした場合はEarningsInfoオブジェクトを、それ以外はNoneを返します。
         """
-        res = self.TrendTemplete_Check()
-        is_pass = (res[0] >= 7)
+        # キャッシュに存在すればそれを返す
+        if self.strTicker in self._ern_info_cache:
+            return self._ern_info_cache[self.strTicker]
 
-        if is_pass:
-            print(self.strTicker + " is ::: Trend Templete ::: ")
-            # isBuySignの呼び出しは、ファンダメンタルチェックをパスした後に
-            # chkData.py側で制御するため、ここでは呼び出さない。
-            # self.isBuySign()
-
-        return is_pass
-
-#------------------------------------------------#
-# トレンドテンプレート判定処理スタート（全件チャート出力）
-#------------------------------------------------#
-    def isTrendTempleteAll(self):
-        # STAGE 1: テクニカル分析 (トレンドテンプレート)
-        res = self.TrendTemplete_Check()
-        if res[0] < 7:
-            return  # テクニカル基準を満たさない場合はここで終了
-
-        # STAGE 2: ファンダメンタル分析 (テクニカル基準を満たした場合のみ実行)
         try:
             # API呼び出しとEarningsInfoオブジェクトの生成
             ticker_obj = yf.Ticker(self.strTicker)
@@ -202,115 +182,122 @@ class CheckData():
 
             if not passed:
                 # print(f"##INFO## {self.strTicker} did not pass fundamental screening.")
-                return  # ファンダメンタル基準を満たさない場合はここで終了
+                self._ern_info_cache[self.strTicker] = None  # 失敗をキャッシュ
+                return None
 
             print(f"{self.strTicker} is ::: fundamentaly OK :::")
+            self._ern_info_cache[self.strTicker] = ern_info  # 成功をキャッシュ
+            return ern_info
 
         except Exception as e:
             # print(f"##ERROR## during fundamental screening for {self.strTicker}: {e}")
-            return  # API呼び出しや分析中にエラーが発生した場合はスキップ
+            self._ern_info_cache[self.strTicker] = None  # エラーをキャッシュ
+            return None
 
-        # STAGE 3: ファイル出力 (すべての基準を満たした場合のみ実行)
-        strLabel = "trend templete"
-        self.writeFlles(res, strLabel, ern_info=ern_info)
+#------------------------------------------------#
+# トレンドテンプレート判定処理スタート（メイン）
+#------------------------------------------------#
+    def isTrendTemplete(self):
+        res = self.TrendTemplete_Check()
+        is_pass = (res[0] >= 7)
+
+        if is_pass:
+            print(self.strTicker + " is ::: Trend Templete ::: ")
+        return is_pass
+
+#------------------------------------------------#
+# トレンドテンプレート判定処理スタート（全件チャート出力）
+#------------------------------------------------#
+    def isTrendTempleteAll(self):
+        res = self.TrendTemplete_Check()
+        if res[0] >= 7:
+            ern_info = self._get_and_screen_earnings_info()
+            if ern_info:
+                self.writeFlles(res, "trend templete", ern_info)
 
 #------------------------------------------------#
 # 買いサイン判定処理スタート（メイン）
 #------------------------------------------------#
     def isBuySign(self):
-
-    # 処理呼び出し
         # Cup with Handle判定
         res = self.Cup_with_Handle_Check()
         td_abs = abs(self.today - res[1])
         if (res[0] >= 4) and (td_abs.days <= self.outPeriod):
-            strLabel = "cup with handle(" + str(res[0]) + ")"
-            self.writeFlles(res, strLabel)  # CSV、チャート書き込み呼び出し
-        else:
-            # Flat Base判定
-            res = self.FlatBase_Check()
-            td_abs = abs(self.today - res[1])
-            if (res[0] >= 3) and (td_abs.days <= self.outPeriod):
-                strLabel = "flat base(" + str(res[0]) + ")"
-                self.writeFlles(res, strLabel)  # CSV、チャート書き込み呼び出し
-            else:
-                # Double Bottom判定
-                res = self.DoubleBottom_Check()
-                td_abs = abs(self.today - res[1])
-                if (res[0] >= 5) and (td_abs.days <= self.outPeriod):
-                    strLabel = "double bottom(" + str(res[0]) + ")"
-                    self.writeFlles(res, strLabel)  # CSV、チャート書き込み呼び出し
-                else:
-                    # VCP判定
-                    res = self.VCP_Check()
-                    td_abs = abs(self.today - res[1])
-                    if (res[0] >= 7) and (td_abs.days <= self.outPeriod):
-                        strLabel = "vcp(" + str(res[0]) + ")"
-                        self.writeFlles(res, strLabel)  # CSV、チャート書き込み呼び出し
-#                            else:
-#                                # ON_Minervini_Check
-#                                res = self.ON_Minervini_Check()
-#                                if (res[0] == 1):
-#                                    td_abs = abs(self.today - res[1])
-#                                    if (td_abs.days <= self.outPeriod):
-#                                        strLabel = "Base Formation"
-#                                        self.writeFlles(res, strLabel)  # CSV、チャート書き込み呼び出し
-        return
+            ern_info = self._get_and_screen_earnings_info()
+            if ern_info:
+                self.writeFlles(res, "cup with handle(" + str(res[0]) + ")", ern_info)
+            return
+
+        # Flat Base判定
+        res = self.FlatBase_Check()
+        td_abs = abs(self.today - res[1])
+        if (res[0] >= 3) and (td_abs.days <= self.outPeriod):
+            ern_info = self._get_and_screen_earnings_info()
+            if ern_info:
+                self.writeFlles(res, "flat base(" + str(res[0]) + ")", ern_info)
+            return
+
+        # Double Bottom判定
+        res = self.DoubleBottom_Check()
+        td_abs = abs(self.today - res[1])
+        if (res[0] >= 5) and (td_abs.days <= self.outPeriod):
+            ern_info = self._get_and_screen_earnings_info()
+            if ern_info:
+                self.writeFlles(res, "double bottom(" + str(res[0]) + ")", ern_info)
+            return
+
+        # VCP判定
+        res = self.VCP_Check()
+        td_abs = abs(self.today - res[1])
+        if (res[0] >= 7) and (td_abs.days <= self.outPeriod):
+            ern_info = self._get_and_screen_earnings_info()
+            if ern_info:
+                self.writeFlles(res, "vcp(" + str(res[0]) + ")", ern_info)
+            return
 
 #------------------------------------------------#
 # 買いサイン判定処理スタート（オニミネ・ニパターン）
 #------------------------------------------------#
     def isON_Minervini(self):
-
-    # 処理呼び出し
         res = self.ON_Minervini_Check()
         if (res[0] == 1):
             td_abs = abs(self.today - res[1])
             if (td_abs.days <= self.outPeriod):
-                strLabel = "Base Formation"
-                self.writeFlles(res, strLabel)  # CSV、チャート書き込み呼び出し
-        return
+                ern_info = self._get_and_screen_earnings_info()
+                if ern_info:
+                    self.writeFlles(res, "Base Formation", ern_info)
 
 #------------------------------------------------#
 # 買いサイン判定処理スタート（グランビルの法則）
 #------------------------------------------------#
     def isGranville(self):
-
-    # 処理呼び出し
         res = self.BuyPoint_Check()
         td_abs = abs(self.today - res[1])
         if ((res[0] == 1) or (res[0] == 3) or (res[0] == 50)) and (td_abs.days <= self.outPeriod):
-            strLabel = "buy sign(" + str(res[0]) + ")"
-            self.writeFlles(res, strLabel)  # CSV、チャート書き込み呼び出し
-        return
+            ern_info = self._get_and_screen_earnings_info()
+            if ern_info:
+                self.writeFlles(res, "buy sign(" + str(res[0]) + ")", ern_info)
 
 #------------------------------------------------#
 # 買いサイン判定処理スタート（Goldern Cross判定）
 #------------------------------------------------#
     def isGoldernCross(self):
-
-    # 処理呼び出し
         res = self.GC_Check()
         td_abs = abs(self.today - res[1])
         if (res[0] != "0") and (td_abs.days <= self.outPeriod):
-            strLabel = "golden cross(" + str(res[0]) + ")"
-            self.writeFlles(res, strLabel)  # CSV、チャート書き込み呼び出し
-        return
+            ern_info = self._get_and_screen_earnings_info()
+            if ern_info:
+                self.writeFlles(res, "golden cross(" + str(res[0]) + ")", ern_info)
 
 #------------------------------------------------#
 # 売りサイン判定処理スタート（メイン）
 #------------------------------------------------#
     def isShortSign(self):
-
-    # 処理呼び出し
         res = self.ShortSign_Check()
-
-    # 出力ファイルへ書き込み（ステータスが5以上かつ指定日以内のの場合）
         td_abs = abs(self.today - res[1])
         if (res[0] >= 5) and (td_abs.days <= self.outPeriod):
-                strLabel = "short sign"
-                self.writeFlles(res, strLabel) # CSV、チャート書き込み呼び出し
-        return
+            # 売りサインではファンダメンタルズを考慮しないため、ern_infoはNoneのまま渡す
+            self.writeFlles(res, "short sign", None)
 
 #---------------------------------------#
 # トレンドテンプレート判定処理
@@ -1279,6 +1266,11 @@ class CheckData():
 
         # インスタンス変数にセット
         self.df = df
+
+        # 新しいティッカーがセットされたら、キャッシュをクリアする
+        if not hasattr(self, 'strTicker') or self.strTicker != ticker_str:
+            self._ern_info_cache.clear()
+
         self.strTicker = ticker_str
         self.strBaseName = ticker_str # BaseName might not be relevant anymore
 

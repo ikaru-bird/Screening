@@ -3,7 +3,6 @@ import os
 import pandas as pd
 import yfinance as yf
 from classCheckData import CheckData
-from classEarningsInfo import EarningsInfo
 from datetime import datetime, timedelta
 import time
 
@@ -12,8 +11,8 @@ import time
 # 1. Read all tickers from the input file first.
 # 2. Download all historical price data in a single batch request.
 # 3. In the main loop, perform a fast technical pre-screening (Trend Template).
-# 4. Only if the pre-screening passes, perform the slow, network-intensive
-#    fundamental analysis for that specific ticker.
+# 4. Only if the pre-screening passes, the analysis methods in CheckData will
+#    trigger the on-demand fundamental analysis.
 # 5. Crucially, save the price data for each ticker to a CSV file so that
 #    downstream scripts like isTrend.py can function correctly.
 # ==================================================
@@ -104,7 +103,6 @@ print("Price data download complete. Starting analysis...")
 ckdt = CheckData(out_file, chart_dir, ma_short, ma_mid, ma_s_long, ma_long, rs_csv1, rs_csv2, in_path, timezone_str)
 NG_list = ["COM","AUX","PRN","NUL"]
 passed_technicals = 0
-passed_fundamentals = 0
 
 # STEP 3 & 4: Main processing loop with sequential screening
 for i, ticker_info in enumerate(tickers_meta):
@@ -135,28 +133,18 @@ for i, ticker_info in enumerate(tickers_meta):
     if ckdt.isTrendTemplete():
         passed_technicals += 1
 
-        # STAGE 2 & 3: Create earnings info object, then perform detailed technical analysis.
-        # The fundamental check is now inside the writeFlles method in classCheckData.
-        try:
-            ticker_obj = yf.Ticker(ticker_str)
-            ern_info = EarningsInfo(ticker_obj)
-            ckdt.set_earnings_info(ern_info) # Set ern_info before technical checks
-
-            # These methods will call writeFlles internally, which now performs the fundamental check.
-            ckdt.isBuySign()
-            ckdt.isGranville()
-            ckdt.isGoldernCross()
-            ckdt.isON_Minervini()
-
-        except Exception as e:
-            print(f"##ERROR## during on-demand data fetch or analysis for {ticker_str}: {e}")
-            continue
+        # STAGE 2: The fundamental check is now inside the analysis methods.
+        # Just call the analysis methods directly.
+        # The logic inside classCheckData will handle the rest.
+        ckdt.isBuySign()
+        ckdt.isGranville()
+        ckdt.isGoldernCross()
+        ckdt.isON_Minervini()
 
 # Final summary
 print("\n--- Analysis Complete ---")
 print(f"Total Tickers Analyzed: {len(tickers_meta)}")
 print(f"Passed Technical Pre-screen (Trend Template): {passed_technicals}")
-# print(f"Passed Fundamental Screen: {passed_fundamentals}")
 
 # データ処理クラスの破棄
 del ckdt
