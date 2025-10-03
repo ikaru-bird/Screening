@@ -5,6 +5,8 @@ import pandas as pd
 import datetime as dt
 import time
 import pytz
+import yfinance as yf
+from classEarningsInfo import EarningsInfo
 from classDrawChart import DrawChart
 
 #---------------------------------------#
@@ -138,9 +140,6 @@ class CheckData():
         # チャート出力クラスの作成
         self.chart = DrawChart(self.ma_short, self.ma_mid, self.ma_s_long, self.ma_long, rs_csv1, rs_csv2, txt_path)
 
-        # 決算情報(空箱)
-        self.ern_info = None
-
         # ファイルの存在チェック
         is_file = os.path.isfile(out_path)
         if is_file == True:
@@ -160,12 +159,6 @@ class CheckData():
     def __del__(self):
         # 出力ファイルを閉じる
         self.w.close()
-
-#---------------------------------------#
-# 決算情報をセット
-#---------------------------------------#
-    def set_earnings_info(self, ern_info):
-        self.ern_info = ern_info
 
 #------------------------------------------------#
 # トレンドテンプレート判定処理スタート（メイン）
@@ -191,14 +184,35 @@ class CheckData():
 # トレンドテンプレート判定処理スタート（全件チャート出力）
 #------------------------------------------------#
     def isTrendTempleteAll(self):
-
-    # 処理呼び出し
+        # STAGE 1: テクニカル分析 (トレンドテンプレート)
         res = self.TrendTemplete_Check()
-        td_abs = abs(self.today - res[1])
-#       if (res[0] >= 7) and (td_abs.days <= self.outPeriod):
-        if (res[0] >= 7):
-            strLabel = "trend templete"
-            self.writeFlles(res, strLabel)  # CSV、チャート書き込み呼び出し
+        if res[0] < 7:
+            return  # テクニカル基準を満たさない場合はここで終了
+
+        # STAGE 2: ファンダメンタル分析 (テクニカル基準を満たした場合のみ実行)
+        try:
+            # API呼び出しとEarningsInfoオブジェクトの生成
+            ticker_obj = yf.Ticker(self.strTicker)
+            ticker_info = ticker_obj.info
+            ern_info = EarningsInfo(ticker_obj, ticker_info)
+
+            # ファンダメンタル・スクリーニングの実行
+            roe = ticker_info.get('returnOnEquity')
+            passed, _ = ern_info.get_fundamental_screening_results(roe)
+
+            if not passed:
+                # print(f"##INFO## {self.strTicker} did not pass fundamental screening.")
+                return  # ファンダメンタル基準を満たさない場合はここで終了
+
+            print(f"{self.strTicker} is ::: fundamentaly OK :::")
+
+        except Exception as e:
+            # print(f"##ERROR## during fundamental screening for {self.strTicker}: {e}")
+            return  # API呼び出しや分析中にエラーが発生した場合はスキップ
+
+        # STAGE 3: ファイル出力 (すべての基準を満たした場合のみ実行)
+        strLabel = "trend templete"
+        self.writeFlles(res, strLabel, ern_info=ern_info)
 
 #------------------------------------------------#
 # 買いサイン判定処理スタート（メイン）
@@ -1280,28 +1294,10 @@ class CheckData():
 #------------------------------------------------#
 # CSVファイル書込み・チャート作成処理
 #------------------------------------------------#
-    def writeFlles(self, res, strLabel):
+    def writeFlles(self, res, strLabel, ern_info=None):
 
         # メッセージ出力
         print(self.strTicker + " is ::: " + strLabel + " :::")
-
-        # STAGE 2: ファンダメンタル・スクリーニング
-        # self.ern_infoがNoneの場合（isTrend.pyからの呼び出しなど）、チェックをスキップ
-        if self.ern_info is not None:
-            try:
-                info = self.ern_info.ticker.info
-                roe = info.get('returnOnEquity')
-                passed, _ = self.ern_info.get_fundamental_screening_results(roe)
-
-                if not passed:
-                    # print(f"##INFO## {self.strTicker} did not pass fundamental screening. Skipping chart/CSV output.")
-                    return # 条件を満たさない場合は後続処理を行わない
-
-                print(f"{self.strTicker} is ::: fundamentaly OK :::")
-
-            except Exception as e:
-                # print(f"##ERROR## during fundamental screening for {self.strTicker}: {e}")
-                return # エラーが発生した場合も後続処理をスキップ
 
         # ローソク足チャートを作成
 
@@ -1365,7 +1361,7 @@ class CheckData():
                         break  # ループを抜ける
 
             # チャート出力
-            info = self.chart.makeChart(Out_DIR, df0, self.strTicker, self.strBaseName, strLabel, ud_val + ' ::: ' + ud_mark , alist, ern_info=self.ern_info)
+            info = self.chart.makeChart(Out_DIR, df0, self.strTicker, self.strBaseName, strLabel, ud_val + ' ::: ' + ud_mark , alist, ern_info=ern_info)
 
             # CSVファイルの書き込み
             if info != ["-","-","-","-","-"]:  # infoがデフォルト値（全部"-"）でなければCSV出力
