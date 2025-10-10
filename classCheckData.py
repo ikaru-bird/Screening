@@ -69,17 +69,15 @@ class CheckData():
             'pivot_ratio': 0.98,
         },
         'cup_with_handle': {
-            'cup_peak_search_days': 30,
-            'cup_min_rise_ratio': 1.3,
-            'base_depth': (0.67, 0.88), # 1-0.33, 1-0.12
-            'base_duration_weeks': (7, 65),
-            'base_volatility_max_rate': 0.05,
-            'cup_formation_range': (0.95, 1.05),
-            'cup_right_side_weeks': (7, 65),
-            'handle_duration_days': 60,
-            'handle_start_delay_days': 5,
-            'handle_depth': (0.88, 0.95),
-            'breakout_check_days': 30,
+            'uptrend_period_days': 250,         # 1. Prior uptrend duration (approx 1 year)
+            'uptrend_min_rise_ratio': 1.3,      # 1. Minimum rise of 30%
+            'cup_duration_weeks': (7, 65),      # 2. Cup duration
+            'cup_depth_ratio': (0.12, 0.50),    # 2. Cup depth (12% to 50%)
+            'right_lip_similarity_ratio': 0.95, # 3. Right lip should be at least 95% of left lip
+            'handle_duration_days': (5, 40),    # 4. Handle duration (1 to 8 weeks)
+            'handle_depth_ratio': (0.05, 0.15), # 4. Handle depth (5% to 15%)
+            'handle_volume_ratio': 0.9,         # 4. Handle volume should be < 90% of avg
+            'breakout_volume_ratio': 1.4,       # 5. Breakout volume should be > 140% of avg
         },
         'flat_base': {
             'peak_search_days_ago': 7, # self.outPeriod
@@ -807,191 +805,119 @@ class CheckData():
             return 5, pivot_dt1, alist
 
 #---------------------------------------#
-# カップウィズハンドル判定処理
+# カップウィズハンドル判定処理 (リファクタリング版)
 #---------------------------------------#
     def Cup_with_Handle_Check(self):
-
-    # Dataframeを参照渡し
         df0 = self.df
         p = self.params['cup_with_handle']
-
-    # 補助線描画用リスト
-        alist= []
-
-    # ダミー用戻り値
+        alist = []
         dummy_dt = self.today
 
-    #①カップの開始
-    #　期間の最安値日を取得
-        rows = df0['Low']
-        if len(df0.index) > 0:
-            min_val = rows.min()
-            idxmin = rows.idxmin()
-#           alist.append((idxmin, df0.loc[idxmin,"Low"]))
-        else:
-            return 0, dummy_dt, alist
+        # --- 1. 先行する上昇トレンドの確認 ---
+        uptrend_start_date = self.today - dt.timedelta(days=p['uptrend_period_days'])
+        df_uptrend = df0.loc[uptrend_start_date:self.today]
+        if len(df_uptrend) < 60: return 0, dummy_dt, alist # 十分なデータがない
 
-    #②カップの頂点
-    #　期間の最安値日以降、直近N取引日以前の最高値が最安値の1.3倍以上
-        df1 = df0.loc[idxmin:]
-        if len(df1) > p['cup_peak_search_days']:
-            df1 = df1.iloc[:-p['cup_peak_search_days']]
-        else:
-            return 1, dummy_dt, alist # データ不足
+        uptrend_low = df_uptrend['Low'].min()
+        uptrend_low_date = df_uptrend['Low'].idxmin()
 
-        if len(df1.index) > 0:
-            rows = df1['High']
-            max_val = rows.max()
-            idxmax = rows.idxmax()
-            alist.append((idxmax, df0.loc[idxmax,"High"]))
-        else:
-            return 1, dummy_dt, alist
+        # 上昇トレンドの最高値（カップの左縁）を探す
+        df_after_low = df_uptrend.loc[uptrend_low_date:]
+        if df_after_low.empty: return 0, dummy_dt, alist
 
-    # STEP2判定
-        if max_val > min_val * p['cup_min_rise_ratio']:
-            pass
-        else:
-            return 1, idxmin, alist
+        left_lip_high = df_after_low['High'].max()
+        left_lip_date = df_after_low['High'].idxmax()
 
-    #③ベースの形成
-    #　最高値から12～33%下落
-        df1 = df0[idxmax : self.today]
+        # 上昇率が条件を満たすか確認
+        if left_lip_high < uptrend_low * p['uptrend_min_rise_ratio']:
+            return 1, left_lip_date, alist
 
-    # ベース価格のレンジ
-        base_p1 = max_val * p['base_depth'][0]
-        base_p2 = max_val * p['base_depth'][1]
+        # --- 2. カップの形成 ---
+        cup_min_days = p['cup_duration_weeks'][0] * 5
+        cup_max_days = p['cup_duration_weeks'][1] * 5
 
-        df2 = df1.query('@base_p1 <= Close <= @base_p2')
+        df_cup_period = df0.loc[left_lip_date:self.today]
+        if len(df_cup_period) < cup_min_days: return 2, left_lip_date, alist
 
-    # STEP3判定
-        if len(df2.index) > 0:
-            base_sdt = df2.index[0]                # ベース開始日
-            base_edt = df2.index[-1]               # ベース終了日
-            base_len = len(df0.loc[idxmax:base_edt]) # ベース構成日数 (取引日数)
+        # カップの底を探す
+        cup_bottom_low = df_cup_period['Low'].min()
+        cup_bottom_date = df_cup_period['Low'].idxmin()
 
-            # ベースの平均値を計算
-            base_avg = df2.Close.mean()
+        # カップの期間が長すぎる場合は除外
+        if (cup_bottom_date - left_lip_date).days > cup_max_days:
+            return 2, left_lip_date, alist
 
-            # ベースの標準偏差を計算
-            base_std = df2.Close.std()
+        # カップの深さを検証
+        cup_depth = (left_lip_high - cup_bottom_low) / left_lip_high
+        if not (p['cup_depth_ratio'][0] <= cup_depth <= p['cup_depth_ratio'][1]):
+            return 2, left_lip_date, alist
 
-            # 標準偏差÷平均値を計算
-            base_rate = base_std / base_avg
+        # --- 3. カップの右縁 ---
+        df_right_side = df0.loc[cup_bottom_date:]
+        if df_right_side.empty: return 3, cup_bottom_date, alist
 
-            # ベースの最安値、最高値、最安日を取得
-            df1_base = df0[base_sdt : base_edt]
-            base_min = df1_base['Close'].min()
-            base_max = df1_base['Close'].max()
-            base_bdt = df1_base['Close'].idxmin()
+        # 右縁の高値を探す (左縁の高さに近づく)
+        df_right_lip_candidates = df_right_side[df_right_side['High'] >= left_lip_high * p['right_lip_similarity_ratio']]
+        if df_right_lip_candidates.empty: return 3, cup_bottom_date, alist
 
-            # ベースの中間日を取得
-            base_mdt_pos = df0.index.get_loc(base_sdt) + int(len(df1_base)/2)
-            base_mdt = df0.index[base_mdt_pos]
+        right_lip_date = df_right_lip_candidates.index[0]
+        right_lip_high = df0.loc[right_lip_date, 'High']
 
-            # ベース構成日数(最高値日から7～65週間)とベースの値幅約5%
-            base_duration_days_min = p['base_duration_weeks'][0] * 5 # 5取引日/週
-            base_duration_days_max = p['base_duration_weeks'][1] * 5 # 5取引日/週
-            if (base_len >= base_duration_days_min) and (base_len <= base_duration_days_max) and (base_rate <= p['base_volatility_max_rate']) and (base_min >= base_p1) and (base_max <= base_p2):
-                alist.append((base_sdt, df0.loc[base_sdt,"Close"])) # ベースの開始
-                alist.append((base_bdt, df0.loc[base_bdt,"Low"]))   # ベースの最安
-                alist.append((base_mdt, base_avg))                  # ベースの平均
-                alist.append((base_edt, df0.loc[base_edt,"Close"])) # ベースの終了
-            else:
-                return 2, idxmax, alist
-        else:
-            return 2, idxmax, alist
+        # カップの期間を再検証
+        cup_duration = (right_lip_date - left_lip_date).days
+        if not (cup_min_days <= cup_duration <= cup_max_days):
+            return 3, cup_bottom_date, alist
 
-    #④カップの形成
-    #　最高値の±5%まで上昇
-        cup_p1 = max_val * p['cup_formation_range'][0]
-        cup_p2 = max_val * p['cup_formation_range'][1]
+        # --- 4. ハンドルの形成 ---
+        handle_min_days, handle_max_days = p['handle_duration_days']
+        df_handle_period = df0.loc[right_lip_date:]
 
-    # カップ右の構成期間(最高値から7～65週間) -> 取引日数で指定
-        try:
-            idxmax_pos = df0.index.get_loc(idxmax)
-            base_edt_pos = df0.index.get_loc(base_edt)
+        if len(df_handle_period) < handle_min_days: return 4, right_lip_date, alist
 
-            cup_right_start_pos = idxmax_pos + p['cup_right_side_weeks'][0] * 5
-            cup_right_end_pos = idxmax_pos + p['cup_right_side_weeks'][1] * 5
+        # ハンドルの安値を探す
+        handle_low = df_handle_period['Low'].min()
+        handle_date = df_handle_period['Low'].idxmin()
 
-            # 検索開始位置はベース終了日以降かつ、カップ右側期間の開始以降
-            search_start_pos = max(base_edt_pos, cup_right_start_pos)
+        # ハンドルの期間を検証
+        handle_duration = (handle_date - right_lip_date).days
+        if not (handle_min_days <= handle_duration <= handle_max_days):
+            return 4, right_lip_date, alist
 
-            df_cup_right_period = df0.iloc[search_start_pos:cup_right_end_pos]
-            df2 = df_cup_right_period.query('@cup_p1 <= High')
-        except (KeyError, IndexError):
-            return 3, base_sdt, alist
+        # ハンドルの深さを検証 (右縁の高値から)
+        handle_depth = (right_lip_high - handle_low) / right_lip_high
+        if not (p['handle_depth_ratio'][0] <= handle_depth <= p['handle_depth_ratio'][1]):
+            return 4, right_lip_date, alist
 
-    # STEP4 and 5判定
-        if len(df2.index) > 0:
-            cup_edt = df2.index[0] # カップ形成日（仮）
-            cup_edt_pos = df0.index.get_loc(cup_edt)
+        # ハンドル形成中の出来高が減少しているか検証
+        avg_volume_cup = df0.loc[left_lip_date:right_lip_date]['Volume'].mean()
+        avg_volume_handle = df0.loc[right_lip_date:handle_date]['Volume'].mean()
+        if avg_volume_handle > avg_volume_cup * p['handle_volume_ratio']:
+            return 4, right_lip_date, alist
 
-            # ハンドル部分の構成期間(取引日数で探索)
-            handle_search_end_pos = cup_edt_pos + p['handle_duration_days']
-            df2_handle = df0.iloc[cup_edt_pos:handle_search_end_pos]
+        # --- 5. ブレイクアウト ---
+        pivot_point = right_lip_high
+        df_breakout_period = df0.loc[handle_date:]
 
-            # 期間中の高値
-            rows      = df2_handle['High']
-            handle_p0 = rows.max()
-            cup_edt   = rows.idxmax() # カップ形成日を再セット
-            cup_edt_pos = df0.index.get_loc(cup_edt) # 位置も再セット
+        # ブレイクアウト日を探す
+        df_breakout = df_breakout_period[df_breakout_period['High'] > pivot_point]
+        if df_breakout.empty: return 5, handle_date, alist
 
-            # ハンドル下落部分の探索期間を再セット
-            handle_dip_start_pos = cup_edt_pos + p['handle_start_delay_days']
-            handle_dip_end_pos = cup_edt_pos + p['handle_duration_days']
-            df3_period = df0.iloc[handle_dip_start_pos:handle_dip_end_pos]
+        breakout_date = df_breakout.index[0]
 
-            # ハンドル部分の価格
-            handle_p1 = handle_p0 * p['handle_depth'][0]
-            handle_p2 = handle_p0 * p['handle_depth'][1]
+        # ブレイクアウト時の出来高が急増しているか検証
+        breakout_volume = df0.loc[breakout_date, 'Volume']
+        avg_volume_50d = df0['MA_VOL'].iloc[-1] # 直近50日平均出来高
+        if breakout_volume < avg_volume_50d * p['breakout_volume_ratio']:
+            return 5, handle_date, alist
 
-            # 1～2週間後に5～12%下落があり、かつ50日週移動平均線より上
-            df3 = df3_period.query('@handle_p1 <= Low <= @handle_p2 & MA50 <= Close')
+        # --- 6. 成功 ---
+        alist.append((left_lip_date, left_lip_high))
+        alist.append((cup_bottom_date, cup_bottom_low))
+        alist.append((right_lip_date, right_lip_high))
+        alist.append((handle_date, handle_low))
+        alist.append((breakout_date, df0.loc[breakout_date, 'High']))
 
-        # 下落がなければ、期間中の高値がpivot(STEP4)
-            if len(df3.index) == 0:
-                pvt_p   = handle_p0
-                # カップの高さの判定
-                if pvt_p > cup_p2:
-                    return 3, base_sdt, alist
-                else:
-                    alist.append((cup_edt, df0.loc[cup_edt,"High"]))
-                    return 4, cup_edt, alist
-
-        # ⑤下落があれば、安値前の高値がpivot、安値がハンドル(STEP5)
-            else:
-                # ハンドル部分
-                rows = df3['Low']
-                cwh_dt = rows.idxmin()
-
-                # カップの高値
-                pvt_p   = handle_p0
-
-                alist.append((cup_edt, df0.loc[cup_edt,"High"]))  # カップの終了日をチャートに追加
-                alist.append((cwh_dt, df0.loc[cwh_dt,"Low"]))     # ハンドルの形成日をチャートに追加
-        else:
-            return 3, base_sdt, alist
-
-    #⑥ピボット判定
-    #　判定期間をセット (取引日数)
-        try:
-            cwh_dt_pos = df0.index.get_loc(cwh_dt)
-            breakout_check_end_pos = cwh_dt_pos + p['breakout_check_days']
-            df_breakout_period = df0.iloc[cwh_dt_pos + 1 : breakout_check_end_pos]
-        except (KeyError, IndexError):
-            return 5, cwh_dt, alist
-
-    #　直近価格がピボットポイントを超える
-        df2 = df_breakout_period.query('High >= @pvt_p')
-
-    # STEP6判定
-        if len(df2.index) > 0:
-            pvt_dt = df2.index[0]
-            alist.append((pvt_dt, df0.loc[pvt_dt,"High"]))
-            return 6, pvt_dt, alist
-        else:
-            return 5, cwh_dt, alist
+        return 6, breakout_date, alist
 
 #---------------------------------------#
 # フラットベース判定処理
