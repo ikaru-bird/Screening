@@ -832,6 +832,8 @@ class CheckData():
         if left_lip_high < uptrend_low * p['uptrend_min_rise_ratio']:
             return 1, left_lip_date, alist
 
+        alist.append((left_lip_date, left_lip_high))
+
         # --- 2. カップの形成 ---
         cup_min_days = p['cup_duration_weeks'][0] * 5
         cup_max_days = p['cup_duration_weeks'][1] * 5
@@ -852,6 +854,8 @@ class CheckData():
         if not (p['cup_depth_ratio'][0] <= cup_depth <= p['cup_depth_ratio'][1]):
             return 2, left_lip_date, alist
 
+        alist.append((cup_bottom_date, cup_bottom_low))
+
         # --- 3. カップの右縁 ---
         df_right_side = df0.loc[cup_bottom_date:]
         if df_right_side.empty: return 3, cup_bottom_date, alist
@@ -867,6 +871,8 @@ class CheckData():
         cup_duration = (right_lip_date - left_lip_date).days
         if not (cup_min_days <= cup_duration <= cup_max_days):
             return 3, cup_bottom_date, alist
+
+        alist.append((right_lip_date, right_lip_high))
 
         # --- 4. ハンドルの形成 ---
         handle_min_days, handle_max_days = p['handle_duration_days']
@@ -894,6 +900,8 @@ class CheckData():
         if avg_volume_handle > avg_volume_cup * p['handle_volume_ratio']:
             return 4, right_lip_date, alist
 
+        alist.append((handle_date, handle_low))
+
         # --- 5. ブレイクアウト ---
         pivot_point = right_lip_high
         df_breakout_period = df0.loc[handle_date:]
@@ -911,10 +919,6 @@ class CheckData():
             return 5, handle_date, alist
 
         # --- 6. 成功 ---
-        alist.append((left_lip_date, left_lip_high))
-        alist.append((cup_bottom_date, cup_bottom_low))
-        alist.append((right_lip_date, right_lip_high))
-        alist.append((handle_date, handle_low))
         alist.append((breakout_date, df0.loc[breakout_date, 'High']))
 
         return 6, breakout_date, alist
@@ -1231,11 +1235,10 @@ class CheckData():
 
         # ローソク足チャートを作成
 
-        # リストの数が3の場合:日付でソート、それ以外:空のリストをセット)
-        if len(res) == 3:
+        # 補助線リストを取得
+        alist = []
+        if len(res) == 3 and res[2]:
             alist = sorted(res[2], key=lambda x: (x[0]))
-        else:
-            alist = []
 
         # チャート出力範囲
         df0 = self.df                        # Dataframeを参照渡し
