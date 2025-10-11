@@ -79,18 +79,120 @@ def calculate_rs_momentum(data):
 
 
 # --------------------------------------------- #
-# RS計算処理関数
+# RS計算処理関数 (ベクトル化対応)
 # --------------------------------------------- #
+
+def _process_ticker_group(group):
+    """
+    1銘柄分のデータ(group)を受け取り、RS関連指標を計算して返す。
+    `groupby().apply()`での使用を想定。
+    """
+    # groupby()から渡されるgroupのインデックスはMultiIndex('Date', 'Ticker')になっている。
+    # 'Ticker'レベルを削除して、インデックスをDatetimeIndexに戻す。
+    group = group.reset_index(level='Ticker', drop=True)
+
+    group = group.dropna(how='all')
+    if group.empty:
+        return None
+
+    # タイムゾーンを日本時間に設定
+    JST = pytz.timezone('Asia/Tokyo')
+
+    # タイムゾーン情報がない場合はUTCを付与
+    if group.index.tz is None:
+        group.index = group.index.tz_localize('UTC')
+
+    # 直近1週間のデータがなければスキップ
+    W1_ago = datetime.now(JST) - timedelta(days=7)
+    if len(group.loc[group.index >= W1_ago]) == 0:
+        return None
+
+    # 終値データを前方補完
+    group["Close"] = group["Close"].ffill()
+    if group['Close'].isnull().all():
+        return None
+
+    # 各期間の日付を定義
+    M1_ago = datetime.now(JST) - timedelta(days=30)
+    M3_ago = datetime.now(JST) - timedelta(days=90)
+    M6_ago = datetime.now(JST) - timedelta(days=180)
+
+    # 各期間の株価データを抽出
+    history_1w = group.loc[group.index <= W1_ago]
+    history_1m = group.loc[group.index <= M1_ago]
+    history_3m = group.loc[group.index <= M3_ago]
+    history_6m = group.loc[group.index <= M6_ago]
+
+    # オリジナルの実装に倣い、例外処理を含めて各指標を計算
+    try:
+        relative_strength_0 = calculate_relative_strength(group)
+    except:
+        relative_strength_0 = 0
+
+    # 元のコードにあったスキップ条件
+    if relative_strength_0 >= 2000:
+        return None
+
+    try:
+        rs_momentum_0 = calculate_rs_momentum(group)
+    except:
+        rs_momentum_0 = 0
+    try:
+        relative_strength_w = calculate_relative_strength(history_1w)
+    except:
+        relative_strength_w = 0
+    try:
+        rs_momentum_w = calculate_rs_momentum(history_1w)
+    except:
+        rs_momentum_w = 0
+    try:
+        relative_strength_1 = calculate_relative_strength(history_1m)
+    except:
+        relative_strength_1 = 0
+    try:
+        rs_momentum_1 = calculate_rs_momentum(history_1m)
+    except:
+        rs_momentum_1 = 0
+    try:
+        relative_strength_3 = calculate_relative_strength(history_3m)
+    except:
+        relative_strength_3 = 0
+    try:
+        rs_momentum_3 = calculate_rs_momentum(history_3m)
+    except:
+        rs_momentum_3 = 0
+    try:
+        relative_strength_6 = calculate_relative_strength(history_6m)
+    except:
+        relative_strength_6 = 0
+    try:
+        rs_momentum_6 = calculate_rs_momentum(history_6m)
+    except:
+        rs_momentum_6 = 0
+
+    # 計算結果をPandas Seriesとして返す
+    return pd.Series({
+        "Relative Strength": relative_strength_0,
+        "RS_1W": relative_strength_w,
+        "RS_1M": relative_strength_1,
+        "RS_3M": relative_strength_3,
+        "RS_6M": relative_strength_6,
+        "RS Momentum": rs_momentum_0,
+        "RM_1W": rs_momentum_w,
+        "RM_1M": rs_momentum_1,
+        "RM_3M": rs_momentum_3,
+        "RM_6M": rs_momentum_6
+    })
+
 def calc_rs(stock_codes, rs_result_csv, rs_sector_csv):
 
     # --------------------------------------------- #
-    # 全銘柄の株価データを分割取得 (レートリミット対策)
+    # 全銘柄の株価データを分割取得 (変更なし)
     # --------------------------------------------- #
     all_tickers = stock_codes["Ticker"].unique().tolist()
     chunk_size = 200
     all_data_list = []
 
-    # ティッカーリストをチャンクに分割
     ticker_chunks = [all_tickers[i:i + chunk_size] for i in range(0, len(all_tickers), chunk_size)]
 
     print(f"Found {len(all_tickers)} tickers. Downloading data in {len(ticker_chunks)} chunks of up to {chunk_size} tickers each.")
@@ -116,9 +218,8 @@ def calc_rs(stock_codes, rs_result_csv, rs_sector_csv):
             else:
                 print(f"Warning: No data returned for chunk {i + 1}.")
 
-            # 次のチャンクへ進む前に5秒待機
+            # 次のチャンクへ進む前に5秒待機 (ユーザー指示により維持)
             if i < len(ticker_chunks) - 1:
-                # print("Waiting for 5 seconds to avoid rate limiting...")
                 time.sleep(5)
 
         except Exception as e:
@@ -129,134 +230,50 @@ def calc_rs(stock_codes, rs_result_csv, rs_sector_csv):
         print("Could not download any price data from yfinance after all chunks.")
         return
 
-    # 分割ダウンロードしたデータを結合
     all_data = pd.concat(all_data_list, axis=1)
-
     print("Price data download complete. Starting analysis...")
+
     # --------------------------------------------- #
-    # 個別RSの計算
+    # 個別RSの計算 (ベクトル化処理)
     # --------------------------------------------- #
-    # 業種区分ごとにRelative Strengthを計算し、結果をDataFrameに保存
-    rs_result = pd.DataFrame(columns=["Industry","Ticker","Relative Strength","Diff","RS_1W","RS_1M","RS_3M","RS_6M","RS Momentum","RM_1W","RM_1M","RM_3M","RM_6M"])
+    # yfinanceの複数銘柄データ(MultiIndex)を整形
+    # (カラム: ('Close', 'AAPL')) -> (インデックス: ('Date', 'Ticker'), カラム: 'Close')
+    data_stacked = all_data.stack(level=1, future_stack=True).rename_axis(index=['Date', 'Ticker'])
 
-    for i, row in stock_codes.iterrows():
-        code = row["Ticker"]
-        sector = row["Industry"]
-        try:
-            # --------------------------------------------- #
-            # 該当銘柄の株価データを抽出
-            # --------------------------------------------- #
-            history = all_data.loc[:, pd.IndexSlice[:, [code]]]
-            history.columns = history.columns.droplevel(1) # Ticker列を削除
-            history = history.dropna(how='all')
-            if history.empty:
-                print(f"# Skip (Code={code}): No data in downloaded batch.")
-                continue
+    # インデックスをリセットし、Tickerが文字列でない不正な行やCloseがNaNの行を削除
+    data_stacked = data_stacked.reset_index()
+    # Tickerが文字列であり、かつCloseがNaNでない行のみを保持
+    is_ticker_str = data_stacked['Ticker'].apply(isinstance, args=(str,))
+    is_close_valid = data_stacked['Close'].notna()
+    data_stacked = data_stacked[is_ticker_str & is_close_valid]
+    data_stacked = data_stacked.set_index(['Date', 'Ticker'])
 
-            # 終値の列を補完
-            history["Close"] = history["Close"].ffill()
+    # Ticker毎にグループ化し、RS計算関数を適用
+    rs_result = data_stacked.groupby(level='Ticker').apply(_process_ticker_group)
 
-            JST = pytz.timezone('Asia/Tokyo')
-            W1_ago = datetime.now(JST) - timedelta(days=7)   # 1週間前の日付
-            M1_ago = datetime.now(JST) - timedelta(days=30)  # 1ヶ月前の日付
-            M3_ago = datetime.now(JST) - timedelta(days=90)  # 3ヶ月前の日付
-            M6_ago = datetime.now(JST) - timedelta(days=180) # 6ヶ月前の日付
-
-            # 直近1週間のデータがない場合はスキップ (タイムゾーンを考慮して比較)
-            if history.index.tz is None:
-                history.index = history.index.tz_localize('UTC')
-
-            if len(history.loc[history.index >= W1_ago]) == 0:
-                print("# Skip  (Code={}): No price data in last week".format(code))
-                continue
-
-            # 各期間のデータ取得
-            history_1w = history.loc[history.index <= W1_ago]
-            history_1m = history.loc[history.index <= M1_ago]
-            history_3m = history.loc[history.index <= M3_ago]
-            history_6m = history.loc[history.index <= M6_ago]
-
-            try:
-                relative_strength_0 = calculate_relative_strength(history)
-            except:
-                relative_strength_0 = 0
-
-            if relative_strength_0 >= 2000:  # relative_strength_0が2000以上の場合はスキップ
-                print("# Skip  (Code={}): relative_strength_0 is {}".format(code, relative_strength_0))
-                continue
-
-            try:
-                rs_momentum_0 = calculate_rs_momentum(history)
-            except:
-                rs_momentum_0 = 0
-
-            try:
-                relative_strength_w = calculate_relative_strength(history_1w)
-            except:
-                relative_strength_w = 0
-
-            try:
-                rs_momentum_w = calculate_rs_momentum(history_1w)
-            except:
-                rs_momentum_w = 0
-
-            try:
-                relative_strength_1 = calculate_relative_strength(history_1m)
-            except:
-                relative_strength_1 = 0
-
-            try:
-                rs_momentum_1 = calculate_rs_momentum(history_1m)
-            except:
-                rs_momentum_1 = 0
-
-            try:
-                relative_strength_3 = calculate_relative_strength(history_3m)
-            except:
-                relative_strength_3 = 0
-
-            try:
-                rs_momentum_3 = calculate_rs_momentum(history_3m)
-            except:
-                rs_momentum_3 = 0
-
-            try:
-                relative_strength_6 = calculate_relative_strength(history_6m)
-            except:
-                relative_strength_6 = 0
-
-            try:
-                rs_momentum_6 = calculate_rs_momentum(history_6m)
-            except:
-                rs_momentum_6 = 0
-
-            rs_result_w = pd.DataFrame({
-                "Industry": [sector],
-                "Ticker": [code],
-                "Relative Strength": [relative_strength_0],
-                "RS_1W": [relative_strength_w],
-                "RS_1M": [relative_strength_1],
-                "RS_3M": [relative_strength_3],
-                "RS_6M": [relative_strength_6],
-                "RS Momentum": [rs_momentum_0],
-                "RM_1W": [rs_momentum_w],
-                "RM_1M": [rs_momentum_1],
-                "RM_3M": [rs_momentum_3],
-                "RM_6M": [rs_momentum_6]
-            }, index=[0])
-
-            rs_result = pd.concat([rs_result.dropna(axis=1, how='all'), rs_result_w.dropna(axis=1, how='all')], ignore_index=True, axis=0)
-
-        except Exception as e:
-            # yfinance.downloadでは複数銘柄取得時にデータがない銘柄はエラーではなく空のDataFrameが返るため、
-            # ここでのエラーは主にデータ処理中の問題を指す
-            print("# Error processing data for (Code={}): {}".format(code, str(e)))
-            continue
+    # 計算結果がNoneだった行(スキップ対象)を削除
+    rs_result.dropna(how='all', inplace=True)
 
     if rs_result.empty:
         print("No data to process after calculations. Exiting.")
         return
 
+    # 銘柄情報(業種)をマージ
+    rs_result = rs_result.reset_index()
+    rs_result = pd.merge(rs_result, stock_codes[['Ticker', 'Industry']], on='Ticker', how='left')
+
+    # 元のスクリプトと列の順序を合わせる
+    cols_in_order = [
+        "Industry", "Ticker", "Relative Strength", "RS_1W", "RS_1M", "RS_3M", "RS_6M",
+        "RS Momentum", "RM_1W", "RM_1M", "RM_3M", "RM_6M"
+    ]
+    # 存在しない列を指定するとエラーになるため、存在する列のみで順序を定義
+    ordered_cols = [col for col in cols_in_order if col in rs_result.columns]
+    rs_result = rs_result[ordered_cols]
+
+    # --------------------------------------------- #
+    # Percentile計算以降の処理 (変更なし)
+    # --------------------------------------------- #
     # 銘柄のPercentile計算
     calculate_percentile(rs_result, 'Relative Strength', 'Percentile')
     calculate_percentile(rs_result, 'RS_1W', '1 Week Ago')
@@ -277,43 +294,34 @@ def calc_rs(stock_codes, rs_result_csv, rs_sector_csv):
     # indexの変更
     rs_result2 = rs_result2.set_index('Rank', drop=True)
 
-# --------------------------------------------- #
-# 業種別RSの計算
-# --------------------------------------------- #
-    # Industry列のNaNを文字列（'_UNCLASSIFIED_'）に置換
+    # --------------------------------------------- #
+    # 業種別RSの計算 (変更なし)
+    # --------------------------------------------- #
     rs_result2['Industry'] = rs_result2['Industry'].fillna('_UNCLASSIFIED_')
-    # 業種区分ごとの平均値を計算・並び替え・インデックスのリセット
     rs_sector = rs_result2[['Industry','Relative Strength','Diff','RS_1W','RS_1M','RS_3M','RS_6M','RS Momentum','RM_1W','RM_1M','RM_3M','RM_6M']].groupby('Industry').mean()
     rs_sector = rs_sector.sort_values('Relative Strength', ascending=False)
     rs_sector2 = rs_sector.reset_index(drop=False)
 
-    # 業種区分RANKを作成
     rs_sector2['Rank'] = rs_sector2.index + 1
 
-    # 業種区分のPercentile計算
     calculate_percentile(rs_sector2, 'Relative Strength', 'Percentile')
     calculate_percentile(rs_sector2, 'RS_1W', '1 Week Ago')
     calculate_percentile(rs_sector2, 'RS_1M', '1 Month Ago')
     calculate_percentile(rs_sector2, 'RS_3M', '3 Months Ago')
     calculate_percentile(rs_sector2, 'RS_6M', '6 Months Ago')
 
-    # 先週とのRS差
     rs_sector2['Diff'] = rs_sector2['Relative Strength'] - rs_sector2['RS_1W']
 
-    # 該当するコードを連結
     rs_sector2['Tickers'] = ""
     for sector_name in rs_sector2['Industry']:
         tickers_str = ','.join(rs_result2[rs_result2['Industry'] == sector_name]['Ticker'].tolist())
         rs_sector2.loc[rs_sector2['Industry'] == sector_name, 'Tickers'] = tickers_str
 
-    # indexの変更
     rs_sector2 = rs_sector2.set_index('Rank', drop=True)
 
-    # 不要列の削除
     rs_result2.drop(['RS_1W','RS_1M','RS_3M','RS_6M'], axis=1, inplace=True)
     rs_sector2.drop(['RS_1W','RS_1M','RS_3M','RS_6M'], axis=1, inplace=True)
 
-    # 結果をCSVファイルに保存
     rs_result2.to_csv(rs_result_csv)
     rs_sector2.to_csv(rs_sector_csv)
 
