@@ -240,9 +240,12 @@ def calc_rs(stock_codes, rs_result_csv, rs_sector_csv):
     # (カラム: ('Close', 'AAPL')) -> (インデックス: ('Date', 'Ticker'), カラム: 'Close')
     data_stacked = all_data.stack(level=1, future_stack=True).rename_axis(index=['Date', 'Ticker'])
 
-    # インデックスをリセットし、TickerやCloseがNaNの行（データ欠損）を削除
+    # インデックスをリセットし、Tickerが文字列でない不正な行やCloseがNaNの行を削除
     data_stacked = data_stacked.reset_index()
-    data_stacked.dropna(subset=['Ticker', 'Close'], inplace=True)
+    # Tickerが文字列であり、かつCloseがNaNでない行のみを保持
+    is_ticker_str = data_stacked['Ticker'].apply(isinstance, args=(str,))
+    is_close_valid = data_stacked['Close'].notna()
+    data_stacked = data_stacked[is_ticker_str & is_close_valid]
     data_stacked = data_stacked.set_index(['Date', 'Ticker'])
 
     # Ticker毎にグループ化し、RS計算関数を適用
