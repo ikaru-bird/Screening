@@ -1,0 +1,101 @@
+AAPL~Apple Inc~Technology~Consumer Electronics~3639.90B~37.29~30.59~Oct 30/a~60,778,315~245.27
+ABNB~Airbnb Inc~Consumer Cyclical~Travel Services~73.45B~28.52~24.63~Nov 06/a~5,086,862~118.19
+ADBE~Adobe Inc~Technology~Software - Application~141.28B~21.02~14.44~Sep 11/a~4,230,112~337.51
+ADI~Analog Devices Inc~Technology~Semiconductors~110.85B~57.32~23.97~Aug 20/b~4,330,572~225.32
+ADP~Automatic Data Processing Inc~Technology~Software - Application~115.53B~28.57~23.80~Oct 29/b~2,715,085~285.19
+ADSK~Autodesk Inc~Technology~Software - Application~64.65B~62.93~26.83~Aug 28/a~1,479,071~303.50
+AEP~American Electric Power Company Inc~Utilities~Utilities - Regulated Electric~62.59B~17.15~18.58~Jul 30/b~3,885,060~117.04
+AMAT~Applied Materials Inc~Technology~Semiconductor Equipment & Materials~167.26B~25.03~22.03~Aug 14/a~12,731,426~209.95
+AMD~Advanced Micro Devices Inc~Technology~Semiconductors~348.75B~123.70~34.91~Nov 04/a~115,386,968~214.90
+AMGN~AMGEN Inc~Healthcare~Drug Manufacturers - General~156.19B~23.74~13.42~Nov 04/a~2,628,933~290.13
+AMZN~Amazon.com Inc~Consumer Cyclical~Internet Retail~2307.57B~33.02~28.47~Jul 31/a~70,628,958~216.37
+APP~Applovin Corp~Communication Services~Advertising Agencies~192.77B~84.66~40.03~Nov 05/a~6,370,274~569.89
+ARM~Arm Holdings plc. ADR~Technology~Semiconductors~163.94B~235.74~68.81~Nov 05/a~8,310,366~154.81
+ASML~ASML Holding NV~Technology~Semiconductor Equipment & Materials~362.87B~35.87~31.68~Oct 15/b~2,920,324~936.19
+AVGO~Broadcom Inc~Technology~Semiconductors~1533.02B~82.94~35.01~Sep 04/a~28,562,576~324.63
+AXON~Axon Enterprise Inc~Industrials~Aerospace & Defense~55.19B~173.79~88.20~Aug 04/a~451,396~703.03
+AZN~Astrazeneca plc ADR~Healthcare~Drug Manufacturers - General~262.09B~31.71~16.37~Nov 06/b~14,185,473~84.53
+BIIB~Biogen Inc~Healthcare~Drug Manufacturers - General~21.49B~14.02~9.26~Oct 30/b~1,722,789~146.57
+BKNG~Booking Holdings Inc~Consumer Cyclical~Travel Services~167.39B~35.92~19.99~Oct 28/a~196,305~5164.93
+BKR~Baker Hughes Co~Energy~Oil & Gas Equipment & Services~44.40B~14.73~17.12~Oct 23/a~7,450,312~45.04
+CCEP~Coca-Cola Europacific Partners Plc~Consumer Defensive~Beverages - Non-Alcoholic~40.50B~24.24~17.06~Aug 06/b~1,965,709~87.90
+CDNS~Cadence Design Systems, Inc~Technology~Software - Application~89.10B~88.48~41.08~Oct 27/a~2,129,198~327.00
+CDW~CDW Corp~Technology~Information Technology Services~19.01B~18.03~13.99~Aug 06/b~1,458,262~145.04
+CEG~Constellation Energy Corporation~Utilities~Utilities - Renewable~115.12B~38.45~31.78~Nov 07/b~3,049,617~368.49
+CHTR~Charter Communications Inc~Communication Services~Telecom Services~39.56B~7.06~6.02~Oct 31/b~1,692,626~259.49
+CMCSA~Comcast Corp~Communication Services~Telecom Services~108.77B~4.87~6.59~Oct 30/b~22,811,027~29.46
+COST~Costco Wholesale Corp~Consumer Defensive~Discount Stores~412.16B~51.08~42.09~Sep 25/a~3,119,565~930.01
+CPRT~Copart, Inc~Industrials~Specialty Business Services~42.46B~27.63~23.22~Sep 04/a~7,844,088~43.88
+CRWD~Crowdstrike Holdings Inc~Technology~Software - Infrastructure~123.89B~-~103.59~Aug 27/a~3,119,492~493.66
+CSCO~Cisco Systems, Inc~Technology~Communication Equipment~268.58B~26.02~15.64~Aug 13/a~20,900,183~67.94
+CSGP~Costar Group, Inc~Real Estate~Real Estate Services~32.02B~296.51~55.77~Oct 28/a~3,025,019~75.58
+CSX~CSX Corp~Industrials~Railroads~66.16B~21.81~18.51~Oct 16/a~18,112,881~35.49
+CTAS~Cintas Corporation~Industrials~Specialty Business Services~75.53B~41.77~35.05~Sep 24/b~3,426,361~187.96
+CTSH~Cognizant Technology Solutions Corp~Technology~Information Technology Services~32.14B~13.36~11.90~Jul 30/a~3,845,903~65.80
+DASH~DoorDash Inc~Consumer Cyclical~Internet Retail~113.64B~148.00~67.08~Aug 06/a~2,422,348~266.02
+DDOG~Datadog Inc~Technology~Software - Application~55.36B~458.65~73.88~Aug 07/b~4,052,197~158.74
+DXCM~Dexcom Inc~Healthcare~Medical Devices~25.54B~45.59~25.26~Oct 30/a~3,497,007~65.12
+EA~Electronic Arts, Inc~Communication Services~Electronic Gaming & Multimedia~50.05B~50.22~21.84~Oct 28/a~3,273,465~200.02
+EXC~Exelon Corp~Utilities~Utilities - Regulated Electric~47.54B~17.87~16.63~Nov 04/b~5,973,867~47.07
+FANG~Diamondback Energy Inc~Energy~Oil & Gas E&P~40.48B~9.94~11.42~Nov 03/a~2,132,235~139.82
+FAST~Fastenal Co~Industrials~Industrial Distribution~52.54B~44.24~37.16~Oct 13/b~9,375,622~45.78
+FTNT~Fortinet Inc~Technology~Software - Infrastructure~63.63B~33.14~29.96~Nov 05/a~4,579,361~83.04
+GEHC~GE HealthCare Technologies Inc~Healthcare~Medical Devices~32.42B~14.54~14.39~Oct 29/b~6,888,112~71.01
+GFS~GlobalFoundries Inc~Technology~Semiconductors~18.22B~-~16.54~Aug 05/b~4,366,194~32.96
+GILD~Gilead Sciences, Inc~Healthcare~Drug Manufacturers - General~145.40B~23.31~13.58~Oct 30/a~7,882,058~117.18
+GOOG~Alphabet Inc~Communication Services~Internet Content & Information~2866.07B~25.30~22.15~Oct 29/a~22,171,376~237.49
+GOOGL~Alphabet Inc~Communication Services~Internet Content & Information~2866.07B~25.20~22.07~Oct 29/a~32,750,401~236.57
+HON~Honeywell International Inc~Industrials~Conglomerates~127.56B~22.84~17.66~Oct 23/b~5,080,884~200.91
+IDXX~Idexx Laboratories, Inc~Healthcare~Diagnostics & Research~49.29B~51.29~43.52~Nov 03/b~410,654~616.15
+INTC~Intel Corp~Technology~Semiconductors~169.86B~-~53.95~Oct 23/a~176,319,021~36.37
+INTU~Intuit Inc~Technology~Software - Application~178.93B~46.81~24.43~Aug 21/a~2,717,120~641.79
+ISRG~Intuitive Surgical Inc~Healthcare~Medical Instruments & Supplies~154.00B~59.95~46.41~Oct 21/a~2,758,155~429.59
+KDP~Keurig Dr Pepper Inc~Consumer Defensive~Beverages - Non-Alcoholic~35.07B~22.91~11.86~Oct 27/b~11,730,852~25.82
+KHC~Kraft Heinz Co~Consumer Defensive~Packaged Foods~29.77B~-~9.48~Oct 29/b~9,679,710~25.15
+KLAC~KLA Corp~Technology~Semiconductor Equipment & Materials~129.69B~32.33~25.04~Oct 29/a~1,571,711~982.75
+LIN~Linde Plc~Basic Materials~Specialty Chemicals~212.80B~32.26~25.28~Oct 31/b~2,033,692~453.82
+LRCX~Lam Research Corp~Technology~Semiconductor Equipment & Materials~165.66B~31.59~25.38~Oct 22/a~18,677,224~131.37
+LULU~Lululemon Athletica inc~Consumer Cyclical~Apparel Retail~20.72B~11.47~13.18~Sep 04/a~7,332,073~167.51
+MAR~Marriott International, Inc~Consumer Cyclical~Lodging~70.63B~29.35~23.06~Nov 04/b~1,726,404~260.20
+MCHP~Microchip Technology, Inc~Technology~Semiconductors~32.60B~-~23.61~Aug 07/a~12,536,558~60.41
+MDLZ~Mondelez International Inc~Consumer Defensive~Confectioners~79.51B~22.44~18.59~Oct 28/a~7,689,058~61.45
+MELI~MercadoLibre Inc~Consumer Cyclical~Internet Retail~108.17B~52.69~32.43~Oct 29/a~728,077~2133.67
+META~Meta Platforms Inc~Communication Services~Internet Content & Information~1771.69B~25.54~23.48~Oct 29/a~16,558,087~705.30
+MNST~Monster Beverage Corp~Consumer Defensive~Beverages - Non-Alcoholic~67.98B~43.47~32.74~Aug 07/a~6,377,099~69.62
+MRVL~Marvell Technology Inc~Technology~Semiconductors~73.80B~-~25.49~Aug 28/a~30,303,605~85.61
+MSFT~Microsoft Corporation~Technology~Software - Infrastructure~3798.05B~37.46~27.97~Oct 29/a~23,817,979~510.96
+MSTR~Strategy Inc~Technology~Software - Application~86.42B~26.83~-~Jul 31/a~13,008,782~304.79
+MU~Micron Technology Inc~Technology~Semiconductors~203.84B~23.95~9.95~Sep 23/a~26,436,599~181.60
+NFLX~Netflix Inc~Communication Services~Entertainment~518.44B~51.99~37.66~Oct 21/a~4,122,149~1220.08
+NVDA~NVIDIA Corp~Technology~Semiconductors~4450.79B~52.13~28.54~Aug 27/a~261,526,785~183.16
+NXPI~NXP Semiconductors NV~Technology~Semiconductors~51.78B~24.48~14.66~Oct 27/a~3,969,624~205.37
+ODFL~Old Dominion Freight Line, Inc~Industrials~Trucking~28.23B~26.23~24.80~Oct 29/b~2,118,657~134.31
+ON~ON Semiconductor Corp~Technology~Semiconductors~18.71B~42.68~15.65~Aug 04/b~13,781,902~45.74
+ORLY~O'Reilly Automotive, Inc~Consumer Cyclical~Auto Parts~86.67B~36.54~30.85~Oct 22/a~5,479,042~102.15
+PANW~Palo Alto Networks Inc~Technology~Software - Infrastructure~141.16B~130.34~48.40~Aug 18/a~4,951,503~208.55
+PAYX~Paychex Inc~Technology~Software - Application~45.18B~28.16~21.30~Sep 30/b~2,708,110~125.55
+PCAR~Paccar Inc~Industrials~Farm & Heavy Construction Machinery~48.83B~15.94~15.19~Oct 21/b~2,669,151~93.00
+PDD~PDD Holdings Inc ADR~Consumer Cyclical~Internet Retail~172.58B~13.55~10.37~Aug 25/b~21,658,248~124.27
+PEP~PepsiCo Inc~Consumer Defensive~Beverages - Non-Alcoholic~205.21B~28.55~17.49~Oct 09/b~17,488,379~150.08
+PLTR~Palantir Technologies Inc~Technology~Software - Infrastructure~416.20B~583.05~209.04~Aug 04/a~53,529,699~175.44
+PYPL~PayPal Holdings Inc~Financial~Credit Services~66.72B~14.95~12.00~Oct 28/b~21,922,145~69.84
+QCOM~Qualcomm, Inc~Technology~Semiconductors~165.72B~14.81~12.52~Nov 05/a~15,726,683~153.59
+REGN~Regeneron Pharmaceuticals, Inc~Healthcare~Biotechnology~59.84B~14.23~13.94~Oct 28/b~1,492,185~564.63
+ROP~Roper Technologies Inc~Technology~Software - Application~54.78B~35.77~23.36~Oct 23/b~1,228,483~509.00
+ROST~Ross Stores, Inc~Consumer Cyclical~Apparel Retail~48.04B~23.46~21.63~Aug 21/a~2,364,406~147.71
+SBUX~Starbucks Corp~Consumer Cyclical~Restaurants~89.19B~33.93~29.78~Jul 29/a~10,971,544~78.46
+SHOP~Shopify Inc~Technology~Software - Application~196.28B~83.87~82.38~Aug 06/b~12,277,445~151.02
+SNPS~Synopsys, Inc~Technology~Software - Infrastructure~81.53B~34.36~31.24~Sep 09/a~3,519,515~438.92
+TEAM~Atlassian Corporation~Technology~Software - Application~37.92B~-~27.75~Oct 30/a~2,508,323~144.56
+TMUS~T-Mobile US Inc~Communication Services~Telecom Services~257.48B~21.58~18.53~Oct 23/b~5,090,156~228.79
+TRI~Thomson-Reuters Corp~Industrials~Specialty Business Services~68.24B~41.82~34.66~Nov 04/b~1,852,528~151.42
+TSLA~Tesla Inc~Consumer Cyclical~Auto Manufacturers~1374.92B~239.45~165.01~Oct 22/a~107,898,392~413.49
+TTD~Trade Desk Inc~Communication Services~Advertising Agencies~25.60B~63.13~48.45~Aug 07/a~12,094,195~52.36
+TTWO~Take-Two Interactive Software, Inc~Communication Services~Electronic Gaming & Multimedia~46.48B~-~27.82~Nov 06/a~1,346,709~251.97
+TXN~Texas Instruments Inc~Technology~Semiconductors~156.10B~31.39~25.70~Oct 21/a~9,601,735~171.70
+VRSK~Verisk Analytics Inc~Industrials~Consulting Services~33.96B~37.49~31.14~Jul 30/b~1,143,213~243.06
+VRTX~Vertex Pharmaceuticals, Inc~Healthcare~Biotechnology~104.55B~29.15~19.84~Aug 04/a~1,145,487~407.79
+WBD~Warner Bros. Discovery Inc~Communication Services~Entertainment~42.34B~56.62~-~Aug 07/b~44,001,498~17.10
+WDAY~Workday Inc~Technology~Software - Application~62.26B~107.84~22.04~Aug 21/a~2,265,788~233.18
+XEL~Xcel Energy, Inc~Utilities~Utilities - Regulated Electric~47.86B~22.45~19.58~Oct 30/b~4,238,258~80.93
+ZS~Zscaler Inc~Technology~Software - Infrastructure~49.05B~-~70.53~Sep 02/a~1,505,391~309.88

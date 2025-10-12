@@ -1,0 +1,3333 @@
+1301.T~極洋~食品 ~Packaged Foods
+1332.T~ニッスイ~食品 ~Packaged Foods
+1333.T~マルハニチロ~食品 ~Farm Products
+1375.T~雪国まいたけ~食品 ~Packaged Foods
+1377.T~サカタのタネ~食品 ~Farm Products
+1379.T~ホクト~食品 ~Farm Products
+1414.T~ショーボンドホールディングス~建設・資材 ~Engineering & Construction
+1417.T~ミライト・ワン~建設・資材 ~Engineering & Construction
+1419.T~タマホーム~建設・資材 ~Residential Construction
+1429.T~日本アクア~建設・資材 ~Building Materials
+1433.T~ベステラ~建設・資材 ~Engineering & Construction
+1515.T~日鉄鉱業~エネルギー資源 ~Other Industrial Metals & Mining
+1518.T~三井松島ホールディングス~エネルギー資源 ~Thermal Coal
+1605.T~ＩＮＰＥＸ~エネルギー資源 ~Oil & Gas E&P
+1662.T~石油資源開発~エネルギー資源 ~Oil & Gas E&P
+1663.T~Ｋ＆Ｏエナジーグループ~エネルギー資源 ~Utilities-Regulated Gas
+1719.T~安藤・間~建設・資材 ~Engineering & Construction
+1720.T~東急建設~建設・資材 ~Engineering & Construction
+1721.T~コムシスホールディングス~建設・資材 ~Engineering & Construction
+1726.T~ビーアールホールディングス~建設・資材 ~Engineering & Construction
+1762.T~高松コンストラクショングループ~建設・資材 ~Engineering & Construction
+1766.T~東建コーポレーション~建設・資材 ~Real Estate Services
+1780.T~ヤマウラ~建設・資材 ~Engineering & Construction
+1786.T~オリエンタル白石~建設・資材 ~Engineering & Construction
+1801.T~大成建設~建設・資材 ~Engineering & Construction
+1802.T~大林組~建設・資材 ~Engineering & Construction
+1803.T~清水建設~建設・資材 ~Engineering & Construction
+1805.T~飛島建設~建設・資材 ~Engineering & Construction
+1808.T~長谷工コーポレーション~建設・資材 ~Residential Construction
+1812.T~鹿島建設~建設・資材 ~Engineering & Construction
+1813.T~不動テトラ~建設・資材 ~Engineering & Construction
+1814.T~大末建設~建設・資材 ~Real Estate-Development
+1815.T~鉄建建設~建設・資材 ~Engineering & Construction
+1820.T~西松建設~建設・資材 ~Engineering & Construction
+1821.T~三井住友建設~建設・資材 ~Engineering & Construction
+1833.T~奥村組~建設・資材 ~Engineering & Construction
+1835.T~東鉄工業~建設・資材 ~Engineering & Construction
+1852.T~淺沼組~建設・資材 ~Engineering & Construction
+1860.T~戸田建設~建設・資材 ~Engineering & Construction
+1861.T~熊谷組~建設・資材 ~Engineering & Construction
+1870.T~矢作建設工業~建設・資材 ~Engineering & Construction
+1871.T~ピーエス三菱~建設・資材 ~Engineering & Construction
+1873.T~日本ハウスホールディングス~建設・資材 ~Residential Construction
+1878.T~大東建託~不動産 ~Real Estate-Diversified
+1879.T~新日本建設~建設・資材 ~Engineering & Construction
+1882.T~東亜道路工業~建設・資材 ~Engineering & Construction
+1884.T~日本道路~建設・資材 ~Engineering & Construction
+1885.T~東亜建設工業~建設・資材 ~Engineering & Construction
+1887.T~日本国土開発~建設・資材 ~Engineering & Construction
+1888.T~若築建設~建設・資材 ~Engineering & Construction
+1890.T~東洋建設~建設・資材 ~Engineering & Construction
+1893.T~五洋建設~建設・資材 ~Engineering & Construction
+1898.T~世紀東急工業~建設・資材 ~Engineering & Construction
+1899.T~福田組~建設・資材 ~Engineering & Construction
+1911.T~住友林業~建設・資材 ~Residential Construction
+1925.T~大和ハウス工業~建設・資材 ~Real Estate-Development
+1926.T~ライト工業~建設・資材 ~Engineering & Construction
+1928.T~積水ハウス~建設・資材 ~Residential Construction
+1929.T~日特建設~建設・資材 ~Engineering & Construction
+1930.T~北陸電気工事~建設・資材 ~Engineering & Construction
+1934.T~ユアテック~建設・資材 ~Engineering & Construction
+1938.T~日本リーテック~建設・資材 ~Electronic Components
+1939.T~四電工~建設・資材 ~Engineering & Construction
+1941.T~中電工~建設・資材 ~Engineering & Construction
+1942.T~関電工~建設・資材 ~Engineering & Construction
+1944.T~きんでん~建設・資材 ~Engineering & Construction
+1945.T~東京エネシス~建設・資材 ~Engineering & Construction
+1946.T~トーエネック~建設・資材 ~Engineering & Construction
+1949.T~住友電設~建設・資材 ~Engineering & Construction
+1950.T~日本電設工業~建設・資材 ~Infrastructure Operations
+1951.T~エクシオグループ~建設・資材 ~Engineering & Construction
+1952.T~新日本空調~建設・資材 ~Engineering & Construction
+1959.T~九電工~建設・資材 ~Engineering & Construction
+1961.T~三機工業~建設・資材 ~Engineering & Construction
+1963.T~日揮ホールディングス~建設・資材 ~Engineering & Construction
+1964.T~中外炉工業~建設・資材 ~Specialty Industrial Machinery
+1968.T~太平電業~建設・資材 ~Infrastructure Operations
+1969.T~高砂熱学工業~建設・資材 ~Building Products & Equipment
+1973.T~ＮＥＣネッツエスアイ~情報通信・サービスその他 ~Information Technology Services
+1975.T~朝日工業社~建設・資材 ~Specialty Industrial Machinery
+1976.T~明星工業~建設・資材 ~Engineering & Construction
+1979.T~大氣社~建設・資材 ~Building Products & Equipment
+1980.T~ダイダン~建設・資材 ~Engineering & Construction
+1982.T~日比谷総合設備~建設・資材 ~Engineering & Construction
+2001.T~ニップン~食品 ~Packaged Foods
+2002.T~日清製粉グループ本社~食品 ~Packaged Foods
+2004.T~昭和産業~食品 ~Farm Products
+2053.T~中部飼料~食品 ~Packaged Foods
+2060.T~フィード・ワン~食品 ~Packaged Foods
+2108.T~日本甜菜製糖~食品 ~Confectioners
+2109.T~ＤＭ三井製糖ホールディングス~食品 ~Confectioners
+2117.T~ウェルネオシュガー~食品 ~Confectioners
+2120.T~ＬＩＦＵＬＬ~情報通信・サービスその他 ~Internet Content & Information
+2121.T~ＭＩＸＩ~情報通信・サービスその他 ~Electronic Gaming & Multimedia
+2124.T~ジェイエイシーリクルートメント~情報通信・サービスその他 ~Staffing & Employment Services
+2127.T~日本Ｍ＆Ａセンターホールディングス~情報通信・サービスその他 ~Capital Markets
+2130.T~メンバーズ~情報通信・サービスその他 ~Advertising Agencies
+2146.T~ＵＴグループ~情報通信・サービスその他 ~Staffing & Employment Services
+2148.T~アイティメディア~情報通信・サービスその他 ~Advertising Agencies
+2153.T~Ｅ・Ｊホールディングス~情報通信・サービスその他 ~Engineering & Construction
+2154.T~オープンアップグループ~情報通信・サービスその他 ~Staffing & Employment Services
+2157.T~コシダカホールディングス~情報通信・サービスその他 ~Leisure
+2163.T~アルトナー~情報通信・サービスその他 ~Staffing & Employment Services
+2168.T~パソナグループ~情報通信・サービスその他 ~Staffing & Employment Services
+2170.T~リンクアンドモチベーション~情報通信・サービスその他 ~Consulting Services
+2175.T~エス・エム・エス~情報通信・サービスその他 ~Health Information Services
+2181.T~パーソルホールディングス~情報通信・サービスその他 ~Staffing & Employment Services
+2198.T~アイ・ケイ・ケイホールディングス~情報通信・サービスその他 ~Personal Services
+2201.T~森永製菓~食品 ~Confectioners
+2206.T~江崎グリコ~食品 ~Packaged Foods
+2207.T~名糖産業~食品 ~Confectioners
+2209.T~井村屋グループ~食品 ~Confectioners
+2211.T~不二家~食品 ~Confectioners
+2212.T~山崎製パン~食品 ~Packaged Foods
+2217.T~モロゾフ~食品 ~Confectioners
+2220.T~亀田製菓~食品 ~Packaged Foods
+2222.T~寿スピリッツ~食品 ~Confectioners
+2229.T~カルビー~食品 ~Packaged Foods
+2264.T~森永乳業~食品 ~Packaged Foods
+2266.T~六甲バター~食品 ~Packaged Foods
+2267.T~ヤクルト本社~食品 ~Beverages-Non-Alcoholic
+2269.T~明治ホールディングス~食品 ~Packaged Foods
+2270.T~雪印メグミルク~食品 ~Packaged Foods
+2281.T~プリマハム~食品 ~Food Distribution
+2282.T~日本ハム~食品 ~Packaged Foods
+2288.T~丸大食品~食品 ~Packaged Foods
+2292.T~Ｓ　Ｆｏｏｄｓ~食品 ~Farm Products
+2294.T~柿安本店~食品 ~Food Distribution
+2296.T~伊藤ハム米久ホールディングス~食品 ~Packaged Foods
+2301.T~学情~情報通信・サービスその他 ~Staffing & Employment Services
+2305.T~スタジオアリス~情報通信・サービスその他 ~Personal Services
+2307.T~クロスキャット~情報通信・サービスその他 ~Software-Application
+2309.T~シミックホールディングス~情報通信・サービスその他 ~Diagnostics & Research
+2317.T~システナ~情報通信・サービスその他 ~Information Technology Services
+2325.T~ＮＪＳ~情報通信・サービスその他 ~Waste Management
+2326.T~デジタルアーツ~情報通信・サービスその他 ~Software-Application
+2327.T~日鉄ソリューションズ~情報通信・サービスその他 ~Information Technology Services
+2331.T~綜合警備保障~情報通信・サービスその他 ~Security & Protection Services
+2335.T~キューブシステム~情報通信・サービスその他 ~Information Technology Services
+2337.T~いちご~不動産 ~Real Estate Services
+2353.T~日本駐車場開発~不動産 ~Infrastructure Operations
+2359.T~コア~情報通信・サービスその他 ~Information Technology Services
+2371.T~カカクコム~情報通信・サービスその他 ~Internet Content & Information
+2372.T~アイロムグループ~情報通信・サービスその他 ~Medical Care Facilities
+2374.T~セントケア・ホールディング~情報通信・サービスその他 ~Medical Care Facilities
+2378.T~ルネサンス~情報通信・サービスその他 ~Entertainment
+2379.T~ディップ~情報通信・サービスその他 ~Staffing & Employment Services
+2384.T~ＳＢＳホールディングス~運輸・物流 ~Integrated Freight & Logistics
+2389.T~デジタルホールディングス~情報通信・サービスその他 ~Advertising Agencies
+2395.T~新日本科学~情報通信・サービスその他 ~Diagnostics & Research
+2410.T~キャリアデザインセンター~情報通信・サービスその他 ~Staffing & Employment Services
+2412.T~ベネフィット・ワン~情報通信・サービスその他 ~Staffing & Employment Services
+2413.T~エムスリー~情報通信・サービスその他 ~Health Information Services
+2427.T~アウトソーシング~情報通信・サービスその他 ~Staffing & Employment Services
+2429.T~ワールドホールディングス~情報通信・サービスその他 ~Staffing & Employment Services
+2432.T~ディー・エヌ・エー~情報通信・サービスその他 ~Electronic Gaming & Multimedia
+2433.T~博報堂ＤＹホールディングス~情報通信・サービスその他 ~Advertising Agencies
+2440.T~ぐるなび~情報通信・サービスその他 ~Internet Content & Information
+2445.T~タカミヤ~情報通信・サービスその他 ~Rental & Leasing Services
+2453.T~ジャパンベストレスキューシステム~情報通信・サービスその他 ~Specialty Business Services
+2461.T~ファンコミュニケーションズ~情報通信・サービスその他 ~Advertising Agencies
+2462.T~ライク~情報通信・サービスその他 ~Conglomerates
+2471.T~エスプール~情報通信・サービスその他 ~Staffing & Employment Services
+2475.T~ＷＤＢホールディングス~情報通信・サービスその他 ~Staffing & Employment Services
+2489.T~アドウェイズ~情報通信・サービスその他 ~Internet Content & Information
+2491.T~バリューコマース~情報通信・サービスその他 ~Advertising Agencies
+2492.T~インフォマート~情報通信・サービスその他 ~Software-Application
+2501.T~サッポロホールディングス~食品 ~Beverages-Brewers
+2502.T~アサヒグループホールディングス~食品 ~Beverages-Brewers
+2503.T~キリンホールディングス~食品 ~Beverages-Brewers
+2531.T~宝ホールディングス~食品 ~Beverages-Brewers
+2533.T~オエノンホールディングス~食品 ~Beverages-Wineries & Distilleries
+2540.T~養命酒製造~食品 ~Beverages-Wineries & Distilleries
+2579.T~コカ・コーラ　ボトラーズジャパンホールディングス~食品 ~Beverages-Non-Alcoholic
+2585.T~ライフドリンク　カンパニー~食品 ~Beverages-Non-Alcoholic
+2587.T~サントリー食品インターナショナル~食品 ~Beverages-Brewers
+2590.T~ダイドーグループホールディングス~食品 ~Beverages-Non-Alcoholic
+2593.T~伊藤園~食品 ~Beverages-Non-Alcoholic
+2594.T~キーコーヒー~食品 ~Packaged Foods
+2602.T~日清オイリオグループ~食品 ~Packaged Foods
+2607.T~不二製油グループ本社~食品 ~Packaged Foods
+2613.T~Ｊ－オイルミルズ~食品 ~Packaged Foods
+2651.T~ローソン~小売 ~Discount Stores
+2659.T~サンエー~小売 ~Department Stores
+2664.T~カワチ薬品~小売 ~Pharmaceutical Retailers
+2670.T~エービーシー・マート~小売 ~Apparel Retail
+2674.T~ハードオフコーポレーション~小売 ~Specialty Retail
+2676.T~高千穂交易~商社・卸売 ~Conglomerates
+2678.T~アスクル~小売 ~Internet Retail
+2681.T~ゲオホールディングス~小売 ~Specialty Retail
+2685.T~アダストリア~小売 ~Apparel Manufacturing
+2692.T~伊藤忠食品~商社・卸売 ~Food Distribution
+2695.T~くら寿司~小売 ~Restaurants
+2715.T~エレマテック~商社・卸売 ~Electronic Components
+2726.T~パルグループホールディングス~小売 ~Apparel Retail
+2730.T~エディオン~小売 ~Specialty Retail
+2733.T~あらた~商社・卸売 ~Department Stores
+2734.T~サーラコーポレーション~小売 ~Conglomerates
+2737.T~トーメンデバイス~商社・卸売 ~Semiconductors
+2742.T~ハローズ~小売 ~Grocery Stores
+2749.T~ＪＰホールディングス~情報通信・サービスその他 ~Specialty Business Services
+2752.T~フジオフードグループ本社~小売 ~Restaurants
+2753.T~あみやき亭~小売 ~Restaurants
+2760.T~東京エレクトロン　デバイス~商社・卸売 ~Electronic Components
+2767.T~円谷フィールズホールディングス~商社・卸売 ~Gambling
+2768.T~双日~商社・卸売 ~Conglomerates
+2784.T~アルフレッサ　ホールディングス~商社・卸売 ~Medical Distribution
+2791.T~大黒天物産~小売 ~Grocery Stores
+2792.T~ハニーズホールディングス~小売 ~Apparel Retail
+2801.T~キッコーマン~食品 ~Packaged Foods
+2802.T~味の素~食品 ~Packaged Foods
+2804.T~ブルドックソース~食品 ~Packaged Foods
+2809.T~キユーピー~食品 ~Packaged Foods
+2810.T~ハウス食品グループ本社~食品 ~Packaged Foods
+2811.T~カゴメ~食品 ~Packaged Foods
+2815.T~アリアケジャパン~食品 ~Packaged Foods
+2871.T~ニチレイ~食品 ~Packaged Foods
+2874.T~横浜冷凍~商社・卸売 ~Farm Products
+2875.T~東洋水産~食品 ~Packaged Foods
+2882.T~イートアンドホールディングス~食品 ~Restaurants
+2884.T~ヨシムラ・フード・ホールディングス~食品 ~Packaged Foods
+2897.T~日清食品ホールディングス~食品 ~Packaged Foods
+2899.T~永谷園ホールディングス~食品 ~Packaged Foods
+2908.T~フジッコ~食品 ~Packaged Foods
+2910.T~ロック・フィールド~食品 ~Packaged Foods
+2914.T~日本たばこ産業~食品 ~Tobacco
+2915.T~ケンコーマヨネーズ~食品 ~Packaged Foods
+2918.T~わらべや日洋ホールディングス~食品 ~Packaged Foods
+2922.T~なとり~食品 ~Packaged Foods
+2929.T~ファーマフーズ~食品 ~Drug Manufacturers-Specialty & Generic
+2930.T~北の達人コーポレーション~素材・化学 ~Household & Personal Products
+2931.T~ユーグレナ~食品 ~Household & Personal Products
+2933.T~紀文食品~食品 ~Packaged Foods
+2935.T~ピックルスホールディングス~食品 ~Packaged Foods
+2975.T~スター・マイカ・ホールディングス~不動産 ~Real Estate Services
+2980.T~ＳＲＥホールディングス~不動産 ~Real Estate Services
+2982.T~ＡＤワークスグループ~不動産 ~Real Estate Services
+3002.T~グンゼ~素材・化学 ~Apparel Manufacturing
+3003.T~ヒューリック~不動産 ~Real Estate Services
+3028.T~アルペン~小売 ~Specialty Retail
+3031.T~ラクーンホールディングス~情報通信・サービスその他 ~Internet Retail
+3034.T~クオールホールディングス~小売 ~Pharmaceutical Retailers
+3036.T~アルコニックス~商社・卸売 ~Other Industrial Metals & Mining
+3038.T~神戸物産~商社・卸売 ~Grocery Stores
+3040.T~ソリトンシステムズ~情報通信・サービスその他 ~Software-Infrastructure
+3046.T~ジンズホールディングス~小売 ~Medical Instruments & Supplies
+3048.T~ビックカメラ~小売 ~Specialty Retail
+3050.T~ＤＣＭホールディングス~小売 ~Home Improvement Retail
+3064.T~ＭｏｎｏｔａＲＯ~小売 ~Internet Retail
+3073.T~ＤＤグループ~小売 ~Restaurants
+3076.T~あい　ホールディングス~商社・卸売 ~Conglomerates
+3086.T~Ｊ．フロント　リテイリング~小売 ~Department Stores
+3087.T~ドトール・日レスホールディングス~小売 ~Restaurants
+3088.T~マツキヨココカラ＆カンパニー~小売 ~Pharmaceutical Retailers
+3091.T~ブロンコビリー~小売 ~Restaurants
+3092.T~ＺＯＺＯ~小売 ~Internet Retail
+3093.T~トレジャー・ファクトリー~小売 ~Specialty Retail
+3097.T~物語コーポレーション~小売 ~Restaurants
+3099.T~三越伊勢丹ホールディングス~小売 ~Department Stores
+3101.T~東洋紡~素材・化学 ~Specialty Chemicals
+3103.T~ユニチカ~素材・化学 ~Specialty Chemicals
+3104.T~富士紡ホールディングス~素材・化学 ~Textile Manufacturing
+3105.T~日清紡ホールディングス~電機・精密 ~Conglomerates
+3106.T~倉敷紡績~素材・化学 ~Conglomerates
+3107.T~ダイワボウホールディングス~商社・卸売 ~Electronics & Computer Distribution
+3109.T~シキボウ~素材・化学 ~Textile Manufacturing
+3110.T~日東紡績~建設・資材 ~Textile Manufacturing
+3116.T~トヨタ紡織~自動車・輸送機 ~Auto Parts
+3132.T~マクニカホールディングス~商社・卸売 ~Electronics & Computer Distribution
+3135.T~マーケットエンタープライズ~小売 ~Internet Retail
+3139.T~ラクト・ジャパン~商社・卸売 ~Packaged Foods
+3141.T~ウエルシアホールディングス~小売 ~Pharmaceutical Retailers
+3148.T~クリエイトＳＤホールディングス~小売 ~Pharmaceutical Retailers
+3150.T~グリムス~商社・卸売 ~Solar
+3151.T~バイタルケーエスケー・ホールディングス~商社・卸売 ~Medical Distribution
+3153.T~八洲電機~商社・卸売 ~Industrial Distribution
+3154.T~メディアスホールディングス~商社・卸売 ~Medical Instruments & Supplies
+3156.T~レスターホールディングス~商社・卸売 ~Semiconductors
+3167.T~ＴＯＫＡＩホールディングス~商社・卸売 ~Conglomerates
+3176.T~三洋貿易~商社・卸売 ~Industrial Distribution
+3179.T~シュッピン~小売 ~Internet Retail
+3180.T~ビューティガレージ~商社・卸売 ~Household & Personal Products
+3182.T~オイシックス・ラ・大地~小売 ~Food Distribution
+3183.T~ウイン・パートナーズ~商社・卸売 ~Medical Distribution
+3186.T~ネクステージ~小売 ~Auto & Truck Dealerships
+3191.T~ジョイフル本田~小売 ~Home Improvement Retail
+3193.T~鳥貴族ホールディングス~小売 ~Restaurants
+3196.T~ホットランド~小売 ~Restaurants
+3197.T~すかいらーくホールディングス~小売 ~Restaurants
+3198.T~ＳＦＰホールディングス~小売 ~Restaurants
+3199.T~綿半ホールディングス~小売 ~Home Improvement Retail
+3201.T~日本毛織~素材・化学 ~Textile Manufacturing
+3221.T~ヨシックスホールディングス~小売 ~Restaurants
+3231.T~野村不動産ホールディングス~不動産 ~Real Estate Services
+3232.T~三重交通グループホールディングス~不動産 ~Conglomerates
+3244.T~サムティ~不動産 ~Real Estate-Diversified
+3245.T~ディア・ライフ~不動産 ~Real Estate Services
+3252.T~地主~不動産 ~Real Estate Services
+3276.T~ＪＰＭＣ~不動産 ~Real Estate Services
+3284.T~フージャースホールディングス~不動産 ~Residential Construction
+3288.T~オープンハウスグループ~不動産 ~Real Estate-Diversified
+3289.T~東急不動産ホールディングス~不動産 ~Real Estate-Diversified
+3291.T~飯田グループホールディングス~不動産 ~Residential Construction
+3302.T~帝国繊維~素材・化学 ~Farm & Heavy Construction Machinery
+3315.T~日本コークス工業~エネルギー資源 ~Coking Coal
+3319.T~ゴルフダイジェスト・オンライン~小売 ~Internet Retail
+3328.T~ＢＥＥＮＯＳ~小売 ~Internet Retail
+3333.T~あさひ~小売 ~Specialty Retail
+3341.T~日本調剤~小売 ~Pharmaceutical Retailers
+3349.T~コスモス薬品~小売 ~Pharmaceutical Retailers
+3360.T~シップヘルスケアホールディングス~商社・卸売 ~Medical Instruments & Supplies
+3371.T~ソフトクリエイトホールディングス~情報通信・サービスその他 ~Information Technology Services
+3382.T~セブン＆アイ・ホールディングス~小売 ~Grocery Stores
+3387.T~クリエイト・レストランツ・ホールディングス~小売 ~Restaurants
+3388.T~明治電機工業~商社・卸売 ~Scientific & Technical Instruments
+3391.T~ツルハホールディングス~小売 ~Pharmaceutical Retailers
+3393.T~スターティアホールディングス~商社・卸売 ~Information Technology Services
+3395.T~サンマルクホールディングス~小売 ~Restaurants
+3397.T~トリドールホールディングス~小売 ~Restaurants
+3401.T~帝人~素材・化学 ~Conglomerates
+3402.T~東レ~素材・化学 ~Textile Manufacturing
+3405.T~クラレ~素材・化学 ~Chemicals
+3407.T~旭化成~素材・化学 ~Chemicals
+3415.T~ＴＯＫＹＯ　ＢＡＳＥ~小売 ~Apparel Retail
+3431.T~宮地エンジニアリンググループ~建設・資材 ~Engineering & Construction
+3433.T~トーカロ~建設・資材 ~Specialty Business Services
+3436.T~ＳＵＭＣＯ~建設・資材 ~Semiconductor Equipment & Materials
+3443.T~川田テクノロジーズ~建設・資材 ~Engineering & Construction
+3445.T~ＲＳ　Ｔｅｃｈｎｏｌｏｇｉｅｓ~建設・資材 ~Semiconductors
+3446.T~ジェイテックコーポレーション~建設・資材 ~Medical Instruments & Supplies
+3457.T~Ａｎｄ　Ｄｏホールディングス~不動産 ~Real Estate Services
+3458.T~シーアールイー~不動産 ~Real Estate Services
+3465.T~ケイアイスター不動産~不動産 ~Real Estate Services
+3475.T~グッドコムアセット~不動産 ~Real Estate-Diversified
+3480.T~ジェイ・エス・ビー~不動産 ~Real Estate-Development
+3482.T~ロードスターキャピタル~不動産 ~Real Estate Services
+3484.T~テンポイノベーション~不動産 ~Real Estate Services
+3486.T~グローバル・リンク・マネジメント~不動産 ~Real Estate Services
+3498.T~霞ヶ関キャピタル~不動産 ~Conglomerates
+3501.T~住江織物~素材・化学 ~Textile Manufacturing
+3539.T~ＪＭホールディングス~小売 ~Grocery Stores
+3543.T~コメダホールディングス~商社・卸売 ~Restaurants
+3546.T~アレンザホールディングス~小売 ~Home Improvement Retail
+3548.T~バロックジャパンリミテッド~小売 ~Apparel Retail
+3549.T~クスリのアオキホールディングス~小売 ~Pharmaceutical Retailers
+3561.T~力の源ホールディングス~小売 ~Restaurants
+3563.T~ＦＯＯＤ　＆　ＬＩＦＥ　ＣＯＭＰＡＮＩＥＳ~小売 ~Restaurants
+3569.T~セーレン~素材・化学 ~Textile Manufacturing
+3580.T~小松マテーレ~素材・化学 ~Textile Manufacturing
+3591.T~ワコールホールディングス~素材・化学 ~Apparel Manufacturing
+3593.T~ホギメディカル~素材・化学 ~Medical Instruments & Supplies
+3608.T~ＴＳＩホールディングス~素材・化学 ~Apparel Manufacturing
+3612.T~ワールド~素材・化学 ~Department Stores
+3626.T~ＴＩＳ~情報通信・サービスその他 ~Information Technology Services
+3632.T~グリー~情報通信・サービスその他 ~Electronic Gaming & Multimedia
+3635.T~コーエーテクモホールディングス~情報通信・サービスその他 ~Electronic Gaming & Multimedia
+3636.T~三菱総合研究所~情報通信・サービスその他 ~Information Technology Services
+3649.T~ファインデックス~情報通信・サービスその他 ~Health Information Services
+3655.T~ブレインパッド~情報通信・サービスその他 ~Information Technology Services
+3656.T~ＫＬａｂ~情報通信・サービスその他 ~Electronic Gaming & Multimedia
+3657.T~ポールトゥウィンホールディングス~情報通信・サービスその他 ~Information Technology Services
+3659.T~ネクソン~情報通信・サービスその他 ~Electronic Gaming & Multimedia
+3660.T~アイスタイル~情報通信・サービスその他 ~Internet Retail
+3661.T~エムアップホールディングス~情報通信・サービスその他 ~Internet Content & Information
+3662.T~エイチーム~情報通信・サービスその他 ~Internet Content & Information
+3665.T~エニグモ~情報通信・サービスその他 ~Software-Infrastructure
+3668.T~コロプラ~情報通信・サービスその他 ~Electronic Gaming & Multimedia
+3673.T~ブロードリーフ~情報通信・サービスその他 ~Software-Application
+3675.T~クロス・マーケティンググループ~情報通信・サービスその他 ~Internet Content & Information
+3676.T~デジタルハーツホールディングス~情報通信・サービスその他 ~Information Technology Services
+3677.T~システム情報~情報通信・サービスその他 ~Software-Infrastructure
+3678.T~メディアドゥ~情報通信・サービスその他 ~Publishing
+3679.T~じげん~情報通信・サービスその他 ~Internet Content & Information
+3681.T~ブイキューブ~情報通信・サービスその他 ~Software-Application
+3687.T~フィックスターズ~情報通信・サービスその他 ~Software-Application
+3688.T~ＣＡＲＴＡ　ＨＯＬＤＩＮＧＳ~情報通信・サービスその他 ~Internet Content & Information
+3694.T~オプティム~情報通信・サービスその他 ~Software-Infrastructure
+3696.T~セレス~情報通信・サービスその他 ~Conglomerates
+3697.T~ＳＨＩＦＴ~情報通信・サービスその他 ~Software-Application
+3708.T~特種東海製紙~素材・化学 ~Paper & Paper Products
+3738.T~ティーガイア~情報通信・サービスその他 ~Telecom Services
+3741.T~セック~情報通信・サービスその他 ~Software-Infrastructure
+3762.T~テクマトリックス~情報通信・サービスその他 ~Information Technology Services
+3763.T~プロシップ~情報通信・サービスその他 ~Software-Application
+3765.T~ガンホー・オンライン・エンターテイメント~情報通信・サービスその他 ~Electronic Gaming & Multimedia
+3769.T~ＧＭＯペイメントゲートウェイ~情報通信・サービスその他 ~Software-Infrastructure
+3771.T~システムリサーチ~情報通信・サービスその他 ~Software-Application
+3774.T~インターネットイニシアティブ~情報通信・サービスその他 ~Telecom Services
+3778.T~さくらインターネット~情報通信・サービスその他 ~Software-Infrastructure
+3788.T~ＧＭＯグローバルサイン・ホールディングス~情報通信・サービスその他 ~Information Technology Services
+3817.T~ＳＲＡホールディングス~情報通信・サービスその他 ~Information Technology Services
+3834.T~朝日ネット~情報通信・サービスその他 ~Telecom Services
+3835.T~ｅＢＡＳＥ~情報通信・サービスその他 ~Software-Application
+3836.T~アバントグループ~情報通信・サービスその他 ~Software-Application
+3837.T~アドソル日進~情報通信・サービスその他 ~Information Technology Services
+3843.T~フリービット~情報通信・サービスその他 ~Internet Content & Information
+3844.T~コムチュア~情報通信・サービスその他 ~Information Technology Services
+3853.T~アステリア~情報通信・サービスその他 ~Software-Application
+3854.T~アイル~情報通信・サービスその他 ~Software-Infrastructure
+3861.T~王子ホールディングス~素材・化学 ~Paper & Paper Products
+3863.T~日本製紙~素材・化学 ~Paper & Paper Products
+3864.T~三菱製紙~素材・化学 ~Paper & Paper Products
+3865.T~北越コーポレーション~素材・化学 ~Paper & Paper Products
+3877.T~中越パルプ工業~素材・化学 ~Paper & Paper Products
+3880.T~大王製紙~素材・化学 ~Paper & Paper Products
+3901.T~マークラインズ~情報通信・サービスその他 ~Internet Content & Information
+3902.T~メディカル・データ・ビジョン~情報通信・サービスその他 ~Health Information Services
+3903.T~ｇｕｍｉ~情報通信・サービスその他 ~Electronic Gaming & Multimedia
+3915.T~テラスカイ~情報通信・サービスその他 ~Software-Infrastructure
+3916.T~デジタル・インフォメーション・テクノロジー~情報通信・サービスその他 ~Information Technology Services
+3921.T~ネオジャパン~情報通信・サービスその他 ~Software-Application
+3922.T~ＰＲ　ＴＩＭＥＳ~情報通信・サービスその他 ~Internet Content & Information
+3923.T~ラクス~情報通信・サービスその他 ~Information Technology Services
+3924.T~ランドコンピュータ~情報通信・サービスその他 ~Information Technology Services
+3925.T~ダブルスタンダード~情報通信・サービスその他 ~Information Technology Services
+3926.T~オープンドア~情報通信・サービスその他 ~Internet Content & Information
+3932.T~アカツキ~情報通信・サービスその他 ~Electronic Gaming & Multimedia
+3937.T~Ｕｂｉｃｏｍホールディングス~情報通信・サービスその他 ~Software-Application
+3939.T~カナミックネットワーク~情報通信・サービスその他 ~Health Information Services
+3941.T~レンゴー~素材・化学 ~Packaging & Containers
+3946.T~トーモク~素材・化学 ~Packaging & Containers
+3950.T~ザ・パック~素材・化学 ~Packaging & Containers
+3962.T~チェンジホールディングス~情報通信・サービスその他 ~Information Technology Services
+3963.T~シンクロ・フード~情報通信・サービスその他 ~Specialty Business Services
+3964.T~オークネット~情報通信・サービスその他 ~Internet Retail
+3968.T~セグエグループ~情報通信・サービスその他 ~Information Technology Services
+3978.T~マクロミル~情報通信・サービスその他 ~Advertising Agencies
+3983.T~オロ~情報通信・サービスその他 ~Software-Application
+3984.T~ユーザーローカル~情報通信・サービスその他 ~Information Technology Services
+3992.T~ニーズウェル~情報通信・サービスその他 ~Software-Infrastructure
+3994.T~マネーフォワード~情報通信・サービスその他 ~Software-Application
+4004.T~レゾナック・ホールディングス~素材・化学 ~Chemicals
+4005.T~住友化学~素材・化学 ~Chemicals
+4008.T~住友精化~素材・化学 ~Specialty Chemicals
+4021.T~日産化学~素材・化学 ~Chemicals
+4022.T~ラサ工業~素材・化学 ~Specialty Chemicals
+4023.T~クレハ~素材・化学 ~Specialty Chemicals
+4025.T~多木化学~素材・化学 ~Chemicals
+4027.T~テイカ~素材・化学 ~Specialty Chemicals
+4028.T~石原産業~素材・化学 ~Specialty Chemicals
+4041.T~日本曹達~素材・化学 ~Chemicals
+4042.T~東ソー~素材・化学 ~Chemicals
+4043.T~トクヤマ~素材・化学 ~Specialty Chemicals
+4044.T~セントラル硝子~素材・化学 ~Building Materials
+4045.T~東亞合成~素材・化学 ~Chemicals
+4046.T~大阪ソーダ~素材・化学 ~Specialty Chemicals
+4047.T~関東電化工業~素材・化学 ~Specialty Chemicals
+4053.T~Ｓｕｎ　Ａｓｔｅｒｉｓｋ~情報通信・サービスその他 ~Information Technology Services
+4061.T~デンカ~素材・化学 ~Chemicals
+4062.T~イビデン~電機・精密 ~Electronic Components
+4063.T~信越化学工業~素材・化学 ~Chemicals
+4064.T~日本カーバイド工業~素材・化学 ~Specialty Chemicals
+4071.T~プラスアルファ・コンサルティング~情報通信・サービスその他 ~Software-Application
+4072.T~電算システムホールディングス~情報通信・サービスその他 ~Information Technology Services
+4078.T~堺化学工業~素材・化学 ~Specialty Chemicals
+4082.T~第一稀元素化学工業~素材・化学 ~Specialty Chemicals
+4088.T~エア・ウォーター~素材・化学 ~Specialty Chemicals
+4091.T~日本酸素ホールディングス~素材・化学 ~Chemicals
+4092.T~日本化学工業~素材・化学 ~Specialty Chemicals
+4093.T~東邦アセチレン~素材・化学 ~Chemicals
+4095.T~日本パーカライジング~素材・化学 ~Specialty Chemicals
+4097.T~高圧ガス工業~素材・化学 ~Chemicals
+4099.T~四国化成ホールディングス~素材・化学 ~Specialty Chemicals
+4109.T~ステラ　ケミファ~素材・化学 ~Specialty Chemicals
+4112.T~保土谷化学工業~素材・化学 ~Specialty Chemicals
+4114.T~日本触媒~素材・化学 ~Chemicals
+4116.T~大日精化工業~素材・化学 ~Specialty Chemicals
+4118.T~カネカ~素材・化学 ~Specialty Chemicals
+4151.T~協和キリン~医薬品 ~Drug Manufacturers-General
+4180.T~Ａｐｐｉｅｒ　Ｇｒｏｕｐ~情報通信・サービスその他 ~Software-Infrastructure
+4182.T~三菱瓦斯化学~素材・化学 ~Specialty Chemicals
+4183.T~三井化学~素材・化学 ~Specialty Chemicals
+4185.T~ＪＳＲ~素材・化学 ~Specialty Chemicals
+4186.T~東京応化工業~素材・化学 ~Electronic Components
+4187.T~大阪有機化学工業~素材・化学 ~Specialty Chemicals
+4188.T~三菱ケミカルグループ~素材・化学 ~Specialty Chemicals
+4189.T~ＫＨネオケム~素材・化学 ~Chemicals
+4202.T~ダイセル~素材・化学 ~Specialty Chemicals
+4203.T~住友ベークライト~素材・化学 ~Specialty Chemicals
+4204.T~積水化学工業~素材・化学 ~Conglomerates
+4205.T~日本ゼオン~素材・化学 ~Specialty Chemicals
+4206.T~アイカ工業~素材・化学 ~Conglomerates
+4208.T~ＵＢＥ~素材・化学 ~Specialty Chemicals
+4212.T~積水樹脂~素材・化学 ~Building Products & Equipment
+4215.T~タキロンシーアイ~素材・化学 ~Specialty Chemicals
+4216.T~旭有機材~素材・化学 ~Building Products & Equipment
+4218.T~ニチバン~素材・化学 ~Business Equipment & Supplies
+4220.T~リケンテクノス~素材・化学 ~Chemicals
+4221.T~大倉工業~素材・化学 ~Specialty Chemicals
+4228.T~積水化成品工業~素材・化学 ~Specialty Chemicals
+4229.T~群栄化学工業~素材・化学 ~Specialty Chemicals
+4246.T~ダイキョーニシカワ~素材・化学 ~Auto Parts
+4249.T~森六ホールディングス~素材・化学 ~Chemicals
+4251.T~恵和~素材・化学 ~Electronic Components
+4272.T~日本化薬~素材・化学 ~Chemicals
+4275.T~カーリットホールディングス~素材・化学 ~Specialty Chemicals
+4290.T~プレステージ・インターナショナル~情報通信・サービスその他 ~Specialty Business Services
+4298.T~プロトコーポレーション~情報通信・サービスその他 ~Internet Content & Information
+4301.T~アミューズ~情報通信・サービスその他 ~Entertainment
+4307.T~野村総合研究所~情報通信・サービスその他 ~Information Technology Services
+4310.T~ドリームインキュベータ~情報通信・サービスその他 ~Asset Management
+4318.T~クイック~情報通信・サービスその他 ~Staffing & Employment Services
+4323.T~日本システム技術~情報通信・サービスその他 ~Software-Application
+4324.T~電通グループ~情報通信・サービスその他 ~Advertising Agencies
+4326.T~インテージホールディングス~情報通信・サービスその他 ~Advertising Agencies
+4331.T~テイクアンドギヴ・ニーズ~情報通信・サービスその他 ~Personal Services
+4333.T~東邦システムサイエンス~情報通信・サービスその他 ~Software-Application
+4337.T~ぴあ~情報通信・サービスその他 ~Specialty Business Services
+4343.T~イオンファンタジー~情報通信・サービスその他 ~Leisure
+4344.T~ソースネクスト~情報通信・サービスその他 ~Software-Application
+4345.T~シーティーエス~情報通信・サービスその他 ~Rental & Leasing Services
+4348.T~インフォコム~情報通信・サービスその他 ~Publishing
+4362.T~日本精化~素材・化学 ~Specialty Chemicals
+4368.T~扶桑化学工業~素材・化学 ~Chemicals
+4369.T~トリケミカル研究所~素材・化学 ~Specialty Chemicals
+4373.T~シンプレクス・ホールディングス~情報通信・サービスその他 ~Consulting Services
+4384.T~ラクスル~情報通信・サービスその他 ~Specialty Business Services
+4385.T~メルカリ~情報通信・サービスその他 ~Internet Retail
+4390.T~ＩＰＳ~情報通信・サービスその他 ~Telecom Services
+4392.T~ＦＩＧ~情報通信・サービスその他 ~Communication Equipment
+4396.T~システムサポート~情報通信・サービスその他 ~Information Technology Services
+4401.T~ＡＤＥＫＡ~素材・化学 ~Specialty Chemicals
+4403.T~日油~素材・化学 ~Specialty Chemicals
+4410.T~ハリマ化成グループ~素材・化学 ~Specialty Chemicals
+4432.T~ウイングアーク１ｓｔ~情報通信・サービスその他 ~Software-Application
+4433.T~ヒト・コミュニケーションズ・ホールディングス~情報通信・サービスその他 ~Staffing & Employment Services
+4443.T~Ｓａｎｓａｎ~情報通信・サービスその他 ~Software-Application
+4446.T~Ｌｉｎｋ－Ｕ~情報通信・サービスその他 ~Software-Application
+4449.T~ギフティ~情報通信・サービスその他 ~Internet Retail
+4452.T~花王~素材・化学 ~Household & Personal Products
+4461.T~第一工業製薬~素材・化学 ~Specialty Chemicals
+4462.T~石原ケミカル~素材・化学 ~Specialty Chemicals
+4471.T~三洋化成工業~素材・化学 ~Specialty Chemicals
+4480.T~メドレー~情報通信・サービスその他 ~Health Information Services
+4481.T~ベース~情報通信・サービスその他 ~Software-Application
+4483.T~ＪＭＤＣ~情報通信・サービスその他 ~Health Information Services
+4502.T~武田薬品工業~医薬品 ~Drug Manufacturers-Specialty & Generic
+4503.T~アステラス製薬~医薬品 ~Drug Manufacturers-General
+4506.T~住友ファーマ~医薬品 ~Drug Manufacturers-Specialty & Generic
+4507.T~塩野義製薬~医薬品 ~Drug Manufacturers-Specialty & Generic
+4516.T~日本新薬~医薬品 ~Drug Manufacturers-Specialty & Generic
+4519.T~中外製薬~医薬品 ~Drug Manufacturers-General
+4521.T~科研製薬~医薬品 ~Drug Manufacturers-Specialty & Generic
+4523.T~エーザイ~医薬品 ~Drug Manufacturers-Specialty & Generic
+4526.T~理研ビタミン~食品 ~Packaged Foods
+4527.T~ロート製薬~医薬品 ~Household & Personal Products
+4528.T~小野薬品工業~医薬品 ~Drug Manufacturers-General
+4530.T~久光製薬~医薬品 ~Drug Manufacturers-Specialty & Generic
+4534.T~持田製薬~医薬品 ~Drug Manufacturers-Specialty & Generic
+4536.T~参天製薬~医薬品 ~Drug Manufacturers-General
+4538.T~扶桑薬品工業~医薬品 ~Drug Manufacturers-Specialty & Generic
+4540.T~ツムラ~医薬品 ~Drug Manufacturers-Specialty & Generic
+4543.T~テルモ~電機・精密 ~Medical Instruments & Supplies
+4544.T~Ｈ．Ｕ．グループホールディングス~情報通信・サービスその他 ~Diagnostics & Research
+4547.T~キッセイ薬品工業~医薬品 ~Drug Manufacturers-Specialty & Generic
+4548.T~生化学工業~医薬品 ~Medical Devices
+4549.T~栄研化学~医薬品 ~Medical Devices
+4551.T~鳥居薬品~医薬品 ~Drug Manufacturers-Specialty & Generic
+4552.T~ＪＣＲファーマ~医薬品 ~Drug Manufacturers-General
+4553.T~東和薬品~医薬品 ~Drug Manufacturers-Specialty & Generic
+4554.T~富士製薬工業~医薬品 ~Drug Manufacturers-Specialty & Generic
+4559.T~ゼリア新薬工業~医薬品 ~Drug Manufacturers-Specialty & Generic
+4565.T~そーせいグループ~医薬品 ~Biotechnology
+4568.T~第一三共~医薬品 ~Drug Manufacturers-General
+4569.T~杏林製薬~医薬品 ~Drug Manufacturers-Specialty & Generic
+4574.T~大幸薬品~医薬品 ~Drug Manufacturers-Specialty & Generic
+4577.T~ダイト~医薬品 ~Drug Manufacturers-Specialty & Generic
+4578.T~大塚ホールディングス~医薬品 ~Drug Manufacturers-General
+4587.T~ペプチドリーム~医薬品 ~Biotechnology
+4611.T~大日本塗料~素材・化学 ~Specialty Chemicals
+4612.T~日本ペイントホールディングス~素材・化学 ~Specialty Chemicals
+4613.T~関西ペイント~素材・化学 ~Specialty Chemicals
+4617.T~中国塗料~素材・化学 ~Specialty Chemicals
+4626.T~太陽ホールディングス~素材・化学 ~Specialty Chemicals
+4631.T~ＤＩＣ~素材・化学 ~Specialty Chemicals
+4633.T~サカタインクス~素材・化学 ~Specialty Chemicals
+4634.T~東洋インキＳＣホールディングス~素材・化学 ~Specialty Chemicals
+4636.T~Ｔ＆Ｋ　ＴＯＫＡ~素材・化学 ~Specialty Chemicals
+4641.T~アルプス技研~情報通信・サービスその他 ~Staffing & Employment Services
+4658.T~日本空調サービス~情報通信・サービスその他 ~Specialty Business Services
+4661.T~オリエンタルランド~情報通信・サービスその他 ~Leisure
+4662.T~フォーカスシステムズ~情報通信・サービスその他 ~Information Technology Services
+4665.T~ダスキン~情報通信・サービスその他 ~Furnishings, Fixtures & Appliances
+4666.T~パーク２４~不動産 ~Infrastructure Operations
+4668.T~明光ネットワークジャパン~情報通信・サービスその他 ~Education & Training Services
+4674.T~クレスコ~情報通信・サービスその他 ~Information Technology Services
+4676.T~フジ・メディア・ホールディングス~情報通信・サービスその他 ~Broadcasting
+4680.T~ラウンドワン~情報通信・サービスその他 ~Leisure
+4681.T~リゾートトラスト~情報通信・サービスその他 ~Resorts & Casinos
+4684.T~オービック~情報通信・サービスその他 ~Software-Application
+4686.T~ジャストシステム~情報通信・サービスその他 ~Software-Infrastructure
+4687.T~ＴＤＣソフト~情報通信・サービスその他 ~Software-Infrastructure
+4689.T~ＬＩＮＥヤフー~情報通信・サービスその他 ~Internet Retail
+4694.T~ビー・エム・エル~情報通信・サービスその他 ~Diagnostics & Research
+4704.T~トレンドマイクロ~情報通信・サービスその他 ~Software-Infrastructure
+4709.T~ＩＤホールディングス~情報通信・サービスその他 ~Information Technology Services
+4714.T~リソー教育~情報通信・サービスその他 ~Education & Training Services
+4718.T~早稲田アカデミー~情報通信・サービスその他 ~Education & Training Services
+4719.T~アルファシステムズ~情報通信・サービスその他 ~Software-Application
+4722.T~フューチャー~情報通信・サービスその他 ~Information Technology Services
+4725.T~ＣＡＣ　Ｈｏｌｄｉｎｇｓ~情報通信・サービスその他 ~Information Technology Services
+4726.T~ＳＢテクノロジー~情報通信・サービスその他 ~Information Technology Services
+4732.T~ユー・エス・エス~情報通信・サービスその他 ~Auto & Truck Dealerships
+4733.T~オービックビジネスコンサルタント~情報通信・サービスその他 ~Information Technology Services
+4743.T~アイティフォー~情報通信・サービスその他 ~Information Technology Services
+4751.T~サイバーエージェント~情報通信・サービスその他 ~Advertising Agencies
+4755.T~楽天グループ~情報通信・サービスその他 ~Internet Retail
+4763.T~クリーク・アンド・リバー社~情報通信・サービスその他 ~Consulting Services
+4765.T~ＳＢＩグローバルアセットマネジメント~情報通信・サービスその他 ~Financial Data & Stock Exchanges
+4768.T~大塚商会~情報通信・サービスその他 ~Electronics & Computer Distribution
+4776.T~サイボウズ~情報通信・サービスその他 ~Software-Application
+4792.T~山田コンサルティンググループ~情報通信・サービスその他 ~Consulting Services
+4801.T~セントラルスポーツ~情報通信・サービスその他 ~Leisure
+4809.T~パラカ~不動産 ~Specialty Business Services
+4812.T~電通国際情報サービス~情報通信・サービスその他 ~Information Technology Services
+4813.T~ＡＣＣＥＳＳ~情報通信・サービスその他 ~Information Technology Services
+4819.T~デジタルガレージ~情報通信・サービスその他 ~Information Technology Services
+4820.T~イーエムシステムズ~情報通信・サービスその他 ~Health Information Services
+4825.T~ウェザーニューズ~情報通信・サービスその他 ~Internet Content & Information
+4826.T~ＣＩＪ~情報通信・サービスその他 ~Software-Application
+4828.T~ビジネスエンジニアリング~情報通信・サービスその他 ~Software-Application
+4839.T~ＷＯＷＯＷ~情報通信・サービスその他 ~Broadcasting
+4845.T~スカラ~情報通信・サービスその他 ~Software-Application
+4847.T~インテリジェント　ウェイブ~情報通信・サービスその他 ~Software-Infrastructure
+4848.T~フルキャストホールディングス~情報通信・サービスその他 ~Staffing & Employment Services
+4849.T~エン・ジャパン~情報通信・サービスその他 ~Staffing & Employment Services
+4880.T~セルソース~医薬品 ~Biotechnology
+4886.T~あすか製薬ホールディングス~医薬品 ~Drug Manufacturers-Specialty & Generic
+4887.T~サワイグループホールディングス~医薬品 ~Drug Manufacturers-Specialty & Generic
+4901.T~富士フイルムホールディングス~素材・化学 ~Conglomerates
+4902.T~コニカミノルタ~電機・精密 ~Business Equipment & Supplies
+4911.T~資生堂~素材・化学 ~Household & Personal Products
+4912.T~ライオン~素材・化学 ~Household & Personal Products
+4914.T~高砂香料工業~素材・化学 ~Specialty Chemicals
+4917.T~マンダム~素材・化学 ~Household & Personal Products
+4919.T~ミルボン~素材・化学 ~Household & Personal Products
+4921.T~ファンケル~素材・化学 ~Household & Personal Products
+4922.T~コーセー~素材・化学 ~Household & Personal Products
+4923.T~コタ~素材・化学 ~Household & Personal Products
+4927.T~ポーラ・オルビスホールディングス~素材・化学 ~Household & Personal Products
+4928.T~ノエビアホールディングス~素材・化学 ~Household & Personal Products
+4931.T~新日本製薬~素材・化学 ~Specialty Retail
+4933.T~Ｉ－ｎｅ~素材・化学 ~Household & Personal Products
+4936.T~アクシージア~素材・化学 ~Household & Personal Products
+4951.T~エステー~素材・化学 ~Household & Personal Products
+4956.T~コニシ~素材・化学 ~Specialty Chemicals
+4958.T~長谷川香料~素材・化学 ~Specialty Chemicals
+4963.T~星光ＰＭＣ~素材・化学 ~Specialty Chemicals
+4967.T~小林製薬~素材・化学 ~Household & Personal Products
+4968.T~荒川化学工業~素材・化学 ~Specialty Chemicals
+4971.T~メック~素材・化学 ~Specialty Chemicals
+4973.T~日本高純度化学~素材・化学 ~Specialty Chemicals
+4974.T~タカラバイオ~素材・化学 ~Biotechnology
+4975.T~ＪＣＵ~素材・化学 ~Specialty Chemicals
+4980.T~デクセリアルズ~素材・化学 ~Electronic Components
+4985.T~アース製薬~素材・化学 ~Household & Personal Products
+4996.T~クミアイ化学工業~素材・化学 ~Agricultural Inputs
+4997.T~日本農薬~素材・化学 ~Agricultural Inputs
+5011.T~ニチレキ~エネルギー資源 ~Building Materials
+5017.T~富士石油~エネルギー資源 ~Oil & Gas Refining & Marketing
+5019.T~出光興産~エネルギー資源 ~Oil & Gas Refining & Marketing
+5020.T~ＥＮＥＯＳホールディングス~エネルギー資源 ~Oil & Gas Refining & Marketing
+5021.T~コスモエネルギーホールディングス~エネルギー資源 ~Oil & Gas Integrated
+5032.T~ＡＮＹＣＯＬＯＲ~情報通信・サービスその他 ~Entertainment
+5074.T~テスホールディングス~建設・資材 ~Utilities-Renewable
+5076.T~インフロニア・ホールディングス~建設・資材 ~Engineering & Construction
+5101.T~横浜ゴム~自動車・輸送機 ~Auto Parts
+5105.T~ＴＯＹＯ　ＴＩＲＥ~自動車・輸送機 ~Auto Parts
+5108.T~ブリヂストン~自動車・輸送機 ~Auto Parts
+5110.T~住友ゴム工業~自動車・輸送機 ~Auto Parts
+5121.T~藤倉コンポジット~自動車・輸送機 ~Auto Parts
+5122.T~オカモト~自動車・輸送機 ~Specialty Chemicals
+5142.T~アキレス~素材・化学 ~Chemicals
+5185.T~フコク~自動車・輸送機 ~Auto Parts
+5186.T~ニッタ~自動車・輸送機 ~Specialty Industrial Machinery
+5191.T~住友理工~自動車・輸送機 ~Auto Parts
+5192.T~三ツ星ベルト~自動車・輸送機 ~Specialty Industrial Machinery
+5195.T~バンドー化学~自動車・輸送機 ~Specialty Industrial Machinery
+5201.T~ＡＧＣ~建設・資材 ~Specialty Chemicals
+5202.T~日本板硝子~建設・資材 ~Auto Parts
+5208.T~有沢製作所~素材・化学 ~Electronic Components
+5214.T~日本電気硝子~建設・資材 ~Electronic Components
+5232.T~住友大阪セメント~建設・資材 ~Building Materials
+5233.T~太平洋セメント~建設・資材 ~Building Materials
+5261.T~リソルホールディングス~情報通信・サービスその他 ~Resorts & Casinos
+5262.T~日本ヒューム~建設・資材 ~Building Products & Equipment
+5269.T~日本コンクリート工業~建設・資材 ~Building Materials
+5288.T~アジアパイルホールディングス~建設・資材 ~Building Materials
+5301.T~東海カーボン~建設・資材 ~Specialty Chemicals
+5302.T~日本カーボン~建設・資材 ~Specialty Chemicals
+5310.T~東洋炭素~建設・資材 ~Electrical Equipment & Parts
+5331.T~ノリタケカンパニーリミテド~建設・資材 ~Conglomerates
+5332.T~ＴＯＴＯ~建設・資材 ~Building Products & Equipment
+5333.T~日本碍子~建設・資材 ~Specialty Industrial Machinery
+5334.T~日本特殊陶業~建設・資材 ~Auto Parts
+5344.T~ＭＡＲＵＷＡ~建設・資材 ~Electronic Components
+5351.T~品川リフラクトリーズ~建設・資材 ~Building Products & Equipment
+5352.T~黒崎播磨~建設・資材 ~Building Materials
+5357.T~ヨータイ~建設・資材 ~Building Materials
+5384.T~フジミインコーポレーテッド~建設・資材 ~Semiconductor Equipment & Materials
+5393.T~ニチアス~建設・資材 ~Conglomerates
+5401.T~日本製鉄~鉄鋼・非鉄 ~Steel
+5406.T~神戸製鋼所~鉄鋼・非鉄 ~Steel
+5408.T~中山製鋼所~鉄鋼・非鉄 ~Steel
+5410.T~合同製鐵~鉄鋼・非鉄 ~Steel
+5411.T~ＪＦＥホールディングス~鉄鋼・非鉄 ~Steel
+5423.T~東京製鐵~鉄鋼・非鉄 ~Steel
+5440.T~共英製鋼~鉄鋼・非鉄 ~Steel
+5444.T~大和工業~鉄鋼・非鉄 ~Steel
+5445.T~東京鐵鋼~鉄鋼・非鉄 ~Steel
+5451.T~淀川製鋼所~鉄鋼・非鉄 ~Steel
+5461.T~中部鋼鈑~鉄鋼・非鉄 ~Steel
+5463.T~丸一鋼管~鉄鋼・非鉄 ~Steel
+5471.T~大同特殊鋼~鉄鋼・非鉄 ~Steel
+5480.T~日本冶金工業~鉄鋼・非鉄 ~Steel
+5481.T~山陽特殊製鋼~鉄鋼・非鉄 ~Steel
+5482.T~愛知製鋼~鉄鋼・非鉄 ~Steel
+5535.T~ミガロホールディングス~不動産 ~Real Estate Services
+5541.T~大平洋金属~鉄鋼・非鉄 ~Other Industrial Metals & Mining
+5563.T~新日本電工~鉄鋼・非鉄 ~Steel
+5602.T~栗本鐵工所~鉄鋼・非鉄 ~Steel
+5631.T~日本製鋼所~機械 ~Specialty Industrial Machinery
+5632.T~三菱製鋼~鉄鋼・非鉄 ~Steel
+5659.T~日本精線~鉄鋼・非鉄 ~Tools & Accessories
+5698.T~エンビプロ・ホールディングス~鉄鋼・非鉄 ~Waste Management
+5702.T~大紀アルミニウム工業所~鉄鋼・非鉄 ~Aluminum
+5703.T~日本軽金属ホールディングス~鉄鋼・非鉄 ~Aluminum
+5706.T~三井金属鉱業~鉄鋼・非鉄 ~Conglomerates
+5707.T~東邦亜鉛~鉄鋼・非鉄 ~Other Industrial Metals & Mining
+5711.T~三菱マテリアル~鉄鋼・非鉄 ~Other Industrial Metals & Mining
+5713.T~住友金属鉱山~鉄鋼・非鉄 ~Other Industrial Metals & Mining
+5714.T~ＤＯＷＡホールディングス~鉄鋼・非鉄 ~Other Industrial Metals & Mining
+5715.T~古河機械金属~鉄鋼・非鉄 ~Other Industrial Metals & Mining
+5726.T~大阪チタニウムテクノロジーズ~鉄鋼・非鉄 ~Other Industrial Metals & Mining
+5727.T~東邦チタニウム~鉄鋼・非鉄 ~Other Industrial Metals & Mining
+5741.T~ＵＡＣＪ~鉄鋼・非鉄 ~Aluminum
+5757.T~ＣＫサンエツ~鉄鋼・非鉄 ~Metal Fabrication
+5801.T~古河電気工業~鉄鋼・非鉄 ~Electrical Equipment & Parts
+5802.T~住友電気工業~鉄鋼・非鉄 ~Auto Parts
+5803.T~フジクラ~鉄鋼・非鉄 ~Electrical Equipment & Parts
+5805.T~ＳＷＣＣ~鉄鋼・非鉄 ~Electrical Equipment & Parts
+5809.T~タツタ電線~鉄鋼・非鉄 ~Electrical Equipment & Parts
+5821.T~平河ヒューテック~鉄鋼・非鉄 ~Conglomerates
+5830.T~いよぎんホールディングス~銀行 ~Banks-Regional
+5831.T~しずおかフィナンシャルグループ~銀行 ~Banks-Regional
+5832.T~ちゅうぎんフィナンシャルグループ~銀行 ~Banks-Regional
+5838.T~楽天銀行~銀行 ~Banks-Regional
+5844.T~京都フィナンシャルグループ~銀行 ~Banks-Regional
+5851.T~リョービ~鉄鋼・非鉄 ~Metal Fabrication
+5852.T~アーレスティ~鉄鋼・非鉄 ~Metal Fabrication
+5857.T~ＡＲＥホールディングス~鉄鋼・非鉄 ~Waste Management
+5901.T~東洋製罐グループホールディングス~建設・資材 ~Packaging & Containers
+5902.T~ホッカンホールディングス~建設・資材 ~Packaging & Containers
+5911.T~横河ブリッジホールディングス~建設・資材 ~Engineering & Construction
+5915.T~駒井ハルテック~建設・資材 ~Engineering & Construction
+5929.T~三和ホールディングス~建設・資材 ~Building Products & Equipment
+5930.T~文化シヤッター~建設・資材 ~Building Products & Equipment
+5932.T~三協立山~建設・資材 ~Building Products & Equipment
+5933.T~アルインコ~建設・資材 ~Scientific & Technical Instruments
+5938.T~ＬＩＸＩＬ~建設・資材 ~Building Products & Equipment
+5943.T~ノーリツ~建設・資材 ~Building Products & Equipment
+5946.T~長府製作所~建設・資材 ~Furnishings, Fixtures & Appliances
+5947.T~リンナイ~建設・資材 ~Furnishings, Fixtures & Appliances
+5949.T~ユニプレス~自動車・輸送機 ~Auto Parts
+5957.T~日東精工~建設・資材 ~Tools & Accessories
+5959.T~岡部~建設・資材 ~Building Products & Equipment
+5970.T~ジーテクト~建設・資材 ~Auto Parts
+5975.T~東プレ~建設・資材 ~Auto Parts
+5976.T~高周波熱錬~建設・資材 ~Steel
+5981.T~東京製綱~建設・資材 ~Specialty Industrial Machinery
+5988.T~パイオラックス~建設・資材 ~Auto Parts
+5989.T~エイチワン~建設・資材 ~Auto Parts
+5991.T~日本発條~建設・資材 ~Auto Parts
+6005.T~三浦工業~機械 ~Specialty Industrial Machinery
+6013.T~タクマ~機械 ~Pollution & Treatment Controls
+6028.T~テクノプロ・ホールディングス~情報通信・サービスその他 ~Staffing & Employment Services
+6035.T~アイ・アールジャパンホールディングス~情報通信・サービスその他 ~Consulting Services
+6036.T~ＫｅｅＰｅｒ技研~情報通信・サービスその他 ~Specialty Chemicals
+6047.T~Ｇｕｎｏｓｙ~情報通信・サービスその他 ~Software-Application
+6050.T~イー・ガーディアン~情報通信・サービスその他 ~Information Technology Services
+6055.T~ジャパンマテリアル~情報通信・サービスその他 ~Engineering & Construction
+6058.T~ベクトル~情報通信・サービスその他 ~Advertising Agencies
+6062.T~チャーム・ケア・コーポレーション~情報通信・サービスその他 ~Medical Care Facilities
+6070.T~キャリアリンク~情報通信・サービスその他 ~Staffing & Employment Services
+6071.T~ＩＢＪ~情報通信・サービスその他 ~Personal Services
+6073.T~アサンテ~情報通信・サービスその他 ~Residential Construction
+6078.T~バリューＨＲ~情報通信・サービスその他 ~Health Information Services
+6080.T~Ｍ＆Ａキャピタルパートナーズ~情報通信・サービスその他 ~Capital Markets
+6088.T~シグマクシス・ホールディングス~情報通信・サービスその他 ~Specialty Business Services
+6089.T~ウィルグループ~情報通信・サービスその他 ~Staffing & Employment Services
+6095.T~メドピア~情報通信・サービスその他 ~Health Information Services
+6098.T~リクルートホールディングス~情報通信・サービスその他 ~Staffing & Employment Services
+6099.T~エラン~情報通信・サービスその他 ~Medical Care Facilities
+6101.T~ツガミ~機械 ~Tools & Accessories
+6103.T~オークマ~機械 ~Specialty Industrial Machinery
+6104.T~芝浦機械~機械 ~Specialty Industrial Machinery
+6113.T~アマダ~機械 ~Specialty Industrial Machinery
+6118.T~アイダエンジニアリング~機械 ~Specialty Industrial Machinery
+6134.T~ＦＵＪＩ~機械 ~Specialty Industrial Machinery
+6135.T~牧野フライス製作所~機械 ~Specialty Industrial Machinery
+6136.T~オーエスジー~機械 ~Tools & Accessories
+6140.T~旭ダイヤモンド工業~機械 ~Tools & Accessories
+6141.T~ＤＭＧ森精機~機械 ~Tools & Accessories
+6143.T~ソディック~機械 ~Specialty Industrial Machinery
+6146.T~ディスコ~機械 ~Semiconductor Equipment & Materials
+6151.T~日東工器~機械 ~Specialty Industrial Machinery
+6157.T~日進工具~機械 ~Tools & Accessories
+6167.T~冨士ダイス~機械 ~Tools & Accessories
+6178.T~日本郵政~情報通信・サービスその他 ~Banks-Regional
+6183.T~ベルシステム２４ホールディングス~情報通信・サービスその他 ~Specialty Business Services
+6184.T~鎌倉新書~情報通信・サービスその他 ~Personal Services
+6191.T~エアトリ~情報通信・サービスその他 ~Travel Services
+6194.T~アトラエ~情報通信・サービスその他 ~Staffing & Employment Services
+6196.T~ストライク~情報通信・サービスその他 ~Capital Markets
+6197.T~ソラスト~情報通信・サービスその他 ~Medical Care Facilities
+6200.T~インソース~情報通信・サービスその他 ~Education & Training Services
+6201.T~豊田自動織機~自動車・輸送機 ~Farm & Heavy Construction Machinery
+6209.T~リケンＮＰＲ~機械 ~Auto Parts
+6222.T~島精機製作所~機械 ~Specialty Industrial Machinery
+6235.T~オプトラン~機械 ~Specialty Industrial Machinery
+6237.T~イワキポンプ~機械 ~Specialty Industrial Machinery
+6238.T~フリュー~機械 ~Leisure
+6240.T~ヤマシンフィルタ~機械 ~Specialty Industrial Machinery
+6247.T~日阪製作所~機械 ~Specialty Industrial Machinery
+6250.T~やまびこ~機械 ~Specialty Industrial Machinery
+6254.T~野村マイクロ・サイエンス~機械 ~Specialty Industrial Machinery
+6258.T~平田機工~機械 ~Specialty Industrial Machinery
+6262.T~ＰＥＧＡＳＵＳ~機械 ~Specialty Industrial Machinery
+6264.T~マルマエ~機械 ~Specialty Industrial Machinery
+6266.T~タツモ~機械 ~Electronic Components
+6268.T~ナブテスコ~機械 ~Specialty Industrial Machinery
+6269.T~三井海洋開発~機械 ~Oil & Gas Equipment & Services
+6272.T~レオン自動機~機械 ~Specialty Industrial Machinery
+6273.T~ＳＭＣ~機械 ~Specialty Industrial Machinery
+6277.T~ホソカワミクロン~機械 ~Specialty Industrial Machinery
+6278.T~ユニオンツール~機械 ~Tools & Accessories
+6279.T~瑞光~機械 ~Specialty Industrial Machinery
+6282.T~オイレス工業~機械 ~Tools & Accessories
+6284.T~日精エー・エス・ビー機械~機械 ~Specialty Industrial Machinery
+6287.T~サトーホールディングス~機械 ~Business Equipment & Supplies
+6289.T~技研製作所~機械 ~Farm & Heavy Construction Machinery
+6293.T~日精樹脂工業~機械 ~Specialty Industrial Machinery
+6294.T~オカダアイヨン~機械 ~Farm & Heavy Construction Machinery
+6298.T~ワイエイシイホールディングス~機械 ~Electronic Components
+6301.T~小松製作所~機械 ~Farm & Heavy Construction Machinery
+6302.T~住友重機械工業~機械 ~Specialty Industrial Machinery
+6305.T~日立建機~機械 ~Farm & Heavy Construction Machinery
+6306.T~日工~機械 ~Farm & Heavy Construction Machinery
+6309.T~巴工業~機械 ~Specialty Industrial Machinery
+6310.T~井関農機~機械 ~Farm & Heavy Construction Machinery
+6315.T~ＴＯＷＡ~機械 ~Semiconductor Equipment & Materials
+6323.T~ローツェ~機械 ~Semiconductor Equipment & Materials
+6326.T~クボタ~機械 ~Farm & Heavy Construction Machinery
+6328.T~荏原実業~機械 ~Conglomerates
+6330.T~東洋エンジニアリング~建設・資材 ~Engineering & Construction
+6331.T~三菱化工機~機械 ~Pollution & Treatment Controls
+6332.T~月島ホールディングス~機械 ~Pollution & Treatment Controls
+6333.T~帝国電機製作所~機械 ~Specialty Industrial Machinery
+6339.T~新東工業~機械 ~Specialty Industrial Machinery
+6340.T~澁谷工業~機械 ~Specialty Industrial Machinery
+6345.T~アイチ　コーポレーション~機械 ~Farm & Heavy Construction Machinery
+6349.T~小森コーポレーション~機械 ~Specialty Industrial Machinery
+6351.T~鶴見製作所~機械 ~Specialty Industrial Machinery
+6358.T~酒井重工業~機械 ~Farm & Heavy Construction Machinery
+6361.T~荏原製作所~機械 ~Specialty Industrial Machinery
+6363.T~酉島製作所~機械 ~Specialty Industrial Machinery
+6364.T~北越工業~機械 ~Specialty Industrial Machinery
+6367.T~ダイキン工業~機械 ~Building Products & Equipment
+6368.T~オルガノ~機械 ~Pollution & Treatment Controls
+6369.T~トーヨーカネツ~機械 ~Specialty Industrial Machinery
+6370.T~栗田工業~機械 ~Pollution & Treatment Controls
+6371.T~椿本チエイン~機械 ~Specialty Industrial Machinery
+6376.T~日機装~電機・精密 ~Specialty Industrial Machinery
+6379.T~レイズネクスト~建設・資材 ~Infrastructure Operations
+6381.T~アネスト岩田~機械 ~Specialty Industrial Machinery
+6383.T~ダイフク~機械 ~Specialty Industrial Machinery
+6387.T~サムコ~機械 ~Semiconductor Equipment & Materials
+6390.T~加藤製作所~機械 ~Farm & Heavy Construction Machinery
+6395.T~タダノ~機械 ~Farm & Heavy Construction Machinery
+6406.T~フジテック~機械 ~Specialty Industrial Machinery
+6407.T~ＣＫＤ~機械 ~Specialty Industrial Machinery
+6412.T~平和~機械 ~Leisure
+6413.T~理想科学工業~機械 ~Computer Hardware
+6417.T~ＳＡＮＫＹＯ~機械 ~Gambling
+6418.T~日本金銭機械~機械 ~Business Equipment & Supplies
+6419.T~マースグループホールディングス~機械 ~Leisure
+6420.T~フクシマガリレイ~機械 ~Specialty Industrial Machinery
+6430.T~ダイコク電機~機械 ~Computer Hardware
+6432.T~竹内製作所~機械 ~Farm & Heavy Construction Machinery
+6436.T~アマノ~機械 ~Scientific & Technical Instruments
+6440.T~ＪＵＫＩ~機械 ~Specialty Industrial Machinery
+6445.T~ジャノメ~機械 ~Furnishings, Fixtures & Appliances
+6448.T~ブラザー工業~電機・精密 ~Business Equipment & Supplies
+6454.T~マックス~機械 ~Tools & Accessories
+6455.T~モリタホールディングス~自動車・輸送機 ~Specialty Industrial Machinery
+6457.T~グローリー~機械 ~Specialty Industrial Machinery
+6458.T~新晃工業~機械 ~Building Products & Equipment
+6459.T~大和冷機工業~機械 ~Specialty Industrial Machinery
+6460.T~セガサミーホールディングス~機械 ~Electronic Gaming & Multimedia
+6463.T~ＴＰＲ~機械 ~Auto Parts
+6464.T~ツバキ・ナカシマ~機械 ~Tools & Accessories
+6465.T~ホシザキ~機械 ~Specialty Industrial Machinery
+6471.T~日本精工~機械 ~Auto Parts
+6472.T~ＮＴＮ~機械 ~Tools & Accessories
+6473.T~ジェイテクト~機械 ~Auto Parts
+6474.T~不二越~機械 ~Tools & Accessories
+6479.T~ミネベアミツミ~電機・精密 ~Electronic Components
+6480.T~日本トムソン~機械 ~Tools & Accessories
+6481.T~ＴＨＫ~機械 ~Specialty Industrial Machinery
+6486.T~イーグル工業~機械 ~Specialty Industrial Machinery
+6490.T~日本ピラー工業~機械 ~Specialty Industrial Machinery
+6498.T~キッツ~機械 ~Specialty Industrial Machinery
+6501.T~日立製作所~電機・精密 ~Conglomerates
+6503.T~三菱電機~電機・精密 ~Electrical Equipment & Parts
+6504.T~富士電機~電機・精密 ~Electrical Equipment & Parts
+6506.T~安川電機~電機・精密 ~Electrical Equipment & Parts
+6507.T~シンフォニアテクノロジー~電機・精密 ~Specialty Industrial Machinery
+6508.T~明電舎~電機・精密 ~Specialty Industrial Machinery
+6516.T~山洋電気~電機・精密 ~Electrical Equipment & Parts
+6517.T~デンヨー~電機・精密 ~Specialty Industrial Machinery
+6523.T~ＰＨＣホールディングス~電機・精密 ~Medical Devices
+6525.T~ＫＯＫＵＳＡＩ　ＥＬＥＣＴＲＩＣ~電機・精密 ~Semiconductor Equipment & Materials
+6526.T~ソシオネクスト~電機・精密 ~Electrical Equipment & Parts
+6532.T~ベイカレント・コンサルティング~情報通信・サービスその他 ~Consulting Services
+6533.T~Ｏｒｃｈｅｓｔｒａ　Ｈｏｌｄｉｎｇｓ~情報通信・サービスその他 ~Advertising Agencies
+6535.T~アイモバイル~情報通信・サービスその他 ~Advertising Agencies
+6539.T~ＭＳ－Ｊａｐａｎ~情報通信・サービスその他 ~Staffing & Employment Services
+6544.T~ジャパンエレベーターサービスホールディングス~情報通信・サービスその他 ~Specialty Business Services
+6556.T~ウェルビー~情報通信・サービスその他 ~Specialty Business Services
+6560.T~エル・ティー・エス~情報通信・サービスその他 ~Consulting Services
+6564.T~ミダックホールディングス~情報通信・サービスその他 ~Waste Management
+6571.T~キュービーネットホールディングス~情報通信・サービスその他 ~Personal Services
+6572.T~ＲＰＡホールディングス~情報通信・サービスその他 ~Information Technology Services
+6584.T~三櫻工業~自動車・輸送機 ~Auto Parts
+6586.T~マキタ~機械 ~Tools & Accessories
+6588.T~東芝テック~電機・精密 ~Computer Hardware
+6590.T~芝浦メカトロニクス~電機・精密 ~Electronic Components
+6592.T~マブチモーター~電機・精密 ~Auto Parts
+6594.T~ニデック~電機・精密 ~Specialty Industrial Machinery
+6615.T~ユー・エム・シー・エレクトロニクス~電機・精密 ~Electronic Components
+6616.T~トレックス・セミコンダクター~電機・精密 ~Semiconductors
+6617.T~東光高岳~電機・精密 ~Electrical Equipment & Parts
+6619.T~ダブル・スコープ~電機・精密 ~Electrical Equipment & Parts
+6620.T~宮越ホールディングス~不動産 ~Asset Management
+6622.T~ダイヘン~電機・精密 ~Specialty Industrial Machinery
+6630.T~ヤーマン~電機・精密 ~Household & Personal Products
+6632.T~ＪＶＣケンウッド~電機・精密 ~Auto Parts
+6638.T~ミマキエンジニアリング~電機・精密 ~Electronics & Computer Distribution
+6640.T~Ｉ－ＰＥＸ~電機・精密 ~Electronic Components
+6644.T~大崎電気工業~電機・精密 ~Scientific & Technical Instruments
+6645.T~オムロン~電機・精密 ~Electronic Components
+6651.T~日東工業~電機・精密 ~Electrical Equipment & Parts
+6652.T~ＩＤＥＣ~電機・精密 ~Electrical Equipment & Parts
+6653.T~正興電機製作所~電機・精密 ~Electronic Components
+6674.T~ジーエス・ユアサ　コーポレーション~電機・精密 ~Electrical Equipment & Parts
+6699.T~ダイヤモンドエレクトリックホールディングス~電機・精密 ~Auto Parts
+6701.T~日本電気~電機・精密 ~Information Technology Services
+6702.T~富士通~電機・精密 ~Information Technology Services
+6703.T~沖電気工業~電機・精密 ~Communication Equipment
+6706.T~電気興業~電機・精密 ~Communication Equipment
+6707.T~サンケン電気~電機・精密 ~Semiconductors
+6718.T~アイホン~電機・精密 ~Communication Equipment
+6723.T~ルネサスエレクトロニクス~電機・精密 ~Semiconductors
+6724.T~セイコーエプソン~電機・精密 ~Computer Hardware
+6727.T~ワコム~電機・精密 ~Computer Hardware
+6728.T~アルバック~電機・精密 ~Specialty Industrial Machinery
+6737.T~ＥＩＺＯ~電機・精密 ~Computer Hardware
+6740.T~ジャパンディスプレイ~電機・精密 ~Electronic Components
+6741.T~日本信号~電機・精密 ~Electrical Equipment & Parts
+6742.T~京三製作所~電機・精密 ~Scientific & Technical Instruments
+6744.T~能美防災~電機・精密 ~Security & Protection Services
+6745.T~ホーチキ~電機・精密 ~Building Products & Equipment
+6750.T~エレコム~電機・精密 ~Computer Hardware
+6752.T~パナソニック　ホールディングス~電機・精密 ~Consumer Electronics
+6753.T~シャープ~電機・精密 ~Consumer Electronics
+6754.T~アンリツ~電機・精密 ~Electronic Components
+6755.T~富士通ゼネラル~電機・精密 ~Furnishings, Fixtures & Appliances
+6758.T~ソニーグループ~電機・精密 ~Consumer Electronics
+6762.T~ＴＤＫ~電機・精密 ~Electronic Components
+6763.T~帝国通信工業~電機・精密 ~Electrical Equipment & Parts
+6768.T~タムラ製作所~電機・精密 ~Electronic Components
+6770.T~アルプスアルパイン~電機・精密 ~Electronic Components
+6779.T~日本電波工業~電機・精密 ~Electronic Components
+6785.T~鈴木~電機・精密 ~Electronic Components
+6787.T~メイコー~電機・精密 ~Electronic Components
+6788.T~日本トリム~電機・精密 ~Pollution & Treatment Controls
+6789.T~ローランド　ディー．ジー．~電機・精密 ~Computer Hardware
+6794.T~フォスター電機~電機・精密 ~Consumer Electronics
+6798.T~ＳＭＫ~電機・精密 ~Electronic Components
+6800.T~ヨコオ~電機・精密 ~Electronic Components
+6804.T~ホシデン~電機・精密 ~Electrical Equipment & Parts
+6806.T~ヒロセ電機~電機・精密 ~Electronic Components
+6807.T~日本航空電子工業~電機・精密 ~Electronic Components
+6809.T~ＴＯＡ~電機・精密 ~Security & Protection Services
+6810.T~マクセル~電機・精密 ~Consumer Electronics
+6814.T~古野電気~電機・精密 ~Scientific & Technical Instruments
+6817.T~スミダコーポレーション~電機・精密 ~Electronic Components
+6820.T~アイコム~電機・精密 ~Communication Equipment
+6823.T~リオン~電機・精密 ~Medical Devices
+6841.T~横河電機~電機・精密 ~Specialty Industrial Machinery
+6844.T~新電元工業~電機・精密 ~Electronic Components
+6845.T~アズビル~電機・精密 ~Specialty Industrial Machinery
+6849.T~日本光電工業~電機・精密 ~Medical Devices
+6850.T~チノー~電機・精密 ~Scientific & Technical Instruments
+6856.T~堀場製作所~電機・精密 ~Scientific & Technical Instruments
+6857.T~アドバンテスト~電機・精密 ~Semiconductor Equipment & Materials
+6859.T~エスペック~電機・精密 ~Scientific & Technical Instruments
+6861.T~キーエンス~電機・精密 ~Scientific & Technical Instruments
+6866.T~日置電機~電機・精密 ~Scientific & Technical Instruments
+6869.T~シスメックス~電機・精密 ~Medical Instruments & Supplies
+6871.T~日本マイクロニクス~電機・精密 ~Semiconductor Equipment & Materials
+6875.T~メガチップス~電機・精密 ~Semiconductors
+6879.T~ＩＭＡＧＩＣＡ　ＧＲＯＵＰ~情報通信・サービスその他 ~Entertainment
+6902.T~デンソー~自動車・輸送機 ~Auto Parts
+6905.T~コーセル~電機・精密 ~Electrical Equipment & Parts
+6908.T~イリソ電子工業~電機・精密 ~Electronic Components
+6914.T~オプテックスグループ~電機・精密 ~Electronic Components
+6920.T~レーザーテック~電機・精密 ~Semiconductor Equipment & Materials
+6923.T~スタンレー電気~電機・精密 ~Auto Parts
+6925.T~ウシオ電機~電機・精密 ~Specialty Industrial Machinery
+6928.T~エノモト~電機・精密 ~Electronic Components
+6929.T~日本セラミック~電機・精密 ~Electronic Components
+6937.T~古河電池~電機・精密 ~Specialty Industrial Machinery
+6941.T~山一電機~電機・精密 ~Semiconductor Equipment & Materials
+6947.T~図研~電機・精密 ~Software-Application
+6951.T~日本電子~電機・精密 ~Scientific & Technical Instruments
+6952.T~カシオ計算機~電機・精密 ~Consumer Electronics
+6954.T~ファナック~電機・精密 ~Specialty Industrial Machinery
+6958.T~日本シイエムケイ~電機・精密 ~Electronic Components
+6961.T~エンプラス~電機・精密 ~Electronic Components
+6962.T~大真空~電機・精密 ~Electronic Components
+6963.T~ローム~電機・精密 ~Semiconductors
+6965.T~浜松ホトニクス~電機・精密 ~Electronic Components
+6966.T~三井ハイテック~電機・精密 ~Semiconductors
+6967.T~新光電気工業~電機・精密 ~Semiconductor Equipment & Materials
+6971.T~京セラ~電機・精密 ~Conglomerates
+6976.T~太陽誘電~電機・精密 ~Electronic Components
+6981.T~村田製作所~電機・精密 ~Electronic Components
+6986.T~双葉電子工業~電機・精密 ~Electronic Components
+6988.T~日東電工~素材・化学 ~Specialty Chemicals
+6995.T~東海理化電機製作所~自動車・輸送機 ~Auto Parts
+6996.T~ニチコン~電機・精密 ~Electronic Components
+6997.T~日本ケミコン~電機・精密 ~Electronic Components
+6999.T~ＫＯＡ~電機・精密 ~Electronic Components
+7003.T~三井Ｅ＆Ｓ~機械 ~Aerospace & Defense
+7004.T~日立造船~機械 ~Pollution & Treatment Controls
+7011.T~三菱重工業~機械 ~Specialty Industrial Machinery
+7012.T~川崎重工業~自動車・輸送機 ~Specialty Industrial Machinery
+7013.T~ＩＨＩ~機械 ~Specialty Industrial Machinery
+7033.T~マネジメントソリューションズ~情報通信・サービスその他 ~Consulting Services
+7034.T~プロレド・パートナーズ~情報通信・サービスその他 ~Consulting Services
+7038.T~フロンティア・マネジメント~情報通信・サービスその他 ~Specialty Business Services
+7059.T~コプロ・ホールディングス~情報通信・サービスその他 ~Staffing & Employment Services
+7071.T~アンビスホールディングス~情報通信・サービスその他 ~Medical Care Facilities
+7085.T~カーブスホールディングス~情報通信・サービスその他 ~Leisure
+7088.T~フォーラムエンジニアリング~情報通信・サービスその他 ~Staffing & Employment Services
+7092.T~Ｆａｓｔ　Ｆｉｔｎｅｓｓ　Ｊａｐａｎ~情報通信・サービスその他 ~Leisure
+7102.T~日本車輌製造~自動車・輸送機 ~Railroads
+7128.T~フルサト・マルカホールディングス~商社・卸売 ~Industrial Distribution
+7130.T~ヤマエグループホールディングス~商社・卸売 ~Conglomerates
+7148.T~ＦＰＧ~金融（除く銀行） ~Financial Conglomerates
+7164.T~全国保証~金融（除く銀行） ~Credit Services
+7167.T~めぶきフィナンシャルグループ~銀行 ~Banks-Regional
+7172.T~ジャパンインベストメントアドバイザー~金融（除く銀行） ~Rental & Leasing Services
+7173.T~東京きらぼしフィナンシャルグループ~銀行 ~Banks-Regional
+7180.T~九州フィナンシャルグループ~銀行 ~Banks-Regional
+7181.T~かんぽ生命保険~金融（除く銀行） ~Insurance-Life
+7182.T~ゆうちょ銀行~銀行 ~Banks-Regional
+7184.T~富山第一銀行~銀行 ~Banks-Regional
+7186.T~コンコルディア・フィナンシャルグループ~銀行 ~Banks-Regional
+7187.T~ジェイリース~金融（除く銀行） ~Real Estate Services
+7189.T~西日本フィナンシャルホールディングス~銀行 ~Banks-Regional
+7198.T~アルヒ~金融（除く銀行） ~Mortgage Finance
+7199.T~プレミアグループ~金融（除く銀行） ~Credit Services
+7201.T~日産自動車~自動車・輸送機 ~Auto Manufacturers
+7202.T~いすゞ自動車~自動車・輸送機 ~Auto Manufacturers
+7203.T~トヨタ自動車~自動車・輸送機 ~Auto Manufacturers
+7205.T~日野自動車~自動車・輸送機 ~Farm & Heavy Construction Machinery
+7211.T~三菱自動車工業~自動車・輸送機 ~Auto Manufacturers
+7220.T~武蔵精密工業~自動車・輸送機 ~Auto Parts
+7224.T~新明和工業~自動車・輸送機 ~Conglomerates
+7226.T~極東開発工業~自動車・輸送機 ~Farm & Heavy Construction Machinery
+7231.T~トピー工業~自動車・輸送機 ~Auto Parts
+7236.T~ティラド~自動車・輸送機 ~Auto Parts
+7238.T~曙ブレーキ工業~自動車・輸送機 ~Auto Parts
+7239.T~タチエス~自動車・輸送機 ~Auto Parts
+7240.T~ＮＯＫ~自動車・輸送機 ~Auto Parts
+7241.T~フタバ産業~自動車・輸送機 ~Auto Parts
+7242.T~カヤバ~自動車・輸送機 ~Auto Parts
+7244.T~市光工業~電機・精密 ~Auto Parts
+7245.T~大同メタル工業~自動車・輸送機 ~Auto Parts
+7246.T~プレス工業~自動車・輸送機 ~Auto Parts
+7250.T~太平洋工業~自動車・輸送機 ~Auto Parts
+7259.T~アイシン~自動車・輸送機 ~Auto Parts
+7261.T~マツダ~自動車・輸送機 ~Auto Manufacturers
+7267.T~本田技研工業~自動車・輸送機 ~Auto Manufacturers
+7269.T~スズキ~自動車・輸送機 ~Auto Manufacturers
+7270.T~ＳＵＢＡＲＵ~自動車・輸送機 ~Auto Manufacturers
+7272.T~ヤマハ発動機~自動車・輸送機 ~Auto Manufacturers
+7276.T~小糸製作所~電機・精密 ~Auto Parts
+7278.T~エクセディ~自動車・輸送機 ~Auto Parts
+7280.T~ミツバ~電機・精密 ~Auto Parts
+7282.T~豊田合成~自動車・輸送機 ~Auto Parts
+7283.T~愛三工業~自動車・輸送機 ~Auto Parts
+7294.T~ヨロズ~自動車・輸送機 ~Auto Parts
+7296.T~エフ・シー・シー~自動車・輸送機 ~Auto Parts
+7309.T~シマノ~自動車・輸送機 ~Leisure
+7313.T~テイ・エス　テック~自動車・輸送機 ~Auto Parts
+7322.T~三十三フィナンシャルグループ~銀行 ~Banks-Regional
+7327.T~第四北越フィナンシャルグループ~銀行 ~Banks-Regional
+7337.T~ひろぎんホールディングス~銀行 ~Banks-Regional
+7347.T~マーキュリアホールディングス~金融（除く銀行） ~Asset Management
+7350.T~おきなわフィナンシャルグループ~銀行 ~Banks-Regional
+7354.T~ダイレクトマーケティングミックス~情報通信・サービスその他 ~Advertising Agencies
+7366.T~ＬＩＴＡＬＩＣＯ~情報通信・サービスその他 ~Education & Training Services
+7380.T~十六フィナンシャルグループ~銀行 ~Banks-Regional
+7381.T~北國フィナンシャルホールディングス~銀行 ~Banks-Regional
+7383.T~ネットプロテクションズホールディングス~金融（除く銀行） ~Credit Services
+7384.T~プロクレアホールディングス~銀行 ~Banks-Regional
+7388.T~ＦＰパートナー~金融（除く銀行） ~Insurance Brokers
+7389.T~あいちフィナンシャルグループ~銀行 ~Banks-Regional
+7408.T~ジャムコ~自動車・輸送機 ~Aerospace & Defense
+7414.T~小野建~商社・卸売 ~Metal Fabrication
+7419.T~ノジマ~小売 ~Specialty Retail
+7420.T~佐鳥電機~商社・卸売 ~Semiconductors
+7421.T~カッパ・クリエイト~小売 ~Restaurants
+7433.T~伯東~商社・卸売 ~Electronic Components
+7438.T~コンドーテック~商社・卸売 ~Specialty Industrial Machinery
+7447.T~ナガイレーベン~商社・卸売 ~Apparel Manufacturing
+7453.T~良品計画~小売 ~Department Stores
+7456.T~松田産業~商社・卸売 ~Other Precious Metals & Mining
+7458.T~第一興商~商社・卸売 ~Leisure
+7459.T~メディパルホールディングス~商社・卸売 ~Medical Distribution
+7466.T~ＳＰＫ~商社・卸売 ~Auto Parts
+7467.T~萩原電気ホールディングス~商社・卸売 ~Semiconductors
+7475.T~アルビス~小売 ~Packaged Foods
+7476.T~アズワン~商社・卸売 ~Medical Distribution
+7482.T~シモジマ~商社・卸売 ~Packaging & Containers
+7483.T~ドウシシャ~商社・卸売 ~Conglomerates
+7504.T~高速~商社・卸売 ~Packaging & Containers
+7508.T~Ｇ‐７ホールディングス~小売 ~Grocery Stores
+7510.T~たけびし~商社・卸売 ~Semiconductor Equipment & Materials
+7513.T~コジマ~小売 ~Specialty Retail
+7516.T~コーナン商事~小売 ~Home Improvement Retail
+7518.T~ネットワンシステムズ~情報通信・サービスその他 ~Information Technology Services
+7520.T~エコス~小売 ~Food Distribution
+7522.T~ワタミ~小売 ~Restaurants
+7525.T~リックス~商社・卸売 ~Specialty Industrial Machinery
+7532.T~パン・パシフィック・インターナショナルホールディングス~小売 ~Discount Stores
+7537.T~丸文~商社・卸売 ~Electronics & Computer Distribution
+7545.T~西松屋チェーン~小売 ~Specialty Retail
+7550.T~ゼンショーホールディングス~小売 ~Restaurants
+7552.T~ハピネット~商社・卸売 ~Specialty Retail
+7554.T~幸楽苑ホールディングス~小売 ~Restaurants
+7575.T~日本ライフライン~商社・卸売 ~Medical Devices
+7581.T~サイゼリヤ~小売 ~Restaurants
+7593.T~ＶＴホールディングス~小売 ~Auto & Truck Dealerships
+7595.T~アルゴグラフィックス~情報通信・サービスその他 ~Information Technology Services
+7596.T~魚力~小売 ~Grocery Stores
+7599.T~ＩＤＯＭ~商社・卸売 ~Auto & Truck Dealerships
+7600.T~日本エム・ディ・エム~電機・精密 ~Medical Devices
+7605.T~フジ・コーポレーション~小売 ~Auto Parts
+7606.T~ユナイテッドアローズ~小売 ~Apparel Retail
+7607.T~進和~商社・卸売 ~Specialty Industrial Machinery
+7609.T~ダイトロン~商社・卸売 ~Semiconductor Equipment & Materials
+7611.T~ハイデイ日高~小売 ~Restaurants
+7613.T~シークス~商社・卸売 ~Electronic Components
+7616.T~コロワイド~小売 ~Restaurants
+7628.T~オーハシテクニカ~商社・卸売 ~Industrial Distribution
+7630.T~壱番屋~小売 ~Restaurants
+7637.T~白銅~商社・卸売 ~Metal Fabrication
+7649.T~スギホールディングス~小売 ~Pharmaceutical Retailers
+7679.T~薬王堂ホールディングス~小売 ~Pharmaceutical Retailers
+7701.T~島津製作所~電機・精密 ~Scientific & Technical Instruments
+7715.T~長野計器~電機・精密 ~Scientific & Technical Instruments
+7717.T~ブイ・テクノロジー~電機・精密 ~Scientific & Technical Instruments
+7718.T~スター精密~機械 ~Specialty Industrial Machinery
+7721.T~東京計器~電機・精密 ~Scientific & Technical Instruments
+7723.T~愛知時計電機~電機・精密 ~Scientific & Technical Instruments
+7725.T~インターアクション~電機・精密 ~Electronic Components
+7729.T~東京精密~電機・精密 ~Semiconductor Equipment & Materials
+7730.T~マニー~電機・精密 ~Medical Instruments & Supplies
+7731.T~ニコン~電機・精密 ~Leisure
+7732.T~トプコン~電機・精密 ~Scientific & Technical Instruments
+7733.T~オリンパス~電機・精密 ~Medical Instruments & Supplies
+7734.T~理研計器~電機・精密 ~Security & Protection Services
+7735.T~ＳＣＲＥＥＮホールディングス~電機・精密 ~Semiconductor Equipment & Materials
+7739.T~キヤノン電子~電機・精密 ~Computer Hardware
+7740.T~タムロン~電機・精密 ~Leisure
+7741.T~ＨＯＹＡ~電機・精密 ~Medical Instruments & Supplies
+7743.T~シード~電機・精密 ~Medical Instruments & Supplies
+7744.T~ノーリツ鋼機~電機・精密 ~Consumer Electronics
+7745.T~Ａ＆Ｄホロンホールディングス~電機・精密 ~Scientific & Technical Instruments
+7747.T~朝日インテック~電機・精密 ~Medical Instruments & Supplies
+7751.T~キヤノン~電機・精密 ~Computer Hardware
+7752.T~リコー~電機・精密 ~Business Equipment & Supplies
+7762.T~シチズン時計~電機・精密 ~Conglomerates
+7769.T~リズム~電機・精密 ~Luxury Goods
+7780.T~メニコン~電機・精密 ~Medical Instruments & Supplies
+7816.T~スノーピーク~情報通信・サービスその他 ~Leisure
+7817.T~パラマウントベッドホールディングス~情報通信・サービスその他 ~Medical Instruments & Supplies
+7818.T~トランザクション~情報通信・サービスその他 ~Household & Personal Products
+7820.T~ニホンフラッシュ~情報通信・サービスその他 ~Building Products & Equipment
+7821.T~前田工繊~情報通信・サービスその他 ~Building Materials
+7832.T~バンダイナムコホールディングス~情報通信・サービスその他 ~Leisure
+7839.T~ＳＨＯＥＩ~情報通信・サービスその他 ~Leisure
+7840.T~フランスベッドホールディングス~情報通信・サービスその他 ~Furnishings, Fixtures & Appliances
+7844.T~マーベラス~情報通信・サービスその他 ~Electronic Gaming & Multimedia
+7846.T~パイロットコーポレーション~情報通信・サービスその他 ~Business Equipment & Supplies
+7856.T~萩原工業~情報通信・サービスその他 ~Textile Manufacturing
+7860.T~エイベックス~情報通信・サービスその他 ~Entertainment
+7864.T~フジシールインターナショナル~情報通信・サービスその他 ~Packaging & Containers
+7867.T~タカラトミー~情報通信・サービスその他 ~Leisure
+7868.T~広済堂ホールディングス~情報通信・サービスその他 ~Specialty Business Services
+7874.T~レック~素材・化学 ~Furnishings, Fixtures & Appliances
+7888.T~三光合成~素材・化学 ~Semiconductor Equipment & Materials
+7893.T~プロネクサス~情報通信・サービスその他 ~Specialty Business Services
+7905.T~大建工業~情報通信・サービスその他 ~Building Products & Equipment
+7911.T~ＴＯＰＰＡＮホールディングス~情報通信・サービスその他 ~Specialty Business Services
+7912.T~大日本印刷~情報通信・サービスその他 ~Specialty Business Services
+7914.T~共同印刷~情報通信・サービスその他 ~Specialty Business Services
+7915.T~ＮＩＳＳＨＡ~情報通信・サービスその他 ~Electronic Components
+7917.T~藤森工業~素材・化学 ~Packaging & Containers
+7921.T~ＴＡＫＡＲＡ　＆　ＣＯＭＰＡＮＹ~情報通信・サービスその他 ~Specialty Business Services
+7925.T~前澤化成工業~素材・化学 ~Chemicals
+7931.T~未来工業~素材・化学 ~Electrical Equipment & Parts
+7936.T~アシックス~情報通信・サービスその他 ~Footwear & Accessories
+7942.T~ＪＳＰ~素材・化学 ~Packaging & Containers
+7943.T~ニチハ~建設・資材 ~Building Products & Equipment
+7944.T~ローランド~情報通信・サービスその他 ~Leisure
+7947.T~エフピコ~素材・化学 ~Packaging & Containers
+7949.T~小松ウオール工業~情報通信・サービスその他 ~Building Products & Equipment
+7951.T~ヤマハ~情報通信・サービスその他 ~Leisure
+7952.T~河合楽器製作所~情報通信・サービスその他 ~Leisure
+7955.T~クリナップ~情報通信・サービスその他 ~Furnishings, Fixtures & Appliances
+7956.T~ピジョン~情報通信・サービスその他 ~Household & Personal Products
+7958.T~天馬~素材・化学 ~Specialty Chemicals
+7962.T~キングジム~情報通信・サービスその他 ~Business Equipment & Supplies
+7965.T~象印マホービン~電機・精密 ~Furnishings, Fixtures & Appliances
+7966.T~リンテック~情報通信・サービスその他 ~Specialty Chemicals
+7970.T~信越ポリマー~素材・化学 ~Specialty Chemicals
+7972.T~イトーキ~情報通信・サービスその他 ~Furnishings, Fixtures & Appliances
+7974.T~任天堂~情報通信・サービスその他 ~Electronic Gaming & Multimedia
+7976.T~三菱鉛筆~情報通信・サービスその他 ~Business Equipment & Supplies
+7979.T~松風~電機・精密 ~Medical Instruments & Supplies
+7981.T~タカラスタンダード~情報通信・サービスその他 ~Furnishings, Fixtures & Appliances
+7984.T~コクヨ~情報通信・サービスその他 ~Business Equipment & Supplies
+7988.T~ニフコ~素材・化学 ~Auto Parts
+7989.T~立川ブラインド工業~建設・資材 ~Furnishings, Fixtures & Appliances
+7990.T~グローブライド~情報通信・サービスその他 ~Leisure
+7994.T~オカムラ~情報通信・サービスその他 ~Business Equipment & Supplies
+7995.T~バルカー~素材・化学 ~Specialty Industrial Machinery
+8001.T~伊藤忠商事~商社・卸売 ~Conglomerates
+8002.T~丸紅~商社・卸売 ~Conglomerates
+8005.T~スクロール~小売 ~Internet Retail
+8007.T~高島~商社・卸売 ~Building Materials
+8008.T~ヨンドシーホールディングス~小売 ~Luxury Goods
+8011.T~三陽商会~素材・化学 ~Apparel Manufacturing
+8012.T~長瀬産業~商社・卸売 ~Specialty Chemicals
+8014.T~蝶理~商社・卸売 ~Conglomerates
+8015.T~豊田通商~商社・卸売 ~Conglomerates
+8016.T~オンワードホールディングス~素材・化学 ~Apparel Manufacturing
+8020.T~兼松~商社・卸売 ~Conglomerates
+8022.T~美津濃~情報通信・サービスその他 ~Specialty Retail
+8031.T~三井物産~商社・卸売 ~Conglomerates
+8032.T~日本紙パルプ商事~商社・卸売 ~Paper & Paper Products
+8035.T~東京エレクトロン~電機・精密 ~Semiconductor Equipment & Materials
+8037.T~カメイ~商社・卸売 ~Oil & Gas Refining & Marketing
+8043.T~スターゼン~商社・卸売 ~Packaged Foods
+8050.T~セイコーグループ~電機・精密 ~Footwear & Accessories
+8051.T~山善~商社・卸売 ~Specialty Industrial Machinery
+8052.T~椿本興業~商社・卸売 ~Industrial Distribution
+8053.T~住友商事~商社・卸売 ~Conglomerates
+8056.T~ＢＩＰＲＯＧＹ~情報通信・サービスその他 ~Information Technology Services
+8057.T~内田洋行~商社・卸売 ~Conglomerates
+8058.T~三菱商事~商社・卸売 ~Conglomerates
+8059.T~第一実業~商社・卸売 ~Specialty Industrial Machinery
+8060.T~キヤノンマーケティングジャパン~商社・卸売 ~Business Equipment & Supplies
+8061.T~西華産業~商社・卸売 ~Industrial Distribution
+8065.T~佐藤商事~商社・卸売 ~Steel
+8068.T~菱洋エレクトロ~商社・卸売 ~Electronics & Computer Distribution
+8070.T~東京産業~商社・卸売 ~Conglomerates
+8074.T~ユアサ商事~商社・卸売 ~Specialty Industrial Machinery
+8075.T~神鋼商事~商社・卸売 ~Steel
+8078.T~阪和興業~商社・卸売 ~Conglomerates
+8079.T~正栄食品工業~商社・卸売 ~Food Distribution
+8081.T~カナデン~商社・卸売 ~Conglomerates
+8084.T~ＲＹＯＤＥＮ~商社・卸売 ~Semiconductors
+8086.T~ニプロ~電機・精密 ~Medical Instruments & Supplies
+8088.T~岩谷産業~商社・卸売 ~Conglomerates
+8091.T~ニチモウ~商社・卸売 ~Packaged Foods
+8093.T~極東貿易~商社・卸売 ~Electronics & Computer Distribution
+8095.T~アステナホールディングス~商社・卸売 ~Conglomerates
+8097.T~三愛オブリ~商社・卸売 ~Oil & Gas Refining & Marketing
+8098.T~稲畑産業~商社・卸売 ~Specialty Chemicals
+8101.T~ＧＳＩクレオス~商社・卸売 ~Textile Manufacturing
+8103.T~明和産業~商社・卸売 ~Industrial Distribution
+8111.T~ゴールドウイン~素材・化学 ~Apparel Manufacturing
+8113.T~ユニ・チャーム~素材・化学 ~Household & Personal Products
+8114.T~デサント~素材・化学 ~Apparel Manufacturing
+8125.T~ワキタ~商社・卸売 ~Farm & Heavy Construction Machinery
+8129.T~東邦ホールディングス~商社・卸売 ~Medical Distribution
+8130.T~サンゲツ~商社・卸売 ~Furnishings, Fixtures & Appliances
+8132.T~シナネンホールディングス~商社・卸売 ~Oil & Gas Refining & Marketing
+8133.T~伊藤忠エネクス~商社・卸売 ~Oil & Gas Refining & Marketing
+8136.T~サンリオ~商社・卸売 ~Specialty Retail
+8137.T~サンワテクノス~商社・卸売 ~Electronics & Computer Distribution
+8140.T~リョーサン~商社・卸売 ~Electronics & Computer Distribution
+8141.T~新光商事~商社・卸売 ~Electronics & Computer Distribution
+8142.T~トーホー~商社・卸売 ~Food Distribution
+8150.T~三信電気~商社・卸売 ~Semiconductors
+8151.T~東陽テクニカ~商社・卸売 ~Scientific & Technical Instruments
+8153.T~モスフードサービス~商社・卸売 ~Restaurants
+8154.T~加賀電子~商社・卸売 ~Electronics & Computer Distribution
+8155.T~三益半導体工業~建設・資材 ~Semiconductor Equipment & Materials
+8157.T~都築電気~情報通信・サービスその他 ~Conglomerates
+8158.T~ソーダニッカ~商社・卸売 ~Chemicals
+8159.T~立花エレテック~商社・卸売 ~Electronic Components
+8160.T~木曽路~小売 ~Restaurants
+8163.T~ＳＲＳホールディングス~小売 ~Restaurants
+8167.T~リテールパートナーズ~小売 ~Grocery Stores
+8168.T~ケーヨー~小売 ~Home Improvement Retail
+8173.T~上新電機~小売 ~Department Stores
+8174.T~日本瓦斯~小売 ~Utilities-Regulated Gas
+8179.T~ロイヤルホールディングス~小売 ~Restaurants
+8182.T~いなげや~小売 ~Grocery Stores
+8185.T~チヨダ~小売 ~Apparel Retail
+8194.T~ライフコーポレーション~小売 ~Grocery Stores
+8200.T~リンガーハット~小売 ~Restaurants
+8203.T~ＭｒＭａｘＨＤ~小売 ~Discount Stores
+8214.T~ＡＯＫＩホールディングス~小売 ~Apparel Retail
+8217.T~オークワ~小売 ~Department Stores
+8218.T~コメリ~小売 ~Home Improvement Retail
+8219.T~青山商事~小売 ~Apparel Retail
+8227.T~しまむら~小売 ~Apparel Retail
+8233.T~高島屋~小売 ~Department Stores
+8237.T~松屋~小売 ~Department Stores
+8242.T~エイチ・ツー・オー　リテイリング~小売 ~Grocery Stores
+8252.T~丸井グループ~小売 ~Credit Services
+8253.T~クレディセゾン~金融（除く銀行） ~Credit Services
+8255.T~アクシアル　リテイリング~小売 ~Department Stores
+8267.T~イオン~小売 ~Department Stores
+8273.T~イズミ~小売 ~Department Stores
+8276.T~平和堂~小売 ~Department Stores
+8278.T~フジ~小売 ~Department Stores
+8279.T~ヤオコー~小売 ~Grocery Stores
+8281.T~ゼビオホールディングス~小売 ~Specialty Retail
+8282.T~ケーズホールディングス~小売 ~Specialty Retail
+8283.T~ＰＡＬＴＡＣ~商社・卸売 ~Household & Personal Products
+8304.T~あおぞら銀行~銀行 ~Banks-Regional
+8306.T~三菱ＵＦＪフィナンシャル・グループ~銀行 ~Banks-Diversified
+8308.T~りそなホールディングス~銀行 ~Banks-Regional
+8309.T~三井住友トラスト・ホールディングス~銀行 ~Banks-Regional
+8316.T~三井住友フィナンシャルグループ~銀行 ~Banks-Diversified
+8331.T~千葉銀行~銀行 ~Banks-Regional
+8334.T~群馬銀行~銀行 ~Banks-Regional
+8336.T~武蔵野銀行~銀行 ~Banks-Regional
+8337.T~千葉興業銀行~銀行 ~Banks-Regional
+8338.T~筑波銀行~銀行 ~Banks-Regional
+8341.T~七十七銀行~銀行 ~Banks-Regional
+8343.T~秋田銀行~銀行 ~Banks-Regional
+8344.T~山形銀行~銀行 ~Banks-Regional
+8345.T~岩手銀行~銀行 ~Banks-Regional
+8346.T~東邦銀行~銀行 ~Banks-Regional
+8354.T~ふくおかフィナンシャルグループ~銀行 ~Banks-Regional
+8358.T~スルガ銀行~銀行 ~Banks-Regional
+8359.T~八十二銀行~銀行 ~Banks-Regional
+8360.T~山梨中央銀行~銀行 ~Banks-Regional
+8361.T~大垣共立銀行~銀行 ~Banks-Regional
+8362.T~福井銀行~銀行 ~Banks-Regional
+8364.T~清水銀行~銀行 ~Banks-Regional
+8366.T~滋賀銀行~銀行 ~Banks-Regional
+8367.T~南都銀行~銀行 ~Banks-Regional
+8368.T~百五銀行~銀行 ~Banks-Regional
+8370.T~紀陽銀行~銀行 ~Banks-Regional
+8377.T~ほくほくフィナンシャルグループ~銀行 ~Banks-Regional
+8381.T~山陰合同銀行~銀行 ~Banks-Regional
+8386.T~百十四銀行~銀行 ~Banks-Regional
+8387.T~四国銀行~銀行 ~Banks-Regional
+8388.T~阿波銀行~銀行 ~Banks-Regional
+8392.T~大分銀行~銀行 ~Banks-Regional
+8393.T~宮崎銀行~銀行 ~Banks-Regional
+8395.T~佐賀銀行~銀行 ~Banks-Regional
+8399.T~琉球銀行~銀行 ~Banks-Regional
+8410.T~セブン銀行~銀行 ~Banks-Regional
+8411.T~みずほフィナンシャルグループ~銀行 ~Banks-Regional
+8418.T~山口フィナンシャルグループ~銀行 ~Banks-Regional
+8424.T~芙蓉総合リース~金融（除く銀行） ~Rental & Leasing Services
+8425.T~みずほリース~金融（除く銀行） ~Credit Services
+8439.T~東京センチュリー~金融（除く銀行） ~Rental & Leasing Services
+8473.T~ＳＢＩホールディングス~金融（除く銀行） ~Financial Conglomerates
+8511.T~日本証券金融~金融（除く銀行） ~Credit Services
+8515.T~アイフル~金融（除く銀行） ~Credit Services
+8522.T~名古屋銀行~銀行 ~Banks-Regional
+8524.T~北洋銀行~銀行 ~Banks-Regional
+8541.T~愛媛銀行~銀行 ~Banks-Regional
+8544.T~京葉銀行~銀行 ~Banks-Regional
+8550.T~栃木銀行~銀行 ~Banks-Regional
+8551.T~北日本銀行~銀行 ~Banks-Regional
+8558.T~東和銀行~銀行 ~Banks-Regional
+8566.T~リコーリース~金融（除く銀行） ~Credit Services
+8570.T~イオンフィナンシャルサービス~金融（除く銀行） ~Credit Services
+8584.T~ジャックス~金融（除く銀行） ~Credit Services
+8585.T~オリエントコーポレーション~金融（除く銀行） ~Credit Services
+8591.T~オリックス~金融（除く銀行） ~Credit Services
+8593.T~三菱ＨＣキャピタル~金融（除く銀行） ~Credit Services
+8595.T~ジャフコ　グループ~金融（除く銀行） ~Asset Management
+8600.T~トモニホールディングス~銀行 ~Banks-Diversified
+8601.T~大和証券グループ本社~金融（除く銀行） ~Capital Markets
+8604.T~野村ホールディングス~金融（除く銀行） ~Capital Markets
+8609.T~岡三証券グループ~金融（除く銀行） ~Capital Markets
+8613.T~丸三証券~金融（除く銀行） ~Capital Markets
+8614.T~東洋証券~金融（除く銀行） ~Capital Markets
+8616.T~東海東京フィナンシャル・ホールディングス~金融（除く銀行） ~Capital Markets
+8622.T~水戸証券~金融（除く銀行） ~Capital Markets
+8624.T~いちよし証券~金融（除く銀行） ~Asset Management
+8628.T~松井証券~金融（除く銀行） ~Capital Markets
+8630.T~ＳＯＭＰＯホールディングス~金融（除く銀行） ~Insurance-Property & Casualty
+8697.T~日本取引所グループ~金融（除く銀行） ~Financial Data & Stock Exchanges
+8698.T~マネックスグループ~金融（除く銀行） ~Capital Markets
+8706.T~極東証券~金融（除く銀行） ~Capital Markets
+8707.T~岩井コスモホールディングス~金融（除く銀行） ~Capital Markets
+8708.T~アイザワ証券グループ~金融（除く銀行） ~Capital Markets
+8713.T~フィデアホールディングス~銀行 ~Banks-Regional
+8714.T~池田泉州ホールディングス~銀行 ~Banks-Regional
+8715.T~アニコム　ホールディングス~金融（除く銀行） ~Insurance-Property & Casualty
+8725.T~ＭＳ＆ＡＤインシュアランスグループホールディングス~金融（除く銀行） ~Insurance-Property & Casualty
+8739.T~スパークス・グループ~金融（除く銀行） ~Asset Management
+8750.T~第一生命ホールディングス~金融（除く銀行） ~Insurance-Life
+8766.T~東京海上ホールディングス~金融（除く銀行） ~Insurance-Property & Casualty
+8771.T~イー・ギャランティ~金融（除く銀行） ~Credit Services
+8793.T~ＮＥＣキャピタルソリューション~金融（除く銀行） ~Rental & Leasing Services
+8795.T~Ｔ＆Ｄホールディングス~金融（除く銀行） ~Insurance-Life
+8798.T~アドバンスクリエイト~金融（除く銀行） ~Insurance-Diversified
+8801.T~三井不動産~不動産 ~Real Estate-Diversified
+8802.T~三菱地所~不動産 ~Real Estate-Diversified
+8803.T~平和不動産~不動産 ~Real Estate-Diversified
+8804.T~東京建物~不動産 ~Real Estate Services
+8818.T~京阪神ビルディング~不動産 ~Real Estate Services
+8830.T~住友不動産~不動産 ~Real Estate Services
+8842.T~東京楽天地~不動産 ~Real Estate Services
+8848.T~レオパレス２１~不動産 ~Real Estate Services
+8850.T~スターツコーポレーション~不動産 ~Real Estate-Diversified
+8860.T~フジ住宅~不動産 ~Real Estate Services
+8864.T~空港施設~不動産 ~Real Estate Services
+8876.T~リログループ~情報通信・サービスその他 ~Specialty Business Services
+8877.T~エスリード~不動産 ~Real Estate-Development
+8881.T~日神グループホールディングス~不動産 ~Real Estate Services
+8892.T~日本エスコン~不動産 ~Residential Construction
+8897.T~ＭＩＲＡＲＴＨホールディングス~不動産 ~Real Estate-Development
+8905.T~イオンモール~不動産 ~Real Estate-Diversified
+8919.T~カチタス~不動産 ~Residential Construction
+8923.T~トーセイ~不動産 ~Real Estate-Diversified
+8934.T~サンフロンティア不動産~不動産 ~Real Estate Services
+8935.T~ＦＪネクストホールディングス~不動産 ~Real Estate Services
+8999.T~グランディハウス~不動産 ~Real Estate Services
+9001.T~東武鉄道~運輸・物流 ~Railroads
+9003.T~相鉄ホールディングス~運輸・物流 ~Conglomerates
+9005.T~東急~運輸・物流 ~Department Stores
+9006.T~京浜急行電鉄~運輸・物流 ~Conglomerates
+9007.T~小田急電鉄~運輸・物流 ~Railroads
+9008.T~京王電鉄~運輸・物流 ~Conglomerates
+9009.T~京成電鉄~運輸・物流 ~Railroads
+9010.T~富士急行~運輸・物流 ~Conglomerates
+9020.T~東日本旅客鉄道~運輸・物流 ~Railroads
+9021.T~西日本旅客鉄道~運輸・物流 ~Railroads
+9022.T~東海旅客鉄道~運輸・物流 ~Railroads
+9024.T~西武ホールディングス~運輸・物流 ~Conglomerates
+9025.T~鴻池運輸~運輸・物流 ~Integrated Freight & Logistics
+9031.T~西日本鉄道~運輸・物流 ~Railroads
+9037.T~ハマキョウレックス~運輸・物流 ~Integrated Freight & Logistics
+9039.T~サカイ引越センター~運輸・物流 ~Trucking
+9041.T~近鉄グループホールディングス~運輸・物流 ~Conglomerates
+9042.T~阪急阪神ホールディングス~運輸・物流 ~Conglomerates
+9044.T~南海電気鉄道~運輸・物流 ~Railroads
+9045.T~京阪ホールディングス~運輸・物流 ~Conglomerates
+9046.T~神戸電鉄~運輸・物流 ~Railroads
+9048.T~名古屋鉄道~運輸・物流 ~Conglomerates
+9052.T~山陽電気鉄道~運輸・物流 ~Railroads
+9055.T~アルプス物流~運輸・物流 ~Trucking
+9058.T~トランコム~運輸・物流 ~Integrated Freight & Logistics
+9064.T~ヤマトホールディングス~運輸・物流 ~Trucking
+9065.T~山九~運輸・物流 ~Integrated Freight & Logistics
+9066.T~日新~運輸・物流 ~Integrated Freight & Logistics
+9068.T~丸全昭和運輸~運輸・物流 ~Integrated Freight & Logistics
+9069.T~センコーグループホールディングス~運輸・物流 ~Integrated Freight & Logistics
+9070.T~トナミホールディングス~運輸・物流 ~Integrated Freight & Logistics
+9072.T~ニッコンホールディングス~運輸・物流 ~Integrated Freight & Logistics
+9075.T~福山通運~運輸・物流 ~Trucking
+9076.T~セイノーホールディングス~運輸・物流 ~Trucking
+9081.T~神奈川中央交通~運輸・物流 ~Railroads
+9090.T~ＡＺ－ＣＯＭ丸和ホールディングス~運輸・物流 ~Integrated Freight & Logistics
+9099.T~Ｃ＆Ｆロジホールディングス~運輸・物流 ~Integrated Freight & Logistics
+9101.T~日本郵船~運輸・物流 ~Marine Shipping
+9104.T~商船三井~運輸・物流 ~Marine Shipping
+9107.T~川崎汽船~運輸・物流 ~Marine Shipping
+9110.T~ＮＳユナイテッド海運~運輸・物流 ~Marine Shipping
+9119.T~飯野海運~運輸・物流 ~Marine Shipping
+9142.T~九州旅客鉄道~運輸・物流 ~Railroads
+9143.T~ＳＧホールディングス~運輸・物流 ~Integrated Freight & Logistics
+9147.T~ＮＩＰＰＯＮ　ＥＸＰＲＥＳＳホールディングス~運輸・物流 ~Integrated Freight & Logistics
+9161.T~ＩＤ＆Ｅホールディングス~情報通信・サービスその他 ~Engineering & Construction
+9201.T~日本航空~運輸・物流 ~Airlines
+9202.T~ＡＮＡホールディングス~運輸・物流 ~Airlines
+9216.T~ビーウィズ~情報通信・サービスその他 ~Specialty Business Services
+9247.T~ＴＲＥホールディングス~情報通信・サービスその他 ~Waste Management
+9248.T~人・夢・技術グループ~情報通信・サービスその他 ~Conglomerates
+9260.T~西本Ｗｉｓｍｅｔｔａｃホールディングス~商社・卸売 ~Food Distribution
+9267.T~Ｇｅｎｋｙ　ＤｒｕｇＳｔｏｒｅｓ~小売 ~Pharmaceutical Retailers
+9273.T~コーア商事ホールディングス~商社・卸売 ~Drug Manufacturers-Specialty & Generic
+9274.T~ＫＰＰグループホールディングス~商社・卸売 ~Paper & Paper Products
+9278.T~ブックオフグループホールディングス~小売 ~Specialty Retail
+9279.T~ギフトホールディングス~小売 ~Restaurants
+9301.T~三菱倉庫~運輸・物流 ~Integrated Freight & Logistics
+9302.T~三井倉庫ホールディングス~運輸・物流 ~Integrated Freight & Logistics
+9303.T~住友倉庫~運輸・物流 ~Integrated Freight & Logistics
+9304.T~澁澤倉庫~運輸・物流 ~Integrated Freight & Logistics
+9305.T~ヤマタネ~商社・卸売 ~Marine Shipping
+9310.T~日本トランスシティ~運輸・物流 ~Integrated Freight & Logistics
+9319.T~中央倉庫~運輸・物流 ~Specialty Business Services
+9324.T~安田倉庫~運輸・物流 ~Specialty Business Services
+9332.T~ＮＩＳＳＯホールディングス~情報通信・サービスその他 ~Staffing & Employment Services
+9336.T~大栄環境~情報通信・サービスその他 ~Waste Management
+9347.T~日本管財ホールディングス~情報通信・サービスその他 ~Real Estate Services
+9364.T~上組~運輸・物流 ~Integrated Freight & Logistics
+9381.T~エーアイテイー~運輸・物流 ~Integrated Freight & Logistics
+9384.T~内外トランスライン~運輸・物流 ~Integrated Freight & Logistics
+9386.T~日本コンセプト~運輸・物流 ~Oil & Gas Midstream
+9401.T~ＴＢＳホールディングス~情報通信・サービスその他 ~Broadcasting
+9404.T~日本テレビホールディングス~情報通信・サービスその他 ~Broadcasting
+9405.T~朝日放送グループホールディングス~情報通信・サービスその他 ~Broadcasting
+9409.T~テレビ朝日ホールディングス~情報通信・サービスその他 ~Broadcasting
+9412.T~スカパーＪＳＡＴホールディングス~情報通信・サービスその他 ~Broadcasting
+9413.T~テレビ東京ホールディングス~情報通信・サービスその他 ~Broadcasting
+9416.T~ビジョン~情報通信・サービスその他 ~Telecom Services
+9418.T~ＵＳＥＮ－ＮＥＸＴ　ＨＯＬＤＩＮＧＳ~情報通信・サービスその他 ~Telecom Services
+9424.T~日本通信~情報通信・サービスその他 ~Telecom Services
+9432.T~日本電信電話~情報通信・サービスその他 ~Telecom Services
+9433.T~ＫＤＤＩ~情報通信・サービスその他 ~Telecom Services
+9434.T~ソフトバンク~情報通信・サービスその他 ~Telecom Services
+9435.T~光通信~情報通信・サービスその他 ~Conglomerates
+9438.T~エムティーアイ~情報通信・サービスその他 ~Health Information Services
+9449.T~ＧＭＯインターネットグループ~情報通信・サービスその他 ~Telecom Services
+9450.T~ファイバーゲート~情報通信・サービスその他 ~Telecom Services
+9468.T~ＫＡＤＯＫＡＷＡ~情報通信・サービスその他 ~Publishing
+9470.T~学研ホールディングス~情報通信・サービスその他 ~Education & Training Services
+9474.T~ゼンリン~情報通信・サービスその他 ~Internet Content & Information
+9501.T~東京電力ホールディングス~電力・ガス ~Utilities-Renewable
+9502.T~中部電力~電力・ガス ~Utilities-Diversified
+9503.T~関西電力~電力・ガス ~Utilities-Renewable
+9504.T~中国電力~電力・ガス ~Utilities-Renewable
+9505.T~北陸電力~電力・ガス ~Utilities-Regulated Electric
+9506.T~東北電力~電力・ガス ~Utilities-Renewable
+9507.T~四国電力~電力・ガス ~Utilities-Renewable
+9508.T~九州電力~電力・ガス ~Utilities-Independent Power Producers
+9509.T~北海道電力~電力・ガス ~Utilities-Renewable
+9511.T~沖縄電力~電力・ガス ~Utilities-Renewable
+9513.T~電源開発~電力・ガス ~Utilities-Renewable
+9517.T~イーレックス~電力・ガス ~Utilities-Renewable
+9519.T~レノバ~電力・ガス ~Utilities-Renewable
+9531.T~東京瓦斯~電力・ガス ~Utilities-Regulated Gas
+9532.T~大阪瓦斯~電力・ガス ~Utilities-Regulated Gas
+9533.T~東邦瓦斯~電力・ガス ~Utilities-Regulated Gas
+9534.T~北海道瓦斯~電力・ガス ~Utilities-Regulated Gas
+9535.T~広島ガス~電力・ガス ~Oil & Gas Integrated
+9536.T~西部ガスホールディングス~電力・ガス ~Utilities-Regulated Gas
+9543.T~静岡ガス~電力・ガス ~Utilities-Regulated Gas
+9551.T~メタウォーター~電力・ガス ~Pollution & Treatment Controls
+9552.T~Ｍ＆Ａ総研ホールディングス~情報通信・サービスその他 ~Capital Markets
+1376.T~カネコ種苗~水産・農林業~Agricultural Inputs
+1384.T~ホクリヨウ~水産・農林業~Farm Products
+1420.T~サンヨーホームズ~建設業~Residential Construction
+1430.T~ファーストコーポレーション~建設業~Residential Construction
+1435.T~Ｒｏｂｏｔ　Ｈｏｍｅ~不動産業~Real Estate Services
+1446.T~キャンディル~建設業~Engineering & Construction
+1514.T~住石ホールディングス~鉱業~Thermal Coal
+1712.T~ダイセキ環境ソリューション~建設業~Waste Management
+1716.T~第一カッター興業~建設業~Engineering & Construction
+1717.T~明豊ファシリティワークス~サービス業~Engineering & Construction
+1768.T~ソネック~建設業~Engineering & Construction
+1810.T~松井建設~建設業~Engineering & Construction
+1811.T~錢高組~建設業~Engineering & Construction
+1822.T~大豊建設~建設業~Engineering & Construction
+1826.T~佐田建設~建設業~Engineering & Construction
+1827.T~ナカノフドー建設~建設業~Engineering & Construction
+1847.T~イチケン~建設業~Real Estate-Development
+1848.T~富士ピー・エス~建設業~Engineering & Construction
+1866.T~北野建設~建設業~Engineering & Construction
+1867.T~植木組~建設業~Engineering & Construction
+1909.T~日本ドライケミカル~機械~Security & Protection Services
+1914.T~日本基礎技術~建設業~Engineering & Construction
+1921.T~巴コーポレーション~建設業~Engineering & Construction
+1967.T~ヤマト~建設業~Engineering & Construction
+1972.T~三晃金属工業~建設業~Building Products & Equipment
+2003.T~日東富士製粉~食料品~Farm Products
+2009.T~鳥越製粉~食料品~Packaged Foods
+2107.T~東洋精糖~食料品~Confectioners
+2112.T~塩水港精糖~食料品~Confectioners
+2139.T~中広~サービス業~Advertising Agencies
+2169.T~ＣＤＳ~サービス業~Software-Application
+2180.T~サニーサイドアップグループ~サービス業~Advertising Agencies
+2183.T~リニカル~サービス業~Biotechnology
+2193.T~クックパッド~サービス業~Internet Content & Information
+2196.T~エスクリ~サービス業~Personal Services
+2204.T~中村屋~食料品~Packaged Foods
+2215.T~第一屋製パン~食料品~Packaged Foods
+2286.T~林兼産業~食料品~Packaged Foods
+2311.T~エプコ~サービス業~Engineering & Construction
+2376.T~サイネックス~サービス業~Publishing
+2418.T~ツカダ・グローバルホールディング~サービス業~Personal Services
+2424.T~ブラス~サービス業~Personal Services
+2428.T~ウェルネット~サービス業~Software-Infrastructure
+2464.T~Ａｏｂａ‐ＢＢＴ~サービス業~Education & Training Services
+2477.T~手間いらず~情報・通信業~Internet Content & Information
+2485.T~ティア~サービス業~Personal Services
+2487.T~ＣＤＧ~サービス業~Advertising Agencies
+2597.T~ユニカフェ~食料品~Packaged Foods
+2599.T~ジャパンフーズ~食料品~Beverages-Non-Alcoholic
+2612.T~かどや製油~食料品~Packaged Foods
+2686.T~ジーフット~小売業~Apparel Retail
+2687.T~シー・ヴイ・エス・ベイエリア~小売業~Grocery Stores
+2689.T~オルバヘルスケアホールディングス~卸売業~Medical Distribution
+2698.T~キャンドゥ~小売業~Department Stores
+2722.T~ＩＫホールディングス~小売業~Discount Stores
+2735.T~ワッツ~小売業~Grocery Stores
+2764.T~ひらまつ~小売業~Restaurants
+2796.T~ファーマライズホールディングス~小売業~Pharmaceutical Retailers
+2812.T~焼津水産化学工業~食料品~Packaged Foods
+2818.T~ピエトロ~食料品~Packaged Foods
+2819.T~エバラ食品工業~食料品~Packaged Foods
+2820.T~やまみ~食料品~Packaged Foods
+2883.T~大冷~食料品~Specialty Industrial Machinery
+2904.T~一正蒲鉾~食料品~Packaged Foods
+2924.T~イフジ産業~食料品~Farm Products
+3001.T~片倉工業~繊維製品~Conglomerates
+3004.T~神栄~卸売業~Conglomerates
+3023.T~ラサ商事~卸売業~Other Industrial Metals & Mining
+3030.T~ハブ~小売業~Restaurants
+3053.T~ペッパーフードサービス~小売業~Restaurants
+3054.T~ハイパー~卸売業~Computer Hardware
+3067.T~東京一番フーズ~小売業~Restaurants
+3079.T~ディーブイエックス~卸売業~Medical Devices
+3082.T~きちりホールディングス~小売業~Restaurants
+3134.T~Ｈａｍｅｅ~小売業~Internet Retail
+3157.T~ジオリーブグループ~卸売業~Building Materials
+3159.T~丸善ＣＨＩホールディングス~小売業~Specialty Retail
+3160.T~大光~卸売業~Food Distribution
+3166.T~ＯＣＨＩホールディングス~卸売業~Home Improvement Retail
+3168.T~黒谷~卸売業~Other Industrial Metals & Mining
+3169.T~ミサワ~小売業~Department Stores
+3172.T~ティーライフ~小売業~Internet Retail
+3173.T~Ｃｏｍｉｎｉｘ~卸売業~Tools & Accessories
+3175.T~エー・ピーホールディングス~小売業~Restaurants
+3178.T~チムニー~小売業~Restaurants
+3202.T~ダイトウボウ~繊維製品~Textile Manufacturing
+3204.T~トーア紡コーポレーション~繊維製品~Conglomerates
+3205.T~ダイドーリミテッド~繊維製品~Apparel Manufacturing
+3222.T~ユナイテッド・スーパーマーケット・ホールディングス~小売業~Department Stores
+3246.T~コーセーアールイー~不動産業~Real Estate-Diversified
+3254.T~プレサンスコーポレーション~不動産業~Real Estate-Development
+3267.T~フィル・カンパニー~建設業~Engineering & Construction
+3271.T~ＴＨＥグローバル社~不動産業~Real Estate-Diversified
+3275.T~ハウスコム~不動産業~Real Estate Services
+3277.T~サンセイランディック~不動産業~Real Estate Services
+3280.T~エストラスト~不動産業~Real Estate-Diversified
+3294.T~イーグランド~不動産業~Real Estate Services
+3299.T~ムゲンエステート~不動産業~Real Estate-Development
+3321.T~ミタチ産業~卸売業~Electronic Components
+3361.T~トーエル~小売業~Utilities-Regulated Gas
+3392.T~デリカフーズホールディングス~卸売業~Packaged Foods
+3396.T~フェリシモ~小売業~Internet Retail
+3421.T~稲葉製作所~金属製品~Furnishings, Fixtures & Appliances
+3434.T~アルファＣｏ~金属製品~Auto Parts
+3447.T~信和~金属製品~Metal Fabrication
+3452.T~ビーロット~不動産業~Real Estate Services
+3454.T~ファーストブラザーズ~不動産業~Asset Management
+3467.T~アグレ都市デザイン~不動産業~Real Estate Services
+3489.T~フェイスネットワーク~不動産業~Real Estate Services
+3512.T~日本フエルト~繊維製品~Conglomerates
+3513.T~イチカワ~繊維製品~Paper & Paper Products
+3521.T~エコナックホールディングス~サービス業~Real Estate Services
+3524.T~日東製網~繊維製品~Textile Manufacturing
+3526.T~芦森工業~輸送用機器~Auto Parts
+3529.T~アツギ~繊維製品~Apparel Manufacturing
+3538.T~ウイルプラスホールディングス~小売業~Auto & Truck Dealerships
+3544.T~サツドラホールディングス~小売業~Pharmaceutical Retailers
+3547.T~串カツ田中ホールディングス~小売業~Restaurants
+3551.T~ダイニック~繊維製品~Specialty Business Services
+3553.T~共和レザー~化学~Chemicals
+3559.T~ピーバンドットコム~卸売業~Electronic Components
+3565.T~アセンテック~卸売業~Information Technology Services
+3571.T~ソトー~繊維製品~Textile Manufacturing
+3577.T~東海染工~繊維製品~Textile Manufacturing
+3607.T~クラウディアホールディングス~繊維製品~Apparel Retail
+3611.T~マツオカコーポレーション~繊維製品~Apparel Manufacturing
+3627.T~テクミラホールディングス~情報・通信業~Software-Infrastructure
+3633.T~ＧＭＯペパボ~情報・通信業~Software-Infrastructure
+3639.T~ボルテージ~情報・通信業~Electronic Gaming & Multimedia
+3640.T~電算~情報・通信業~Semiconductors
+3648.T~ＡＧＳ~情報・通信業~Software-Application
+3666.T~テクノスジャパン~情報・通信業~Information Technology Services
+3667.T~ｅｎｉｓｈ~情報・通信業~Electronic Gaming & Multimedia
+3672.T~オルトプラス~情報・通信業~Electronic Gaming & Multimedia
+3682.T~エンカレッジ・テクノロジ~情報・通信業~Information Technology Services
+3683.T~サイバーリンクス~情報・通信業~Information Technology Services
+3686.T~ディー・エル・イー~情報・通信業~Entertainment
+3770.T~ザッパラス~情報・通信業~Internet Content & Information
+3784.T~ヴィンクス~情報・通信業~Software-Application
+3826.T~システムインテグレータ~情報・通信業~Software-Application
+3839.T~ＯＤＫソリューションズ~情報・通信業~Information Technology Services
+3852.T~サイバーコム~情報・通信業~Software-Application
+3878.T~巴川製紙所~化学~Paper & Paper Products
+3896.T~阿波製紙~パルプ・紙~Paper & Paper Products
+3909.T~ショーケース~情報・通信業~Software-Application
+3912.T~モバイルファクトリー~情報・通信業~Electronic Gaming & Multimedia
+3918.T~ＰＣＩホールディングス~情報・通信業~Information Technology Services
+3920.T~アイビーシー~情報・通信業~Information Technology Services
+3928.T~マイネット~情報・通信業~Electronic Gaming & Multimedia
+3934.T~ベネフィットジャパン~情報・通信業~Telecom Services
+3940.T~ノムラシステムコーポレーション~情報・通信業~Information Technology Services
+3965.T~キャピタル・アセット・プランニング~情報・通信業~Software-Application
+3969.T~エイトレッド~情報・通信業~Software-Application
+3981.T~ビーグリー~情報・通信業~Internet Content & Information
+3985.T~テモナ~情報・通信業~Internet Content & Information
+3996.T~サインポスト~情報・通信業~Information Technology Services
+4031.T~片倉コープアグリ~化学~Agricultural Inputs
+4098.T~チタン工業~化学~Specialty Chemicals
+4100.T~戸田工業~化学~Specialty Chemicals
+4231.T~タイガースポリマー~化学~Specialty Chemicals
+4238.T~ミライアル~化学~Semiconductor Equipment & Materials
+4245.T~ダイキアクシス~化学~Waste Management
+4248.T~竹本容器~化学~Packaging & Containers
+4284.T~ソルクシーズ~情報・通信業~Software-Application
+4286.T~ＣＬホールディングス~サービス業~Advertising Agencies
+4295.T~フェイス~情報・通信業~Entertainment
+4299.T~ハイマックス~情報・通信業~Software-Application
+4312.T~サイバネットシステム~情報・通信業~Software-Application
+4319.T~ＴＡＣ~サービス業~Education & Training Services
+4320.T~ＣＥホールディングス~情報・通信業~Health Information Services
+4346.T~ネクシィーズグループ~サービス業~Specialty Business Services
+4350.T~メディカルシステムネットワーク~小売業~Pharmaceutical Retailers
+4382.T~ＨＥＲＯＺ~情報・通信業~Software-Application
+4404.T~ミヨシ油脂~食料品~Packaged Foods
+4406.T~新日本理化~化学~Specialty Chemicals
+4420.T~イーソル~情報・通信業~Electronics & Computer Distribution
+4430.T~東海ソフト~情報・通信業~Software-Infrastructure
+4434.T~サーバーワークス~情報・通信業~Software-Infrastructure
+4439.T~東名~情報・通信業~Conglomerates
+4440.T~ヴィッツ~情報・通信業~Software-Application
+4441.T~トビラシステムズ~情報・通信業~Communication Equipment
+4463.T~日華化学~化学~Chemicals
+4465.T~ニイタカ~化学~Household & Personal Products
+4512.T~わかもと製薬~医薬品~Drug Manufacturers-Specialty & Generic
+4531.T~有機合成薬品工業~化学~Chemicals
+4539.T~日本ケミファ~医薬品~Drug Manufacturers-Specialty & Generic
+4581.T~大正製薬ホールディングス~医薬品~Drug Manufacturers-Specialty & Generic
+4615.T~神東塗料~化学~Specialty Chemicals
+4619.T~日本特殊塗料~化学~Specialty Chemicals
+4620.T~藤倉化成~化学~Specialty Chemicals
+4651.T~サニックス~サービス業~Waste Management
+4671.T~ファルコホールディングス~サービス業~Diagnostics & Research
+4678.T~秀英予備校~サービス業~Education & Training Services
+4679.T~田谷~サービス業~Personal Services
+4716.T~日本オラクル~情報・通信業~Software-Application
+4728.T~トーセ~情報・通信業~Electronic Gaming & Multimedia
+4745.T~東京個別指導学院~サービス業~Education & Training Services
+4746.T~東計電算~情報・通信業~Software-Application
+4762.T~エックスネット~情報・通信業~Software-Application
+4767.T~テー・オー・ダブリュー~サービス業~Advertising Agencies
+4829.T~日本エンタープライズ~情報・通信業~Software-Application
+4926.T~シーボン~化学~Household & Personal Products
+4929.T~アジュバンホールディングス~化学~Household & Personal Products
+4955.T~アグロ　カネショウ~化学~Agricultural Inputs
+4977.T~新田ゼラチン~化学~Specialty Chemicals
+4979.T~ＯＡＴアグリオ~化学~Agricultural Inputs
+4992.T~北興化学工業~化学~Agricultural Inputs
+4994.T~大成ラミック~化学~Packaging & Containers
+5009.T~富士興産~卸売業~Oil & Gas Refining & Marketing
+5013.T~ユシロ化学工業~石油・石炭製品~Chemicals
+5015.T~ビーピー・カストロール~石油・石炭製品~Oil & Gas Refining & Marketing
+5018.T~ＭＯＲＥＳＣＯ~石油・石炭製品~Specialty Chemicals
+5187.T~クリエートメディック~精密機器~Medical Devices
+5204.T~石塚硝子~ガラス・土石製品~Packaging & Containers
+5210.T~日本山村硝子~ガラス・土石製品~Packaging & Containers
+5218.T~オハラ~ガラス・土石製品~Electronic Components
+5273.T~三谷セキサン~ガラス・土石製品~Building Products & Equipment
+5337.T~ダントーホールディングス~ガラス・土石製品~Building Products & Equipment
+5363.T~東京窯業~ガラス・土石製品~Building Materials
+5367.T~ニッカトー~ガラス・土石製品~Specialty Industrial Machinery
+5388.T~クニミネ工業~ガラス・土石製品~Building Materials
+5391.T~エーアンドエーマテリアル~ガラス・土石製品~Building Products & Equipment
+5449.T~大阪製鐵~鉄鋼~Steel
+5464.T~モリ工業~鉄鋼~Steel
+5476.T~日本高周波鋼業~鉄鋼~Steel
+5491.T~日本金属~鉄鋼~Steel
+5603.T~虹技~鉄鋼~Metal Fabrication
+5612.T~日本鋳鉄管~鉄鋼~Building Products & Equipment
+5658.T~日亜鋼業~鉄鋼~Tools & Accessories
+5721.T~エス・サイエンス~非鉄金属~Conglomerates
+5819.T~カナレ電気~非鉄金属~Electrical Equipment & Parts
+5909.T~コロナ~金属製品~Furnishings, Fixtures & Appliances
+5923.T~高田機工~金属製品~Engineering & Construction
+5936.T~東洋シヤッター~金属製品~Building Products & Equipment
+5942.T~日本フイルコン~金属製品~Specialty Industrial Machinery
+5951.T~ダイニチ工業~金属製品~Furnishings, Fixtures & Appliances
+5958.T~三洋工業~金属製品~Building Products & Equipment
+5985.T~サンコール~金属製品~Auto Parts
+5986.T~モリテック　スチール~金属製品~Steel
+5992.T~中央発條~金属製品~Auto Parts
+5998.T~アドバネクス~金属製品~Tools & Accessories
+6029.T~アトラグループ~サービス業~Medical Care Facilities
+6037.T~ファーストロジック~サービス業~Internet Content & Information
+6044.T~三機サービス~サービス業~Specialty Business Services
+6048.T~デザインワン・ジャパン~サービス業~Internet Content & Information
+6054.T~リブセンス~サービス業~Internet Content & Information
+6059.T~ウチヤマホールディングス~サービス業~Medical Care Facilities
+6082.T~ライドオンエクスプレスホールディングス~サービス業~Internet Retail
+6083.T~ＥＲＩホールディングス~サービス業~Specialty Business Services
+6087.T~アビスト~サービス業~Specialty Industrial Machinery
+6093.T~エスクロー・エージェント・ジャパン~サービス業~Specialty Business Services
+6096.T~レアジョブ~サービス業~Education & Training Services
+6121.T~ＴＡＫＩＳＡＷＡ~機械~Specialty Industrial Machinery
+6138.T~ダイジェット工業~機械~Metal Fabrication
+6165.T~パンチ工業~機械~Tools & Accessories
+6171.T~土木管理総合試験所~サービス業~Engineering & Construction
+6185.T~ＳＭＮ~サービス業~Advertising Agencies
+6186.T~一蔵~サービス業~Personal Services
+6189.T~グローバルキッズＣＯＭＰＡＮＹ~サービス業~Specialty Business Services
+6199.T~セラク~サービス業~Information Technology Services
+6203.T~豊和工業~機械~Specialty Industrial Machinery
+6208.T~石川製作所~機械~Specialty Industrial Machinery
+6210.T~東洋機械金属~機械~Specialty Industrial Machinery
+6217.T~津田駒工業~機械~Specialty Industrial Machinery
+6218.T~エンシュウ~機械~Specialty Industrial Machinery
+6236.T~ＮＣホールディングス~機械~Specialty Industrial Machinery
+6291.T~日本エアーテック~機械~Pollution & Treatment Controls
+6292.T~カワタ~機械~Specialty Industrial Machinery
+6316.T~丸山製作所~機械~Farm & Heavy Construction Machinery
+6317.T~北川鉄工所~機械~Specialty Industrial Machinery
+6319.T~シンニッタン~鉄鋼~Metal Fabrication
+6325.T~タカキタ~機械~Farm & Heavy Construction Machinery
+6335.T~東京機械製作所~機械~Specialty Industrial Machinery
+6356.T~日本ギア工業~機械~Auto Parts
+6362.T~石井鐵工所~機械~Metal Fabrication
+6373.T~大同工業~機械~Specialty Industrial Machinery
+6378.T~木村化工機~機械~Specialty Industrial Machinery
+6393.T~油研工業~機械~Specialty Industrial Machinery
+6428.T~オーイズミ~機械~Electronic Gaming & Multimedia
+6444.T~サンデン~機械~Auto Parts
+6470.T~大豊工業~機械~Auto Parts
+6482.T~ユーシン精機~機械~Specialty Industrial Machinery
+6485.T~前澤給装工業~機械~Building Products & Equipment
+6489.T~前澤工業~機械~Pollution & Treatment Controls
+6505.T~東洋電機製造~電気機器~Specialty Industrial Machinery
+6513.T~オリジン~電気機器~Semiconductor Equipment & Materials
+6538.T~キャリアインデックス~サービス業~Staffing & Employment Services
+6540.T~船場~サービス業~Engineering & Construction
+6546.T~フルテック~サービス業~Specialty Industrial Machinery
+6547.T~グリーンズ~サービス業~Lodging
+6551.T~ツナググループ・ホールディングス~サービス業~Staffing & Employment Services
+6552.T~ＧａｍｅＷｉｔｈ~サービス業~Electronic Gaming & Multimedia
+6555.T~ＭＳ＆Ｃｏｎｓｕｌｔｉｎｇ~サービス業~Information Technology Services
+6654.T~不二電機工業~電気機器~Electrical Equipment & Parts
+6675.T~サクサホールディングス~電気機器~Communication Equipment
+6676.T~メルコホールディングス~電気機器~Computer Hardware
+6678.T~テクノメディカ~電気機器~Medical Devices
+6704.T~岩崎通信機~電気機器~Communication Equipment
+6715.T~ナカヨ~電気機器~Communication Equipment
+6730.T~アクセル~電気機器~Semiconductors
+6748.T~星和電機~電気機器~Electrical Equipment & Parts
+6771.T~池上通信機~電気機器~Communication Equipment
+6803.T~ティアック~電気機器~Computer Hardware
+6848.T~東亜ディーケーケー~電気機器~Scientific & Technical Instruments
+6853.T~共和電業~電気機器~Scientific & Technical Instruments
+6855.T~日本電子材料~電気機器~Semiconductor Equipment & Materials
+6858.T~小野測器~電気機器~Scientific & Technical Instruments
+6877.T~ＯＢＡＲＡ　ＧＲＯＵＰ~電気機器~Tools & Accessories
+6901.T~澤藤電機~電気機器~Auto Parts
+6904.T~原田工業~電気機器~Communication Equipment
+6915.T~千代田インテグレ~電気機器~Electronic Components
+6926.T~岡谷電機産業~電気機器~Electronic Components
+6927.T~ヘリオス　テクノ　ホールディング~電気機器~Consumer Electronics
+6932.T~遠藤照明~電気機器~Furnishings, Fixtures & Appliances
+6938.T~双信電機~電気機器~Semiconductors
+6973.T~協栄産業~卸売業~Semiconductors
+6989.T~北陸電気工業~電気機器~Electronic Components
+7014.T~名村造船所~輸送用機器~Aerospace & Defense
+7022.T~サノヤスホールディングス~機械~Aerospace & Defense
+7030.T~スプリックス~サービス業~Education & Training Services
+7035.T~ａｎｄ　ｆａｃｔｏｒｙ~サービス業~Software-Application
+7037.T~テノ．ホールディングス~サービス業~Medical Care Facilities
+7044.T~ピアラ~サービス業~Advertising Agencies
+7060.T~ギークス~サービス業~Information Technology Services
+7105.T~三菱ロジスネクスト~輸送用機器~Farm & Heavy Construction Machinery
+7122.T~近畿車輛~輸送用機器~Railroads
+7127.T~一家ホールディングス~小売業~Personal Services
+7135.T~ジャパンクラフトホールディングス~小売業~Apparel Retail
+7150.T~島根銀行~銀行業~Banks-Regional
+7161.T~じもとホールディングス~銀行業~Banks-Regional
+7183.T~あんしん保証~その他金融業~Credit Services
+7191.T~イントラスト~その他金融業~Credit Services
+7192.T~日本モーゲージサービス~その他金融業~Mortgage Finance
+7196.T~Ｃａｓａ~その他金融業~Mortgage Finance
+7212.T~エフテック~輸送用機器~Auto Parts
+7213.T~レシップホールディングス~輸送用機器~Electronic Components
+7214.T~ＧＭＢ~輸送用機器~Auto Parts
+7215.T~ファルテック~輸送用機器~Auto Parts
+7222.T~日産車体~輸送用機器~Auto Manufacturers
+7247.T~ミクニ~輸送用機器~Auto Parts
+7256.T~河西工業~輸送用機器~Auto Parts
+7266.T~今仙電機製作所~輸送用機器~Auto Parts
+7271.T~安永~輸送用機器~Auto Parts
+7277.T~ＴＢＫ~輸送用機器~Auto Parts
+7284.T~盟和産業~輸送用機器~Auto Parts
+7291.T~日本プラスト~輸送用機器~Auto Parts
+7305.T~新家工業~鉄鋼~Steel
+7358.T~ポピンズ~サービス業~Personal Services
+7374.T~コンフィデンス・インターワークス~サービス業~Staffing & Employment Services
+7416.T~はるやまホールディングス~小売業~Apparel Retail
+7417.T~南陽~卸売業~Industrial Distribution
+7427.T~エコートレーディング~卸売業~Packaged Foods
+7442.T~中山福~卸売業~Specialty Retail
+7445.T~ライトオン~小売業~Apparel Retail
+7451.T~三菱食品~卸売業~Food Distribution
+7455.T~パリミキホールディングス~小売業~Specialty Retail
+7463.T~アドヴァングループ~小売業~Building Materials
+7480.T~スズデン~卸売業~Electrical Equipment & Parts
+7481.T~尾家産業~卸売業~Food Distribution
+7487.T~小津産業~卸売業~Paper & Paper Products
+7494.T~コナカ~小売業~Apparel Retail
+7506.T~ハウス　オブ　ローゼ~小売業~Department Stores
+7512.T~イオン北海道~小売業~Department Stores
+7514.T~ヒマラヤ~小売業~Specialty Retail
+7524.T~マルシェ~小売業~Restaurants
+7527.T~システムソフト~情報・通信業~Software-Application
+7561.T~ハークスレイ~小売業~Restaurants
+7570.T~橋本総業ホールディングス~卸売業~Building Products & Equipment
+7590.T~タカショー~卸売業~Home Improvement Retail
+7601.T~ポプラ~小売業~Department Stores
+7608.T~エスケイジャパン~卸売業~Leisure
+7615.T~ＹＵ－ＷＡ　Ｃｒｅａｔｉｏｎ　Ｈｏｌｄｉｎｇｓ~小売業~Apparel Retail
+7619.T~田中商事~卸売業~Electronics & Computer Distribution
+7640.T~トップカルチャー~小売業~Specialty Retail
+7646.T~ＰＬＡＮＴ~小売業~Discount Stores
+7673.T~ダイコー通産~卸売業~Communication Equipment
+7702.T~ＪＭＳ~精密機器~Medical Instruments & Supplies
+7709.T~クボテック~精密機器~Computer Hardware
+7727.T~オーバル~精密機器~Scientific & Technical Instruments
+7775.T~大研医器~精密機器~Medical Instruments & Supplies
+7782.T~シンシア~精密機器~Medical Instruments & Supplies
+7795.T~ＫＹＯＲＩＴＳＵ~その他製品~Conglomerates
+7811.T~中本パックス~その他製品~Specialty Business Services
+7819.T~粧美堂~その他製品~Household & Personal Products
+7822.T~永大産業~その他製品~Furnishings, Fixtures & Appliances
+7823.T~アートネイチャー~その他製品~Household & Personal Products
+7833.T~アイフィスジャパン~その他製品~Specialty Business Services
+7872.T~エステールホールディングス~その他製品~Luxury Goods
+7885.T~タカノ~その他製品~Furnishings, Fixtures & Appliances
+7897.T~ホクシン~その他製品~Lumber & Wood Production
+7898.T~ウッドワン~その他製品~Furnishings, Fixtures & Appliances
+7908.T~きもと~化学~Electronic Components
+7916.T~光村印刷~その他製品~Specialty Business Services
+7918.T~ヴィア・ホールディングス~小売業~Restaurants
+7937.T~ツツミ~その他製品~Luxury Goods
+7940.T~ウェーブロックホールディングス~化学~Specialty Chemicals
+7971.T~東リ~化学~Building Products & Equipment
+7987.T~ナカバヤシ~その他製品~Specialty Business Services
+7999.T~ＭＵＴＯＨホールディングス~電気機器~Business Equipment & Supplies
+8013.T~ナイガイ~繊維製品~Apparel Retail
+8018.T~三共生興~卸売業~Apparel Retail
+8025.T~ツカモトコーポレーション~卸売業~Apparel Retail
+8029.T~ルックホールディングス~繊維製品~Apparel Manufacturing
+8038.T~東都水産~卸売業~Food Distribution
+8041.T~ＯＵＧホールディングス~卸売業~Farm Products
+8077.T~トルク~卸売業~Industrial Distribution
+8089.T~ナイス~卸売業~Industrial Distribution
+8104.T~クワザワホールディングス~卸売業~Building Materials
+8107.T~キムラタン~繊維製品~Apparel Manufacturing
+8118.T~キング~繊維製品~Textile Manufacturing
+8127.T~ヤマトインターナショナル~繊維製品~Apparel Manufacturing
+8131.T~ミツウロコグループホールディングス~卸売業~Oil & Gas Refining & Marketing
+8165.T~千趣会~小売業~Internet Retail
+8166.T~タカキュー~小売業~Apparel Manufacturing
+8181.T~東天紅~小売業~Restaurants
+8207.T~テンアライド~小売業~Restaurants
+8230.T~はせがわ~小売業~Specialty Retail
+8244.T~近鉄百貨店~小売業~Department Stores
+8260.T~井筒屋~小売業~Department Stores
+8275.T~フォーバル~卸売業~Information Technology Services
+8285.T~三谷産業~卸売業~Conglomerates
+8289.T~Ｏｌｙｍｐｉｃグループ~小売業~Specialty Retail
+8291.T~日産東京販売ホールディングス~小売業~Auto & Truck Dealerships
+8349.T~東北銀行~銀行業~Banks-Regional
+8365.T~富山銀行~銀行業~Banks-Regional
+8383.T~鳥取銀行~銀行業~Banks-Regional
+8416.T~高知銀行~銀行業~Banks-Regional
+8518.T~日本アジア投資~証券、商品先物取引業~Asset Management
+8537.T~大光銀行~銀行業~Banks-Regional
+8542.T~トマト銀行~銀行業~Banks-Regional
+8562.T~福島銀行~銀行業~Banks-Regional
+8563.T~大東銀行~銀行業~Banks-Regional
+8572.T~アコム~その他金融業~Credit Services
+8596.T~九州リースサービス~その他金融業~Rental & Leasing Services
+8617.T~光世証券~証券、商品先物取引業~Capital Markets
+8732.T~マネーパートナーズグループ~証券、商品先物取引業~Capital Markets
+8742.T~小林洋行~証券、商品先物取引業~Capital Markets
+8769.T~アドバンテッジリスクマネジメント~サービス業~Medical Care Facilities
+8772.T~アサックス~その他金融業~Mortgage Finance
+8835.T~太平洋興発~卸売業~Conglomerates
+8841.T~テーオーシー~不動産業~Real Estate Services
+8869.T~明和地所~不動産業~Real Estate Services
+8871.T~ゴールドクレスト~不動産業~Real Estate-Development
+8904.T~ＡＶＡＮＴＩＡ~不動産業~Residential Construction
+8908.T~毎日コムネット~不動産業~Real Estate Services
+8917.T~ファースト住建~不動産業~Residential Construction
+8918.T~ランド~不動産業~Real Estate-Diversified
+8920.T~東祥~サービス業~Leisure
+8928.T~穴吹興産~不動産業~Real Estate Services
+8940.T~インテリックス~不動産業~Real Estate-Diversified
+8944.T~ランドビジネス~不動産業~Real Estate Services
+8945.T~サンネクスタグループ~不動産業~Real Estate Services
+9067.T~丸運~陸運業~Trucking
+9074.T~日本石油輸送~陸運業~Railroads
+9078.T~エスライングループ本社~陸運業~Trucking
+9115.T~明海グループ~海運業~Integrated Freight & Logistics
+9130.T~共栄タンカー~海運業~Marine Shipping
+9232.T~パスコ~空運業~Specialty Business Services
+9262.T~シルバーライフ~小売業~Packaged Foods
+9265.T~ヤマシタヘルスケアホールディングス~卸売業~Medical Distribution
+9275.T~ナルミヤ・インターナショナル~小売業~Apparel Manufacturing
+9306.T~東陽倉庫~倉庫・運輸関連業~Integrated Freight & Logistics
+9308.T~乾汽船~海運業~Marine Shipping
+9312.T~ケイヒン~倉庫・運輸関連業~Integrated Freight & Logistics
+9322.T~川西倉庫~倉庫・運輸関連業~Specialty Business Services
+9325.T~ファイズホールディングス~倉庫・運輸関連業~Specialty Business Services
+9351.T~東洋埠頭~倉庫・運輸関連業~Integrated Freight & Logistics
+9366.T~サンリツ~倉庫・運輸関連業~Integrated Freight & Logistics
+9368.T~キムラユニティー~倉庫・運輸関連業~Specialty Business Services
+9369.T~キユーソー流通システム~倉庫・運輸関連業~Integrated Freight & Logistics
+9380.T~東海運~倉庫・運輸関連業~Marine Shipping
+9385.T~ショーエイコーポレーション~化学~Advertising Agencies
+9414.T~日本ＢＳ放送~情報・通信業~Broadcasting
+9417.T~スマートバリュー~情報・通信業~Software-Infrastructure
+9419.T~ワイヤレスゲート~情報・通信業~Telecom Services
+9428.T~クロップス~情報・通信業~Telecom Services
+9466.T~アイドママーケティングコミュニケーション~情報・通信業~Advertising Agencies
+9475.T~昭文社ホールディングス~情報・通信業~Publishing
+9479.T~インプレスホールディングス~情報・通信業~Publishing
+9514.T~エフオン~電気・ガス業~Utilities-Renewable
+9601.T~松竹~情報・通信業~Entertainment
+9602.T~東宝~情報・通信業~Entertainment
+9603.T~エイチ・アイ・エス~サービス業~Leisure
+9605.T~東映~情報・通信業~Entertainment
+9612.T~ラックランド~サービス業~Engineering & Construction
+9613.T~ＮＴＴデータグループ~情報・通信業~Information Technology Services
+9616.T~共立メンテナンス~サービス業~Lodging
+9619.T~イチネンホールディングス~サービス業~Rental & Leasing Services
+9621.T~建設技術研究所~サービス業~Engineering & Construction
+9622.T~スペース~サービス業~Engineering & Construction
+9627.T~アインホールディングス~小売業~Pharmaceutical Retailers
+9628.T~燦ホールディングス~サービス業~Personal Services
+9629.T~ピー・シー・エー~情報・通信業~Software-Application
+9632.T~スバル興業~サービス業~Specialty Business Services
+9633.T~東京テアトル~サービス業~Conglomerates
+9644.T~タナベコンサルティンググループ~サービス業~Consulting Services
+9658.T~ビジネスブレイン太田昭和~情報・通信業~Information Technology Services
+9663.T~ナガワ~サービス業~Engineering & Construction
+9672.T~東京都競馬~サービス業~Gambling
+9675.T~常磐興産~サービス業~Resorts & Casinos
+9678.T~カナモト~サービス業~Rental & Leasing Services
+9682.T~ＤＴＳ~情報・通信業~Information Technology Services
+9684.T~スクウェア・エニックス・ホールディングス~情報・通信業~Electronic Gaming & Multimedia
+9692.T~シーイーシー~情報・通信業~Software-Application
+9697.T~カプコン~情報・通信業~Electronic Gaming & Multimedia
+9699.T~ニシオホールディングス~サービス業~Rental & Leasing Services
+9702.T~アイ・エス・ビー~情報・通信業~Software-Application
+9704.T~アゴーラ　ホスピタリティー　グループ~サービス業~Lodging
+9706.T~日本空港ビルデング~不動産業~Airports & Air Services
+9715.T~トランス・コスモス~サービス業~Information Technology Services
+9716.T~乃村工藝社~サービス業~Engineering & Construction
+9717.T~ジャステック~情報・通信業~Software-Application
+9719.T~ＳＣＳＫ~情報・通信業~Information Technology Services
+9722.T~藤田観光~サービス業~Lodging
+9726.T~ＫＮＴ－ＣＴホールディングス~サービス業~Travel Services
+9729.T~トーカイ~サービス業~Rental & Leasing Services
+9731.T~白洋舎~サービス業~Personal Services
+9735.T~セコム~サービス業~Security & Protection Services
+9739.T~ＮＳＷ~情報・通信業~Information Technology Services
+9740.T~セントラル警備保障~サービス業~Security & Protection Services
+9742.T~アイネス~情報・通信業~Information Technology Services
+9743.T~丹青社~サービス業~Specialty Business Services
+9744.T~メイテックグループホールディングス~サービス業~Staffing & Employment Services
+9746.T~ＴＫＣ~情報・通信業~Information Technology Services
+9749.T~富士ソフト~情報・通信業~Information Technology Services
+9755.T~応用地質~サービス業~Engineering & Construction
+9757.T~船井総研ホールディングス~サービス業~Consulting Services
+9759.T~ＮＳＤ~情報・通信業~Software-Application
+9760.T~進学会ホールディングス~サービス業~Conglomerates
+9763.T~丸紅建材リース~卸売業~Rental & Leasing Services
+9765.T~オオバ~サービス業~Engineering & Construction
+9766.T~コナミグループ~情報・通信業~Electronic Gaming & Multimedia
+9768.T~いであ~サービス業~Engineering & Construction
+9769.T~学究社~サービス業~Education & Training Services
+9783.T~ベネッセホールディングス~サービス業~Education & Training Services
+9787.T~イオンディライト~サービス業~Specialty Business Services
+9788.T~ナック~サービス業~Engineering & Construction
+9790.T~福井コンピュータホールディングス~情報・通信業~Software-Application
+9793.T~ダイセキ~サービス業~Waste Management
+9795.T~ステップ~サービス業~Education & Training Services
+9824.T~泉州電業~卸売業~Electronics & Computer Distribution
+9828.T~元気寿司~小売業~Restaurants
+9830.T~トラスコ中山~卸売業~Industrial Distribution
+9831.T~ヤマダホールディングス~小売業~Specialty Retail
+9832.T~オートバックスセブン~卸売業~Auto Parts
+9837.T~モリト~卸売業~Apparel Retail
+9842.T~アークランズ~小売業~Specialty Retail
+9843.T~ニトリホールディングス~小売業~Furnishings, Fixtures & Appliances
+9850.T~グルメ杵屋~小売業~Restaurants
+9854.T~愛眼~小売業~Specialty Retail
+9856.T~ケーユーホールディングス~小売業~Auto & Truck Dealerships
+9861.T~吉野家ホールディングス~小売業~Restaurants
+9869.T~加藤産業~卸売業~Food Distribution
+9872.T~北恵~卸売業~Building Products & Equipment
+9880.T~イノテック~電気機器~Electronics & Computer Distribution
+9882.T~イエローハット~卸売業~Auto & Truck Dealerships
+9887.T~松屋フーズホールディングス~小売業~Restaurants
+9889.T~ＪＢＣＣホールディングス~情報・通信業~Information Technology Services
+9896.T~ＪＫホールディングス~卸売業~Conglomerates
+9900.T~サガミホールディングス~小売業~Restaurants
+9902.T~日伝~卸売業~Industrial Distribution
+9919.T~関西フードマーケット~小売業~Grocery Stores
+9928.T~ミロク情報サービス~情報・通信業~Software-Application
+9930.T~北沢産業~卸売業~Specialty Industrial Machinery
+9932.T~杉本商事~卸売業~Industrial Distribution
+9934.T~因幡電機産業~卸売業~Electrical Equipment & Parts
+9936.T~王将フードサービス~小売業~Restaurants
+9946.T~ミニストップ~小売業~Department Stores
+9948.T~アークス~小売業~Department Stores
+9956.T~バローホールディングス~小売業~Department Stores
+9960.T~東テク~卸売業~Electronic Components
+9962.T~ミスミグループ本社~卸売業~Tools & Accessories
+9972.T~アルテック~卸売業~Specialty Industrial Machinery
+9974.T~ベルク~小売業~Grocery Stores
+9979.T~大庄~小売業~Restaurants
+9982.T~タキヒヨー~卸売業~Apparel Manufacturing
+9983.T~ファーストリテイリング~小売業~Apparel Retail
+9984.T~ソフトバンクグループ~情報・通信業~Telecom Services
+9986.T~蔵王産業~卸売業~Industrial Distribution
+9987.T~スズケン~卸売業~Medical Distribution
+9989.T~サンドラッグ~小売業~Pharmaceutical Retailers
+9990.T~サックスバー　ホールディングス~小売業~Luxury Goods
+9991.T~ジェコス~卸売業~Rental & Leasing Services
+9993.T~ヤマザワ~小売業~Grocery Stores
+9994.T~やまや~小売業~Beverages-Brewers
+9995.T~グローセル~卸売業~Semiconductors
+9997.T~ベルーナ~小売業~Specialty Retail
+2150.T~ケアネット~サービス業~Health Information Services
+4194.T~ビジョナル~情報・通信業~Internet Content & Information
+7826.T~フルヤ金属~その他製品~Electronic Components
+1380.T~秋川牧園~水産・農林業~Farm Products
+1381.T~アクシーズ~水産・農林業~Farm Products
+1382.T~ホーブ~水産・農林業~Farm Products
+1383.T~ベルグアース~水産・農林業~Farm Products
+1407.T~ウエストホールディングス~建設業~Utilities-Renewable
+1418.T~インターライフホールディングス~建設業~Specialty Business Services
+1434.T~ＪＥＳＣＯホールディングス~建設業~Engineering & Construction
+1438.T~岐阜造園~建設業~Engineering & Construction
+1439.T~安江工務店~建設業~Engineering & Construction
+1443.T~技研ホールディングス~建設業~Engineering & Construction
+1450.T~田中建設工業~建設業~Engineering & Construction
+1451.T~ＫＨＣ~建設業~Real Estate-Development
+1491.T~中外鉱業~非鉄金属~Gold
+1711.T~ＳＤＳホールディングス~建設業~Utilities-Renewable
+1718.T~美樹工業~建設業~Engineering & Construction
+1723.T~日本電技~建設業~Electronic Components
+1724.T~シンクレイヤ~建設業~Communication Equipment
+1730.T~麻生フオームクリート~建設業~Engineering & Construction
+1736.T~オーテック~建設業~Industrial Distribution
+1743.T~コーアツ工業~建設業~Engineering & Construction
+1757.T~創建エース~建設業~Real Estate-Development
+1758.T~太洋基礎工業~建設業~Engineering & Construction
+1764.T~工藤建設~建設業~Engineering & Construction
+1770.T~藤田エンジニアリング~建設業~Engineering & Construction
+1775.T~富士古河Ｅ＆Ｃ~建設業~Engineering & Construction
+1776.T~三井住建道路~建設業~Engineering & Construction
+1783.T~ｆａｎｔａｓｉｓｔａ~建設業~Engineering & Construction
+1787.T~ナカボーテック~建設業~Metal Fabrication
+1788.T~三東工業社~建設業~Engineering & Construction
+1789.T~ＥＴＳホールディングス~建設業~Engineering & Construction
+1793.T~大本組~建設業~Engineering & Construction
+1795.T~マサル~建設業~Engineering & Construction
+1798.T~守谷商会~建設業~Engineering & Construction
+1799.T~第一建設工業~建設業~Engineering & Construction
+1807.T~佐藤渡辺~建設業~Engineering & Construction
+1828.T~田辺工業~建設業~Engineering & Construction
+1840.T~土屋ホールディングス~建設業~Residential Construction
+1841.T~サンユー建設~建設業~Engineering & Construction
+1844.T~大盛工業~建設業~Engineering & Construction
+1850.T~南海辰村建設~建設業~Engineering & Construction
+1853.T~森組~建設業~Engineering & Construction
+1897.T~金下建設~建設業~Engineering & Construction
+1904.T~大成温調~建設業~Building Products & Equipment
+1905.T~テノックス~建設業~Engineering & Construction
+1948.T~弘電社~建設業~Engineering & Construction
+1960.T~サンテック~建設業~Engineering & Construction
+1965.T~テクノ菱和~建設業~Engineering & Construction
+1966.T~高田工業所~建設業~Engineering & Construction
+1971.T~中央ビルト工業~金属製品~Building Materials
+1981.T~協和日成~建設業~Building Products & Equipment
+1992.T~神田通信機~建設業~Communication Equipment
+1994.T~高橋カーテンウォール工業~建設業~Building Products & Equipment
+1997.T~暁飯島工業~建設業~Engineering & Construction
+2055.T~日和産業~食料品~Packaged Foods
+2114.T~フジ日本精糖~食料品~Confectioners
+2122.T~インタースペース~サービス業~Advertising Agencies
+2134.T~燦キャピタルマネージメント~サービス業~Asset Management
+2136.T~ヒップ~サービス業~Staffing & Employment Services
+2138.T~クルーズ~情報・通信業~Software-Application
+2152.T~幼児活動研究会~サービス業~Education & Training Services
+2156.T~セーラー広告~サービス業~Advertising Agencies
+2162.T~ｎｍｓ　ホールディングス~サービス業~Electronic Components
+2179.T~成学社~サービス業~Education & Training Services
+2185.T~シイエム・シイ~サービス業~Information Technology Services
+2186.T~ソーバル~サービス業~Software-Application
+2208.T~ブルボン~食料品~Confectioners
+2216.T~カンロ~食料品~Confectioners
+2221.T~岩塚製菓~食料品~Confectioners
+2224.T~コモ~食料品~Packaged Foods
+2226.T~湖池屋~食料品~Packaged Foods
+2268.T~Ｂ－Ｒ　サーティワン　アイスクリーム~食料品~Food Distribution
+2291.T~福留ハム~食料品~Packaged Foods
+2293.T~滝沢ハム~食料品~Packaged Foods
+2300.T~きょくとう~サービス業~Personal Services
+2303.T~ドーン~情報・通信業~Software-Application
+2304.T~ＣＳＳホールディングス~サービス業~Specialty Business Services
+2315.T~ＣＡＩＣＡ　ＤＩＧＩＴＡＬ~情報・通信業~Information Technology Services
+2323.T~ｆｏｎｆｕｎ~情報・通信業~Information Technology Services
+2329.T~東北新社~情報・通信業~Entertainment
+2330.T~フォーサイド~情報・通信業~Leisure
+2332.T~クエスト~情報・通信業~Information Technology Services
+2338.T~クオンタムソリューションズ~情報・通信業~Information Technology Services
+2340.T~極楽湯ホールディングス~サービス業~Leisure
+2341.T~アルバイトタイムス~サービス業~Publishing
+2344.T~平安レイサービス~サービス業~Personal Services
+2345.T~クシム~情報・通信業~Software-Application
+2349.T~エヌアイデイ~情報・通信業~Information Technology Services
+2354.T~ＹＥ　ＤＩＧＩＴＡＬ~情報・通信業~Information Technology Services
+2373.T~ケア２１~サービス業~Medical Care Facilities
+2375.T~ギグワークス~サービス業~Information Technology Services
+2391.T~プラネット~サービス業~Information Technology Services
+2393.T~日本ケアサプライ~サービス業~Rental & Leasing Services
+2397.T~ＤＮＡチップ研究所~サービス業~Diagnostics & Research
+2404.T~鉄人化計画~サービス業~Lodging
+2408.T~ＫＧ情報~サービス業~Publishing
+2411.T~ゲンダイエージェンシー~情報・通信業~Advertising Agencies
+2415.T~ヒューマンホールディングス~サービス業~Education & Training Services
+2425.T~ケアサービス~サービス業~Medical Care Facilities
+2435.T~シダー~サービス業~Medical Care Facilities
+2436.T~共同ピーアール~サービス業~Advertising Agencies
+2437.T~Ｓｈｉｎｗａ　Ｗｉｓｅ　Ｈｏｌｄｉｎｇｓ~サービス業~Personal Services
+2449.T~プラップジャパン~サービス業~Consulting Services
+2454.T~オールアバウト~サービス業~Internet Content & Information
+2459.T~アウンコンサルティング~サービス業~Internet Content & Information
+2468.T~フュートレック~サービス業~Information Technology Services
+2469.T~ヒビノ~サービス業~Consumer Electronics
+2480.T~システム・ロケーション~情報・通信業~Specialty Business Services
+2481.T~タウンニュース社~サービス業~Publishing
+2483.T~翻訳センター~サービス業~Specialty Business Services
+2484.T~出前館~情報・通信業~Internet Retail
+2488.T~ＪＴＰ~サービス業~Information Technology Services
+2493.T~イーサポートリンク~サービス業~Information Technology Services
+2498.T~オリエンタルコンサルタンツホールディングス~サービス業~Specialty Business Services
+2499.T~日本和装ホールディングス~サービス業~Specialty Business Services
+2573.T~北海道コカ・コーラボトリング~食料品~Beverages-Non-Alcoholic
+2588.T~プレミアムウォーターホールディングス~食料品~Utilities-Regulated Water
+25935.T~伊藤園 優先株式~食料品~None
+2652.T~まんだらけ~小売業~Internet Retail
+2653.T~イオン九州~小売業~Department Stores
+2654.T~アスモ~小売業~Packaged Foods
+2656.T~ベクターホールディングス~小売業~Advertising Agencies
+2666.T~オートウェーブ~小売業~Specialty Retail
+2667.T~イメージ　ワン~卸売業~Scientific & Technical Instruments
+2668.T~タビオ~卸売業~Apparel Manufacturing
+2669.T~カネ美食品~小売業~Packaged Foods
+2673.T~夢みつけ隊~小売業~Internet Retail
+2683.T~魚喜~小売業~Food Distribution
+2693.T~ＹＫＴ~卸売業~Specialty Industrial Machinery
+2694.T~焼肉坂井ホールディングス~小売業~Restaurants
+2700.T~木徳神糧~卸売業~Packaged Foods
+2702.T~日本マクドナルドホールディングス~小売業~Restaurants
+2705.T~大戸屋ホールディングス~小売業~Restaurants
+2708.T~久世~卸売業~Food Distribution
+2721.T~ジェイホールディングス~卸売業~Real Estate Services
+2736.T~フェスタリアホールディングス~小売業~Luxury Goods
+2743.T~ピクセルカンパニーズ~卸売業~Utilities-Renewable
+2747.T~北雄ラッキー~小売業~Grocery Stores
+2750.T~石光商事~卸売業~Confectioners
+2751.T~テンポスホールディングス~卸売業~Specialty Retail
+2754.T~東葛ホールディングス~小売業~Auto & Truck Dealerships
+2762.T~ＳＡＮＫＯ　ＭＡＲＫＥＴＩＮＧ　ＦＯＯＤＳ~小売業~Restaurants
+2763.T~エフティグループ~卸売業~Communication Equipment
+2769.T~ヴィレッジヴァンガードコーポレーション~小売業~Specialty Retail
+2776.T~新都ホールディングス~卸売業~Apparel Manufacturing
+2778.T~パレモ・ホールディングス~小売業~Apparel Retail
+2780.T~コメ兵ホールディングス~小売業~Real Estate Services
+2782.T~セリア~小売業~Discount Stores
+2788.T~アップルインターナショナル~卸売業~Auto & Truck Dealerships
+2789.T~カルラ~小売業~Restaurants
+2790.T~ナフコ~小売業~Home Improvement Retail
+2795.T~日本プリメックス~卸売業~Specialty Industrial Machinery
+2798.T~ワイズテーブルコーポレーション~小売業~Restaurants
+2805.T~ヱスビー食品~食料品~Packaged Foods
+2806.T~ユタカフーズ~食料品~Packaged Foods
+2813.T~和弘食品~食料品~Packaged Foods
+2814.T~佐藤食品工業~食料品~Packaged Foods
+2816.T~ダイショー~食料品~Food Distribution
+2830.T~アヲハタ~食料品~Packaged Foods
+2831.T~はごろもフーズ~食料品~Packaged Foods
+2872.T~セイヒョー~食料品~Packaged Foods
+2876.T~デルソーレ~食料品~Packaged Foods
+2877.T~日東ベスト~食料品~Packaged Foods
+2892.T~日本食品化工~食料品~Packaged Foods
+2894.T~石井食品~食料品~Packaged Foods
+2901.T~石垣食品~食料品~Beverages-Non-Alcoholic
+2903.T~シノブフーズ~食料品~Packaged Foods
+2907.T~あじかん~食料品~Packaged Foods
+2911.T~旭松食品~食料品~Packaged Foods
+2916.T~仙波糖化工業~食料品~Confectioners
+2917.T~大森屋~食料品~Packaged Foods
+2923.T~サトウ食品~食料品~Packaged Foods
+2926.T~篠崎屋~食料品~Packaged Foods
+2927.T~ＡＦＣ－ＨＤアムスライフサイエンス~食料品~Packaged Foods
+2932.T~ＳＴＩフードホールディングス~食料品~Packaged Foods
+2938.T~オカムラ食品工業~食料品~Farm Products
+2961.T~日本調理機~金属製品~Specialty Industrial Machinery
+2962.T~テクニスコ~金属製品~Metal Fabrication
+2970.T~グッドライフカンパニー~不動産業~Real Estate Services
+2984.T~ヤマイチ・ユニハイムエステート~不動産業~Real Estate-Development
+2991.T~ランドネット~不動産業~Real Estate Services
+2993.T~長栄~不動産業~Real Estate Services
+2999.T~ホームポジション~不動産業~Residential Construction
+3010.T~ポラリス・ホールディングス~サービス業~Real Estate-Diversified
+3011.T~バナーズ~小売業~Auto & Truck Dealerships
+3020.T~アプライド~小売業~Electronics & Computer Distribution
+3021.T~パシフィックネット~サービス業~Computer Hardware
+3024.T~クリエイト~卸売業~Metal Fabrication
+3035.T~ケイティケイ~卸売業~Business Equipment & Supplies
+3041.T~ビューティカダンホールディングス~卸売業~Personal Services
+3045.T~カワサキ~卸売業~Apparel Manufacturing
+3058.T~三洋堂ホールディングス~小売業~Specialty Retail
+3059.T~ヒラキ~小売業~Footwear & Accessories
+3065.T~ライフフーズ~小売業~Restaurants
+3068.T~ＷＤＩ~小売業~Restaurants
+3069.T~ＪＦＬＡホールディングス~小売業~Restaurants
+3071.T~ストリーム~小売業~Internet Retail
+3075.T~銚子丸~小売業~Restaurants
+3077.T~ホリイフードサービス~小売業~Restaurants
+3080.T~ジェーソン~小売業~Discount Stores
+3083.T~シーズメン~小売業~Apparel Retail
+3089.T~テクノアルファ~卸売業~Semiconductor Equipment & Materials
+3094.T~スーパーバリュー~小売業~Grocery Stores
+3096.T~オーシャンシステム~小売業~Grocery Stores
+3111.T~オーミケンシ~繊維製品~Textile Manufacturing
+3113.T~ＵＮＩＶＡ・Ｏａｋホールディングス~証券、商品先物取引業~Asset Management
+3121.T~マーチャント・バンカーズ~サービス業~Asset Management
+3123.T~サイボー~繊維製品~Textile Manufacturing
+3131.T~シンデン・ハイテックス~卸売業~Electronics & Computer Distribution
+3143.T~オーウイル~卸売業~Food Distribution
+3161.T~アゼアス~卸売業~Textile Manufacturing
+3174.T~ハピネス・アンド・ディ~小売業~Specialty Retail
+3177.T~ありがとうサービス~小売業~Specialty Retail
+3181.T~買取王国~小売業~Specialty Retail
+3184.T~ＩＣＤＡホールディングス~小売業~Auto & Truck Dealerships
+3189.T~ＡＮＡＰ~小売業~Apparel Retail
+3190.T~ホットマン~小売業~Textile Manufacturing
+3192.T~白鳩~小売業~Internet Retail
+3223.T~エスエルディー~小売業~Restaurants
+3236.T~プロパスト~不動産業~Real Estate-Diversified
+3238.T~セントラル総合開発~不動産業~Real Estate Services
+3241.T~ウィル~不動産業~Real Estate Services
+3242.T~アーバネットコーポレーション~不動産業~Real Estate-Diversified
+3248.T~アールエイジ~不動産業~Real Estate-Diversified
+3264.T~アスコット~不動産業~Real Estate-Diversified
+3266.T~ファンドクリエーショングループ~不動産業~Asset Management
+3293.T~アズマハウス~不動産業~Real Estate-Development
+3297.T~東武住販~不動産業~Real Estate Services
+3306.T~日本製麻~卸売業~Conglomerates
+3317.T~フライングガーデン~小売業~Restaurants
+3320.T~クロスプラス~卸売業~Apparel Manufacturing
+3322.T~アルファグループ~卸売業~Communication Equipment
+3323.T~レカム~卸売業~Telecom Services
+3326.T~ランシステム~サービス業~Leisure
+3329.T~東和フードサービス~小売業~Restaurants
+3347.T~トラスト~小売業~Auto & Truck Dealerships
+3350.T~メタプラネット~卸売業~Restaurants
+3352.T~バッファロー~小売業~Auto & Truck Dealerships
+3353.T~メディカル一光グループ~小売業~Conglomerates
+3355.T~クリヤマホールディングス~卸売業~Specialty Chemicals
+3358.T~ワイエスフード~小売業~Restaurants
+3370.T~フジタコーポレーション~小売業~Restaurants
+3372.T~関門海~小売業~Restaurants
+3374.T~内外テック~卸売業~Electrical Equipment & Parts
+3375.T~ＺＯＡ~小売業~Electronics & Computer Distribution
+3377.T~バイク王＆カンパニー~卸売業~Auto & Truck Dealerships
+3386.T~コスモ・バイオ~卸売業~Diagnostics & Research
+3399.T~丸千代山岡家~小売業~Restaurants
+3409.T~北日本紡績~繊維製品~Textile Manufacturing
+3417.T~大木ヘルスケアホールディングス~卸売業~Pharmaceutical Retailers
+3420.T~ケー・エフ・シー~金属製品~Conglomerates
+3422.T~Ｊ－ＭＡＸ~金属製品~Auto Parts
+3423.T~エスイー~金属製品~Engineering & Construction
+3426.T~アトムリビンテック~金属製品~Building Products & Equipment
+3435.T~サンコーテクノ~金属製品~Metal Fabrication
+3437.T~特殊電極~金属製品~Specialty Industrial Machinery
+3439.T~三ツ知~金属製品~Auto Parts
+3440.T~日創プロニティ~金属製品~Metal Fabrication
+3441.T~山王~金属製品~Metal Fabrication
+3444.T~菊池製作所~金属製品~Specialty Industrial Machinery
+3449.T~テクノフレックス~金属製品~Metal Fabrication
+3469.T~デュアルタップ~不動産業~Real Estate-Diversified
+3490.T~アズ企画設計~不動産業~Real Estate Services
+3494.T~マリオン~不動産業~Real Estate Services
+3495.T~香陵住販~不動産業~Real Estate Services
+3536.T~アクサスホールディングス~小売業~Household & Personal Products
+3537.T~昭栄薬品~卸売業~Specialty Chemicals
+3540.T~歯愛メディカル~卸売業~Household & Personal Products
+3560.T~ほぼ日~小売業~Specialty Retail
+3562.T~Ｎｏ．１~卸売業~Business Equipment & Supplies
+3583.T~オーベクス~繊維製品~Department Stores
+3597.T~自重堂~繊維製品~Apparel Manufacturing
+3598.T~山喜~繊維製品~Apparel Manufacturing
+3600.T~フジックス~繊維製品~Textile Manufacturing
+3604.T~川本産業~繊維製品~Medical Instruments & Supplies
+3634.T~ソケッツ~情報・通信業~Information Technology Services
+3641.T~パピレス~情報・通信業~Publishing
+3647.T~ジー・スリーホールディングス~情報・通信業~Information Technology Services
+3663.T~セルシス~情報・通信業~Software-Application
+3670.T~協立情報通信~情報・通信業~Information Technology Services
+3710.T~ジョルダン~情報・通信業~Software-Application
+3712.T~情報企画~情報・通信業~Software-Application
+3719.T~ジェクシード~情報・通信業~Consulting Services
+3726.T~フォーシーズＨＤ~小売業~Internet Retail
+3733.T~ソフトウェア・サービス~情報・通信業~Health Information Services
+3744.T~サイオス~情報・通信業~Software-Application
+3747.T~インタートレード~情報・通信業~Capital Markets
+3750.T~サイトリ細胞研究所~情報・通信業~Biotechnology
+3753.T~フライトソリューションズ~情報・通信業~Information Technology Services
+3758.T~アエリア~情報・通信業~Electronic Gaming & Multimedia
+3760.T~ケイブ~情報・通信業~Electronic Gaming & Multimedia
+3766.T~システムズ・デザイン~情報・通信業~Information Technology Services
+3768.T~リスクモンスター~情報・通信業~Consulting Services
+3772.T~ウェルス・マネジメント~不動産業~Asset Management
+3776.T~ブロードバンドタワー~情報・通信業~Telecom Services
+3779.T~ジェイ・エスコムホールディングス~情報・通信業~Internet Retail
+3787.T~テクノマセマティカル~情報・通信業~Software-Application
+3791.T~ＩＧポート~情報・通信業~Entertainment
+3796.T~いい生活~情報・通信業~Software-Application
+3798.T~ＵＬＳグループ~情報・通信業~Information Technology Services
+3799.T~キーウェアソリューションズ~情報・通信業~Information Technology Services
+3800.T~ユニリタ~情報・通信業~Software-Application
+3802.T~エコミック~情報・通信業~Specialty Business Services
+3804.T~システム　ディ~情報・通信業~Software-Application
+3810.T~サイバーステップ~情報・通信業~Electronic Gaming & Multimedia
+3816.T~大和コンピューター~情報・通信業~Software-Application
+3823.T~ＴＨＥ　ＷＨＹ　ＨＯＷ　ＤＯ　ＣＯＭＰＡＮＹ~情報・通信業~Software-Application
+3825.T~リミックスポイント~小売業~Utilities-Diversified
+3840.T~パス~情報・通信業~Specialty Business Services
+3841.T~ジーダット~情報・通信業~Software-Application
+3845.T~アイフリークモバイル~情報・通信業~Internet Content & Information
+3847.T~パシフィックシステム~情報・通信業~Information Technology Services
+3848.T~データ・アプリケーション~情報・通信業~Software-Application
+3850.T~エヌ・ティ・ティ・データ・イントラマート~情報・通信業~Software-Infrastructure
+3851.T~日本一ソフトウェア~情報・通信業~Electronic Gaming & Multimedia
+3856.T~Ａｂａｌａｎｃｅ~電気機器~Software-Application
+3857.T~ラック~情報・通信業~Information Technology Services
+3858.T~ユビキタスＡＩ~情報・通信業~Software-Infrastructure
+3891.T~ニッポン高度紙工業~パルプ・紙~Electronic Components
+3892.T~岡山製紙~パルプ・紙~Paper & Paper Products
+3895.T~ハビックス~パルプ・紙~Paper & Paper Products
+3910.T~エムケイシステム~情報・通信業~Software-Application
+3933.T~チエル~情報・通信業~Software-Application
+3943.T~大石産業~パルプ・紙~Packaging & Containers
+3944.T~古林紙工~パルプ・紙~Packaging & Containers
+3945.T~スーパーバッグ~パルプ・紙~Paper & Paper Products
+3947.T~ダイナパック~パルプ・紙~Packaging & Containers
+3948.T~光ビジネスフォーム~パルプ・紙~Specialty Business Services
+3951.T~朝日印刷~パルプ・紙~Packaging & Containers
+3953.T~大村紙業~パルプ・紙~Packaging & Containers
+3954.T~昭和パックス~パルプ・紙~Packaging & Containers
+3955.T~イムラ~パルプ・紙~Paper & Paper Products
+3958.T~笹徳印刷~パルプ・紙~Specialty Business Services
+3974.T~ＳＣＡＴ~情報・通信業~Information Technology Services
+3988.T~ＳＹＳホールディングス~情報・通信業~Information Technology Services
+3993.T~ＰＫＳＨＡ　Ｔｅｃｈｎｏｌｏｇｙ~情報・通信業~Software-Infrastructure
+3997.T~トレードワークス~情報・通信業~Information Technology Services
+4012.T~アクシス~情報・通信業~Information Technology Services
+4016.T~ＭＩＴホールディングス~情報・通信業~Information Technology Services
+4026.T~神島化学工業~ガラス・土石製品~Building Products & Equipment
+4040.T~南海化学~化学~Chemicals
+4059.T~まぐまぐ~情報・通信業~Internet Content & Information
+4080.T~田中化学研究所~化学~Chemicals
+4094.T~日本化学産業~化学~Specialty Chemicals
+4102.T~丸尾カルシウム~化学~Chemicals
+4107.T~伊勢化学工業~化学~Specialty Chemicals
+4113.T~田岡化学工業~化学~Specialty Chemicals
+4119.T~日本ピグメント~化学~Specialty Chemicals
+4120.T~スガイ化学工業~化学~Specialty Chemicals
+4124.T~大阪油化工業~化学~Chemicals
+4125.T~三和油化工業~化学~Waste Management
+4171.T~グローバルインフォメーション~情報・通信業~Specialty Business Services
+4172.T~東和ハイシステム~情報・通信業~Health Information Services
+4174.T~アピリッツ~情報・通信業~Software-Application
+4193.T~ファブリカコミュニケーションズ~情報・通信業~Software-Application
+4196.T~ネオマーケティング~情報・通信業~Advertising Agencies
+4197.T~アスマーク~情報・通信業~Specialty Business Services
+4198.T~テンダ~情報・通信業~Information Technology Services
+4222.T~児玉化学工業~化学~Auto Parts
+4224.T~ロンシール工業~化学~Building Products & Equipment
+4234.T~サンエー化研~化学~Specialty Chemicals
+4235.T~ウルトラファブリックス・ホールディングス~化学~Textile Manufacturing
+4237.T~フジプレアム~化学~Electronic Components
+4241.T~アテクト~化学~Conglomerates
+4242.T~タカギセイコー~化学~Specialty Chemicals
+4243.T~ニックス~化学~Specialty Chemicals
+4247.T~ポバール興業~化学~Specialty Chemicals
+4274.T~細谷火工~化学~Chemicals
+4287.T~ジャストプランニング~情報・通信業~Computer Hardware
+4288.T~アズジェント~情報・通信業~Software-Infrastructure
+4293.T~セプテーニ・ホールディングス~サービス業~Advertising Agencies
+4304.T~Ｅストアー~情報・通信業~Specialty Business Services
+4317.T~レイ~サービス業~Entertainment
+4334.T~ユークス~情報・通信業~Electronic Gaming & Multimedia
+4335.T~アイ・ピー・エス~情報・通信業~Information Technology Services
+4341.T~西菱電機~サービス業~Telecom Services
+4347.T~ブロードメディア~サービス業~Entertainment
+4351.T~山田債権回収管理総合事務所~その他金融業~Specialty Business Services
+4356.T~応用技術~情報・通信業~Information Technology Services
+4360.T~マナック・ケミカル・パートナーズ~化学~Chemicals
+4361.T~川口化学工業~化学~Specialty Chemicals
+4365.T~松本油脂製薬~化学~Specialty Chemicals
+4366.T~ダイトーケミックス~化学~Chemicals
+4367.T~広栄化学~化学~Specialty Chemicals
+4386.T~ＳＩＧグループ~情報・通信業~Information Technology Services
+4398.T~ブロードバンドセキュリティ~情報・通信業~Information Technology Services
+4409.T~東邦化学工業~化学~Specialty Chemicals
+4421.T~ディ・アイ・システム~情報・通信業~Information Technology Services
+4464.T~ソフト９９コーポレーション~化学~Specialty Chemicals
+4491.T~コンピューターマネージメント~情報・通信業~Software-Application
+4492.T~ゼネテック~情報・通信業~Software-Application
+4494.T~バリオセキュア~情報・通信業~Software-Infrastructure
+4499.T~Ｓｐｅｅｅ~情報・通信業~Advertising Agencies
+4524.T~森下仁丹~医薬品~Drug Manufacturers-Specialty & Generic
+4556.T~カイノス~医薬品~Medical Instruments & Supplies
+4558.T~中京医薬品~医薬品~Department Stores
+4595.T~ミズホメディー~医薬品~Drug Manufacturers-Specialty & Generic
+4616.T~川上塗料~化学~Specialty Chemicals
+4623.T~アサヒペン~化学~Specialty Chemicals
+4624.T~イサム塗料~化学~Specialty Chemicals
+4625.T~アトミクス~化学~Specialty Chemicals
+4627.T~ナトコ~化学~Specialty Chemicals
+4628.T~エスケー化研~化学~Specialty Chemicals
+4629.T~大伸化学~化学~Specialty Chemicals
+4635.T~東京インキ~化学~Specialty Chemicals
+4642.T~オリジナル設計~サービス業~Engineering & Construction
+4644.T~イマジニア~情報・通信業~Internet Content & Information
+4645.T~市進ホールディングス~サービス業~Education & Training Services
+4650.T~ＳＤエンターテイメント~サービス業~Entertainment
+4657.T~環境管理センター~サービス業~Waste Management
+4659.T~エイジス~サービス業~Specialty Business Services
+4664.T~アール・エス・シー~サービス業~Specialty Business Services
+4667.T~アイサンテクノロジー~情報・通信業~Software-Infrastructure
+4673.T~川崎地質~サービス業~Engineering & Construction
+4685.T~菱友システムズ~情報・通信業~Conglomerates
+4690.T~日本パレットプール~サービス業~Packaging & Containers
+4691.T~ワシントンホテル~サービス業~Lodging
+4705.T~クリップコーポレーション~サービス業~Education & Training Services
+4707.T~キタック~サービス業~Engineering & Construction
+4712.T~ＫｅｙＨｏｌｄｅｒ~サービス業~Entertainment
+4720.T~城南進学研究社~サービス業~Education & Training Services
+4735.T~京進~サービス業~Education & Training Services
+4736.T~日本ラッド~情報・通信業~Information Technology Services
+4748.T~構造計画研究所~情報・通信業~Engineering & Construction
+4750.T~ダイサン~サービス業~Engineering & Construction
+4752.T~昭和システムエンジニアリング~情報・通信業~Information Technology Services
+4754.T~トスネット~サービス業~Security & Protection Services
+4760.T~アルファ~サービス業~Advertising Agencies
+4761.T~さくらケーシーエス~情報・通信業~Information Technology Services
+4766.T~ピーエイ~サービス業~Staffing & Employment Services
+4769.T~ＩＣ~情報・通信業~Information Technology Services
+4770.T~図研エルミック~情報・通信業~Software-Application
+4771.T~エフアンドエム~サービス業~Specialty Business Services
+4777.T~ガーラ~情報・通信業~Electronic Gaming & Multimedia
+4781.T~日本ハウズイング~サービス業~Real Estate Services
+4783.T~ＮＣＤ~情報・通信業~Information Technology Services
+4784.T~ＧＭＯアドパートナーズ~サービス業~Software-Infrastructure
+4800.T~オリコン~情報・通信業~Internet Content & Information
+4814.T~ネクストウェア~情報・通信業~Information Technology Services
+4816.T~東映アニメーション~情報・通信業~Entertainment
+4832.T~ＪＦＥシステムズ~情報・通信業~Information Technology Services
+4837.T~シダックス~サービス業~Food Distribution
+4838.T~スペースシャワーネットワーク~情報・通信業~Broadcasting
+4885.T~室町ケミカル~医薬品~Chemicals
+4918.T~アイビー化粧品~化学~Household & Personal Products
+4920.T~日本色材工業研究所~化学~Household & Personal Products
+4925.T~ハーバー研究所~化学~Household & Personal Products
+4930.T~グラフィコ~化学~Household & Personal Products
+4932.T~アルマード~化学~Household & Personal Products
+4935.T~リベルタ~化学~Household & Personal Products
+4957.T~ヤスハラケミカル~化学~Specialty Chemicals
+4960.T~ケミプロ化成~化学~Chemicals
+4966.T~上村工業~化学~Specialty Chemicals
+4970.T~東洋合成工業~化学~Chemicals
+4972.T~綜研化学~化学~Specialty Chemicals
+4976.T~東洋ドライルーブ~化学~Specialty Chemicals
+4987.T~寺岡製作所~化学~Specialty Chemicals
+4990.T~昭和化学工業~化学~Specialty Chemicals
+4998.T~フマキラー~化学~Agricultural Inputs
+5010.T~日本精蝋~石油・石炭製品~Oil & Gas Refining & Marketing
+5036.T~日本ビジネスシステムズ~情報・通信業~Software-Infrastructure
+5071.T~ヴィス~建設業~Specialty Business Services
+5078.T~セレコーポレーション~建設業~Real Estate Services
+5079.T~ノバック~建設業~Engineering & Construction
+5103.T~昭和ホールディングス~ゴム製品~Specialty Chemicals
+5133.T~テリロジーホールディングス~情報・通信業~Information Technology Services
+5161.T~西川ゴム工業~ゴム製品~Auto Parts
+5162.T~朝日ラバー~ゴム製品~Auto Parts
+5184.T~ニチリン~ゴム製品~Auto Parts
+5189.T~櫻護謨~ゴム製品~Auto Parts
+5194.T~相模ゴム工業~ゴム製品~Household & Personal Products
+5199.T~不二ラテックス~ゴム製品~Specialty Chemicals
+5212.T~不二硝子~ガラス・土石製品~Medical Devices
+5216.T~倉元製作所~ガラス・土石製品~Electronic Components
+5217.T~テクノクオーツ~ガラス・土石製品~Semiconductor Equipment & Materials
+5237.T~ノザワ~ガラス・土石製品~Building Products & Equipment
+5250.T~プライム・ストラテジー~情報・通信業~Software-Infrastructure
+5257.T~ノバシステム~情報・通信業~Software-Application
+5268.T~旭コンクリート工業~ガラス・土石製品~Building Products & Equipment
+5271.T~トーヨーアサノ~ガラス・土石製品~Building Products & Equipment
+5277.T~スパンクリートコーポレーション~ガラス・土石製品~Building Products & Equipment
+5279.T~日本興業~ガラス・土石製品~Engineering & Construction
+5280.T~ヨシコン~不動産業~Real Estate-Development
+5282.T~ジオスター~ガラス・土石製品~Building Materials
+5283.T~高見澤~卸売業~Building Materials
+5284.T~ヤマウホールディングス~ガラス・土石製品~Building Materials
+5285.T~ヤマックス~ガラス・土石製品~Building Materials
+5287.T~イトーヨーギョー~ガラス・土石製品~Building Products & Equipment
+5290.T~ベルテクスコーポレーション~ガラス・土石製品~Building Materials
+5304.T~ＳＥＣカーボン~ガラス・土石製品~Specialty Chemicals
+5341.T~ＡＳＡＨＩ　ＥＩＴＯホールディングス~ガラス・土石製品~Household & Personal Products
+5355.T~日本坩堝~ガラス・土石製品~Conglomerates
+5368.T~日本インシュレーション~ガラス・土石製品~Specialty Industrial Machinery
+5380.T~新東~ガラス・土石製品~Building Products & Equipment
+5381.T~Ｍｉｐｏｘ~ガラス・土石製品~Specialty Chemicals
+5386.T~鶴弥~ガラス・土石製品~Building Products & Equipment
+5395.T~理研コランダム~ガラス・土石製品~Specialty Chemicals
+5446.T~北越メタル~鉄鋼~Steel
+5458.T~高砂鐵工~鉄鋼~Steel
+5484.T~東北特殊鋼~鉄鋼~Steel
+5533.T~エリッツホールディングス~不動産業~Real Estate Services
+5542.T~新報国マテリアル~鉄鋼~Steel
+5571.T~エキサイトホールディングス~情報・通信業~Software-Application
+5576.T~オービーシステム~情報・通信業~Information Technology Services
+5589.T~オートサーバー~情報・通信業~Auto & Truck Dealerships
+5609.T~日本鋳造~鉄鋼~Steel
+5610.T~大和重工~鉄鋼~Building Products & Equipment
+5644.T~メタルアート~鉄鋼~Metal Fabrication
+5660.T~神鋼鋼線工業~鉄鋼~Steel
+5695.T~パウダーテック~鉄鋼~Specialty Chemicals
+5697.T~サンユウ~鉄鋼~Steel
+5699.T~イボキン~鉄鋼~Waste Management
+5724.T~アサカ理研~非鉄金属~Other Industrial Metals & Mining
+5729.T~日本精鉱~非鉄金属~Chemicals
+5742.T~エヌアイシ・オートテック~非鉄金属~Aluminum
+5753.T~日本伸銅~非鉄金属~Copper
+5781.T~東邦金属~非鉄金属~Other Industrial Metals & Mining
+5816.T~オーナンバ~非鉄金属~Electrical Equipment & Parts
+5817.T~ＪＭＡＣＳ~非鉄金属~Communication Equipment
+5820.T~三ッ星~非鉄金属~Electrical Equipment & Parts
+5843.T~ニッポンインシュア~その他金融業~Insurance-Diversified
+5845.T~全保連~その他金融業~Specialty Business Services
+5856.T~エルアイイーエイチ~小売業~Conglomerates
+5868.T~ロココ~サービス業~None
+5869.T~早稲田学習研究会~サービス業~None
+5885.T~ジーデップ・アドバンス~卸売業~Computer Hardware
+5889.T~Ｊａｐａｎ　Ｅｙｅｗｅａｒ　Ｈｏｌｄｉｎｇｓ~小売業~Medical Instruments & Supplies
+5891.T~魁力屋~小売業~None
+5900.T~ダイケン~金属製品~Building Products & Equipment
+5903.T~シンポ~金属製品~Specialty Industrial Machinery
+5905.T~日本製罐~金属製品~Packaging & Containers
+5906.T~エムケー精工~金属製品~Consumer Electronics
+5918.T~瀧上工業~金属製品~Engineering & Construction
+5921.T~川岸工業~金属製品~Steel
+5922.T~那須電機鉄工~金属製品~Metal Fabrication
+5928.T~アルメタックス~金属製品~Building Products & Equipment
+5935.T~元旦ビューティ工業~金属製品~Building Products & Equipment
+5939.T~大谷工業~金属製品~Electrical Equipment & Parts
+5940.T~不二サッシ~金属製品~Building Products & Equipment
+5941.T~中西製作所~金属製品~Furnishings, Fixtures & Appliances
+5945.T~天龍製鋸~金属製品~Tools & Accessories
+5950.T~日本パワーファスニング~金属製品~Tools & Accessories
+5952.T~アマテイ~金属製品~Tools & Accessories
+5955.T~ヤマシナ~金属製品~Tools & Accessories
+5956.T~トーソー~金属製品~Furnishings, Fixtures & Appliances
+5962.T~浅香工業~その他製品~Tools & Accessories
+5965.T~フジマック~金属製品~Furnishings, Fixtures & Appliances
+5966.T~京都機械工具~金属製品~Tools & Accessories
+5967.T~ＴＯＮＥ~金属製品~Tools & Accessories
+5969.T~ロブテックス~金属製品~Tools & Accessories
+5971.T~共和工業所~金属製品~Tools & Accessories
+5973.T~トーアミ~金属製品~Steel
+5974.T~中国工業~金属製品~Utilities-Regulated Gas
+5982.T~マルゼン~金属製品~Specialty Industrial Machinery
+5983.T~イワブチ~金属製品~Electrical Equipment & Parts
+5984.T~兼房~金属製品~Specialty Industrial Machinery
+5987.T~オーネックス~金属製品~Metal Fabrication
+5990.T~スーパーツール~金属製品~Tools & Accessories
+5994.T~ファインシンター~金属製品~Metal Fabrication
+5997.T~協立エアテック~金属製品~Building Products & Equipment
+6016.T~ジャパンエンジンコーポレーション~輸送用機器~Specialty Industrial Machinery
+6018.T~阪神内燃機工業~輸送用機器~Specialty Industrial Machinery
+6022.T~赤阪鐵工所~機械~Aerospace & Defense
+6023.T~ダイハツディーゼル~輸送用機器~Specialty Industrial Machinery
+6042.T~ニッキ~輸送用機器~Auto Parts
+6060.T~こころネット~サービス業~Personal Services
+6061.T~ユニバーサル園芸社~サービス業~Specialty Retail
+6063.T~日本エマージェンシーアシスタンス~サービス業~Medical Care Facilities
+6074.T~ジェイエスエス~サービス業~Leisure
+6091.T~ウエスコホールディングス~サービス業~Engineering & Construction
+6125.T~岡本工作機械製作所~機械~Specialty Industrial Machinery
+6131.T~浜井産業~機械~Specialty Industrial Machinery
+6137.T~小池酸素工業~機械~Specialty Industrial Machinery
+6144.T~西部電機~機械~Specialty Industrial Machinery
+6145.T~ＮＩＴＴＯＫＵ~機械~Specialty Industrial Machinery
+6147.T~ヤマザキ~機械~Specialty Industrial Machinery
+6149.T~小田原エンジニアリング~機械~Specialty Industrial Machinery
+6150.T~タケダ機械~機械~Metal Fabrication
+6155.T~高松機械工業~機械~Specialty Industrial Machinery
+6156.T~エーワン精密~機械~Tools & Accessories
+6158.T~和井田製作所~機械~Specialty Industrial Machinery
+6159.T~ミクロン精密~機械~Specialty Industrial Machinery
+6161.T~エスティック~機械~Specialty Industrial Machinery
+6164.T~太陽工機~機械~Specialty Industrial Machinery
+6188.T~富士ソフトサービスビューロ~サービス業~Information Technology Services
+6223.T~西部技研~機械~Specialty Industrial Machinery
+6226.T~守谷輸送機工業~機械~Engineering & Construction
+6227.T~ＡＩメカテック~機械~Electronic Components
+6228.T~ジェイ・イー・ティ~機械~Semiconductor Equipment & Materials
+6229.T~オーケーエム~機械~Specialty Industrial Machinery
+6230.T~ＳＡＮＥＩ~機械~Building Products & Equipment
+6231.T~木村工機~機械~Electrical Equipment & Parts
+6233.T~ＫＬＡＳＳ~機械~Specialty Industrial Machinery
+6239.T~ナガオカ~機械~Oil & Gas Refining & Marketing
+6245.T~ヒラノテクシード~機械~Specialty Industrial Machinery
+6246.T~テクノスマート~機械~Specialty Industrial Machinery
+6248.T~横田製作所~機械~Specialty Industrial Machinery
+6249.T~ゲームカード・ジョイコホールディングス~機械~Leisure
+6257.T~藤商事~機械~Gambling
+6265.T~コンバム~機械~Specialty Industrial Machinery
+6267.T~ゼネラルパッカー~機械~Specialty Industrial Machinery
+6276.T~シリウスビジョン~電気機器~Specialty Industrial Machinery
+6286.T~靜甲~機械~Specialty Industrial Machinery
+6297.T~鉱研工業~機械~Specialty Industrial Machinery
+6307.T~サンセイ~機械~Specialty Business Services
+6312.T~フロイント産業~機械~Specialty Industrial Machinery
+6322.T~タクミナ~機械~Specialty Industrial Machinery
+6324.T~ハーモニック・ドライブ・システムズ~機械~Specialty Industrial Machinery
+6327.T~北川精機~機械~Specialty Industrial Machinery
+6334.T~明治機械~機械~Specialty Industrial Machinery
+6336.T~石井表記~機械~Specialty Industrial Machinery
+6337.T~テセック~機械~Semiconductor Equipment & Materials
+6338.T~タカトリ~機械~Semiconductors
+6342.T~太平製作所~機械~Lumber & Wood Production
+6343.T~フリージア・マクロス~機械~Specialty Industrial Machinery
+6346.T~キクカワエンタープライズ~機械~Specialty Industrial Machinery
+6347.T~プラコー~機械~Specialty Industrial Machinery
+6357.T~三精テクノロジーズ~機械~Specialty Industrial Machinery
+6360.T~東京自働機械製作所~機械~Specialty Industrial Machinery
+6365.T~電業社機械製作所~機械~Specialty Industrial Machinery
+6366.T~千代田化工建設~建設業~Engineering & Construction
+6380.T~オリエンタルチエン工業~機械~Tools & Accessories
+6382.T~トリニティ工業~機械~Auto Parts
+6384.T~昭和真空~機械~Specialty Industrial Machinery
+6391.T~加地テック~機械~Specialty Industrial Machinery
+6392.T~ヤマダコーポレーション~機械~Specialty Industrial Machinery
+6396.T~宇野澤組鐵工所~機械~Specialty Industrial Machinery
+6400.T~不二精機~機械~Specialty Industrial Machinery
+6402.T~兼松エンジニアリング~機械~Specialty Industrial Machinery
+6403.T~水道機工~機械~Waste Management
+6405.T~鈴茂器工~機械~Specialty Industrial Machinery
+6408.T~小倉クラッチ~機械~Specialty Industrial Machinery
+6411.T~中野冷機~機械~Specialty Industrial Machinery
+6416.T~桂川電機~機械~Computer Hardware
+6424.T~高見沢サイバネティックス~機械~Scientific & Technical Instruments
+6425.T~ユニバーサルエンターテインメント~機械~Leisure
+6433.T~ヒーハイスト~機械~Metal Fabrication
+6466.T~ＴＶＥ~機械~Specialty Industrial Machinery
+6467.T~ニチダイ~機械~Specialty Industrial Machinery
+6469.T~放電精密加工研究所~機械~Specialty Industrial Machinery
+6484.T~ＫＶＫ~機械~Furnishings, Fixtures & Appliances
+6488.T~ヨシタケ~機械~Specialty Industrial Machinery
+6492.T~岡野バルブ製造~機械~Specialty Industrial Machinery
+6493.T~ＮＩＴＴＡＮ~輸送用機器~Auto Parts
+6494.T~ＮＦＫホールディングス~機械~Specialty Industrial Machinery
+6495.T~宮入バルブ製作所~機械~Specialty Industrial Machinery
+6496.T~中北製作所~機械~Specialty Industrial Machinery
+6497.T~ハマイ~機械~Metal Fabrication
+6518.T~三相電機~電気機器~Specialty Industrial Machinery
+6524.T~湖北工業~電気機器~Electronic Components
+6542.T~ＦＣホールディングス~サービス業~Engineering & Construction
+6543.T~日宣~サービス業~Advertising Agencies
+6549.T~ディーエムソリューションズ~サービス業~Advertising Agencies
+6565.T~ＡＢホテル~サービス業~Lodging
+6566.T~要興業~サービス業~Waste Management
+6570.T~共和コーポレーション~サービス業~Leisure
+6578.T~エヌリンクス~サービス業~Consulting Services
+6599.T~エブレン~電気機器~Computer Hardware
+6614.T~シキノハイテック~電気機器~Semiconductors
+6625.T~ＪＡＬＣＯホールディングス~不動産業~Semiconductors
+6626.T~ＳＥＭＩＴＥＣ~電気機器~Electronic Components
+6627.T~テラプローブ~電気機器~Semiconductor Equipment & Materials
+6629.T~テクノホライゾン~電気機器~Electronic Components
+6633.T~Ｃ＆Ｇシステムズ~電気機器~Software-Application
+6634.T~ネクスグループ~電気機器~Communication Equipment
+6635.T~大日光・エンジニアリング~電気機器~Electronic Components
+6637.T~寺崎電気産業~電気機器~Electrical Equipment & Parts
+6643.T~戸上電機製作所~電気機器~Electrical Equipment & Parts
+6647.T~森尾電機~電気機器~Electrical Equipment & Parts
+6648.T~かわでん~電気機器~Specialty Industrial Machinery
+6656.T~インスペック~電気機器~Semiconductor Equipment & Materials
+6658.T~シライ電子工業~電気機器~Electronic Components
+6659.T~メディアリンクス~電気機器~Software-Infrastructure
+6662.T~ユビテック~電気機器~Software-Infrastructure
+6663.T~太洋テクノレックス~電気機器~Electronic Components
+6664.T~オプトエレクトロニクス~電気機器~Scientific & Technical Instruments
+6666.T~リバーエレテック~電気機器~Electronic Components
+6668.T~アドテック　プラズマ　テクノロジー~電気機器~Electrical Equipment & Parts
+6670.T~ＭＣＪ~電気機器~Computer Hardware
+6677.T~エスケーエレクトロニクス~電気機器~Electronic Components
+6694.T~ズーム~電気機器~Consumer Electronics
+6698.T~ヴィスコ・テクノロジーズ~電気機器~Electronic Components
+6721.T~ウインテスト~電気機器~Scientific & Technical Instruments
+6731.T~ピクセラ~電気機器~Computer Hardware
+6734.T~ニューテック~電気機器~Computer Hardware
+6736.T~サン電子~電気機器~Consumer Electronics
+6743.T~大同信号~電気機器~Specialty Industrial Machinery
+6757.T~ＯＳＧコーポレーション~電気機器~Specialty Industrial Machinery
+6769.T~ザインエレクトロニクス~電気機器~Semiconductors
+6772.T~東京コスモス電機~電気機器~Electronic Components
+6775.T~ＴＢグループ~電気機器~Electronic Components
+6776.T~天昇電気工業~化学~Auto Parts
+6777.T~ｓａｎｔｅｃ　Ｈｏｌｄｉｎｇｓ~電気機器~Scientific & Technical Instruments
+6778.T~アルチザネットワークス~電気機器~Communication Equipment
+6786.T~ＲＶＨ~サービス業~Software-Application
+6819.T~伊豆シャボテンリゾート~サービス業~Leisure
+6822.T~大井電気~電気機器~Communication Equipment
+6824.T~新コスモス電機~電気機器~Scientific & Technical Instruments
+6832.T~アオイ電子~電気機器~Semiconductors
+6834.T~精工技研~電気機器~Electronic Components
+6835.T~アライドテレシスホールディングス~電気機器~Communication Equipment
+6836.T~ぷらっとホーム~電気機器~Computer Hardware
+6837.T~京写~電気機器~Electronic Components
+6838.T~多摩川ホールディングス~電気機器~Conglomerates
+6840.T~ＡＫＩＢＡホールディングス~電気機器~Computer Hardware
+6862.T~ミナトホールディングス~電気機器~Computer Hardware
+6863.T~ニレコ~電気機器~Scientific & Technical Instruments
+6864.T~エヌエフホールディングス~電気機器~Electronic Components
+6867.T~リーダー電子~電気機器~Scientific & Technical Instruments
+6870.T~日本フェンオール~電気機器~Security & Protection Services
+6874.T~協立電機~電気機器~Scientific & Technical Instruments
+6882.T~三社電機製作所~電気機器~Electrical Equipment & Parts
+6888.T~アクモス~情報・通信業~Information Technology Services
+6890.T~フェローテックホールディングス~電気機器~Semiconductors
+6894.T~パルステック工業~電気機器~Electrical Equipment & Parts
+6897.T~ツインバード~電気機器~Furnishings, Fixtures & Appliances
+6898.T~トミタ電機~電気機器~Consumer Electronics
+6899.T~ＡＳＴＩ~電気機器~Electronic Components
+6907.T~ジオマテック~電気機器~Electronic Components
+6912.T~菊水ホールディングス~電気機器~Electrical Equipment & Parts
+6918.T~アバールデータ~電気機器~Computer Hardware
+6919.T~ケル~電気機器~Electronic Components
+6930.T~日本アンテナ~電気機器~Communication Equipment
+6942.T~ソフィアホールディングス~情報・通信業~Information Technology Services
+6943.T~ＮＫＫスイッチズ~電気機器~Electrical Equipment & Parts
+6946.T~日本アビオニクス~電気機器~Electrical Equipment & Parts
+6955.T~ＦＤＫ~電気機器~Electrical Equipment & Parts
+6957.T~芝浦電子~電気機器~Scientific & Technical Instruments
+6960.T~フクダ電子~電気機器~Medical Devices
+6964.T~サンコー~電気機器~Electronic Components
+6969.T~松尾電機~電気機器~Electronic Components
+6977.T~日本抵抗器製作所~電気機器~Electronic Components
+6982.T~リード~輸送用機器~Auto Parts
+6993.T~大黒屋ホールディングス~小売業~Electrical Equipment & Parts
+6994.T~指月電機製作所~電気機器~Electrical Equipment & Parts
+6998.T~日本タングステン~電気機器~Metal Fabrication
+7018.T~内海造船~輸送用機器~Aerospace & Defense
+7021.T~ニッチツ~機械~Specialty Industrial Machinery
+7040.T~サン・ライフホールディング~サービス業~Personal Services
+7042.T~アクセスグループ・ホールディングス~サービス業~Personal Services
+7057.T~エヌ・シー・エヌ~サービス業~Engineering & Construction
+7058.T~共栄セキュリティーサービス~サービス業~Security & Protection Services
+7065.T~ユーピーアール~サービス業~Rental & Leasing Services
+7081.T~コーユーレンティア~サービス業~Rental & Leasing Services
+7087.T~ウイルテック~サービス業~Semiconductors
+7111.T~ＩＮＥＳＴ~卸売業~Specialty Business Services
+7115.T~アルファパーチェス~卸売業~Specialty Industrial Machinery
+7116.T~ダイワ通信~卸売業~Security & Protection Services
+7120.T~ＳＨＩＮＫＯ~卸売業~Information Technology Services
+7126.T~グローバルスタイル~小売業~Apparel Manufacturing
+7129.T~ミアヘルサホールディングス~小売業~Pharmaceutical Retailers
+7131.T~のむら産業~卸売業~Packaging & Containers
+7134.T~アップガレージグループ~小売業~Auto & Truck Dealerships
+7162.T~アストマックス~証券、商品先物取引業~Asset Management
+7163.T~住信ＳＢＩネット銀行~銀行業~Banks-Regional
+71729.T~ジャパンインベストメントアドバイザー 新株予約権~証券、商品先物取引業~None
+7175.T~今村証券~証券、商品先物取引業~Capital Markets
+7177.T~ＧＭＯフィナンシャルホールディングス~証券、商品先物取引業~Capital Markets
+7185.T~ヒロセ通商~証券、商品先物取引業~Capital Markets
+7208.T~カネミツ~輸送用機器~Auto Parts
+7217.T~テイン~輸送用機器~Auto Parts
+7218.T~田中精密工業~輸送用機器~Auto Parts
+7219.T~エッチ・ケー・エス~輸送用機器~Auto Parts
+7228.T~デイトナ~輸送用機器~Auto Parts
+7229.T~ユタカ技研~輸送用機器~Auto Parts
+7235.T~東京ラヂエーター製造~輸送用機器~Auto Parts
+7254.T~ユニバンス~輸送用機器~Auto Parts
+7255.T~桜井製作所~輸送用機器~Auto Parts
+7264.T~ムロコーポレーション~輸送用機器~Auto Parts
+7265.T~エイケン工業~輸送用機器~Pollution & Treatment Controls
+7268.T~タツミ~輸送用機器~Auto Parts
+7273.T~イクヨ~輸送用機器~Auto Parts
+7279.T~ハイレックスコーポレーション~輸送用機器~Specialty Industrial Machinery
+7287.T~日本精機~輸送用機器~Auto Parts
+7292.T~村上開明堂~輸送用機器~Auto Parts
+7297.T~カーメイト~輸送用機器~Auto Parts
+7299.T~フジオーゼックス~輸送用機器~Auto Parts
+7314.T~小田原機器~輸送用機器~Business Equipment & Supplies
+7315.T~ＩＪＴＴ~輸送用機器~Auto Parts
+7338.T~インヴァスト~証券、商品先物取引業~Financial Conglomerates
+7357.T~ジオコード~サービス業~Advertising Agencies
+7367.T~セルム~サービス業~Staffing & Employment Services
+7368.T~表示灯~サービス業~Advertising Agencies
+7377.T~ＤＮホールディングス~サービス業~Specialty Business Services
+7399.T~ナンシン~輸送用機器~Tools & Accessories
+7412.T~アトム~小売業~Restaurants
+7413.T~創健社~卸売業~Packaged Foods
+7422.T~東邦レマック~卸売業~Footwear & Accessories
+7425.T~初穂商事~卸売業~Steel
+7426.T~山大~卸売業~Lumber & Wood Production
+7434.T~オータケ~卸売業~Building Products & Equipment
+7435.T~ナ・デックス~卸売業~Specialty Industrial Machinery
+7443.T~横浜魚類~卸売業~Farm Products
+7444.T~ハリマ共和物産~卸売業~Department Stores
+7446.T~東北化学薬品~卸売業~Specialty Chemicals
+7450.T~サンデー~小売業~Home Improvement Retail
+7460.T~ヤギ~卸売業~Textile Manufacturing
+7461.T~キムラ~卸売業~Building Materials
+7462.T~ＣＡＰＩＴＡ~小売業~Oil & Gas Refining & Marketing
+7464.T~セフテック~卸売業~Security & Protection Services
+7472.T~鳥羽洋行~卸売業~Industrial Distribution
+7477.T~ムラキ~卸売業~Specialty Retail
+7486.T~サンリン~卸売業~Oil & Gas Refining & Marketing
+7490.T~日新商事~卸売業~Conglomerates
+7500.T~西川計測~卸売業~Scientific & Technical Instruments
+7501.T~ティムコ~卸売業~Specialty Retail
+7502.T~プラザホールディングス~サービス業~Personal Services
+7505.T~扶桑電通~卸売業~Information Technology Services
+7509.T~アイエーグループ~小売業~Conglomerates
+7515.T~マルヨシセンター~小売業~Grocery Stores
+7521.T~ムサシ~卸売業~Conglomerates
+7523.T~アールビバン~小売業~Personal Services
+7531.T~清和中央ホールディングス~卸売業~Steel
+7538.T~大水~卸売業~Food Distribution
+7539.T~アイナボホールディングス~卸売業~Building Products & Equipment
+7544.T~スリーエフ~小売業~Grocery Stores
+7551.T~ウェッズ~輸送用機器~Auto Parts
+7555.T~大田花き~卸売業~Farm Products
+7559.T~ジーエフシー~卸売業~Food Distribution
+7562.T~安楽亭~小売業~Restaurants
+7564.T~ワークマン~小売業~Apparel Retail
+7565.T~萬世電機~卸売業~Electronics & Computer Distribution
+7567.T~栄電子~卸売業~Electrical Equipment & Parts
+7571.T~ヤマノホールディングス~小売業~Conglomerates
+7578.T~ニチリョク~小売業~Personal Services
+7585.T~かんなん丸~小売業~Restaurants
+7602.T~カーチスホールディングス~卸売業~Auto & Truck Dealerships
+7603.T~マックハウス~小売業~Apparel Retail
+7604.T~梅の花~小売業~Restaurants
+7610.T~テイツー~小売業~Specialty Retail
+7614.T~オーエムツーネットワーク~小売業~Food Distribution
+7621.T~うかい~小売業~Restaurants
+7623.T~サンオータス~小売業~Auto & Truck Dealerships
+7624.T~ＮａＩＴＯ~卸売業~Industrial Distribution
+7625.T~グローバルダイニング~小売業~Restaurants
+7634.T~星医療酸器~卸売業~Medical Distribution
+7635.T~杉田エース~卸売業~Building Products & Equipment
+7636.T~ハンズマン~小売業~Specialty Retail
+7638.T~ＮＥＷ　ＡＲＴ　ＨＯＬＤＩＮＧＳ~小売業~Luxury Goods
+7643.T~ダイイチ~小売業~Grocery Stores
+7647.T~音通~サービス業~Rental & Leasing Services
+7670.T~オーウエル~卸売業~Conglomerates
+7677.T~ヤシマキザイ~卸売業~Railroads
+7678.T~あさくま~小売業~Restaurants
+7681.T~レオクラン~卸売業~Medical Distribution
+7682.T~浜木綿~小売業~Restaurants
+7686.T~カクヤスグループ~小売業~Food Distribution
+7692.T~アースインフィニティ~小売業~Utilities-Diversified
+7698.T~アイスコ~卸売業~Food Distribution
+7705.T~ジーエルサイエンス~精密機器~Scientific & Technical Instruments
+7711.T~助川電気工業~精密機器~Electrical Equipment & Parts
+7713.T~シグマ光機~精密機器~Electronic Components
+7716.T~ナカニシ~精密機器~Medical Instruments & Supplies
+7719.T~東京衡機~精密機器~Specialty Industrial Machinery
+7722.T~国際計測器~精密機器~Specialty Industrial Machinery
+7726.T~黒田精工~機械~Tools & Accessories
+7746.T~岡本硝子~精密機器~Electronic Components
+7749.T~メディキット~精密機器~Medical Instruments & Supplies
+7760.T~ＩＭＶ~精密機器~Scientific & Technical Instruments
+7771.T~日本精密~精密機器~Luxury Goods
+7781.T~平山ホールディングス~精密機器~Staffing & Employment Services
+7791.T~ドリームベッド~その他製品~Furnishings, Fixtures & Appliances
+7800.T~アミファ~その他製品~Packaging & Containers
+7804.T~ビーアンドピー~その他製品~Advertising Agencies
+7805.T~プリントネット~その他製品~Specialty Business Services
+7807.T~幸和製作所~その他製品~Furnishings, Fixtures & Appliances
+7808.T~シー・エス・ランバー~その他製品~Lumber & Wood Production
+7809.T~壽屋~その他製品~Leisure
+7810.T~クロスフォー~その他製品~Luxury Goods
+7812.T~クレステック~その他製品~Specialty Business Services
+7814.T~日本創発グループ~その他製品~Specialty Business Services
+7815.T~東京ボード工業~その他製品~Lumber & Wood Production
+7827.T~オービス~その他製品~Conglomerates
+7831.T~ウイルコホールディングス~その他製品~Specialty Business Services
+7836.T~アビックス~その他製品~Electronic Components
+7837.T~アールシーコア~その他製品~Real Estate-Development
+7841.T~遠藤製作所~その他製品~Leisure
+7847.T~グラファイトデザイン~その他製品~Leisure
+7849.T~スターツ出版~情報・通信業~Publishing
+7850.T~総合商研~その他製品~Specialty Business Services
+7851.T~カワセコンピュータサプライ~その他製品~Specialty Business Services
+7857.T~セキ~その他製品~Advertising Agencies
+7859.T~アルメディオ~その他製品~Electronic Components
+7863.T~平賀~その他製品~Specialty Business Services
+7865.T~ピープル~その他製品~Leisure
+7871.T~フクビ化学工業~化学~Building Products & Equipment
+7875.T~竹田ｉＰホールディングス~その他製品~Publishing
+7877.T~永大化工~化学~Specialty Chemicals
+7878.T~光・彩~その他製品~Luxury Goods
+7879.T~ノダ~その他製品~Building Products & Equipment
+7883.T~サンメッセ~その他製品~Specialty Business Services
+7886.T~ヤマト・インダストリー~化学~Specialty Chemicals
+7887.T~南海プライウッド~その他製品~Furnishings, Fixtures & Appliances
+7896.T~セブン工業~その他製品~Building Products & Equipment
+7901.T~マツモト~その他製品~Paper & Paper Products
+7902.T~ソノコム~その他製品~Electronic Components
+7906.T~ヨネックス~その他製品~Leisure
+7919.T~野崎印刷紙業~その他製品~Specialty Business Services
+7922.T~三光産業~その他製品~Specialty Business Services
+7923.T~トーイン~その他製品~Packaging & Containers
+7927.T~ムトー精工~化学~Electronic Components
+7928.T~旭化学工業~化学~Tools & Accessories
+7932.T~ニッピ~その他製品~Footwear & Accessories
+7938.T~リーガルコーポレーション~その他製品~Footwear & Accessories
+7939.T~研創~その他製品~Specialty Business Services
+7946.T~光陽社~その他製品~Specialty Business Services
+7953.T~菊水化学工業~その他製品~Building Products & Equipment
+7957.T~フジコピアン~その他製品~Business Equipment & Supplies
+7963.T~興研~その他製品~Medical Devices
+7975.T~リヒトラブ~その他製品~Business Equipment & Supplies
+7980.T~重松製作所~その他製品~Medical Instruments & Supplies
+7983.T~ミロク~その他製品~Tools & Accessories
+7985.T~ネポン~金属製品~Specialty Industrial Machinery
+7986.T~日本アイ・エス・ケイ~その他製品~Steel
+7991.T~マミヤ・オーピー~機械~Business Equipment & Supplies
+7992.T~セーラー万年筆~その他製品~Business Equipment & Supplies
+7997.T~くろがね工作所~その他製品~Furnishings, Fixtures & Appliances
+8006.T~ユアサ・フナショク~卸売業~Food Distribution
+8023.T~大興電子通信~情報・通信業~Electronics & Computer Distribution
+8030.T~中央魚類~卸売業~Food Distribution
+8039.T~築地魚市場~卸売業~Food Distribution
+8040.T~東京ソワール~繊維製品~Apparel Manufacturing
+8045.T~横浜丸魚~卸売業~Packaged Foods
+8046.T~丸藤シートパイル~卸売業~Steel
+8066.T~三谷商事~卸売業~Conglomerates
+8072.T~日本出版貿易~卸売業~Publishing
+8076.T~カノークス~卸売業~Steel
+8085.T~ナラサキ産業~卸売業~Industrial Distribution
+8105.T~堀田丸正~卸売業~Apparel Manufacturing
+8115.T~ムーンバット~卸売業~Footwear & Accessories
+8117.T~中央自動車工業~卸売業~Auto Parts
+8119.T~三栄コーポレーション~卸売業~Furnishings, Fixtures & Appliances
+8123.T~川辺~卸売業~Textile Manufacturing
+8135.T~ゼット~卸売業~Leisure
+8138.T~三京化成~卸売業~Specialty Chemicals
+8139.T~ナガホリ~卸売業~Luxury Goods
+8143.T~ラピーヌ~繊維製品~Apparel Manufacturing
+8144.T~デンキョーグループホールディングス~卸売業~Consumer Electronics
+8147.T~トミタ~卸売業~Industrial Distribution
+8152.T~ソマール~卸売業~Specialty Chemicals
+8198.T~マックスバリュ東海~小売業~Grocery Stores
+8202.T~ラオックスホールディングス~小売業~Specialty Retail
+8208.T~エンチョー~小売業~Home Improvement Retail
+8209.T~フレンドリー~小売業~Restaurants
+8215.T~銀座山形屋~小売業~Apparel Manufacturing
+8225.T~タカチホ~卸売業~Specialty Retail
+8226.T~理経~卸売業~Information Technology Services
+8247.T~大和~小売業~Department Stores
+8254.T~さいか屋~小売業~Department Stores
+8462.T~フューチャーベンチャーキャピタル~証券、商品先物取引業~Asset Management
+8508.T~Ｊトラスト~その他金融業~Financial Conglomerates
+8699.T~ＨＳホールディングス~証券、商品先物取引業~Capital Markets
+8700.T~丸八証券~証券、商品先物取引業~Capital Markets
+8704.T~トレイダーズホールディングス~証券、商品先物取引業~Capital Markets
+8705.T~日産証券グループ~証券、商品先物取引業~Capital Markets
+8737.T~あかつき本社~証券、商品先物取引業~Asset Management
+8746.T~第一商品~証券、商品先物取引業~Capital Markets
+8747.T~豊トラスティ証券~証券、商品先物取引業~Capital Markets
+8783.T~ＧＦＡ~その他金融業~Asset Management
+8789.T~フィンテック　グローバル~その他金融業~Financial Conglomerates
+8836.T~ＲＩＳＥ~不動産業~Real Estate Services
+8844.T~コスモスイニシア~不動産業~Real Estate Services
+8854.T~日住サービス~不動産業~Real Estate Services
+8886.T~ウッドフレンズ~不動産業~Real Estate-Development
+8887.T~リベレステ~不動産業~Real Estate-Development
+8889.T~ＡＰＡＭＡＮ~不動産業~Real Estate Services
+8890.T~レーサム~不動産業~Real Estate Services
+8891.T~ＡＭＧホールディングス~不動産業~Real Estate Services
+8893.T~新日本建物~不動産業~Real Estate Services
+8894.T~ＲＥＶＯＬＵＴＩＯＮ~不動産業~Real Estate Services
+8898.T~センチュリー２１・ジャパン~不動産業~Real Estate Services
+8903.T~サンウッド~不動産業~Real Estate Services
+8912.T~エリアクエスト~不動産業~Real Estate Services
+8914.T~エリアリンク~不動産業~Real Estate Services
+8925.T~アルデプロ~不動産業~Real Estate Services
+8927.T~明豊エンタープライズ~不動産業~Real Estate-Diversified
+8929.T~青山財産ネットワークス~不動産業~Real Estate Services
+8931.T~和田興産~不動産業~Real Estate-Diversified
+8946.T~ＡＳＩＡＮ　ＳＴＡＲ~不動産業~Real Estate Services
+8995.T~誠建設工業~不動産業~Real Estate-Diversified
+8996.T~ハウスフリーダム~不動産業~Real Estate Services
+9012.T~秩父鉄道~陸運業~Railroads
+9017.T~新潟交通~陸運業~Railroads
+9028.T~ゼロ~陸運業~Auto & Truck Dealerships
+9029.T~ヒガシトゥエンティワン~陸運業~Integrated Freight & Logistics
+9033.T~広島電鉄~陸運業~Railroads
+9034.T~南総通運~陸運業~Integrated Freight & Logistics
+9036.T~東部ネットワーク~陸運業~Integrated Freight & Logistics
+9049.T~京福電気鉄道~陸運業~Railroads
+9051.T~センコン物流~陸運業~Integrated Freight & Logistics
+9057.T~遠州トラック~陸運業~Trucking
+9059.T~カンダホールディングス~陸運業~Trucking
+9060.T~日本ロジテム~陸運業~Trucking
+9063.T~岡山県貨物運送~陸運業~Trucking
+9073.T~京極運輸商事~陸運業~Trucking
+9082.T~大和自動車交通~陸運業~Auto & Truck Dealerships
+9083.T~神姫バス~陸運業~Integrated Freight & Logistics
+9087.T~タカセ~陸運業~Specialty Business Services
+9127.T~玉井商船~海運業~Marine Shipping
+9145.T~ビーイングホールディングス~陸運業~Integrated Freight & Logistics
+9160.T~ノバレーゼ~サービス業~Personal Services
+9171.T~栗林商船~海運業~Marine Shipping
+9173.T~東海汽船~海運業~Marine Shipping
+9193.T~東京汽船~倉庫・運輸関連業~Marine Shipping
+9206.T~スターフライヤー~空運業~Airlines
+9213.T~セイファート~サービス業~Conglomerates
+9220.T~エフビー介護サービス~サービス業~Medical Care Facilities
+9221.T~フルハシＥＰＯ~サービス業~Waste Management
+9233.T~アジア航測~空運業~Engineering & Construction
+9249.T~日本エコシステム~サービス業~Entertainment
+9264.T~ポエック~卸売業~Specialty Industrial Machinery
+9268.T~オプティマスグループ~卸売業~Auto & Truck Dealerships
+9307.T~杉村倉庫~倉庫・運輸関連業~Specialty Business Services
+9311.T~アサガミ~倉庫・運輸関連業~Integrated Freight & Logistics
+9313.T~丸八倉庫~倉庫・運輸関連業~Specialty Business Services
+9327.T~イー・ロジット~倉庫・運輸関連業~Integrated Freight & Logistics
+9339.T~コーチ・エィ~サービス業~Education & Training Services
+9340.T~アソインターナショナル~サービス業~Medical Instruments & Supplies
+9353.T~櫻島埠頭~倉庫・運輸関連業~Marine Shipping
+9355.T~リンコーコーポレーション~倉庫・運輸関連業~Integrated Freight & Logistics
+9360.T~鈴与シンワート~情報・通信業~Information Technology Services
+9361.T~伏木海陸運送~倉庫・運輸関連業~Marine Shipping
+9362.T~兵機海運~倉庫・運輸関連業~Marine Shipping
+9363.T~大運~倉庫・運輸関連業~Integrated Freight & Logistics
+9365.T~トレーディア~倉庫・運輸関連業~Marine Shipping
+9367.T~大東港運~倉庫・運輸関連業~Marine Shipping
+9376.T~ユーラシア旅行社~サービス業~Travel Services
+9377.T~エージーピー~倉庫・運輸関連業~Airports & Air Services
+9408.T~ＢＳＮメディアホールディングス~情報・通信業~Entertainment
+9421.T~エヌジェイホールディングス~情報・通信業~Telecom Services
+9423.T~フォーバル・リアルストレート~情報・通信業~Real Estate Services
+9425.T~日本テレホン~情報・通信業~Electronics & Computer Distribution
+94345.T~ソフトバンク 優先株式~情報・通信業~None
+9436.T~沖縄セルラー電話~情報・通信業~Telecom Services
+9439.T~エム・エイチ・グループ~サービス業~Personal Services
+9441.T~ベルパーク~情報・通信業~Specialty Retail
+9444.T~トーシンホールディングス~情報・通信業~Specialty Retail
+9445.T~フォーバルテレコム~情報・通信業~Telecom Services
+9446.T~サカイホールディングス~情報・通信業~Telecom Services
+9476.T~中央経済社ホールディングス~情報・通信業~Publishing
+9478.T~ＳＥホールディングス・アンド・インキュベーションズ~情報・通信業~Publishing
+9537.T~北陸瓦斯~電気・ガス業~Utilities-Regulated Gas
+9539.T~京葉瓦斯~電気・ガス業~Utilities-Regulated Gas
+9564.T~ＦＣＥ~サービス業~Conglomerates
+9600.T~アイネット~情報・通信業~Information Technology Services
+9610.T~ウィルソン・ラーニング　ワールドワイド~サービス業~Staffing & Employment Services
+9625.T~セレスポ~サービス業~Advertising Agencies
+9635.T~武蔵野興業~サービス業~Real Estate Services
+9636.T~きんえい~サービス業~Entertainment
+9637.T~オーエス~サービス業~Conglomerates
+9639.T~三協フロンテア~サービス業~Real Estate-Diversified
+9640.T~セゾン情報システムズ~情報・通信業~Information Technology Services
+9647.T~協和コンサルタンツ~サービス業~Engineering & Construction
+9651.T~日本プロセス~情報・通信業~Software-Application
+9656.T~グリーンランドリゾート~サービス業~Resorts & Casinos
+9661.T~歌舞伎座~サービス業~Real Estate Services
+9679.T~ホウライ~サービス業~Insurance-Diversified
+9685.T~ＫＹＣＯＭホールディングス~情報・通信業~Software-Application
+9686.T~東洋テック~サービス業~Security & Protection Services
+9687.T~ＫＳＫ~情報・通信業~Software-Application
+9691.T~両毛システムズ~情報・通信業~Software-Application
+9696.T~ウィザス~サービス業~Education & Training Services
+9698.T~クレオ~情報・通信業~Software-Application
+9701.T~東京會舘~サービス業~Restaurants
+9708.T~帝国ホテル~サービス業~Lodging
+9709.T~ＮＣＳ＆Ａ~情報・通信業~Information Technology Services
+9713.T~ロイヤルホテル~サービス業~Lodging
+9720.T~ホテル、ニューグランド~サービス業~Lodging
+9723.T~京都ホテル~サービス業~Lodging
+9733.T~ナガセ~サービス業~Education & Training Services
+9753.T~アイエックス・ナレッジ~情報・通信業~Information Technology Services
+9761.T~東海リース~サービス業~Real Estate Services
+9767.T~日建工学~サービス業~Building Products & Equipment
+9776.T~札幌臨床検査センター~サービス業~Pharmaceutical Retailers
+9778.T~昴~サービス業~Education & Training Services
+9780.T~ハリマビステム~サービス業~Specialty Business Services
+9782.T~ディーエムエス~サービス業~Advertising Agencies
+9791.T~ビケンテクノ~サービス業~Specialty Business Services
+9799.T~旭情報サービス~情報・通信業~Information Technology Services
+9812.T~テーオーホールディングス~卸売業~Building Materials
+9816.T~ストライダーズ~不動産業~Real Estate Services
+9818.T~大丸エナウィン~卸売業~Utilities-Regulated Gas
+9820.T~エムティジェネックス~不動産業~Specialty Business Services
+9823.T~マミーマート~小売業~Grocery Stores
+9827.T~リリカラ~卸売業~Furnishings, Fixtures & Appliances
+9835.T~ジュンテンドー~小売業~Home Improvement Retail
+9845.T~パーカーコーポレーション~化学~Industrial Distribution
+9846.T~天満屋ストア~小売業~Grocery Stores
+9849.T~共同紙販ホールディングス~卸売業~Conglomerates
+9852.T~ＣＢグループマネジメント~卸売業~Household & Personal Products
+9853.T~銀座ルノアール~小売業~Restaurants
+9857.T~英和~卸売業~Electrical Equipment & Parts
+9867.T~ソレキア~卸売業~Electronic Components
+9873.T~日本ＫＦＣホールディングス~小売業~Restaurants
+9876.T~コックス~小売業~Apparel Manufacturing
+9878.T~セキド~小売業~Apparel Retail
+9885.T~シャルレ~卸売業~Apparel Manufacturing
+9888.T~ＵＥＸ~卸売業~Steel
+9890.T~マキヤ~小売業~Grocery Stores
+9895.T~コンセック~卸売業~Tools & Accessories
+9903.T~カンセキ~小売業~Home Improvement Retail
+9904.T~ベリテ~小売業~Luxury Goods
+9906.T~藤井産業~卸売業~Specialty Industrial Machinery
+9908.T~日本電計~卸売業~Rental & Leasing Services
+9913.T~日邦産業~卸売業~Electronic Components
+9914.T~植松商会~卸売業~Industrial Distribution
+9927.T~ワットマン~小売業~Specialty Retail
+9929.T~平和紙業~卸売業~Paper & Paper Products
+9941.T~太洋物産~卸売業~Food Distribution
+9950.T~ハチバン~小売業~Restaurants
+9955.T~ヨンキュウ~卸売業~Farm Products
+9959.T~アシードホールディングス~小売業~Beverages-Non-Alcoholic
+9969.T~ショクブン~小売業~Restaurants
+9973.T~小僧寿し~小売業~Restaurants
+9976.T~セキチュー~小売業~Home Improvement Retail
+9977.T~アオキスーパー~小売業~Grocery Stores
+9978.T~文教堂グループホールディングス~小売業~Specialty Retail
+9980.T~ＭＲＫホールディングス~小売業~Apparel Manufacturing
+9996.T~サトー商会~卸売業~Food Distribution
+5871.T~ＳＯＬＩＺＥ~サービス業~Computer Hardware
+146A.T~コロンビア・ワークス~不動産業~Real Estate - Development
+5356.T~美濃窯業~ガラス・土石製品~Building Materials
+6092.T~エンバイオ・ホールディングス~サービス業~Specialty Business Services
+6797.T~名古屋電機工業~電気機器~Security & Protection Services
+187A.T~サムティホールディングス~不動産業~Real Estate—Diversified
+208A.T~構造計画研究所ホールディングス~情報・通信業~Engineering & Construction
+220A.T~Ｆａｂｅｒ　Ｃｏｍｐａｎｙ~情報・通信業~Software—Application
+7095.T~Ｍａｃｂｅｅ　Ｐｌａｎｅｔ~サービス業~Advertising Agencies
+9229.T~サンウェルズ~サービス業~Medical Care Facilities
+50765.T~インフロニア・ホールディングス 優先株式~建設業~Engineering & Construction
+9341.T~ＧＥＮＯＶＡ~サービス業~Medical Devices
+250A.T~シマダヤ~食料品~Packaged Foods
+253A.T~ＥＴＳグループ~建設業~Engineering & Construction
+254A.T~ＡＩフュージョンキャピタルグループ~証券、商品先物取引業~Asset Management
+256A.T~飛島ホールディングス~建設業~Engineering & Construction
+261A.T~日水コン~サービス業~Engineering & Construction
+262A.T~インターメスティック~小売業~Medical Instruments & Supplies
+268A.T~リガク・ホールディングス~精密機器~Scientific & Technical Instruments
+3935.T~エディア~情報・通信業~Electronic Gaming & Multimedia
+9023.T~東京地下鉄~陸運業~Conglomerates
+94346.T~ソフトバンク第２回社債型種類株式~情報・通信業~Telecom Services
+7683.T~ダブルエー~小売業~Apparel Retail
+160A.T~アズパートナーズ~サービス業~Conglomerates
+197A.T~タウンズ~医薬品~Medical Instruments & Supplies
+212A.T~フィットイージー~サービス業~Leisure
+285A.T~キオクシアホールディングス~電気機器~Semiconductors
+287A.T~黒田グループ~卸売業~Conglomerates
+297A.T~アルピコホールディングス~小売業~Conglomerates
+3842.T~ネクストジェン~情報・通信業~Telecom Services
+3461.T~パルマ~不動産業~Specialty Business Services
+4413.T~ボードルア~情報・通信業~Information Technology Services
+5016.T~ＪＸ金属~非鉄金属~Semiconductor Equipment & Materials
+7813.T~プラッツ~その他製品~Medical Instruments & Supplies
+274A.T~ガーデン~小売業~Restaurants
+300A.T~ＭＩＣ~サービス業~Advertising Agencies
+331A.T~メディックス~サービス業~Advertising Agencies
+343A.T~ＩＡＣＥトラベル~サービス業~Travel Services
+255A.T~ジーエルテクノホールディングス~精密機器~Scientific & Technical Instruments
+167A.T~リョーサン菱洋ホールディングス~卸売業~Electronics & Computer Distribution
+2479.T~ジェイテック~サービス業~Electronic Components
+3286.T~トラストホールディングス~不動産業~Specialty Business Services
+3496.T~アズーム~不動産業~Real Estate Services
+367A.T~プリモグローバルホールディングス~小売業~Luxury Goods
+368A.T~北里コーポレーション~精密機器~Medical Instruments & Supplies
+372A.T~レント~サービス業~Rental & Leasing Services
+4051.T~ＧＭＯフィナンシャルゲート~情報・通信業~Software - Infrastructure
+386A.T~みのや~小売業~Apparel Manufacturing
+6090.T~ヒューマン・メタボローム・テクノロジーズ~サービス業~Diagnostics & Research
+7157.T~ライフネット生命保険~保険業~Insurance - Life
+3690.T~イルグルム~情報・通信業~Advertising Agencies
+407A.T~ＵＮＩＣＯＮホールディングス~建設業~Engineering & Construction
+409A.T~オリオンビール~食料品~Beverages - Brewers
+8729.T~ソニーフィナンシャルグループ~保険業~Insurance - Life
+211A.T~カドス・コーポレーション~建設業~----
+365A.T~伊澤タオル~繊維製品~----
