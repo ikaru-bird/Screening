@@ -1040,10 +1040,10 @@ class CheckData():
 
         if "without sufficient volume" in breakout_reason:
             # Awaiting volume confirmation
-            return 5, self.today, alist
+            return 5, df.index[-1], alist
 
         # Awaiting breakout from handle or lip
-        return 5, self.today, alist
+        return 5, df.index[-1], alist
 
 #---------------------------------------#
 # フラットベース判定処理
