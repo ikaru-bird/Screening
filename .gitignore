@@ -1,2 +1,7 @@
 __pycache__/
 *.pyc
+_files/
+Output*/
+output*/
+*.csv
+*.png
