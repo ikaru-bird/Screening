@@ -33,7 +33,15 @@ class EarningsInfo():
 
     def __init__(self, ticker_obj, info=None):
         self.ticker = ticker_obj
-        self.info = info if info is not None else {}
+        # If info is not provided, fetch it. This ensures self.info is always populated.
+        if info is None:
+            try:
+                self.info = self.ticker.info
+            except Exception as e:
+                # print(f"Could not fetch ticker.info for {self.ticker.ticker}: {e}")
+                self.info = {}
+        else:
+            self.info = info
         # Initialize internal cache variables with a sentinel value
         # Data will be fetched on-demand via properties (lazy loading)
         self._income_stmt = self._SENTINEL
