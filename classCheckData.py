@@ -598,6 +598,9 @@ class CheckData():
 
     # Dataframeを参照渡し
         df0 = self.df
+        if df0.empty:
+            return 0, self.today
+
         p = self.params['vcp']
         atr_factor = p.get('atr_factor', 0.5) # ATR係数を取得、なければデフォルト値
 
@@ -609,7 +612,7 @@ class CheckData():
             max_val = rows.max()
             idxmax = rows.idxmax()
         else:
-            return 0, self.today
+            return 0, df0.index[-1]
 
         # 最高値時点のATRを取得し、動的調整値を計算
         try:
@@ -727,6 +730,9 @@ class CheckData():
 
     # Dataframeを参照渡し
         df0 = self.df
+        if df0.empty:
+            return 1, self.today, []
+
         p = self.params['double_bottom']
 
     # 補助線描画用リスト
@@ -741,7 +747,7 @@ class CheckData():
             idxmax = rows.idxmax()
             alist.append([idxmax, df0.loc[idxmax,"High"]])
         else:
-            return 1, self.today, alist
+            return 1, df0.index[-1], alist
 
     #②最高値以降の最安値を探す（1番底）
         df1  = df0[idxmax : self.today]
@@ -979,8 +985,11 @@ class CheckData():
 #---------------------------------------#
     def Cup_with_Handle_Check(self):
         df = self.df.sort_index()
+        if df.empty:
+            return 0, self.today, []
+
         p = self.params['cup_with_handle']
-        dummy_dt = self.today
+        dummy_dt = df.index[-1] # Use last valid date as the default
         alist = []
 
         # Stage 1: Find a valid cup shape (left lip, bottom, right lip).
@@ -1052,6 +1061,9 @@ class CheckData():
 
     # Dataframeを参照渡し
         df0 = self.df
+        if df0.empty:
+            return 0, self.today, []
+
         p = self.params['flat_base']
         breakout_vol_mult = p.get('breakout_volume_multiplier', 1.5)
 
@@ -1059,7 +1071,7 @@ class CheckData():
         alist= []
 
     # ダミー用戻り値
-        dummy_dt = self.today
+        dummy_dt = df0.index[-1]
 
     #①ベースの開始
     #　期間の最安値日を取得
