@@ -16,27 +16,27 @@ def calculate_relative_strength(history):
     try:
         c    = history["Close"].iloc[-1]
     except:
-        c    = history["Close"].iloc[0]
+        c    = 1
 
     try:
         c63  = history["Close"].iloc[-63]
     except:
-        c63  = history["Close"].iloc[0]
+        c63  = c
 
     try:
         c126 = history["Close"].iloc[-126]
     except:
-        c126 = history["Close"].iloc[0]
+        c126 = c
 
     try:
         c189 = history["Close"].iloc[-189]
     except:
-        c189 = history["Close"].iloc[0]
+        c189 = c
 
     try:
         c252 = history["Close"].iloc[-252]
     except:
-        c252 = history["Close"].iloc[0]
+        c252 = c
 
     relative_strength = ((((c - c63) / c63) * 0.4) + (((c - c126) / c126) * 0.2) + (((c - c189) / c189) * 0.2) + (((c - c252) / c252) * 0.2)) * 100
     return round(relative_strength, 2)
