@@ -230,7 +230,7 @@ class DrawChart():
                 mav=(self.ma_short, self.ma_mid, self.ma_s_long, self.ma_long),
                 volume=ax3, addplot=apd,
                 alines={'alines':alist, 'linestyle':'dotted', 'linewidths':1, 'colors':'#cccccc'},
-                xlim=(df.index[0], df.index[-1] + dt.timedelta(days=3)),
+                xlim=(df.index[0], df.index[-1]),
                 tight_layout=True
             )
         except Exception as e:
