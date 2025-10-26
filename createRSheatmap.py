@@ -110,7 +110,7 @@ def create_heatmap(csv_path, output_path):
             if other_tickers_str:
                 full_text += ', ' + other_tickers_str
 
-            ax.text(0.05, 0.05, full_text, transform=ax.transAxes, fontsize=8, color='black', va='bottom', ha='left')
+            ax.text(0.05, 0.05, full_text, transform=ax.transAxes, fontsize=9, color='black', va='bottom', ha='left')
 
         # Add mini-chart
         if top_ticker:
