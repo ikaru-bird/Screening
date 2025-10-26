@@ -70,7 +70,6 @@ def create_heatmap(csv_path, output_path):
         diff = row['Diff']
         tickers = row['Tickers'].split(',')
         top_ticker = tickers[0] if tickers else ''
-        top_3_tickers = ', '.join(tickers[:3])
 
         # Cell background color
         ax.set_facecolor(get_color(rs_rating))
@@ -99,8 +98,19 @@ def create_heatmap(csv_path, output_path):
         # RS Rating (bottom-right)
         ax.text(0.95, 0.05, f"{int(rs_rating)}", transform=ax.transAxes, fontsize=28, fontweight='bold', color='black', ha='right', va='bottom')
 
-        # Top 3 Tickers (bottom-left)
-        ax.text(0.05, 0.05, top_3_tickers, transform=ax.transAxes, fontsize=8, color='black', va='bottom', ha='left')
+        # Top 3 Tickers (bottom-left) - first one bold
+        if len(tickers) > 0:
+            first_ticker = tickers[0]
+            other_tickers_str = ', '.join(tickers[1:3])
+
+            # Use mathtext for bolding the first ticker without requiring LaTeX
+            bold_first_ticker = r"$\bf{" + first_ticker + "}$"
+
+            full_text = bold_first_ticker
+            if other_tickers_str:
+                full_text += ', ' + other_tickers_str
+
+            ax.text(0.05, 0.05, full_text, transform=ax.transAxes, fontsize=8, color='black', va='bottom', ha='left')
 
         # Add mini-chart
         if top_ticker:
