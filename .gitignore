@@ -9,8 +9,9 @@ Output*/
 output*/
 *.log
 #_files/
-*.csv
+#*.csv
 #*.png
+!_files/RS/SectorRS_Heatmap_US.png
 
 # Environment
 .env
