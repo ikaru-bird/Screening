@@ -10,22 +10,47 @@ import pytz
 import textwrap
 
 def get_color(rs_rating):
-    """Maps RS Rating to a color based on the provided image."""
-    if rs_rating >= 97:
-        return '#006d2c'  # Darkest Green
-    elif rs_rating >= 94:
-        return '#2ca25f'
-    elif rs_rating >= 91:
-        return '#66c2a4'
-    elif rs_rating >= 88:
-        return '#99d8c9'
-    elif rs_rating >= 85:
-        return '#ccece6'  # Lightest Green
-    elif rs_rating >= 82:
-        return '#ffffb2'  # Lightest Yellow
-    elif rs_rating >= 80:
-        return '#fed976'  # Light Orange
-    return '#feb24c'      # Orange
+    """Maps RS Rating to a color based on a linear gradient."""
+
+    def hex_to_rgb(hex_color):
+        hex_color = hex_color.lstrip('#')
+        return tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
+
+    def rgb_to_hex(rgb_color):
+        r, g, b = rgb_color
+        return '#{:02x}{:02x}{:02x}'.format(int(r), int(g), int(b))
+
+    if rs_rating < 80:
+        return '#ccece6'  # Lightest green for values below the main range
+
+    # Define the colors for the gradient.
+    # Higher RS ratings will be a stronger green.
+    color_start_hex = '#ccece6'  # for RS rating 80
+    color_end_hex = '#2ca25f'    # for RS rating 99
+
+    # Convert hex to RGB
+    r_start, g_start, b_start = hex_to_rgb(color_start_hex)
+    r_end, g_end, b_end = hex_to_rgb(color_end_hex)
+
+    # Define the RS rating range for the gradient
+    rating_min = 80
+    rating_max = 99
+
+    # Clamp the rating to the defined range
+    rs_rating_clamped = max(rating_min, min(rs_rating, rating_max))
+
+    # Calculate the interpolation factor (0.0 to 1.0)
+    if (rating_max - rating_min) == 0:
+        t = 1.0 # If range is zero, use the end color
+    else:
+        t = (rs_rating_clamped - rating_min) / (rating_max - rating_min)
+
+    # Linear interpolation for each color channel
+    r = r_start + t * (r_end - r_start)
+    g = g_start + t * (g_end - g_start)
+    b = b_start + t * (b_end - b_start)
+
+    return rgb_to_hex((r, g, b))
 
 def create_heatmap(csv_path, output_path):
     """Generates the RS heatmap from the provided CSV file."""
@@ -35,7 +60,7 @@ def create_heatmap(csv_path, output_path):
 
     # 2. Set up the plot
     fig = plt.figure(figsize=(12, 16), dpi=150)
-    gs = GridSpec(8, 4, figure=fig, hspace=0.4, wspace=0.3, height_ratios=[0.5, 1, 1, 1, 1, 1, 1, 1])
+    gs = GridSpec(8, 4, figure=fig, hspace=0.2, wspace=0.2, height_ratios=[0.5, 1, 1, 1, 1, 1, 1, 1])
 
     # 3. Add main title and legend
     ax_title = fig.add_subplot(gs[0, :])
@@ -43,7 +68,7 @@ def create_heatmap(csv_path, output_path):
     now = datetime.datetime.now(pytz.timezone('UTC'))
     dt_text = now.strftime('Update %Y/%m/%d(%a)')
     ax_title.text(0.0, 0.8, 'US Stock Relative Strength Heatmap', ha='left', va='center', fontsize=24, fontweight='bold')
-    ax_title.text(0.0, 0.5, dt_text, ha='left', va='center', fontsize=16)
+    ax_title.text(0.0, 0.3, dt_text, ha='left', va='center', fontsize=16)
 
     # Add legend
     #legend_elements = [
