@@ -35,7 +35,7 @@ def create_heatmap(csv_path, output_path):
 
     # 2. Set up the plot
     fig = plt.figure(figsize=(12, 16), dpi=150)
-    gs = GridSpec(8, 4, figure=fig, hspace=0.4, wspace=0.3)
+    gs = GridSpec(8, 4, figure=fig, hspace=0.4, wspace=0.3, height_ratios=[0.5, 1, 1, 1, 1, 1, 1, 1])
 
     # 3. Add main title and legend
     ax_title = fig.add_subplot(gs[0, :])
@@ -64,13 +64,12 @@ def create_heatmap(csv_path, output_path):
         col_idx = i % 4
 
         ax = fig.add_subplot(gs[row_idx, col_idx])
-        
+
         rs_rating = row['Percentile']
         sector_name = row['Industry']
         diff = row['Diff']
         tickers = row['Tickers'].split(',')
         top_ticker = tickers[0] if tickers else ''
-        top_3_tickers = ', '.join(tickers[:3])
 
         # Cell background color
         ax.set_facecolor(get_color(rs_rating))
@@ -83,9 +82,8 @@ def create_heatmap(csv_path, output_path):
 
         # Add text
         wrapped_sector_name = textwrap.fill(sector_name, width=20)
-        ax.text(0.05, 0.9, wrapped_sector_name, transform=ax.transAxes, fontsize=10, color='black', va='top', fontweight='bold')
-        ax.text(0.05, 0.6, f"{int(rs_rating)}", transform=ax.transAxes, fontsize=28, fontweight='bold', color='black', va='top')
-        
+        ax.text(0.05, 0.95, wrapped_sector_name, transform=ax.transAxes, fontsize=10, color='black', va='top', fontweight='bold')
+
         # Up/Down arrow
         arrow = ''
         color = 'black'
@@ -95,23 +93,38 @@ def create_heatmap(csv_path, output_path):
         elif diff < 0:
             arrow = '▼'
             color = 'red'
-        ax.text(0.95, 0.7, arrow, transform=ax.transAxes, fontsize=20, color=color, va='top', ha='right')
-        
-        # Top 3 Tickers
-        ax.text(0.95, 0.6, top_3_tickers, transform=ax.transAxes, fontsize=8, color='black', va='top', ha='right')
+        ax.text(0.05, 0.5, arrow, transform=ax.transAxes, fontsize=20, color=color, va='center', ha='left')
+
+        # RS Rating (bottom-right)
+        ax.text(0.95, 0.05, f"{int(rs_rating)}", transform=ax.transAxes, fontsize=28, fontweight='bold', color='black', ha='right', va='bottom')
+
+        # Top 3 Tickers (bottom-left) - first one bold
+        if len(tickers) > 0:
+            first_ticker = tickers[0]
+            other_tickers_str = ', '.join(tickers[1:3])
+
+            # Use mathtext for bolding the first ticker without requiring LaTeX
+            bold_first_ticker = r"$\bf{" + first_ticker + "}$"
+
+            full_text = bold_first_ticker
+            if other_tickers_str:
+                full_text += ', ' + other_tickers_str
+
+            ax.text(0.05, 0.05, full_text, transform=ax.transAxes, fontsize=9, color='black', va='bottom', ha='left')
 
         # Add mini-chart
         if top_ticker:
             try:
                 stock_data = yf.download(top_ticker, period='90d', progress=False)
                 if not stock_data.empty:
-                    chart_ax = ax.inset_axes([0.1, 0.1, 0.8, 0.5])
-                    chart_ax.plot(stock_data.index, stock_data['Close'], color='black', linewidth=1.5)
-                    chart_ax.axis('off') # Correctly hides all chart axes, labels, and borders
+                    # Move chart up to make space for text at the bottom
+                    chart_ax = ax.inset_axes([0.1, 0.25, 0.8, 0.6], zorder=0)
+                    chart_ax.plot(stock_data.index, stock_data['Close'], color='white', linewidth=1.5)
+                    chart_ax.axis('off')
             except Exception as e:
-                ax.text(0.5, 0.35, "Chart NA", color='black', fontsize=8, ha='center', va='center')
+                ax.text(0.5, 0.5, "Chart NA", color='black', fontsize=8, ha='center', va='center')
 
-    
+
     # 5. Save the figure
     plt.savefig(output_path, bbox_inches='tight')
     plt.close()
@@ -121,4 +134,3 @@ if __name__ == "__main__":
     CSV_FILE    = '_files/RS/rs_industries_us.csv'
     OUTPUT_FILE = '_files/RS/SectorRS_Heatmap_US.png'
     create_heatmap(CSV_FILE, OUTPUT_FILE)
-
