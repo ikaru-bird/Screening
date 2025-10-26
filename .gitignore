@@ -8,9 +8,9 @@ __pycache__/
 Output*/
 output*/
 *.log
-_files/
+#_files/
 *.csv
-*.png
+#*.png
 
 # Environment
 .env
