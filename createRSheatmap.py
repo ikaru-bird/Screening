@@ -165,7 +165,6 @@ def create_heatmap(csv_path, output_path, region):
             except Exception as e:
                 ax.text(0.5, 0.5, "Chart NA", color='black', fontsize=8, ha='center', va='center')
 
-
     # 5. Save the figure
     plt.savefig(output_path, bbox_inches='tight')
     plt.close()
@@ -175,8 +174,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Generate a Relative Strength heatmap for stocks.')
     parser.add_argument('region', type=str, choices=['US', 'JP'], help='The region (US or JP).')
     parser.add_argument('csv_path', type=str, help='Path to the input CSV file.')
+    parser.add_argument('out_path', type=str, help='Path to the input Output file.')
     args = parser.parse_args()
 
-    output_file = f'_files/RS/SectorRS_Heatmap_{args.region}.png'
-
-    create_heatmap(args.csv_path, output_file, args.region)
+    create_heatmap(args.csv_path, args.out_file, args.region)
