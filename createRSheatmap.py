@@ -58,11 +58,11 @@ def create_heatmap(csv_path, output_path, region):
     # 1. Load and filter data
     df = pd.read_csv(csv_path)
 
-    # Identify top 10 by Diff and RS Momentum (Percentile)
+    # Identify top 10 by Diff and RS Momentum
     top_10_diff = df.nlargest(10, 'Diff')
-    top_10_rs = df.nlargest(10, 'Percentile')
+    top_10_rs   = df.nlargest(10, 'RS Momentum')
     top_diff_industries = set(top_10_diff['Industry'])
-    top_rs_industries = set(top_10_rs['Industry'])
+    top_rs_industries   = set(top_10_rs['Industry'])
 
     df_filtered = df[(df['Percentile'] >= 80) & (df['Percentile'] <= 99)].head(28)
 
@@ -130,7 +130,7 @@ def create_heatmap(csv_path, output_path, region):
                 arrow = '▲▲'
             else:
                 arrow = '▲'
-            color = 'green'
+            color = 'lime'
         elif diff < 0:
             arrow = '▼'
             color = 'red'
