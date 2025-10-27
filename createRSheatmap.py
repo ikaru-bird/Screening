@@ -8,6 +8,7 @@ from matplotlib.gridspec import GridSpec
 import datetime
 import pytz
 import textwrap
+import argparse
 
 def get_color(rs_rating):
     """Maps RS Rating to a color based on a linear gradient."""
@@ -52,7 +53,7 @@ def get_color(rs_rating):
 
     return rgb_to_hex((r, g, b))
 
-def create_heatmap(csv_path, output_path):
+def create_heatmap(csv_path, output_path, region):
     """Generates the RS heatmap from the provided CSV file."""
     # 1. Load and filter data
     df = pd.read_csv(csv_path)
@@ -72,10 +73,14 @@ def create_heatmap(csv_path, output_path):
     # 3. Add main title and legend
     ax_title = fig.add_subplot(gs[0, :])
     ax_title.axis('off')
-    now = datetime.datetime.now(pytz.timezone('UTC'))
-    dt_text = now.strftime('Update %Y/%m/%d(%a)')
-    ax_title.text(0.0, 0.8, 'US Stock Relative Strength Heatmap', ha='left', va='center', fontsize=24, fontweight='bold')
-    ax_title.text(0.0, 0.3, dt_text, ha='left', va='center', fontsize=16)
+#   now = datetime.datetime.now(pytz.timezone('UTC'))
+#   dt_text = now.strftime('Update: %Y/%m/%d(%a)')
+    now = datetime.datetime.now(pytz.timezone('Asia/Tokyo'))
+    dt_text = now.strftime('%Y/%m/%d(%a) %H:%M JST')
+    
+    title_text = f'::: {region} Stock / Relative Strength :::'
+    ax_title.text(0.0, 0.8, title_text, ha='center', va='center', fontsize=24, fontweight='bold')
+    ax_title.text(0.0, 0.3, dt_text, ha='center', va='center', fontsize=16)
 
     # Add legend
     #legend_elements = [
@@ -132,7 +137,7 @@ def create_heatmap(csv_path, output_path):
         ax.text(0.05, 0.5, arrow, transform=ax.transAxes, fontsize=20, color=color, va='center', ha='left')
 
         # RS Rating (bottom-right)
-        ax.text(0.95, 0.05, f"{int(rs_rating)}", transform=ax.transAxes, fontsize=28, fontweight='bold', color='white', ha='right', va='bottom')
+        ax.text(0.95, 0.15, f"{int(rs_rating)}", transform=ax.transAxes, fontsize=28, fontweight='bold', color='white', ha='right', va='bottom')
 
         # Top 3 Tickers (bottom-left) - first one bold
         if len(tickers) > 0:
@@ -151,7 +156,7 @@ def create_heatmap(csv_path, output_path):
         # Add mini-chart
         if top_ticker:
             try:
-                stock_data = yf.download(top_ticker, period='90d', progress=False)
+                stock_data = yf.download(top_ticker, period='90d', progress=False, auto_adjust=True)
                 if not stock_data.empty:
                     # Move chart up to make space for text at the bottom
                     chart_ax = ax.inset_axes([0.1, 0.25, 0.8, 0.6], zorder=0)
@@ -167,6 +172,11 @@ def create_heatmap(csv_path, output_path):
     print(f"Heatmap saved to {output_path}")
 
 if __name__ == "__main__":
-    CSV_FILE    = '_files/RS/rs_industries_us.csv'
-    OUTPUT_FILE = '_files/RS/SectorRS_Heatmap_US.png'
-    create_heatmap(CSV_FILE, OUTPUT_FILE)
+    parser = argparse.ArgumentParser(description='Generate a Relative Strength heatmap for stocks.')
+    parser.add_argument('region', type=str, choices=['US', 'JP'], help='The region (US or JP).')
+    parser.add_argument('csv_path', type=str, help='Path to the input CSV file.')
+    args = parser.parse_args()
+
+    output_file = f'_files/RS/SectorRS_Heatmap_{args.region}.png'
+
+    create_heatmap(args.csv_path, output_file, args.region)
