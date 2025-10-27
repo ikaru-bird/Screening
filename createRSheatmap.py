@@ -134,7 +134,7 @@ def create_heatmap(csv_path, output_path, region):
         ax.text(0.05, 0.5, arrow, transform=ax.transAxes, fontsize=20, color=color, va='center', ha='left')
 
         # RS Rating (bottom-right)
-        ax.text(0.95, 0.05, f"{int(rs_rating)}", transform=ax.transAxes, fontsize=28, fontweight='bold', color='white', ha='right', va='bottom')
+        ax.text(0.95, 0.15, f"{int(rs_rating)}", transform=ax.transAxes, fontsize=28, fontweight='bold', color='white', ha='right', va='bottom')
 
         # Top 3 Tickers (bottom-left) - first one bold
         if len(tickers) > 0:
