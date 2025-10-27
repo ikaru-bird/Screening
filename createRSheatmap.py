@@ -73,11 +73,14 @@ def create_heatmap(csv_path, output_path, region):
     # 3. Add main title and legend
     ax_title = fig.add_subplot(gs[0, :])
     ax_title.axis('off')
-    now = datetime.datetime.now(pytz.timezone('UTC'))
-    dt_text = now.strftime('Update %Y/%m/%d(%a)')
-    title_text = f'{region} Stock Relative Strength Heatmap'
-    ax_title.text(0.0, 0.8, title_text, ha='left', va='center', fontsize=24, fontweight='bold')
-    ax_title.text(0.0, 0.3, dt_text, ha='left', va='center', fontsize=16)
+#   now = datetime.datetime.now(pytz.timezone('UTC'))
+#   dt_text = now.strftime('Update: %Y/%m/%d(%a)')
+    now = datetime.datetime.now(pytz.timezone('Asia/Tokyo'))
+    dt_text = now.strftime('%Y/%m/%d(%a) %H:%M JST')
+    
+    title_text = f'::: {region} Stock / Relative Strength :::'
+    ax_title.text(0.0, 0.8, title_text, ha='center', va='center', fontsize=24, fontweight='bold')
+    ax_title.text(0.0, 0.3, dt_text, ha='center', va='center', fontsize=16)
 
     # Add legend
     #legend_elements = [
