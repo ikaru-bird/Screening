@@ -153,7 +153,7 @@ def create_heatmap(csv_path, output_path, region):
         # Add mini-chart
         if top_ticker:
             try:
-                stock_data = yf.download(top_ticker, period='90d', progress=False)
+                stock_data = yf.download(top_ticker, period='90d', progress=False, auto_adjust=True)
                 if not stock_data.empty:
                     # Move chart up to make space for text at the bottom
                     chart_ax = ax.inset_axes([0.1, 0.25, 0.8, 0.6], zorder=0)
