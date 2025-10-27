@@ -56,6 +56,13 @@ def create_heatmap(csv_path, output_path):
     """Generates the RS heatmap from the provided CSV file."""
     # 1. Load and filter data
     df = pd.read_csv(csv_path)
+
+    # Identify top 10 by Diff and RS Momentum (Percentile)
+    top_10_diff = df.nlargest(10, 'Diff')
+    top_10_rs = df.nlargest(10, 'Percentile')
+    top_diff_industries = set(top_10_diff['Industry'])
+    top_rs_industries = set(top_10_rs['Industry'])
+
     df_filtered = df[(df['Percentile'] >= 80) & (df['Percentile'] <= 99)].head(28)
 
     # 2. Set up the plot
@@ -113,7 +120,11 @@ def create_heatmap(csv_path, output_path):
         arrow = ''
         color = 'black'
         if diff > 0:
-            arrow = '▲'
+            # Check if the industry is in the top 10 for both Diff and RS Momentum
+            if sector_name in top_diff_industries and sector_name in top_rs_industries:
+                arrow = '▲▲'
+            else:
+                arrow = '▲'
             color = 'green'
         elif diff < 0:
             arrow = '▼'
@@ -121,7 +132,7 @@ def create_heatmap(csv_path, output_path):
         ax.text(0.05, 0.5, arrow, transform=ax.transAxes, fontsize=20, color=color, va='center', ha='left')
 
         # RS Rating (bottom-right)
-        ax.text(0.95, 0.05, f"{int(rs_rating)}", transform=ax.transAxes, fontsize=28, fontweight='bold', color='black', ha='right', va='bottom')
+        ax.text(0.95, 0.05, f"{int(rs_rating)}", transform=ax.transAxes, fontsize=28, fontweight='bold', color='white', ha='right', va='bottom')
 
         # Top 3 Tickers (bottom-left) - first one bold
         if len(tickers) > 0:
