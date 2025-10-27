@@ -1,4 +1,4 @@
-# create_rs_heatmap.py
+import sys
 import pandas as pd
 import yfinance as yf
 import matplotlib
@@ -79,8 +79,8 @@ def create_heatmap(csv_path, output_path, region):
     dt_text = now.strftime('%Y/%m/%d(%a) %H:%M JST')
     
     title_text = f'::: {region} Stock / Relative Strength :::'
-    ax_title.text(0.0, 0.8, title_text, ha='center', va='center', fontsize=24, fontweight='bold')
-    ax_title.text(0.0, 0.3, dt_text, ha='center', va='center', fontsize=16)
+    ax_title.text(0.0, 0.8, title_text, ha='left', va='center', fontsize=24, fontweight='bold')
+    ax_title.text(0.0, 0.3, dt_text, ha='left', va='center', fontsize=16)
 
     # Add legend
     #legend_elements = [
@@ -171,10 +171,11 @@ def create_heatmap(csv_path, output_path, region):
     print(f"Heatmap saved to {output_path}")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Generate a Relative Strength heatmap for stocks.')
-    parser.add_argument('region', type=str, choices=['US', 'JP'], help='The region (US or JP).')
-    parser.add_argument('csv_path', type=str, help='Path to the input CSV file.')
-    parser.add_argument('out_path', type=str, help='Path to the input Output file.')
-    args = parser.parse_args()
 
-    create_heatmap(args.csv_path, args.out_file, args.region)
+    # パラメータ受取り
+    args     = sys.argv
+    region   = args[1]
+    csv_path = args[2]
+    out_path = args[3]
+
+    create_heatmap(csv_path, out_path, region)
