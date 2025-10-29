@@ -1,10 +1,22 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import sys
+import squarify
+import textwrap
+
+# === 引数チェック ===
+if len(sys.argv) != 4:
+    print("Usage: python createTickerHeatmap.py <input_file> <output_file> <region>")
+    sys.exit(1)
+
+# === 引数読込 ===
+input_file = sys.argv[1]
+output_file = sys.argv[2]
+region = sys.argv[3]
 
 # === ファイル読込 ===
-path = '_files/RS/rs_stocks_us.csv'  # ファイルパスを指定
-df = pd.read_csv(path)
+df = pd.read_csv(input_file)
 
 # === 列の整形 ===
 df.columns = [c.strip() for c in df.columns]
@@ -24,44 +36,50 @@ filtered = df[
 filtered = filtered.sort_values('RS Momentum', ascending=False).reset_index(drop=True)
 
 # === 可視化設定 ===
-n = len(filtered)
-cols = int(np.ceil(np.sqrt(n)))
-rows = int(np.ceil(n / cols))
-
-fig, ax = plt.subplots(figsize=(12, 8))
 plt.style.use('dark_background')
+fig, ax = plt.subplots(figsize=(12, 8))
 ax.set_facecolor('#0a0d1a')
 ax.axis('off')
 
-# 正規化とカラーマップ設定
+# === ツリーマップデータ準備 ===
 sizes = filtered['Diff']
 colors = filtered['RS Momentum']
-norm = plt.Normalize(colors.min(), colors.max())
+labels = [f"{ticker}\n{textwrap.fill(industry, 15)}" for ticker, industry in zip(filtered['Ticker'], filtered['Industry'])]
+
+
+# カラーマップ設定
+norm = plt.Normalize(vmin=colors.min(), vmax=colors.max())
 cmap = plt.cm.coolwarm
+color_mapped = [cmap(norm(value)) for value in colors]
 
-# === ヒートマップ描画 ===
-width = 1 / cols
-height = 1 / rows
+# === ツリーマップ描画 ===
+# ラベルは後で手動で追加するため、ここでは描画しない
+squarify.plot(sizes=sizes, color=color_mapped, ax=ax)
 
-for i, (ticker, diff, rs) in enumerate(zip(filtered['Ticker'], sizes, colors)):
-    row = i // cols
-    col = i % cols
-    x = col * width
-    y = 1 - (row + 1) * height
+# === ラベル描画 ===
+# squarify.plotがaxに追加したパッチ(矩形)のリストを取得
+patches = ax.patches
+for i, rect in enumerate(patches):
+    ticker = filtered['Ticker'].iloc[i]
+    industry = textwrap.fill(filtered['Industry'].iloc[i], 15)
 
-    color = cmap(norm(rs))
-    ax.add_patch(plt.Rectangle((x, y), width, height, color=color, ec='black', lw=0.6))
+    # テキストを中央に配置
+    x, y, dx, dy = rect.get_x(), rect.get_y(), rect.get_width(), rect.get_height()
 
-    label = f"{ticker}\n{rs:.2f}"
-    ax.text(x + width/2, y + height/2, label,
-            ha='center', va='center', fontsize=9,
-            color='white', weight='bold')
+    # Y座標を矩形の高さに基づいて調整
+    y_ticker = y + dy / 2 + dy * 0.08
+    y_industry = y + dy / 2 - dy * 0.08
+
+    ax.text(x + dx / 2, y_ticker, ticker,
+            ha='center', va='center', fontsize=9, color='white', weight='bold')
+    ax.text(x + dx / 2, y_industry, industry,
+            ha='center', va='center', fontsize=8, color='white')
 
 # === タイトル ===
-ax.text(0.5, 1.05, "STOCKS", fontsize=22, color='gray', ha='center', weight='bold')
-ax.text(0.5, 1.01, "Diff in top 5%, RS Momentum > 0.5", fontsize=12, color='gray', ha='center')
+ax.set_title(f"TOP STOCKS ({region})", fontsize=22, color='gray', weight='bold', pad=20)
+fig.text(0.5, 0.92, "Diff in top 5%, RS Momentum > 0.5", fontsize=12, color='gray', ha='center')
+
 
 # === 保存 ===
-plt.tight_layout()
-plt.savefig('_files/RS/topTickers.png', dpi=250, bbox_inches='tight', facecolor='#0a0d1a')
-plt.show()
+plt.tight_layout(pad=1)
+plt.savefig(output_file, dpi=250, bbox_inches='tight', facecolor='#0a0d1a')
