@@ -27,7 +27,7 @@ def get_color(rs_rating):
     # Define the colors for the gradient.
     # Higher RS ratings will be a stronger green.
     color_start_hex = '#ccece6'  # for RS rating 80
-    color_end_hex = '#2ca25f'    # for RS rating 99
+    color_end_hex   = '#2ca25f'  # for RS rating 99
 
     # Convert hex to RGB
     r_start, g_start, b_start = hex_to_rgb(color_start_hex)
@@ -58,13 +58,23 @@ def create_heatmap(csv_path, output_path, region):
     # 1. Load and filter data
     df = pd.read_csv(csv_path)
 
-    # Identify top 10 by Diff and RS Momentum
-    top_10_diff = df.nlargest(10, 'Diff')
-    top_10_rs   = df.nlargest(10, 'RS Momentum')
-    top_diff_industries = set(top_10_diff['Industry'])
-    top_rs_industries   = set(top_10_rs['Industry'])
+    # Identify top industries by Diff and RS Momentum
+    top_diff = df.nlargest(10, 'Diff')
+    top_rs   = df.nlargest(20, 'RS Momentum')
+    top_diff_industries = set(top_diff['Industry'])
+    top_rs_industries   = set(top_rs['Industry'])
 
     df_filtered = df[(df['Percentile'] >= 80) & (df['Percentile'] <= 99)].head(28)
+
+    common_industries = top_diff_industries & top_rs_industries
+    filtered_common = df_filtered[df_filtered['Industry'].isin(common_industries)]
+    
+    top_industries = (
+        filtered_common
+        .sort_values(by='Diff', ascending=False)
+        .head(3)['Industry']
+        .unique()
+    )
 
     # 2. Set up the plot
     fig = plt.figure(figsize=(12, 16), dpi=150)
@@ -126,7 +136,7 @@ def create_heatmap(csv_path, output_path, region):
         color = 'black'
         if diff > 0:
             # Check if the industry is in the top 10 for both Diff and RS Momentum
-            if sector_name in top_diff_industries and sector_name in top_rs_industries:
+            if sector_name in top_industries:
                 arrow = '▲▲'
             else:
                 arrow = '▲'
