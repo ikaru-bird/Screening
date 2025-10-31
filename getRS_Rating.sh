@@ -51,8 +51,10 @@ python $SCRIPT_DIR/relative-strength-us.py $SCREEN_DATA3 $RS_RESULT4 $RS_SECTOR4
 
 echo "3. Creating RS Charts..."
 # セクター別RS一覧作成
-python $SCRIPT_DIR/SectorRS_US.py $RS_SECTOR1 $RS_IMG1
-python $SCRIPT_DIR/SectorRS_JP.py $RS_SECTOR2 $RS_IMG2
+# python $SCRIPT_DIR/SectorRS_US.py $RS_SECTOR1 $RS_IMG1
+# python $SCRIPT_DIR/SectorRS_JP.py $RS_SECTOR2 $RS_IMG2
+python $SCRIPT_DIR/createRsHeatmap.py US $RS_SECTOR1 $RS_IMG1
+python $SCRIPT_DIR/createRsHeatmap.py JP $RS_SECTOR2 $RS_IMG2
 
 echo "4. Calculating RS Momentum..."
 # セクターのRS Momentumの計算処理の実行
