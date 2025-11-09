@@ -76,6 +76,21 @@ def create_heatmap(csv_path, output_path, region):
         .unique()
     )
 
+    # --- Print Top Industries and Tickers ---
+    print("--- Top Industries ---")
+    for industry in top_industries:
+        print(industry)
+
+    print("\n--- Top 3 Tickers per Top Industry ---")
+    for industry in top_industries:
+        industry_row = df_filtered[df_filtered['Industry'] == industry]
+        if not industry_row.empty:
+            tickers_str = industry_row['Tickers'].iloc[0]
+            tickers_list = tickers_str.split(',')
+            top_3_tickers = tickers_list[:3]
+            print(f"{industry}: {', '.join(top_3_tickers)}")
+    # -----------------------------------------
+
     # 2. Set up the plot
     fig = plt.figure(figsize=(12, 16), dpi=150)
     gs = GridSpec(8, 4, figure=fig, hspace=0.2, wspace=0.2, height_ratios=[0.5, 1, 1, 1, 1, 1, 1, 1])
