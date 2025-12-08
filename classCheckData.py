@@ -988,6 +988,11 @@ class CheckData():
         if df.empty:
             return 0, self.today, []
 
+        # Check for valid volume data. If not present, the pattern cannot be confirmed.
+        if 'Volume' not in df.columns or df['Volume'].isnull().all() or (df['Volume'] == 0).all():
+            dummy_dt = df.index[-1] if not df.empty else self.today
+            return 0, dummy_dt, []
+
         p = self.params['cup_with_handle']
         dummy_dt = df.index[-1] # Use last valid date as the default
         alist = []
