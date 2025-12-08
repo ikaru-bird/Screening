@@ -98,13 +98,13 @@ for i, row in industry_agg.iterrows(): # 'i' is now guaranteed to be 0, 1, 2...
     ix, iy, idx, idy = industry_plot['x'], industry_plot['y'], industry_plot['dx'], industry_plot['dy']
 
     # Industryの枠線
-    rect = patches.Rectangle((ix, iy), idx, idy, linewidth=2.5, edgecolor='#2c3e50', facecolor='none', zorder=5)
+    rect = patches.Rectangle((ix, iy), idx, idy, linewidth=2.5, edgecolor='white', facecolor='none', zorder=5)
     ax.add_patch(rect)
 
     # Industryラベル
     wrapped_industry = textwrap.fill(industry_name, width=15)
-    ax.text(ix + 2, iy + idy - 2, wrapped_industry,
-            ha='left', va='top', fontsize=12, color='white', weight='bold', zorder=10)
+    ax.text(ix + 1, iy + idy - 1, wrapped_industry,
+            ha='left', va='top', fontsize=9, color='white', weight='normal', zorder=10)
 
     # このIndustryに属するTickerを取得し、インデックスをリセット
     tickers_in_industry = filtered_df[filtered_df['Industry'] == industry_name].reset_index(drop=True)
@@ -121,16 +121,13 @@ for i, row in industry_agg.iterrows(): # 'i' is now guaranteed to be 0, 1, 2...
 
             # Ticker矩形
             color = cmap(norm(ticker_row['RS Momentum']))
-            rect_ticker = patches.Rectangle((tx, ty), tdx, tdy, linewidth=1, edgecolor='#0a0d1a', facecolor=color, zorder=1)
+            rect_ticker = patches.Rectangle((tx, ty), tdx, tdy, linewidth=0.5, edgecolor='#0a0d1a', facecolor=color, zorder=1)
             ax.add_patch(rect_ticker)
 
             # Tickerラベル
-            font_size = 9
-            if tdx * tdy < len(ticker_row['Ticker']) * 20 or tdx < 10 or tdy < 10:
-                pass # 小さすぎる場合は描画しない
-            else:
-                ax.text(tx + tdx / 2, ty + tdy / 2, ticker_row['Ticker'],
-                       ha='center', va='center', fontsize=font_size, color='white', weight='bold', zorder=10)
+            font_size = 13
+            ax.text(tx + tdx / 2, ty + tdy / 2, f"$\\bf{{{ticker_row['Ticker']}}}$",
+                    ha='center', va='center', fontsize=font_size, color='white', zorder=10)
 
 # === タイトル ===
 ax.set_title(f"TOP STOCKS ({region})", fontsize=22, color='gray', weight='bold', pad=20)
