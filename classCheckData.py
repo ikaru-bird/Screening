@@ -985,7 +985,7 @@ class CheckData():
 #---------------------------------------#
     def Cup_with_Handle_Check(self):
         df = self.df.sort_index()
-        if df.empty:
+        if df.empty or 'Volume' not in df.columns or df['Volume'].sum() == 0:
             return 0, self.today, []
 
         p = self.params['cup_with_handle']
