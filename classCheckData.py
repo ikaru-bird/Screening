@@ -988,6 +988,11 @@ class CheckData():
         if df.empty:
             return 0, self.today, []
 
+        # Check for valid volume data. Use .values.all() to robustly handle
+        # both Series and DataFrame results for the 'Volume' column.
+        if 'Volume' not in df.columns or df['Volume'].isnull().values.all() or (df['Volume'] == 0).values.all():
+            return 0, self.today, []
+
         p = self.params['cup_with_handle']
         dummy_dt = df.index[-1] # Use last valid date as the default
         alist = []
@@ -997,6 +1002,12 @@ class CheckData():
         if err:
             # For simplicity, returning 0 for all initial failures.
             # A more granular return code could be implemented later if needed.
+            return 0, dummy_dt, alist
+
+        # Stage 1.5: Invalidate patterns that are too old to be relevant for plotting.
+        # The plotting logic uses tail(260), which is ~1 year.
+        # If the start of the cup is more than a year ago, ignore it.
+        if (df.index[-1] - left_lip_date).days > 365:
             return 0, dummy_dt, alist
 
         # Stage 2: Check for a prior uptrend before the cup.
@@ -1308,6 +1319,10 @@ class CheckData():
 # DataFrameを直接セットし、指標を計算
 #---------------------------------------#
     def setDF(self, df, ticker_str):
+        # yfinance can return multi-level columns; flatten them for consistency.
+        if isinstance(df.columns, pd.MultiIndex):
+            df.columns = df.columns.droplevel(1)
+
         df = df.dropna(how='all')                       # 欠損値を除外
         # インデックスを強制的にDatetimeIndexに変換し、タイムゾーンをUTCに統一
         df.index = pd.to_datetime(df.index, utc=True)
