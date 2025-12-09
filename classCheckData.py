@@ -1378,7 +1378,15 @@ class CheckData():
         df0 = self.df                        # Dataframeを参照渡し
         df0 = df0.tail(260)                  # データを末尾から行数で絞り込み
         df0 = df0.sort_index()               # 日付で昇順ソート
-        df0.loc[res[1],'Signal'] = df0.loc[res[1],'Low'] * 0.97 # マーカー表示用の列に値をセット(安値-3%の位置に表示)
+
+        # 補助線リストをチャート描画期間内にフィルタリング
+        if alist:
+            chart_start_date = df0.index[0]
+            alist = [item for item in alist if item[0] >= chart_start_date]
+
+        # res[1]（シグナル日）が描画期間内にある場合のみマーカーをセット
+        if res[1] in df0.index:
+            df0.loc[res[1],'Signal'] = df0.loc[res[1],'Low'] * 0.97 # マーカー表示用の列に値をセット(安値-3%の位置に表示)
 #       print(df0.loc[res[1],'Signal'])
 
         # UDレシオの計算(10レコードの推移)

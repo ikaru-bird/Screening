@@ -1,5 +1,7 @@
 import sys
 import os
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 import pandas as pd
 import yfinance as yf
 from classCheckData import CheckData
