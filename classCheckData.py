@@ -999,6 +999,11 @@ class CheckData():
             # A more granular return code could be implemented later if needed.
             return 0, dummy_dt, alist
 
+        # If the pattern started too long ago, it is not relevant for the chart,
+        # which only shows the last ~260 trading days. A 1-year check is a safe buffer.
+        if (self.today - left_lip_date).days > 365:
+             return 0, dummy_dt, alist # Pattern is too old to be plotted
+
         # Stage 2: Check for a prior uptrend before the cup.
         is_uptrend, reason = self._cwh_check_prior_uptrend(df, left_lip_date)
         if not is_uptrend:

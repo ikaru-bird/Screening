@@ -139,7 +139,18 @@ for i, ticker_info in enumerate(tickers_meta):
         # The fundamental check is now inside the writeFlles method in classCheckData.
         try:
             ticker_obj = yf.Ticker(ticker_str)
-            ern_info = EarningsInfo(ticker_obj)
+            # Fetch info dict once. This is the main network call for fundamental data.
+            info_dict = ticker_obj.info
+
+            # Check for a valid response. Sometimes yfinance returns an empty dict or a
+            # dict with an error for invalid tickers or API issues. 'regularMarketPrice'
+            # is a reliable key to check for existence.
+            if not info_dict or info_dict.get('regularMarketPrice') is None:
+                # print(f"##INFO## Could not get valid fundamental data for {ticker_str}. Skipping.")
+                continue
+
+            # Pass the fetched info to avoid a redundant network call in the constructor.
+            ern_info = EarningsInfo(ticker_obj, info=info_dict)
             ckdt.set_earnings_info(ern_info) # Set ern_info before technical checks
 
             # These methods will call writeFlles internally, which now performs the fundamental check.
