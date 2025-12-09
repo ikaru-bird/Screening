@@ -2,6 +2,8 @@ import sys
 import os
 import pandas as pd
 import yfinance as yf
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 from classCheckData import CheckData
 from classEarningsInfo import EarningsInfo
 from datetime import datetime, timedelta

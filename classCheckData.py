@@ -245,7 +245,7 @@ class CheckData():
 #                                    if (td_abs.days <= self.outPeriod):
 #                                        strLabel = "Base Formation"
 #                                        self.writeFlles(res, strLabel)  # CSV、チャート書き込み呼び出し
-        return
+        return (0, self.today, [])
 
 #------------------------------------------------#
 # 買いサイン判定処理スタート（オニミネ・ニパターン）
@@ -721,7 +721,8 @@ class CheckData():
             pivot_dt2 = df2.index[0]
             return 8, pivot_dt2
         else:
-            return 7, pivot_dt1
+            # No breakout yet, pattern is "watching". Return the last date.
+            return 7, df1.index[-1]
 
 #---------------------------------------#
 # Double Bottom判定処理
@@ -814,7 +815,7 @@ class CheckData():
             alist.append([pivot_dt2, df0.loc[pivot_dt2,"High"]])
             return 6, pivot_dt2, alist
         else:
-            return 5, pivot_dt1, alist
+            return 5, df0.index[-1], alist
 
 #---------------------------------------#
 # カップウィズハンドル判定処理 (HELPER METHODS)
@@ -1049,10 +1050,11 @@ class CheckData():
 
         if "without sufficient volume" in breakout_reason:
             # Awaiting volume confirmation
-            return 5, df.index[-1], alist
+            breakout_date = df.query('index > @handle_low_date and High >= @pivot_price').index[0]
+            return 5, breakout_date, alist
 
         # Awaiting breakout from handle or lip
-        return 5, df.index[-1], alist
+        return 4, df.index[-1], alist
 
 #---------------------------------------#
 # フラットベース判定処理
@@ -1149,7 +1151,7 @@ class CheckData():
             alist.append((pvt_dt, df0.loc[pvt_dt,"High"]))
             return 4, pvt_dt, alist
         else:
-            return 3, base_edt, alist
+            return 3, df0.index[-1], alist
 
 #---------------------------------------#
 # O'Neil/Minervini流チャート判定
@@ -1255,7 +1257,7 @@ class CheckData():
                 return 1, base_end_date, alist
 
         # 条件に合わない場合は0を返す
-        return 0, None, alist
+        return 0, df0.index[-1], alist
 
 #------------------------------------------------#
 # U/Dレシオ計算処理
@@ -1350,22 +1352,25 @@ class CheckData():
         print(self.strTicker + " is ::: " + strLabel + " :::")
 
         # STAGE 2: ファンダメンタル・スクリーニング
-        # self.ern_infoがNoneの場合（isTrend.pyからの呼び出しなど）、チェックをスキップ
-        if self.ern_info is not None:
-            try:
-                info = self.ern_info.ticker.info
-                roe = info.get('returnOnEquity')
-                passed, _ = self.ern_info.get_fundamental_screening_results(roe)
+        try:
+            # self.ern_infoがNoneの場合（isTrend.pyからの呼び出しなど）、チェックをスキップ
+            if self.ern_info is not None:
+                    info = self.ern_info.ticker.info
+                    roe = info.get('returnOnEquity')
 
-                if not passed:
-                    # print(f"##INFO## {self.strTicker} did not pass fundamental screening. Skipping chart/CSV output.")
-                    return # 条件を満たさない場合は後続処理を行わない
+                    # APIエラーなどでinfoが取得できなかった場合、'returnOnEquity'が存在しないことがある
+                    if roe is None:
+                        print(f"##INFO## Could not retrieve ROE for {self.strTicker}. Skipping fundamental check.")
+                    else:
+                        passed, _ = self.ern_info.get_fundamental_screening_results(roe)
+                        if not passed:
+                            # print(f"##INFO## {self.strTicker} did not pass fundamental screening. Skipping chart/CSV output.")
+                            return # 条件を満たさない場合は後続処理を行わない
+                        print(f"{self.strTicker} is ::: fundamentaly OK :::")
 
-                print(f"{self.strTicker} is ::: fundamentaly OK :::")
-
-            except Exception as e:
-                # print(f"##ERROR## during fundamental screening for {self.strTicker}: {e}")
-                return # エラーが発生した場合も後続処理をスキップ
+        except Exception as e:
+            print(f"##ERROR## during fundamental screening for {self.strTicker}: {e}")
+            return # エラーが発生した場合も後続処理をスキップ
 
         # ローソク足チャートを作成
 
@@ -1378,7 +1383,16 @@ class CheckData():
         df0 = self.df                        # Dataframeを参照渡し
         df0 = df0.tail(260)                  # データを末尾から行数で絞り込み
         df0 = df0.sort_index()               # 日付で昇順ソート
-        df0.loc[res[1],'Signal'] = df0.loc[res[1],'Low'] * 0.97 # マーカー表示用の列に値をセット(安値-3%の位置に表示)
+
+        # 描画範囲外の古い日付を持つ補助線やシグナルをフィルタリング
+        if not df0.empty:
+            chart_start_date = df0.index[0]
+            if alist:
+                alist = [point for point in alist if point[0] >= chart_start_date]
+
+            # シグナル点が描画範囲内にある場合のみマーカーをセット
+            if res[1] in df0.index:
+                df0.loc[res[1],'Signal'] = df0.loc[res[1],'Low'] * 0.97 # マーカー表示用の列に値をセット(安値-3%の位置に表示)
 #       print(df0.loc[res[1],'Signal'])
 
         # UDレシオの計算(10レコードの推移)
