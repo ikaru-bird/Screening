@@ -114,7 +114,8 @@ class DrawChart():
             ticker_obj = yf.Ticker(strTicker)
             try:
                 ticker_info = ticker_obj.info
-            except:
+            except Exception as e:
+                print(f"##ERROR## Could not get ticker info for {strTicker} from yfinance: {e}")
                 ticker_info = {}
             ern = EarningsInfo(ticker_obj, info=ticker_info)
 
