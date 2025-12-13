@@ -4,6 +4,9 @@ import pandas as pd
 import datetime as dt
 import yfinance as yf # Import yfinance here
 import math
+import sys
+import os
+from contextlib import contextmanager
 
 class EarningsInfo():
     # --- ファンダメンタル・スクリーニングの閾値設定 ---
@@ -36,9 +39,10 @@ class EarningsInfo():
         # If info is not provided, fetch it. This ensures self.info is always populated.
         if info is None:
             try:
-                self.info = self.ticker.info
+                with self._suppress_stderr():
+                    self.info = self.ticker.info
             except Exception as e:
-                print(f"ticker.info for {self.ticker.ticker} could not be retrieved.")
+                print(f"Could not retrieve ticker.info for {self.ticker.ticker}.")
                 self.info = {}
         else:
             self.info = info
@@ -50,6 +54,18 @@ class EarningsInfo():
         self._revenue_estimate = self._SENTINEL
         self._earnings_estimate = self._SENTINEL
 
+    @contextmanager
+    def _suppress_stderr(self):
+        """A context manager to temporarily suppress stderr."""
+        original_stderr = sys.stderr
+        devnull = open(os.devnull, 'w')
+        sys.stderr = devnull
+        try:
+            yield
+        finally:
+            sys.stderr.close()
+            sys.stderr = original_stderr
+
     @property
     def income_stmt(self):
         if self._income_stmt is self._SENTINEL:
@@ -58,9 +74,10 @@ class EarningsInfo():
                 if self.info.get('quoteType') == 'INDEX':
                     self._income_stmt = None
                 else:
-                    self._income_stmt = self.ticker.income_stmt
+                    with self._suppress_stderr():
+                        self._income_stmt = self.ticker.income_stmt
             except Exception as e:
-                print(f"income_stmt for {self.ticker.ticker} could not be retrieved.")
+                print(f"Could not retrieve income_stmt for {self.ticker.ticker}.")
                 self._income_stmt = None # Cache failure as None
         return self._income_stmt
 
@@ -71,9 +88,10 @@ class EarningsInfo():
                 if self.info.get('quoteType') == 'INDEX':
                     self._quarterly_income_stmt = None
                 else:
-                    self._quarterly_income_stmt = self.ticker.quarterly_income_stmt
+                    with self._suppress_stderr():
+                        self._quarterly_income_stmt = self.ticker.quarterly_income_stmt
             except Exception as e:
-                print(f"quarterly_income_stmt for {self.ticker.ticker} could not be retrieved.")
+                print(f"Could not retrieve quarterly_income_stmt for {self.ticker.ticker}.")
                 self._quarterly_income_stmt = None
         return self._quarterly_income_stmt
 
@@ -84,9 +102,10 @@ class EarningsInfo():
                 if self.info.get('quoteType') == 'INDEX':
                     self._earnings_history = None
                 else:
-                    self._earnings_history = self.ticker.earnings_history
+                    with self._suppress_stderr():
+                        self._earnings_history = self.ticker.earnings_history
             except Exception as e:
-                print(f"earnings_history for {self.ticker.ticker} could not be retrieved.")
+                print(f"Could not retrieve earnings_history for {self.ticker.ticker}.")
                 self._earnings_history = None
         return self._earnings_history
 
@@ -97,9 +116,10 @@ class EarningsInfo():
                 if self.info.get('quoteType') == 'INDEX':
                     self._revenue_estimate = None
                 else:
-                    self._revenue_estimate = self.ticker.revenue_estimate
+                    with self._suppress_stderr():
+                        self._revenue_estimate = self.ticker.revenue_estimate
             except Exception as e:
-                print(f"revenue_estimate for {self.ticker.ticker} could not be retrieved.")
+                print(f"Could not retrieve revenue_estimate for {self.ticker.ticker}.")
                 self._revenue_estimate = None
         return self._revenue_estimate
 
@@ -110,9 +130,10 @@ class EarningsInfo():
                 if self.info.get('quoteType') == 'INDEX':
                     self._earnings_estimate = None
                 else:
-                    self._earnings_estimate = self.ticker.earnings_estimate
+                    with self._suppress_stderr():
+                        self._earnings_estimate = self.ticker.earnings_estimate
             except Exception as e:
-                print(f"earnings_estimate for {self.ticker.ticker} could not be retrieved.")
+                print(f"Could not retrieve earnings_estimate for {self.ticker.ticker}.")
                 self._earnings_estimate = None
         return self._earnings_estimate
 
