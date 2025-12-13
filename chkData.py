@@ -142,6 +142,13 @@ for i, ticker_info in enumerate(tickers_meta):
         try:
             ticker_obj = yf.Ticker(ticker_str)
             ern_info = EarningsInfo(ticker_obj)
+
+            # If ticker.info could not be fetched, ern_info.info will be empty.
+            # Skip this ticker as we cannot perform fundamental analysis.
+            # A message will be printed from within the EarningsInfo class constructor.
+            if not ern_info.info:
+                continue
+
             ckdt.set_earnings_info(ern_info) # Set ern_info before technical checks
 
             # These methods will call writeFlles internally, which now performs the fundamental check.

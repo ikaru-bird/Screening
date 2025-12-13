@@ -38,7 +38,7 @@ class EarningsInfo():
             try:
                 self.info = self.ticker.info
             except Exception as e:
-                # print(f"Could not fetch ticker.info for {self.ticker.ticker}: {e}")
+                print(f"ticker.info for {self.ticker.ticker} could not be retrieved.")
                 self.info = {}
         else:
             self.info = info
@@ -60,7 +60,7 @@ class EarningsInfo():
                 else:
                     self._income_stmt = self.ticker.income_stmt
             except Exception as e:
-                # print(f"Could not fetch income_stmt for {self.ticker.ticker}: {e}")
+                print(f"income_stmt for {self.ticker.ticker} could not be retrieved.")
                 self._income_stmt = None # Cache failure as None
         return self._income_stmt
 
@@ -73,7 +73,7 @@ class EarningsInfo():
                 else:
                     self._quarterly_income_stmt = self.ticker.quarterly_income_stmt
             except Exception as e:
-                # print(f"Could not fetch quarterly_income_stmt for {self.ticker.ticker}: {e}")
+                print(f"quarterly_income_stmt for {self.ticker.ticker} could not be retrieved.")
                 self._quarterly_income_stmt = None
         return self._quarterly_income_stmt
 
@@ -86,7 +86,7 @@ class EarningsInfo():
                 else:
                     self._earnings_history = self.ticker.earnings_history
             except Exception as e:
-                # print(f"Could not fetch earnings_history for {self.ticker.ticker}: {e}")
+                print(f"earnings_history for {self.ticker.ticker} could not be retrieved.")
                 self._earnings_history = None
         return self._earnings_history
 
@@ -99,7 +99,7 @@ class EarningsInfo():
                 else:
                     self._revenue_estimate = self.ticker.revenue_estimate
             except Exception as e:
-                # print(f"Could not fetch revenue_estimate for {self.ticker.ticker}: {e}")
+                print(f"revenue_estimate for {self.ticker.ticker} could not be retrieved.")
                 self._revenue_estimate = None
         return self._revenue_estimate
 
@@ -112,7 +112,7 @@ class EarningsInfo():
                 else:
                     self._earnings_estimate = self.ticker.earnings_estimate
             except Exception as e:
-                # print(f"Could not fetch earnings_estimate for {self.ticker.ticker}: {e}")
+                print(f"earnings_estimate for {self.ticker.ticker} could not be retrieved.")
                 self._earnings_estimate = None
         return self._earnings_estimate
 
