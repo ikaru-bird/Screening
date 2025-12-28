@@ -2,7 +2,7 @@
 import sys
 from bs4 import BeautifulSoup
 import re
-import requests
+from curl_cffi import requests
 import pandas as pd
 import time
 
@@ -12,84 +12,89 @@ outpath = args[1]
 url     = args[2]
 
 # 空のDaafame
-# cols  = ['No.','Ticker','Company','Sector','Industry','Market Cap','P/E','Fwd P/E','Earnings','Volume','Price']
 headers = ['No.','Ticker','Company','Sector','Industry','Market Cap','P/E','Fwd P/E','Price','Volume','Earnings']
-
 stock_list = pd.DataFrame(index=[], columns=headers)
 
-# finvizのURL
-# url = 'https://finviz.com/screener.ashx?v=152&f=cap_smallover,fa_epsqoq_o10,fa_epsyoy_o10,ind_stocksonly,sh_price_o7&o=-marketcap&c=0,1,2,3,4,6,7,8,65,67,68'
+# ヘッダー
+req_headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36'
+}
 
-site = requests.get(url, headers={'User-Agent': 'Custom'})
+# 最初のページを取得して総ページ数を確認
+site = requests.get(url, headers=req_headers, impersonate="chrome110")
 data = BeautifulSoup(site.text,'html.parser')
 
-# optionタグのみ読み込む
+# optionタグからページ数を取得
 article = data.find_all("option")
-# print(article)
-
+np = 1
 for item_html in article:
-    # データに"Page"と入った物があれば、ページ数を表すデータ
-    if item_html.text[:4] == "Page":
-        #”Page 1/96"の"96"だけが欲しいので、"/"でデータを区切って"/"の後ろのデータだけ取る
-        tmp = item_html.text.split('/')
-        tmp = tmp[1].splitlines()
-        np  = int(tmp[0])
-        print("Pages: " + str(np))
-        break
-
-# ページ数だけループ
-for i in range(0, np):
-    # URL読み込み（urlに(ページNo)*20+1が入る）
-    url2 = url + '&r=' + str((i*20)+1)
-    
-    j = 0
-    for j in range(3):
+    if item_html.text.startswith("Page"):
         try:
-            # データ取得
-            ua     = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
-            site   = requests.get(url2, headers={'User-Agent': ua})
-            data   = BeautifulSoup(site.text,'html.parser')
-            
-            # タグの解析
-            # スクリーニング結果のテーブルに含まれるclass名を指定する
-            # 例）<table class="styled-table... screener_table">
-            #     <table class="styled-table-new ... screener_table">
-            table = data.find_all('table', {'class': 'screener-new_table'})[0]
+            tmp = item_html.text.split('/')
+            if len(tmp) > 1:
+                tmp = tmp[1].splitlines()
+                np  = int(tmp[0])
+                print("Pages: " + str(np))
+            break
+        except (ValueError, IndexError):
+            # ページ数が取得できない場合はループを続ける
+            continue
+
+# 各ページからデータを取得
+for i in range(0, np):
+    url2 = url + '&r=' + str((i*20)+1)
+
+    df = None
+    for j in range(3): #リトライ処理
+        try:
+            site = requests.get(url2, headers=req_headers, impersonate="chrome110")
+            data = BeautifulSoup(site.text,'html.parser')
+
+            # 'screener_table'クラスを持つテーブルを探す
+            table = data.find('table', {'class': 'screener_table'})
+            if table is None:
+                 # 新しいクラス名でも試す
+                table = data.find('table', {'class': 'screener-new_table'})
+
+            if table is None:
+                # それでも見つからなければ、より汎用的な方法で探す
+                all_tables = data.find_all('table')
+                for t in all_tables:
+                    if 'Ticker' in t.text:
+                        table = t
+                        break
+
+            if table is None:
+                raise ValueError("Could not find the screener table.")
+
             rows = table.find_all('tr')
-            
-            # テーブルから値を抽出
-            data = []
+
+            table_data = []
             for row in rows[1:]:
                 cols = row.find_all('td')
-                cols = [col.text.strip() for col in cols]
-                data.append(cols)
-            
-            # Pandas Dataframeに格納
-            df = pd.DataFrame(data, columns=headers)
-            df = df.set_index('No.', drop=False)
-            
+                cols_text = [col.text.strip() for col in cols]
+                if len(cols_text) == len(headers):
+                    table_data.append(cols_text)
 
+            if not table_data:
+                # 有効なデータ行がない場合はリトライ
+                raise ValueError("No data rows found in table.")
+
+            df = pd.DataFrame(table_data, columns=headers)
+            df = df.set_index('No.', drop=False)
+
+            break # 成功したらリトライループを抜ける
         except Exception as e:
-            print(f"エラーが発生しました：{e}")
-            print(f"Error Retry ::: Page = {i + 1} ::: Count = {j + 1}")
-            # 5秒スリープしてリトライ
+            print(f"Error on page {i + 1}, attempt {j + 1}: {e}")
             time.sleep(5)
-        else:
-            # 例外が発生しなかった場合、ループを抜ける
-            break
-    
-    # Dataframeの結合
-    stock_list = pd.concat([stock_list, df], axis=0)
-#   stock_list = stock_list.reset_index(drop=True)
-#   print(stock_list)
+
+    if df is not None:
+        stock_list = pd.concat([stock_list, df], axis=0)
 
 # リストの件数出力
 print("Count: " + str(len(stock_list)))
 
 # リストをファイル出力
 with open(outpath, 'w', encoding='utf-8') as f:
-    # データ数だけループ
-    for column_name, item in stock_list.iterrows():
-        # データ書き込み（社名にカンマが入っている場合があるので"~"区切り）
-#       f.write(str(item[1]) + '~' + str(item[2]) + '~' + str(item[3]) + '~' + str(item[4]) + '~' + str(item[5]) + '~' + str(item[6]) + '~' + str(item[7]) + '~' + str(item[10]) + '~' + str(item[9]) + '~' + str(item[8]) + '\n')
-        f.write(str(item.iloc[1]) + '~' + str(item.iloc[2]) + '~' + str(item.iloc[3]) + '~' + str(item.iloc[4]) + '~' + str(item.iloc[5]) + '~' + str(item.iloc[6]) + '~' + str(item.iloc[7]) + '~' + str(item.iloc[10]) + '~' + str(item.iloc[9]) + '~' + str(item.iloc[8]) + '\n')
+    for _, item in stock_list.iterrows():
+        f.write('~'.join(map(str, [item.iloc[1], item.iloc[2], item.iloc[3], item.iloc[4], item.iloc[5], item.iloc[6], item.iloc[7], item.iloc[10], item.iloc[9], item.iloc[8]])) + '\n')

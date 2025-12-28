@@ -10,3 +10,4 @@ requests
 pytz
 beautifulsoup4
 ta
+curl_cffi
