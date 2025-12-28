@@ -53,7 +53,8 @@ for i in range(0, np):
             # タグの解析
             # スクリーニング結果のテーブルに含まれるclass名を指定する
             # 例）<table class="styled-table... screener_table">
-            table = data.find_all('table', {'class': 'screener_table'})[0]
+            #     <table class="styled-table-new ... screener_table">
+            table = data.find_all('table', {'class': 'screener-new_table'})[0]
             rows = table.find_all('tr')
             
             # テーブルから値を抽出
