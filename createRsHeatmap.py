@@ -1,6 +1,7 @@
 import sys
 import pandas as pd
 import yfinance as yf
+from yfinance.exceptions import YFRateLimitError
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -9,6 +10,7 @@ import datetime
 import pytz
 import textwrap
 import argparse
+import time
 
 def get_color(rs_rating):
     """Maps RS Rating to a color based on a linear gradient."""
@@ -176,13 +178,27 @@ def create_heatmap(csv_path, output_path, region):
 
         # Add mini-chart
         if top_ticker:
+            stock_data = None
+            for attempt in range(3):
+                try:
+                    stock_data = yf.download(top_ticker, period='90d', progress=False, auto_adjust=True)
+                    break  # Success, exit retry loop
+                except YFRateLimitError:
+                    print(f"Rate limit on {top_ticker}. Attempt {attempt+1}/3. Retrying in 10s...")
+                    if attempt < 2:
+                        time.sleep(10)
+                except Exception as e:
+                    print(f"Error downloading {top_ticker}: {e}")
+                    break # Don't retry other errors
+
             try:
-                stock_data = yf.download(top_ticker, period='90d', progress=False, auto_adjust=True)
-                if not stock_data.empty:
-                    # Move chart up to make space for text at the bottom
+                if stock_data is not None and not stock_data.empty:
                     chart_ax = ax.inset_axes([0.1, 0.25, 0.8, 0.6], zorder=0)
                     chart_ax.plot(stock_data.index, stock_data['Close'], color='white', linewidth=1.5)
                     chart_ax.axis('off')
+                else:
+                    # Trigger the 'except' block to print "Chart NA"
+                    raise ValueError("Data is empty or download failed.")
             except Exception as e:
                 ax.text(0.5, 0.5, "Chart NA", color='black', fontsize=8, ha='center', va='center')
 
