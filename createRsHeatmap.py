@@ -1,7 +1,6 @@
 import sys
 import pandas as pd
 import yfinance as yf
-from yfinance.exceptions import YFRateLimitError
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -178,28 +177,26 @@ def create_heatmap(csv_path, output_path, region):
 
         # Add mini-chart
         if top_ticker:
-            stock_data = None
+            stock_data = pd.DataFrame()
             for attempt in range(3):
                 try:
                     stock_data = yf.download(top_ticker, period='90d', progress=False, auto_adjust=True)
-                    break  # Success, exit retry loop
-                except YFRateLimitError:
-                    print(f"Rate limit on {top_ticker}. Attempt {attempt+1}/3. Retrying in 10s...")
-                    if attempt < 2:
-                        time.sleep(10)
+                    if not stock_data.empty:
+                        break  # Success
                 except Exception as e:
-                    print(f"Error downloading {top_ticker}: {e}")
-                    break # Don't retry other errors
+                    print(f"An exception occurred while downloading {top_ticker}: {e}")
+                    stock_data = pd.DataFrame() # Ensure data is empty on exception
 
-            try:
-                if stock_data is not None and not stock_data.empty:
-                    chart_ax = ax.inset_axes([0.1, 0.25, 0.8, 0.6], zorder=0)
-                    chart_ax.plot(stock_data.index, stock_data['Close'], color='white', linewidth=1.5)
-                    chart_ax.axis('off')
-                else:
-                    # Trigger the 'except' block to print "Chart NA"
-                    raise ValueError("Data is empty or download failed.")
-            except Exception as e:
+                # If we are here, the download failed. Announce retry and sleep.
+                if attempt < 2: # Don't announce or sleep on the last attempt
+                    print(f"Download failed for {top_ticker}. Attempt {attempt+1}/3. Retrying in 10s...")
+                    time.sleep(10)
+
+            if not stock_data.empty:
+                chart_ax = ax.inset_axes([0.1, 0.25, 0.8, 0.6], zorder=0)
+                chart_ax.plot(stock_data.index, stock_data['Close'], color='white', linewidth=1.5)
+                chart_ax.axis('off')
+            else:
                 ax.text(0.5, 0.5, "Chart NA", color='black', fontsize=8, ha='center', va='center')
 
     # 5. Save the figure
