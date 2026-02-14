@@ -55,7 +55,7 @@ python $SCRIPT_DIR/chkData.py $SCREEN_DATA1 $STOCK_DIR1 $OUT_FILE1 $OUT_DIR $MA_
 python $SCRIPT_DIR/chkData.py $SCREEN_DATA2 $STOCK_DIR2 $OUT_FILE1 $OUT_DIR $MA_S $MA_M $MA_SL $MA_L $INTVAL $RS_CSV1 $RS_CSV2 "America/New_York"
 
 echo "3. Starting TrendTemplete screening...(indexes only)"
-python $SCRIPT_DIR/isTrend.py $STOCK_DIR2 $OUT_FILE2 $OUT_DIR/Trend- $MA_S $MA_M $MA_SL $MA_L $RS_CSV1 $RS_CSV2 $SCREEN_DATA2
+python $SCRIPT_DIR/isTrend.py $STOCK_DIR2 $OUT_FILE2 $OUT_DIR/Trend- $MA_S $MA_M $MA_SL $MA_L $RS_CSV1 $RS_CSV2 $SCREEN_DATA2 $INTVAL
 
 # 終了時刻
 end_time=`date +%s`

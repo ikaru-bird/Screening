@@ -103,7 +103,7 @@ all_data = pd.concat(all_data_list, axis=1)
 print("Price data download complete. Starting analysis...")
 
 # データ処理クラスの作成
-ckdt = CheckData(out_file, chart_dir, ma_short, ma_mid, ma_s_long, ma_long, rs_csv1, rs_csv2, in_path, timezone_str)
+ckdt = CheckData(out_file, chart_dir, ma_short, ma_mid, ma_s_long, ma_long, rs_csv1, rs_csv2, in_path, timezone_str, dt_interval)
 NG_list = ["COM","AUX","PRN","NUL"]
 passed_technicals = 0
 passed_fundamentals = 0
