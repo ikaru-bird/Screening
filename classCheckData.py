@@ -379,7 +379,7 @@ class CheckData():
             return 5, start_dt
 
     # ⑦ 現在の株価は52週高値から25％以内
-        rows   = df0['High']
+        rows   = df1['High']
         max_val = rows.max()
         idxmax = rows.idxmax()
 
@@ -1323,8 +1323,14 @@ class CheckData():
 #---------------------------------------#
     def setDF(self, df, ticker_str):
         df = df.dropna(how='all')                       # 欠損値を除外
+        if df.empty:
+            return
+
         # インデックスを強制的にDatetimeIndexに変換し、タイムゾーンをUTCに統一
         df.index = pd.to_datetime(df.index, utc=True)
+
+        # 基準となる日付をデータ末尾の日付に更新（オフラインスキャン等への対応）
+        self.today = df.index[-1]
 
         # 移動平均を計算
         df['MA10']   = df['Close'].rolling(self.ma_short).mean()

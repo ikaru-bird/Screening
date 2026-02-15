@@ -50,6 +50,10 @@ for path, dirs, files in os.walk(in_dir):
 
         # 判定処理呼び出し
         ckdt.isTrendTempleteAll()
+        ckdt.isBuySign()
+        ckdt.isGranville()
+        ckdt.isGoldernCross()
+        ckdt.isON_Minervini()
         print('--')
 
 # データ処理クラスの破棄
