@@ -18,9 +18,10 @@ ma_long   = int(args[7])
 rs_csv1   = args[8]
 rs_csv2   = args[9]
 txt_path  = args[10]
+dt_interval = args[11] if len(args) > 11 else '1d'
 
 # データ処理クラスの作成
-ckdt = CheckData(out_file, chart_dir, ma_short, ma_mid, ma_s_long, ma_long, rs_csv1, rs_csv2, txt_path)
+ckdt = CheckData(out_file, chart_dir, ma_short, ma_mid, ma_s_long, ma_long, rs_csv1, rs_csv2, txt_path, dt_interval=dt_interval)
 
 # 探索ディレクトリ内をループ処理
 for path, dirs, files in os.walk(in_dir):

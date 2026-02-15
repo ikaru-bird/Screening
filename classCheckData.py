@@ -104,7 +104,7 @@ class CheckData():
 #---------------------------------------#
 # コンストラクタ
 #---------------------------------------#
-    def __init__(self, out_path, chart_dir, ma_short, ma_mid, ma_s_long, ma_long, rs_csv1, rs_csv2, txt_path, timezone_str=None):
+    def __init__(self, out_path, chart_dir, ma_short, ma_mid, ma_s_long, ma_long, rs_csv1, rs_csv2, txt_path, timezone_str=None, dt_interval='1d'):
 
         # パラメータをセット
         self.params = self.PATTERN_PARAMS
@@ -114,6 +114,10 @@ class CheckData():
         self.ma_mid     = ma_mid
         self.ma_s_long  = ma_s_long
         self.ma_long    = ma_long
+
+        # インターバルと倍率のセット
+        self.interval = dt_interval
+        self.bar_factor = 1.0 if dt_interval == '1d' else 0.2
 
         # チャートを出力する期間
         self.outPeriod = 7
@@ -339,8 +343,9 @@ class CheckData():
 
     # ③ 200日移動平均線が少なくとも1ヵ月以上上昇トレンド
         idx_pos = df0.index.get_loc(idxtoday)
-        if idx_pos >= p['ma200_uptime_days']:
-            idxlastm = df0.index[idx_pos - p['ma200_uptime_days']]
+        ma200_uptime_bars = int(p['ma200_uptime_days'] * self.bar_factor)
+        if idx_pos >= ma200_uptime_bars:
+            idxlastm = df0.index[idx_pos - ma200_uptime_bars]
         else:
             idxlastm = df0.index[0]  # データ不足時は最古の比較対象を使用
         if (df0.loc[idxtoday, 'DIFF'] > 0) and (df0.loc[idxlastm, 'DIFF'] > 0):
@@ -849,7 +854,8 @@ class CheckData():
         cup_lip_min_deviation = p['cup_lip_min_deviation']
         cup_min_rounded_points = p['cup_min_rounded_points']
 
-        if len(df) < cup_min_duration_days:
+        cup_min_duration_bars = int(cup_min_duration_days * self.bar_factor)
+        if len(df) < cup_min_duration_bars:
             return None, None, None, None, "Not enough historical data to form a cup"
 
         # Find the high point (left lip) in the first 75% of the lookback period
@@ -894,7 +900,8 @@ class CheckData():
         # Verify a "U" shape by checking that the bottom is not too sharp
         cup_period_df = df.loc[left_lip_date:right_lip_date]
         low_points_count = cup_period_df[cup_period_df['Low'] < cup_bottom_price * 1.1].shape[0]
-        if low_points_count < cup_min_rounded_points:
+        cup_min_rounded_points_bars = max(1, int(cup_min_rounded_points * self.bar_factor))
+        if low_points_count < cup_min_rounded_points_bars:
             return None, None, None, None, f"Cup bottom is too sharp (V-shaped), not enough rounding ({low_points_count} points)"
 
         return left_lip_date, cup_bottom_date, cup_bottom_price, right_lip_date, None
@@ -909,7 +916,8 @@ class CheckData():
         handle_lookahead_end_date = handle_start_date + dt.timedelta(days=handle_max_duration_days)
         handle_df = df.loc[handle_start_date:handle_lookahead_end_date]
 
-        if handle_df.empty or len(handle_df) < handle_min_duration_days:
+        handle_min_duration_bars = max(1, int(handle_min_duration_days * self.bar_factor))
+        if handle_df.empty or len(handle_df) < handle_min_duration_bars:
             return None, None, "Not enough data to form a handle"
 
         # Handle should be a shallow pullback from the right lip's high
@@ -1128,9 +1136,14 @@ class CheckData():
             base_bdt = df1_base['Close'].idxmin()
 
             # ベース構成日数(最高値日から約4～8週間)と最安値が高値-15%を下回らない
-            base_duration_days_min = p['base_duration_weeks'][0] * 5
-            base_duration_days_max = p['base_duration_weeks'][1] * 5
-            if (base_len >= base_duration_days_min) and (base_len <= base_duration_days_max) and (base_min >= base_p1) and (base_max <= base_p2):
+            if self.interval == '1wk':
+                base_duration_bars_min = p['base_duration_weeks'][0]
+                base_duration_bars_max = p['base_duration_weeks'][1]
+            else:
+                base_duration_bars_min = p['base_duration_weeks'][0] * 5
+                base_duration_bars_max = p['base_duration_weeks'][1] * 5
+            
+            if (base_len >= base_duration_bars_min) and (base_len <= base_duration_bars_max) and (base_min >= base_p1) and (base_max <= base_p2):
                 alist.append((base_sdt, df0.loc[base_sdt,"Close"])) # ベースの開始
                 alist.append((base_bdt, df0.loc[base_bdt,"Low"]))   # ベースの最安
                 alist.append((base_edt, df0.loc[base_edt,"Close"])) # ベースの終了
@@ -1266,8 +1279,9 @@ class CheckData():
         down_vol = 0.0
         ud_ratio = 0.00
 
-    # 直近の50件に絞り込む
-        df1 = df0.tail(50)
+    # 直近の50件に絞り込む(週足の場合は10件)
+        lookback = int(50 * self.bar_factor)
+        df1 = df0.tail(lookback)
 
     # DataFrame内をループ
         for index, data in df1.iterrows():
@@ -1317,7 +1331,9 @@ class CheckData():
         df['MA50']   = df['Close'].rolling(self.ma_mid).mean()
         df['MA150']  = df['Close'].rolling(self.ma_s_long).mean()
         df['MA200']  = df['Close'].rolling(self.ma_long).mean()
-        df['DIFF']   = df['MA200'].pct_change(20, fill_method=None)
+        # MA200の傾き（20本分、週足なら4本分）
+        diff_lookback = int(20 * self.bar_factor)
+        df['DIFF']   = df['MA200'].pct_change(diff_lookback, fill_method=None)
         df['MA_VOL'] = df['Volume'].rolling(self.ma_mid).mean()
 
         # ATR (Average True Range) を計算 (期間:14)
@@ -1374,9 +1390,10 @@ class CheckData():
         if len(res) == 3 and res[2]:
             alist = sorted(res[2], key=lambda x: (x[0]))
 
-        # チャート出力範囲
+        # チャート出力範囲(週足の場合は52本分)
         df0 = self.df                        # Dataframeを参照渡し
-        df0 = df0.tail(260)                  # データを末尾から行数で絞り込み
+        lookback_chart = int(260 * self.bar_factor)
+        df0 = df0.tail(lookback_chart)       # データを末尾から行数で絞り込み
         df0 = df0.sort_index()               # 日付で昇順ソート
 
         # 補助線リストをチャート描画期間内にフィルタリング
@@ -1389,8 +1406,9 @@ class CheckData():
             df0.loc[res[1],'Signal'] = df0.loc[res[1],'Low'] * 0.97 # マーカー表示用の列に値をセット(安値-3%の位置に表示)
 #       print(df0.loc[res[1],'Signal'])
 
-        # UDレシオの計算(10レコードの推移)
-        ud_ratio1 = self.calcUDRatio(df0.head(-10))
+        # UDレシオの計算(10レコードの推移、週足なら2本)
+        ud_lookahead = int(10 * self.bar_factor)
+        ud_ratio1 = self.calcUDRatio(df0.head(-ud_lookahead))
         ud_ratio2 = self.calcUDRatio(df0)
 
         if (ud_ratio1 <= ud_ratio2) and (ud_ratio2 >= 1):
