@@ -72,7 +72,19 @@ for i in range(0, np):
             table_data = []
             for row in rows[1:]:
                 cols = row.find_all('td')
-                cols_text = [col.text.strip() for col in cols]
+                cols_text = []
+                for idx, col in enumerate(cols):
+                    if idx == 1:  # Ticker column
+                        # Find the a tag with class tab-link to get the exact ticker
+                        ticker_a = col.find('a', class_='tab-link')
+                        if ticker_a:
+                            cols_text.append(ticker_a.text.strip())
+                        elif col.has_attr('data-boxover-ticker'):
+                            cols_text.append(col['data-boxover-ticker'].strip())
+                        else:
+                            cols_text.append(col.text.strip())
+                    else:
+                        cols_text.append(col.text.strip())
                 if len(cols_text) == len(headers):
                     table_data.append(cols_text)
 
