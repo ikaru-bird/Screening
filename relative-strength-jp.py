@@ -6,6 +6,7 @@ import pandas as pd
 import RelativeStrength as rs
 import numpy as np
 import searchIndustryJP as ind
+from classGetExcelList import GetExcelList
 
 # --------------------------------------------- #
 # 処理開始（メイン）
@@ -21,7 +22,14 @@ if __name__ == "__main__":
 # --------------------------------------------- #
 # 株式コードとセクター情報を読み込み
 # --------------------------------------------- #
-    url = 'https://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/data_j.xls'
+    chkLink = GetExcelList()
+    baseurl = "https://www.jpx.co.jp/markets/statistics-equities/misc/01.html"
+    urlList = chkLink.getLink(baseurl)
+    if len(urlList) > 0:
+        url = urlList[0]
+    else:
+        url = "https://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/data_j.xlsx"
+
     stock_codes = pd.read_excel(url, sheet_name='Sheet1')
 #   stock_codes = stock_codes.rename(columns={'コード': 'Ticker', "市場・商品区分":"SEGMENT", '33業種区分':'Industry', '規模コード':'SIZE'})
     stock_codes = stock_codes.rename(columns={'コード': 'Ticker', "市場・商品区分":"SEGMENT", '33業種区分':'Sector', '規模コード':'SIZE'})

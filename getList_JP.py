@@ -27,7 +27,7 @@ urlList = chkLink.getLink(baseurl)
 if len(urlList) > 0:
     url = urlList[0]
 else:
-    url = "https://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/data_j.xls"
+    url = "https://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/data_j.xlsx"
 
 r   = requests.get(url)
 with open(xlspath, 'wb') as output:
