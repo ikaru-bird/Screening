@@ -28,17 +28,26 @@ data = BeautifulSoup(site.text,'html.parser')
 article = data.find_all("option")
 np = 1
 for item_html in article:
-    if item_html.text.startswith("Page"):
+    text = item_html.text.strip()
+    if text.startswith("Page"):
         try:
-            tmp = item_html.text.split('/')
+            tmp = text.split('/')
             if len(tmp) > 1:
                 tmp = tmp[1].splitlines()
-                np  = int(tmp[0])
+                np  = int(tmp[0].strip().split()[0])
                 print("Pages: " + str(np))
-            break
+                break
         except (ValueError, IndexError):
-            # ページ数が取得できない場合はループを続ける
             continue
+    elif "/" in text:
+        tmp = text.split('/')
+        if len(tmp) > 1 and tmp[1].strip().isdigit():
+            try:
+                np = int(tmp[1].strip())
+                print("Pages: " + str(np))
+                break
+            except ValueError:
+                continue
 
 # 各ページからデータを取得
 for i in range(0, np):
