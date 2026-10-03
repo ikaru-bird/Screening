@@ -35,7 +35,6 @@ for item_html in article:
             if len(tmp) > 1:
                 tmp = tmp[1].splitlines()
                 np  = int(tmp[0].strip().split()[0])
-                print("Pages: " + str(np))
                 break
         except (ValueError, IndexError):
             continue
@@ -44,19 +43,35 @@ for item_html in article:
         if len(tmp) > 1 and tmp[1].strip().isdigit():
             try:
                 np = int(tmp[1].strip())
-                print("Pages: " + str(np))
                 break
             except ValueError:
                 continue
 
+if np > 50:
+    print(f"Pages: {np} (capped to 50 due to Finviz limit)")
+    np = 50
+else:
+    print("Pages: " + str(np))
+
 # 各ページからデータを取得
+stop_fetching = False
 for i in range(0, np):
+    if stop_fetching:
+        break
+
     url2 = url + '&r=' + str((i*20)+1)
 
     df = None
     for j in range(3): #リトライ処理
         try:
             site = requests.get(url2, headers=req_headers, impersonate="chrome110")
+            if site.status_code == 403:
+                print(f"Access forbidden (403) on page {i + 1}. Stopping page fetch.")
+                stop_fetching = True
+                break
+            if site.status_code != 200:
+                raise ValueError(f"HTTP status {site.status_code}")
+
             data = BeautifulSoup(site.text,'html.parser')
 
             # 'screener_table'クラスを持つテーブルを探す
@@ -116,6 +131,11 @@ for i in range(0, np):
 print("Count: " + str(len(stock_list)))
 
 # リストをファイル出力
+import os
+dirname = os.path.dirname(outpath)
+if dirname:
+    os.makedirs(dirname, exist_ok=True)
+
 with open(outpath, 'w', encoding='utf-8') as f:
     for _, item in stock_list.iterrows():
         f.write('~'.join(map(str, [item.iloc[1], item.iloc[2], item.iloc[3], item.iloc[4], item.iloc[5], item.iloc[6], item.iloc[7], item.iloc[10], item.iloc[9], item.iloc[8]])) + '\n')
